@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Aviso de creacion de cliente para Proseso de persona natural Candidato</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BICE</letterhead>
+    <name>Aviso de creación de cliente</name>
+    <style>freeForm</style>
+    <subject>Aviso de creacion de Cliente para Candicato {!Lead.Name}</subject>
+    <textOnly>Se le comunica que el candidato {!Lead.Name} ha sido creado por el área de clientes, puede continuar con el proceso.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

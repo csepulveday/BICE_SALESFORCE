@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>BICE P2P Relationship</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>BICE P2P Relationships</value>
+    </caseValues>
+    <fields>
+        <label><!-- CIF_RECLI_Id --></label>
+        <name>CIF_RECLI_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>FromPerson__c</name>
+        <relationshipLabel><!-- BICE P2P Relationships --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Relation Type --></label>
+        <name>Relation_Type__c</name>
+        <picklistValues>
+            <masterLabel>Co-owner on BICE Product</masterLabel>
+            <translation><!-- Co-owner on BICE Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Family Member</masterLabel>
+            <translation><!-- Family Member --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guarantor</masterLabel>
+            <translation><!-- Guarantor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>ToPerson__c</name>
+        <relationshipLabel><!-- BICE P2P Relationships (Account) --></relationshipLabel>
+    </fields>
+    <gender>Feminine</gender>
+</CustomObjectTranslation>

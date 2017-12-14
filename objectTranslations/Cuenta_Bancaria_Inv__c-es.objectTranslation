@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Cuenta Bancaria Inv</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Cuentas Bancarias Inv</value>
+    </caseValues>
+    <fields>
+        <label><!-- Banco --></label>
+        <name>Banco__c</name>
+        <picklistValues>
+            <masterLabel>1 FIRST BANK</masterLabel>
+            <translation><!-- 1 FIRST BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ABN AMRO BANK</masterLabel>
+            <translation><!-- ABN AMRO BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ABN AMRO BANK (CHILE)</masterLabel>
+            <translation><!-- ABN AMRO BANK (CHILE) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AMERICAN EXPRESS BANK</masterLabel>
+            <translation><!-- AMERICAN EXPRESS BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AMERICAN NATIONAL BANK</masterLabel>
+            <translation><!-- AMERICAN NATIONAL BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AMTRADE BANK</masterLabel>
+            <translation><!-- AMTRADE BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BAC FLORIDA BANK</masterLabel>
+            <translation><!-- BAC FLORIDA BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCA COMMERCIALE ITALIANA</masterLabel>
+            <translation><!-- BANCA COMMERCIALE ITALIANA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO ATLANTICO</masterLabel>
+            <translation><!-- BANCO ATLANTICO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO BBVA</masterLabel>
+            <translation><!-- BANCO BBVA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO BICE</masterLabel>
+            <translation><!-- BANCO BICE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO BILBAO VIZCAYA</masterLabel>
+            <translation><!-- BANCO BILBAO VIZCAYA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO CENTRAL DE CHILE</masterLabel>
+            <translation><!-- BANCO CENTRAL DE CHILE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO CONSORCIO</masterLabel>
+            <translation><!-- BANCO CONSORCIO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO CREDITO INVERSIONES</masterLabel>
+            <translation><!-- BANCO CREDITO INVERSIONES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO DE CHILE</masterLabel>
+            <translation><!-- BANCO DE CHILE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO DE CHILE/EDWARDS-CITI</masterLabel>
+            <translation><!-- BANCO DE CHILE/EDWARDS-CITI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO DE CREDITO E INVERSIONES</masterLabel>
+            <translation><!-- BANCO DE CREDITO E INVERSIONES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO DEL DESARROLLO</masterLabel>
+            <translation><!-- BANCO DEL DESARROLLO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO DEL ESTADO DE CHILE</masterLabel>
+            <translation><!-- BANCO DEL ESTADO DE CHILE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO DO BRASIL</masterLabel>
+            <translation><!-- BANCO DO BRASIL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO DO BRASIL S A</masterLabel>
+            <translation><!-- BANCO DO BRASIL S A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO ECONOMICO</masterLabel>
+            <translation><!-- BANCO ECONOMICO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO EDWARDS CITI</masterLabel>
+            <translation><!-- BANCO EDWARDS CITI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO EXTERIOR DE ESPANA</masterLabel>
+            <translation><!-- BANCO EXTERIOR DE ESPANA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO FALABELLA</masterLabel>
+            <translation><!-- BANCO FALABELLA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO INTERNACIONAL</masterLabel>
+            <translation><!-- BANCO INTERNACIONAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO ITAÚ CHILE</masterLabel>
+            <translation><!-- BANCO ITAÚ CHILE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO MERCANTIL</masterLabel>
+            <translation><!-- BANCO MERCANTIL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO PARIS</masterLabel>
+            <translation><!-- BANCO PARIS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO PENTA</masterLabel>
+            <translation><!-- BANCO PENTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO POPULAR</masterLabel>
+            <translation><!-- BANCO POPULAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO POPULAR DE PUERTO RICO</masterLabel>
+            <translation><!-- BANCO POPULAR DE PUERTO RICO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO RIPLEY</masterLabel>
+            <translation><!-- BANCO RIPLEY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO SANTANDER</masterLabel>
+            <translation><!-- BANCO SANTANDER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO SANTANDER-(CHILE)</masterLabel>
+            <translation><!-- BANCO SANTANDER-(CHILE) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO SANTIAGO</masterLabel>
+            <translation><!-- BANCO SANTIAGO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCO SECURITY</masterLabel>
+            <translation><!-- BANCO SECURITY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANCOINTERNACIONAL</masterLabel>
+            <translation><!-- BANCOINTERNACIONAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANK FUND STAFF FEDERAL CREDIT</masterLabel>
+            <translation><!-- BANK FUND STAFF FEDERAL CREDIT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANK HAPOALIM BM</masterLabel>
+            <translation><!-- BANK HAPOALIM BM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANK OF AMERICA</masterLabel>
+            <translation><!-- BANK OF AMERICA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANK OF BOSTON</masterLabel>
+            <translation><!-- BANK OF BOSTON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANK ONE COLUMBUS N.A.</masterLabel>
+            <translation><!-- BANK ONE COLUMBUS N.A. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANKBOSTON N.A.</masterLabel>
+            <translation><!-- BANKBOSTON N.A. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANKERS TRUST COMPANY</masterLabel>
+            <translation><!-- BANKERS TRUST COMPANY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANQUE NATIONALE DE PARIS</masterLabel>
+            <translation><!-- BANQUE NATIONALE DE PARIS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BANQUE SUDAMERIS</masterLabel>
+            <translation><!-- BANQUE SUDAMERIS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BARCLAYS BANK</masterLabel>
+            <translation><!-- BARCLAYS BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BARNETT BANK</masterLabel>
+            <translation><!-- BARNETT BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BHIF</masterLabel>
+            <translation><!-- BHIF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CALIFORNIA COMMERCE BANK</masterLabel>
+            <translation><!-- CALIFORNIA COMMERCE BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAMBRIDGE TRUST COMPANY</masterLabel>
+            <translation><!-- CAMBRIDGE TRUST COMPANY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAPITAL BANK</masterLabel>
+            <translation><!-- CAPITAL BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CENTRAL HISPANO USA</masterLabel>
+            <translation><!-- CENTRAL HISPANO USA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHEMICAL BANK</masterLabel>
+            <translation><!-- CHEMICAL BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHITTENDEN BANK</masterLabel>
+            <translation><!-- CHITTENDEN BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CITIBANK</masterLabel>
+            <translation><!-- CITIBANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CITIBANK DELAWARE</masterLabel>
+            <translation><!-- CITIBANK DELAWARE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CITIBANK N.A.</masterLabel>
+            <translation><!-- CITIBANK N.A. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CITIBANK NEW YORK</masterLabel>
+            <translation><!-- CITIBANK NEW YORK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CITIBANK-SANTIAGO</masterLabel>
+            <translation><!-- CITIBANK-SANTIAGO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CITICORP</masterLabel>
+            <translation><!-- CITICORP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CITY NATIONAL BANK</masterLabel>
+            <translation><!-- CITY NATIONAL BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COLONIAL BANK</masterLabel>
+            <translation><!-- COLONIAL BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COMMERCE BANK OF KANSAS CITY</masterLabel>
+            <translation><!-- COMMERCE BANK OF KANSAS CITY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CONSOLIDATED BANK</masterLabel>
+            <translation><!-- CONSOLIDATED BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CORESTATES BANK OF DELAWARE NA</masterLabel>
+            <translation><!-- CORESTATES BANK OF DELAWARE NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CORP BANCA</masterLabel>
+            <translation><!-- CORP BANCA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CORPBANCA</masterLabel>
+            <translation><!-- CORPBANCA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CREDICHILE</masterLabel>
+            <translation><!-- CREDICHILE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CREDIT SUISSE</masterLabel>
+            <translation><!-- CREDIT SUISSE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CREDIT UNION</masterLabel>
+            <translation><!-- CREDIT UNION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CREDITO</masterLabel>
+            <translation><!-- CREDITO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEUTSCHE BANK</masterLabel>
+            <translation><!-- DEUTSCHE BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEUTSCHE BANK (CHILE)</masterLabel>
+            <translation><!-- DEUTSCHE BANK (CHILE) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEUTSCHE SUDAMERIKANISCHE BANK</masterLabel>
+            <translation><!-- DEUTSCHE SUDAMERIKANISCHE BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DO BRAZIL</masterLabel>
+            <translation><!-- DO BRAZIL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DRAWEE BANK</masterLabel>
+            <translation><!-- DRAWEE BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DRESDNER BANK LATEINAMERIKA AG</masterLabel>
+            <translation><!-- DRESDNER BANK LATEINAMERIKA AG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FEDERAL CREDIT UNION</masterLabel>
+            <translation><!-- FEDERAL CREDIT UNION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FIDELITY BANK N.A.</masterLabel>
+            <translation><!-- FIDELITY BANK N.A. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLEET BANK</masterLabel>
+            <translation><!-- FLEET BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FROST NATIONAL BANK</masterLabel>
+            <translation><!-- FROST NATIONAL BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRANITE STATE BANK</masterLabel>
+            <translation><!-- GRANITE STATE BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HARRIS TRUST AND SAVINGS BANK</masterLabel>
+            <translation><!-- HARRIS TRUST AND SAVINGS BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HNS BANCO</masterLabel>
+            <translation><!-- HNS BANCO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HONGKONG BANK</masterLabel>
+            <translation><!-- HONGKONG BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HSBC BANK (CHILE)</masterLabel>
+            <translation><!-- HSBC BANK (CHILE) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HSBC BANK USA</masterLabel>
+            <translation><!-- HSBC BANK USA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INTERBANK</masterLabel>
+            <translation><!-- INTERBANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ISRAEL DISCOUNT BANK</masterLabel>
+            <translation><!-- ISRAEL DISCOUNT BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JP MORGAN</masterLabel>
+            <translation><!-- JP MORGAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JP MORGAN CHASE BANK, N.A.</masterLabel>
+            <translation><!-- JP MORGAN CHASE BANK, N.A. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KREDIETBANK</masterLabel>
+            <translation><!-- KREDIETBANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LASALLE BANK FSB</masterLabel>
+            <translation><!-- LASALLE BANK FSB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LEHMAN BROTHERS INC.</masterLabel>
+            <translation><!-- LEHMAN BROTHERS INC. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LLOYDS BANK</masterLabel>
+            <translation><!-- LLOYDS BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M &amp; I BANK</masterLabel>
+            <translation><!-- M &amp; I BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M&amp;T BUFFALO</masterLabel>
+            <translation><!-- M&amp;T BUFFALO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MARINE MIDLAND BANK</masterLabel>
+            <translation><!-- MARINE MIDLAND BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MELLON BANK N.A.</masterLabel>
+            <translation><!-- MELLON BANK N.A. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MERRILL LYNCH</masterLabel>
+            <translation><!-- MERRILL LYNCH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MOODY NATIONAL BANK</masterLabel>
+            <translation><!-- MOODY NATIONAL BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MTB BANK</masterLabel>
+            <translation><!-- MTB BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NATIONAL BANK</masterLabel>
+            <translation><!-- NATIONAL BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NATIONSBANK OF TEXAS</masterLabel>
+            <translation><!-- NATIONSBANK OF TEXAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NORTHERN TRUST BANK FLORIDA</masterLabel>
+            <translation><!-- NORTHERN TRUST BANK FLORIDA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NORWEST BANK MINNESOTA N.A.</masterLabel>
+            <translation><!-- NORWEST BANK MINNESOTA N.A. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OCEAN BANK</masterLabel>
+            <translation><!-- OCEAN BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PACIFIC NATIONAL BANK</masterLabel>
+            <translation><!-- PACIFIC NATIONAL BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAINE WEBBER</masterLabel>
+            <translation><!-- PAINE WEBBER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PEOPLES BANK</masterLabel>
+            <translation><!-- PEOPLES BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PINEBANK</masterLabel>
+            <translation><!-- PINEBANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PNC NATIONAL BANK</masterLabel>
+            <translation><!-- PNC NATIONAL BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REPUBLIC NATIONAL BANK</masterLabel>
+            <translation><!-- REPUBLIC NATIONAL BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RIGGS BANK N.A.</masterLabel>
+            <translation><!-- RIGGS BANK N.A. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROYAL BANK</masterLabel>
+            <translation><!-- ROYAL BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S&amp;T BANK</masterLabel>
+            <translation><!-- S&amp;T BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SCOTIABANK</masterLabel>
+            <translation><!-- SCOTIABANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SMITH BARNEY</masterLabel>
+            <translation><!-- SMITH BARNEY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STATE STREET BANK AND TRUST CO</masterLabel>
+            <translation><!-- STATE STREET BANK AND TRUST CO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUMMIT BANK</masterLabel>
+            <translation><!-- SUMMIT BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUNTRUST BANK</masterLabel>
+            <translation><!-- SUNTRUST BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SWISS BANK CORPORATION</masterLabel>
+            <translation><!-- SWISS BANK CORPORATION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TERRABANK N.A</masterLabel>
+            <translation><!-- TERRABANK N.A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE BANCK OF LUNINK LATINIC</masterLabel>
+            <translation><!-- THE BANCK OF LUNINK LATINIC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE BANK OF CHERRY CREEK</masterLabel>
+            <translation><!-- THE BANK OF CHERRY CREEK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE BANK OF NEW YORK</masterLabel>
+            <translation><!-- THE BANK OF NEW YORK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE BANK OF TELLURIDE</masterLabel>
+            <translation><!-- THE BANK OF TELLURIDE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE BANK OF TOKYO TRUST CO</masterLabel>
+            <translation><!-- THE BANK OF TOKYO TRUST CO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE CHASE MANHATTAN BANK</masterLabel>
+            <translation><!-- THE CHASE MANHATTAN BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE INTERNATIONAL BANK OF MIAM</masterLabel>
+            <translation><!-- THE INTERNATIONAL BANK OF MIAM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE PARK AVENUE BANK N.A.</masterLabel>
+            <translation><!-- THE PARK AVENUE BANK N.A. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE PRUDENTIAL BANK</masterLabel>
+            <translation><!-- THE PRUDENTIAL BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THE RIGGS NATIONAL BANK</masterLabel>
+            <translation><!-- THE RIGGS NATIONAL BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TOWERBANK</masterLabel>
+            <translation><!-- TOWERBANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRADE &amp; COMMERCE BANK</masterLabel>
+            <translation><!-- TRADE &amp; COMMERCE BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TSB BANK</masterLabel>
+            <translation><!-- TSB BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UBS NEW YORK BRANCH</masterLabel>
+            <translation><!-- UBS NEW YORK BRANCH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UBS SA STAMFORD</masterLabel>
+            <translation><!-- UBS SA STAMFORD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNITED MISSOURI BANK</masterLabel>
+            <translation><!-- UNITED MISSOURI BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VALLEY BANK N.A</masterLabel>
+            <translation><!-- VALLEY BANK N.A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VISA INTERNATIONAL</masterLabel>
+            <translation><!-- VISA INTERNATIONAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WACHOVIA BANK N.A.</masterLabel>
+            <translation><!-- WACHOVIA BANK N.A. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WASHINGTON MUTUAL BANK</masterLabel>
+            <translation><!-- WASHINGTON MUTUAL BANK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WELLS FARGO BANK</masterLabel>
+            <translation><!-- WELLS FARGO BANK --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Cliente --></label>
+        <name>Cliente__c</name>
+        <relationshipLabel><!-- Cuentas Bancarias Inv --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Marque la casilla para indicar que es la cuenta principal del Cliente --></help>
+        <label><!-- Esta es la Cuenta Principal --></label>
+        <name>Esta_es_la_Cuenta_Principal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Moneda --></label>
+        <name>Moneda__c</name>
+        <picklistValues>
+            <masterLabel>Dolar</masterLabel>
+            <translation><!-- Dolar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Euro</masterLabel>
+            <translation><!-- Euro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peso</masterLabel>
+            <translation><!-- Peso --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Número de la cuenta --></help>
+        <label><!-- Número --></label>
+        <name>Numero__c</name>
+    </fields>
+    <fields>
+        <label><!-- Origen de la Cuenta --></label>
+        <name>Origen_de_la_Cuenta__c</name>
+        <picklistValues>
+            <masterLabel>Bancos extranjeros</masterLabel>
+            <translation><!-- Bancos extranjeros --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chile</masterLabel>
+            <translation><!-- Chile --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sucursal --></label>
+        <name>Sucursal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Cuenta --></label>
+        <name>Tipo_de_Cuenta__c</name>
+        <picklistValues>
+            <masterLabel>Cuenta Ahorro</masterLabel>
+            <translation><!-- Cuenta Ahorro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cuenta Corriente</masterLabel>
+            <translation><!-- Cuenta Corriente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cuenta Vista</masterLabel>
+            <translation><!-- Cuenta Vista --></translation>
+        </picklistValues>
+    </fields>
+    <gender>Feminine</gender>
+</CustomObjectTranslation>

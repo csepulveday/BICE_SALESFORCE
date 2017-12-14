@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>RUT__c</field>
+        <field>Name</field>
+        <field>Company</field>
+        <field>Raz_n_Social__c</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Act_Estado_aprobacion_Gte_BP_Aprobado</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Act_fecha_de_aprobacion_Gte_de_BP</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Gerente_Banca_Privada</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Lead.Segmentation__c</field>
+                <operation>equals</operation>
+                <value>Banca Privada</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>ApproveRecord</ifCriteriaNotMet>
+        <label>Aprobación para Banca Privada</label>
+        <name>Aprobacion_para_Banca_Privada</name>
+        <rejectionActions>
+            <action>
+                <name>Act_Estado_aprobacion_Gte_BP_Rechazado</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Act_fecha_de_aprobacion_Gte_de_BP</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Actualiza_segmentacion_a_Banca_Personas</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>Proceso para validar que el Candidato puede pertenecer a la Banca Privada. La aprobación esta dirigida a la función &quot;Assistant Private Banking Division Manager&quot;</description>
+    <emailTemplate>unfiled$public/Aprobacion_Banca_Privada</emailTemplate>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Lead.Segmentation__c</field>
+            <operation>equals</operation>
+            <value>Banca Privada</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordType</field>
+            <operation>equals</operation>
+            <value>Lead Persona Natural,Lead Persona Jurídica,Lead Persona Natural (Fuerza de Ventas),Lead Persona Jurídica (Fuerza Ventas)</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Act_Estado_aprobacion_Gte_BP_Pendiente</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Act_fecha_de_aprobacion_Gte_de_BP</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Aprobación Lead Gerente Banca Privada</label>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

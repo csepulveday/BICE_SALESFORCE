@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_30675263</developerName>
+        <masterLabel>In Progress</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>agf__ADM_Work__c.agf__Assignee__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Carlos Concha</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Charles Sepúlveda</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Diego Galvez</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Enzo Bustamante</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Evaldo Oliveira</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Gustavo Ramírez</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Nicolás Concha</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Peter Tung</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Rodrigo Baeza</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Rosangela Sousa</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Samuel Bravo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sebastián Rosas</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Yetsabel García</sourceValue>
+            </sourceValues>
+            <value>In Progress</value>
+        </values>
+        <values>
+            <value>New</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumn</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>BucketField_30675263</groupingColumn>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000099</textColor>
+        <textSize>12</textSize>
+        <title>Tasks</title>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CHILD_NAME</field>
+    </columns>
+    <columns>
+        <field>agf__ADM_Task__c.agf__Subject__c</field>
+    </columns>
+    <columns>
+        <field>agf__ADM_Work__c.agf__Status__c</field>
+    </columns>
+    <columns>
+        <field>agf__ADM_Task__c.agf__Assigned_To__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>agf__ADM_Task__c.agf__Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Completed</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>agf__ADM_Work__c.agf__Assignee__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_30675263</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>RELEASE  0__5 Tasks</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$agf__ADM_Work__c$agf__ADM_Task__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>agf__ADM_Work__c.agf__Assigned_On__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

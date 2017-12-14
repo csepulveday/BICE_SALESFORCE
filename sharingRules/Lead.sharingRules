@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Acceso_Lectura_a_Leads_Banca_Personas</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Acceso Lectura a Leads Banca Personas</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Retail_Banking_Regional_Manager_Zona_3</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>notEqual</operation>
+            <value>.</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CAC_Acceso_Escritura_a_Candidatos_enviados_a_CAC</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Los Administrativos de CAC pueden editar los registros de Leads Profin que les envian y una vez que el mac es creado y Enviado, dejan de verlos</description>
+        <label>CAC Acceso Escritura a Candidatos PROFIN enviados a CAC</label>
+        <sharedTo>
+            <group>C_A_C</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lead Persona Jurídica (Fuerza Ventas),Lead Persona Natural (Fuerza de Ventas)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Status</field>
+            <operation>equals</operation>
+            <value>Calificación</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Jefe_Grupo_autoriza_crear_CIF_y_MAC__c</field>
+            <operation>equals</operation>
+            <value>Verdadero</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Scanned_Documents__c</field>
+            <operation>equals</operation>
+            <value>Falso</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Candidato_Profin</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>(Candidato: Tipo de registro de candidatoIGUAL ALead Persona Jurídica (Fuerza Ventas),Lead Persona Natural (Fuerza de Ventas)) Y (Candidato: Estado de candidatoIGUAL ACalificación) Y (Candidato: Jefe Grupo autoriza crear CIF, RIB y MACIGUAL AVerdadero) Y (Candidato: Documentos digitalizadosIGUAL AFalso)</description>
+        <label>Candidato Profin</label>
+        <sharedTo>
+            <group>C_A_C</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lead Persona Jurídica (Fuerza Ventas),Lead Persona Natural (Fuerza de Ventas)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Jefe_Grupo_autoriza_crear_CIF_y_MAC__c</field>
+            <operation>equals</operation>
+            <value>Verdadero</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Colaboracion_con_Gte_de_Banca_Privada</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Colaboración con Gte de Banca Privada</label>
+        <sharedTo>
+            <role>Assistant_Private_Banking_Division_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Status_Approval_Manager_Banca_Privada__c</field>
+            <operation>equals</operation>
+            <value>Pendiente</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Delegados_Gerente_de_Venta</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Los delegados del Gerente De Ventas que Figuren en el Grupo &quot;Delegados Gerentes de Venta&quot; podrán acceder a los registros que requieren su aprobación hasta que se produzca la digitalización.</description>
+        <label>Delegados Gerente de Venta</label>
+        <sharedTo>
+            <group>Delegados_Gerentes_de_Venta_Profin</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lead Persona Jurídica (Fuerza Ventas),Lead Persona Natural (Fuerza de Ventas)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Scanned_Documents__c</field>
+            <operation>equals</operation>
+            <value>Falso</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>MAC_creado_y_enviado__c</field>
+            <operation>equals</operation>
+            <value>Verdadero</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>EyC_Creaci_n_clientes</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>EyC - Creación clientes</label>
+        <sharedTo>
+            <role>Administrativo_Area_Clientes</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lead Empresas y Corporaciones</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Customer_Creation__c</field>
+            <operation>equals</operation>
+            <value>Pendiente</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Status</field>
+            <operation>equals</operation>
+            <value>Calificación</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Segmentation_Banca_Privada</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Cuando un Lead es de la segmentación Banca Privada ha sido aprobado por el Gerente de Banca Privada es visible solo lectura por el Gerente de Banca Privada</description>
+        <label>Lead Segmentation Banca Privada</label>
+        <sharedTo>
+            <role>Assistant_Private_Banking_Division_Manager</role>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Segmentation__c</field>
+            <operation>equals</operation>
+            <value>Banca Privada</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Request_to_Create_Client_Area__c</field>
+            <operation>equals</operation>
+            <value>Verdadero</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Customer_Creation__c</field>
+            <operation>equals</operation>
+            <value>Pendiente,Realizado,Reparos</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Pendientes_Aprobacion_Gerente_de_Venta</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Pendientes Aprobación Gerente de Venta</label>
+        <sharedTo>
+            <group>Gerente_de_Ventas</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lead Persona Jurídica (Fuerza Ventas),Lead Persona Natural (Fuerza de Ventas)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>MAC_creado_y_enviado__c</field>
+            <operation>equals</operation>
+            <value>Verdadero</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Perfil_aprobado_Gerente_de_ventas__c</field>
+            <operation>equals</operation>
+            <value>Falso</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Profin_Grupo_01</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Los candidatos creados por Ejecutivos Profin del Grupo 01 son compartidos con con ejecutivos de su mismo Grupo y sus superiores en jerarquía.</description>
+        <label>Profin Grupo 01</label>
+        <sharedTo>
+            <group>Profin_Grupo_01</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Funcion_del_Creador_del_registro__c</field>
+            <operation>equals</operation>
+            <value>Retail_Sales_Force_Commercial_Executive_01</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Profin_Grupo_02</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Los candidatos creados por Ejecutivos Profin del Grupo 02 son compartidos con con ejecutivos de su mismo Grupo y sus superiores en jerarquía.</description>
+        <label>Profin Grupo 02</label>
+        <sharedTo>
+            <group>Profin_Grupo_02</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Funcion_del_Creador_del_registro__c</field>
+            <operation>equals</operation>
+            <value>Retail_Sales_Force_Commercial_Executive_02</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Profin_Grupo_03</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Los candidatos creados por Ejecutivos Profin del Grupo 03 son compartidos con con ejecutivos de su mismo Grupo y sus superiores en jerarquía.</description>
+        <label>Profin Grupo 03</label>
+        <sharedTo>
+            <group>Profin_Grupo_03</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Funcion_del_Creador_del_registro__c</field>
+            <operation>equals</operation>
+            <value>Retail_Sales_Force_Commercial_Executive_03</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Profin_Grupo_04</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Los candidatos creados por Ejecutivos Profin del Grupo 04 son compartidos con con ejecutivos de su mismo Grupo y sus superiores en jerarquía.</description>
+        <label>Profin Grupo 04</label>
+        <sharedTo>
+            <group>Profin_Grupo_04</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Funcion_del_Creador_del_registro__c</field>
+            <operation>equals</operation>
+            <value>Retail_Sales_Force_Commercial_Executive_04</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Profin_Grupo_05</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Los candidatos creados por Ejecutivos Profin del Grupo 05 son compartidos con con ejecutivos de su mismo Grupo y sus superiores en jerarquía.</description>
+        <label>Profin Grupo 05</label>
+        <sharedTo>
+            <group>Profin_Grupo_05</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Funcion_del_Creador_del_registro__c</field>
+            <operation>equals</operation>
+            <value>Retail_Sales_Force_Commercial_Executive_05</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Profin_Grupo_06</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Los candidatos creados por Ejecutivos Profin del Grupo 06 son compartidos con con ejecutivos de su mismo Grupo y sus superiores en jerarquía.</description>
+        <label>Profin Grupo 06</label>
+        <sharedTo>
+            <group>Profin_Grupo_06</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Funcion_del_Creador_del_registro__c</field>
+            <operation>equals</operation>
+            <value>Retail_Sales_Force_Commercial_Executive_06</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Regla_colaboracion_area_clientes</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>2017 09 14, se elimina la restricción &quot;Creación Cliente&quot; no iguual a &quot;Realizado&quot;</description>
+        <label>Regla colaboración área clientes</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Jefe_rea_Clientes</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>Request_to_Create_Client_Area__c</field>
+            <operation>equals</operation>
+            <value>Verdadero</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Regla_colaboracion_area_clientes_lectura</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Regla colaboración área clientes lectura</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Gerente_Area_Clientes</roleAndSubordinatesInternal>
+        </sharedTo>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Request_to_Create_Client_Area__c</field>
+            <operation>equals</operation>
+            <value>Verdadero</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Status</field>
+            <operation>equals</operation>
+            <value>Contacto</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Estado_Aprobacion_Gerente_Ventas__c</field>
+            <operation>notEqual</operation>
+            <value>Pendiente,Aprobado,Rechazado</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Leads_Regional_Zona_3</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Da acceso Escritura a Leads cuyos de propietarios pertenezcan a las Sucursales dependientes de la Gerencia Regional Zona 3, a todas los usuarios que estén asociados al Grupo Público &quot;Retail Banking Regional Zona 3&quot;</description>
+        <label>Leads Regional Zona 3</label>
+        <sharedTo>
+            <group>Retail_Banking_Regional_Zonal_3</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Retail_Banking_Regional_Manager_Zona_3</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Alerta al ejecutivo 60 días antes del vencimiento de la línea en la oportunidad</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BICE</letterhead>
+    <name>Alerta vencimiento línea</name>
+    <style>formalLetter</style>
+    <subject>Alerta - línea próxima a vencer</subject>
+    <textOnly>Hola. Debes estar atento ya que la línea del cliente {!Opportunity.Account} vencerá en 60 días.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

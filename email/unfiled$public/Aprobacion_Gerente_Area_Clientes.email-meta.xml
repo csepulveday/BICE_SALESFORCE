@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BICE</letterhead>
+    <name>Aprobación Gerente Area Clientes</name>
+    <style>freeForm</style>
+    <subject>Aprobación de {!Lead.Name}</subject>
+    <textOnly>Se solicita aprobación del lead: {!Lead.Name}, Rut:{!Lead.RUT__c}
+
+Puede aprobar o rechazar esta solicitud respondiendo este correo introduciendo APROBAR, APROBADO, SÍ o RECHAZAR, RECHAZADO o NO(con tilde si corresponde) en la primera linea.
+O si lo prefiere, para acceder al registro, haga clic en el siguiente vínculo:
+{!Lead.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

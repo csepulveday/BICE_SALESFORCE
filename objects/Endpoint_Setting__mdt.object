@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Endpoint__c</fullName>
+        <description>Store the endpoints used in the external integrations</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Endpoint</label>
+        <required>true</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Namespace__c</fullName>
+        <description>Used in SOAP custom calls that requieres non-standard namespace definitions</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Namespace</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <label>Endpoint Setting</label>
+    <pluralLabel>Endpoint Settings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Giro</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Giros</value>
+    </caseValues>
+    <fields>
+        <label><!-- Gir cod sii --></label>
+        <name>Gir_cod_sii__c</name>
+    </fields>
+    <fields>
+        <label><!-- Giro descripción --></label>
+        <name>Giro_descripcion__c</name>
+    </fields>
+    <gender>Masculine</gender>
+</CustomObjectTranslation>

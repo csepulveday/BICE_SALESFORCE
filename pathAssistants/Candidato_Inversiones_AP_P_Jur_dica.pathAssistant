@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Candidato Inversiones AP (P Jurídica)</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Presente las alternativas de inverisón que ofrece el banco.&lt;/p&gt;&lt;p&gt;Estime el nivel de riesgo del cliente&lt;/p&gt;&lt;p&gt;Identifique el tipo de inversión que desea realizar.&lt;/p&gt;&lt;p&gt;Si no le interesa, cierre el lead.&lt;/p&gt;&lt;p&gt;Si le interesa y estas no requieren crédito para operar, convierta el lead en Oportunidad de inversión, prepare y presente la propuesta con las comisiones respectivas.&lt;/p&gt;&lt;p&gt;Al convertir, debe hacer clic en Nombre cliente, Añadir nuevo y seleccionar Cuenta empresa.&lt;/p&gt;&lt;p&gt;Si el cliente acepta la propuesta continúe con el proceso para convertirlo en cliente y de las instrucciones respectivas para depósito de fondos y cuando el depósito se concrete cierre la oportunidad ganada. Si El cliente se arrepiente, cierre la oportunidad como perdida e indique los motivos.&lt;/p&gt;</info>
+        <picklistValueName>Contacto</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Motivo_rechazo__c</fieldNames>
+        <fieldNames>Otro_motivo_de_rechazo__c</fieldNames>
+        <info>&lt;p&gt;1. Presione Modificar&lt;/p&gt;&lt;p&gt;2. Seleccione &amp;quot;Motivo de Rechazo&amp;quot; más adecuado&amp;quot; (&amp;quot;No cumple requisitos&amp;quot;, &amp;quot;Sin interés&amp;quot;, etc...)&lt;/p&gt;&lt;p&gt;3. Presione &amp;quot;Guardar&amp;quot;&lt;/p&gt;</info>
+        <picklistValueName>No califica</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Company</fieldNames>
+        <fieldNames>RUT__c</fieldNames>
+        <fieldNames>Raz_n_Social__c</fieldNames>
+        <fieldNames>Result_compliance_tracker__c</fieldNames>
+        <info>&lt;p&gt;Obtenga la información básica del Candidato (Compañia, RUT y Razón Social) y Valide Requisitos.&lt;/p&gt;&lt;p&gt;Precalifique el Candidato y si considera que este no tiene inconvenientes pase a la fase de contacto y gestione una reunión con él para presentar los productos disponibles y ver si prospera el interés de este por invertir. &lt;/p&gt;</info>
+        <picklistValueName>Precalificación</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Lead_Inversiones_AP_Persona_Jur_dica</recordTypeName>
+</PathAssistant>

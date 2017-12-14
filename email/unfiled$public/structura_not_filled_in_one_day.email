@@ -1,0 +1,4 @@
+Informamos que el campo Estructura en el ítem de Oportunidad de la Oportunidad {!Opportunity.Name} del ejecutivo {!Opportunity.OwnerFullName}, no ha sido llenado en 1 día desde que se creó.<br>
+<br>
+Para acceder al item use el Link:
+{!OpportunityLineItem.Link}

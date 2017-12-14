@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Aviso de creacion de cliente con reparos para Proseso de persona natural Candidato</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BICE</letterhead>
+    <name>Aviso de creación de cliente con reparos</name>
+    <style>freeForm</style>
+    <subject>Aviso de creacion de Cliente  con reparos para Candicato {!Lead.Name}</subject>
+    <textOnly>Se le comunica que el candidato {!Lead.Name} no ha sido creado por los siguientes reparos:
+
+{!Lead.Observation_Customer_Area__c}
+
+Para ver más detalles, haga clic en el link: {!Lead.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

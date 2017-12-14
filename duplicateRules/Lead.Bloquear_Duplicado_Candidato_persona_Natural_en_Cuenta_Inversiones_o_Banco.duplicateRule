@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DuplicateRule xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionOnInsert>Block</actionOnInsert>
+    <actionOnUpdate>Block</actionOnUpdate>
+    <alertText>El Lead que está creando ya existe como Cliente de en Salesforce. Búsquelo y cree la oportunidad directamente.</alertText>
+    <description>Al crear un Candidato persona natural de Inversiones o Banco busca y bloquea si ya existe en Cuentas con Ejecutivo de Inversiones o Banco respectivamente.</description>
+    <duplicateRuleFilter xsi:nil="true"/>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>PersonAccount</matchRuleSObjectType>
+        <matchingRule>Duplicado_en_Cuenta_Persona_del_Banco_o_de_Inversiones3</matchingRule>
+        <objectMapping>
+            <inputObject>Lead</inputObject>
+            <mappingFields>
+                <inputField>Apellido_materno__c</inputField>
+                <outputField>Apellido_materno__pc</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>LastName</inputField>
+                <outputField>LastName</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>Email</inputField>
+                <outputField>PersonEmail</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>Email_Comercial_Inv__c</inputField>
+                <outputField>Email_Comercial_Inv__pc</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>Email_Personal_Inv__c</inputField>
+                <outputField>Email_Personal_Inv__pc</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>FirstName</inputField>
+                <outputField>FirstName</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>RUT__c</inputField>
+                <outputField>RUT__c</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>Registro_Banco__c</inputField>
+                <outputField>Tiene_Ejecutivo_de_Cuenta__c</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>Registro_Inversiones__c</inputField>
+                <outputField>Tiene_Ejecutivo_de_Inversiones__c</outputField>
+            </mappingFields>
+            <outputObject>PersonAccount</outputObject>
+        </objectMapping>
+    </duplicateRuleMatchRules>
+    <isActive>true</isActive>
+    <masterLabel>Bloquear Duplicado Candidato persona Natural en Cuenta Inversiones o Banco</masterLabel>
+    <securityOption>BypassSharingRules</securityOption>
+    <sortOrder>3</sortOrder>
+</DuplicateRule>

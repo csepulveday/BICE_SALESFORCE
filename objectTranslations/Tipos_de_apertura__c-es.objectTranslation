@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Tipos de apertura</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Tipos de apertura</value>
+    </caseValues>
+    <fields>
+        <label><!-- Id Tipo de registro --></label>
+        <name>Id_Tipo_de_registro__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Apertura --></label>
+        <name>Tipo_de_Apertura__c</name>
+    </fields>
+    <gender>Neuter</gender>
+</CustomObjectTranslation>

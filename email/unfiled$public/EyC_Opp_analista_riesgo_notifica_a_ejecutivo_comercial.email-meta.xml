@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BICE</letterhead>
+    <name>EyC - Opp - analista riesgo notifica a ejecutivo comercial</name>
+    <style>formalLetter</style>
+    <subject>Creación informe analista riesgo completa</subject>
+    <textOnly>El analista de riesgo ha concluido el informe para la gestión de la oportunidad {!Opportunity.Name}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Llenar el campo Estrutura en Oportunidad en 1 dia</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Estructura no llenada en 1 dia</name>
+    <style>none</style>
+    <subject>Llenar el campo Estructura en Oportunidad {!Opportunity.Name}</subject>
+    <textOnly>Informamos que el campo Estructura en el ítem de Oportunidad de la Oportunidad {!Opportunity.Name} del ejecutivo {!Opportunity.OwnerFullName}, no ha sido llenado en 1 día desde que se creó.  
+
+Para acceder al item use el Link: {!OpportunityLineItem.Link}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

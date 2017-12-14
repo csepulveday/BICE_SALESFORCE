@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Candidatos Inversiones AP (P Natural)</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;1. Tome contacto con el cliente, presente las alternativas de inversión del banco y averigüe si tiene interés en invertir&lt;/p&gt;&lt;p&gt;1.1. Si no tiene interés, seleccione &amp;quot;No califica&amp;quot; y siga las instrucciones en pantalla. &lt;/p&gt;&lt;p&gt;1.2. Si tiene interés reúnase las veces que sea necesaria para determinar las necesidades del cliente&lt;/p&gt;&lt;p&gt;2. Seleccione Detalle y complemente la información que obtenga: tipo de productos, plazos, horizonte, perfil de inversión, Riesgo del inversionista (Perfil del inversionista), entre otros. &lt;/p&gt;&lt;p&gt;3. Convierta el Candidato en Oportunidad, prepare y presente una propuesta.&lt;/p&gt;</info>
+        <picklistValueName>Contacto</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Motivo_rechazo__c</fieldNames>
+        <fieldNames>Otro_motivo_de_rechazo__c</fieldNames>
+        <info>&lt;p&gt;1. Presione &amp;quot;Modificar&amp;quot;&lt;/p&gt;&lt;p&gt;2. Seleccione el Motivo de rechazo más adecuado&lt;/p&gt;&lt;p&gt;3. Guarde el registro&lt;/p&gt;</info>
+        <picklistValueName>No califica</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Name</fieldNames>
+        <fieldNames>Apellido_materno__c</fieldNames>
+        <fieldNames>RUT__c</fieldNames>
+        <fieldNames>Nationality__c</fieldNames>
+        <fieldNames>Result_compliance_tracker__c</fieldNames>
+        <info>&lt;p&gt;&lt;b&gt;&lt;i&gt;&lt;u&gt;Caso en que Ejecutivo crea el Candidato&lt;/u&gt;&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Ejecutivo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;1. Complete la información del Candidato, Verifique requisitos y Solicite aprobación del Subgerente para continuar&lt;/p&gt;&lt;p&gt;&lt;b&gt;Subgerente&lt;/b&gt;&lt;/p&gt;&lt;p&gt;2 Apruebe o rechace el Candidato&lt;/p&gt;&lt;p&gt;3. Si lo aprueba, puede reasignarlo a otro ejecutivo.&lt;/p&gt;&lt;p&gt;&lt;b&gt;&lt;i&gt;&lt;u&gt;Caso Candidato creado por Subgerente:&lt;/u&gt;&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Subgerente&lt;/b&gt;&lt;/p&gt;&lt;p&gt;1. Complete la información del Candidato y Valide Requisitos.&lt;/p&gt;&lt;p&gt;2. Según resultados determine si es buen o mal candidato. Si es mal candidato descártelo e indique motivos. Si es bueno, cambie a Etapa Contacto y reasígnelo a un ejecutivo para que continúe gestionando al cliente potencial.&lt;/p&gt;</info>
+        <picklistValueName>Precalificación</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Lead_Inversiones_AP_Persona_Natural</recordTypeName>
+</PathAssistant>

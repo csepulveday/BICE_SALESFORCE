@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>New Business</fullName>
+        <default>false</default>
+        <label>New Business</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Venta Corta</fullName>
+        <default>false</default>
+        <label>Venta Corta</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Multiproducts</fullName>
+        <default>false</default>
+        <label>Multiproducts</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Monoproducto</fullName>
+        <default>false</default>
+        <label>Monoproducto</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,52 @@
+.THIS .BackColor{
+    background-color: #f7f9fb;  
+}
+.THIS .Labels{
+    font-family: 'Open Sans', arial;
+	font-size: 16px;
+	color: #000000;
+}
+.THIS .Campos{
+    font-weight: normal;
+	font-size: 18px;
+    text-align: right;
+	vertical-align: top;
+    color: #6a6a6a !important;
+}
+.THIS .texto-gris {
+    color: #6a6a6a !important;
+}
+.THIS .align-center {
+	text-align: center;
+}
+.THIS .bold18 {
+	font-weight: bold;
+	font-size: 18px !important;
+}
+.THIS .bold26 {
+	font-weight: bold;
+	font-size: 26px !important;
+}
+.THIS .celda50{
+	width:50%;
+}
+.THIS .MargenTabla{   
+    margin-top: initial;
+}
+
+.THIS .tipo.left-top {
+	text-align: left;
+	vertical-align: top;
+}
+
+.THIS .tipo.caja_inferior {
+	padding-right: 30px;
+	width: 240px;
+	height: 200px;
+}
+
+.THIS .tipo.elemento {
+	display: inline-block;
+	*zoom:1;
+ 	*display:inline;
+}

@@ -1,0 +1,6 @@
+Estimado se le comunica que el Perfil del Lead {!Lead.FirstName} {!Lead.LastName} ha sido rechazado.
+<br>
+<br>
+Para ver el detalle del registro haga click en el siguiente vinculo:
+<br>
+{!Lead.Link}

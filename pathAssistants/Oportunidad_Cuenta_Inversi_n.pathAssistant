@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>Oportunidad Cuenta Inversión</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Enrolamiento_Ok__c</fieldNames>
+        <fieldNames>KYC_Ingresado__c</fieldNames>
+        <fieldNames>KYC_Aprobado__c</fieldNames>
+        <fieldNames>Inv_RequiresCreditManagement__c</fieldNames>
+        <fieldNames>Aprobado_Comite__c</fieldNames>
+        <info>&lt;p&gt;1) Si requiere enrolamiento&lt;/p&gt;&lt;p&gt;1.1) Prepare documentos BI&lt;/p&gt;&lt;p&gt;1.2) Obtenga escrituras y gestionar estudio de poderes legales (sociedades no clientes Banco)&lt;/p&gt;&lt;p&gt;1.3) Obtenga Firma de contratos necesarios&lt;/p&gt;&lt;p&gt;1.4) Envie a área de clientes para visado&lt;/p&gt;&lt;p&gt;1.5) Cuando enrrolamiento esté ok marque &amp;quot;Enrrolamiento Ok&amp;quot; y guarde registro&lt;/p&gt;&lt;p&gt;2)  Prepare KYC. Cuando lo haga marque &amp;quot;KYC ingresado&amp;quot; y guarde registro&lt;/p&gt;&lt;p&gt;3) Una vez aprobado el KYC marque &amp;quot;KYC aprobado&amp;quot; y guarde registro&lt;/p&gt;&lt;p&gt;4) Si tipo de inversión es Simultánea, Forward o Venta Corta, verifique e indique si requiere gestionar línea de crédito o no, guarde registro y siga instrucciones en pantalla&lt;/p&gt;&lt;p&gt;5) Gestione línea de crédito (RIB, MAC). Marque &amp;quot;Sí&amp;quot; en &amp;quot;Aprobado Comité&amp;quot; cuando sea favorable. Marque No cuando tenga reparos y si es definitivo marque &amp;quot;Cierre Perdida&amp;quot;&lt;/p&gt;</info>
+        <picklistValueName>Calificación</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Motivo_rechazo__c</fieldNames>
+        <fieldNames>Otro_motivo__c</fieldNames>
+        <info>&lt;p&gt;1) Presione Modificar&lt;/p&gt;&lt;p&gt;2) Seleccione &amp;quot;Motivo de Rechazo&amp;quot; más adecuado&amp;quot; (&amp;quot;No cumple requisitos&amp;quot;, &amp;quot;Sin interés&amp;quot;, etc...)&lt;/p&gt;&lt;p&gt;3) Presione &amp;quot;Guardar&amp;quot;&lt;/p&gt;</info>
+        <picklistValueName>Cerrada Ganada</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>INV_InvestmentType__c</fieldNames>
+        <fieldNames>INV_ProposalDelivered__c</fieldNames>
+        <fieldNames>Acepta_propuesta__c</fieldNames>
+        <fieldNames>INV_ProposalRequired__c</fieldNames>
+        <info>&lt;p&gt;1) Cree la propuesta(*) en sistema Torre&lt;/p&gt;&lt;p&gt;2) Indique el &amp;quot;Tipo de inversión&amp;quot; involucrada en la propuesta.&lt;/p&gt;&lt;p&gt;3) Entregue propuesta y marque &amp;quot;Propuesta entregada&amp;quot;.&lt;/p&gt;&lt;p&gt;4) Si cliente acepta la propuesta marque &amp;quot;Sí&amp;quot; en &amp;quot;Acepta propuesta?&amp;quot;. Si no, marque &amp;quot;No&amp;quot;. En ambos casos guarde el registro y siga instrucciones en pantalla.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Nota: (*) Si el tipo de inversión no requiere propuesta, desmarque &amp;quot;Requiere propuesta&amp;quot;, guarde el registro y siga instrucciones en pantalla.&lt;/p&gt;&lt;p&gt; &lt;/p&gt;</info>
+        <picklistValueName>Contacto</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>INV_InvestmentMade__c</fieldNames>
+        <info>&lt;p&gt;1) Gestione y coordine la inversión a realizar en las plataformas respectivas.&lt;/p&gt;&lt;p&gt;2) Realizada la Inversión marque &amp;quot;Inversión realizada&amp;quot; y guarde el registro.&lt;/p&gt;</info>
+        <picklistValueName>Otorgamiento</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Cuenta_de_Inversion</recordTypeName>
+</PathAssistant>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>Oportunidad BIA</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>EnviadoComite__c</fieldNames>
+        <fieldNames>Resultado_Comite__c</fieldNames>
+        <fieldNames>Motivo_rechazo__c</fieldNames>
+        <info>&lt;p&gt;&lt;b&gt;Ejecutivo de Cuenta:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;1. Revise ingrese y si es necesario actualice información para KYC, CIF, RIB y MAC&lt;/p&gt;&lt;p&gt;2. Digitalice la información correspondiente que sea necesaria (recuerde ingresar garantías BIA de acuerdo a lo informado en la solicitud de productos)&lt;/p&gt;&lt;p&gt;3. Solicite Aprobación a Comité electrónico. Al hacerlo marque &amp;quot;Enviado a Comité&amp;quot;.&lt;/p&gt;&lt;p&gt;4. Esperar pronunciamiento del Comité&lt;/p&gt;&lt;p&gt;5. Informar resultado de Comité al Cliente y actualice &amp;quot;Resultado de Comité&amp;quot;.&lt;/p&gt;&lt;p&gt;6. Si el pronunciamiento tiene reparos. Subsánelos y espere pronunciamiento definitivo.&lt;/p&gt;&lt;p&gt;7. Si el pronunciamiento es negativo, indique el motivo del rechazo y guarde el registro.&lt;/p&gt;&lt;p&gt;8. Ingreso de solicitud de apertura a BPM y control documental&lt;/p&gt;</info>
+        <picklistValueName>Calificación</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Motivo_rechazo__c</fieldNames>
+        <fieldNames>Otro_motivo__c</fieldNames>
+        <info>&lt;p&gt;1) Presione Modificar&lt;/p&gt;&lt;p&gt;2) Seleccione &amp;quot;Motivo de Rechazo&amp;quot; más adecuado&amp;quot; (&amp;quot;No cumple requisitos&amp;quot;, &amp;quot;Sin interés&amp;quot;, etc...)&lt;/p&gt;&lt;p&gt;3) Presione &amp;quot;Guardar&amp;quot;&lt;/p&gt;</info>
+        <picklistValueName>Cerrada Perdida</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Ejecutivo_Inversiones__c</fieldNames>
+        <fieldNames>Ejecutivo_Cuenta__c</fieldNames>
+        <fieldNames>Tipo_BIA__c</fieldNames>
+        <fieldNames>Inv_PropuestaCreada__c</fieldNames>
+        <fieldNames>Acepta_propuesta__c</fieldNames>
+        <info>&lt;p&gt;1. Completar Ejecutivo de Inversiones o Ejecutivo Cuenta según corresponda (sujeto a confirmación)&lt;/p&gt;&lt;p&gt;2. Coordinar la reunión con cliente y ambos ejecutivos&lt;/p&gt;&lt;p&gt;&lt;b&gt;Ejecutivo Inversión:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;2.1. Crear Propuesta de inversión de acuerdo al perfil de inversionista percibido y seleccionar &amp;quot;Propuesta creada&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Ejecutivo Cuenta:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;2.2. Identificar si es cliente Banco o no. Si lo es y score comportamiento no está entre A1 y A12 =&amp;gt; Recordar actualizar Estado de Situación (para MAC)&lt;/p&gt;&lt;p&gt;2.3. Si no es cliente Banco, cree el prospecto, solicite la creación a Área Cliente y conviértalo.&lt;/p&gt;&lt;p&gt;3. Recordar asistir a la reunión con propuesta y set de documentos a firmar:&lt;/p&gt;&lt;p&gt;- Solicitud producto BIA, Fotocopia CI, formulario Fatca, Tarjetón con foto, huella y firma, Declaración Art.85, Estado de Situación.&lt;/p&gt;&lt;p&gt;- Formulario de ingreso de activos a BIA.&lt;/p&gt;&lt;p&gt;4. Terminada la reunión indicar si Cliente aceptó la Propuesta o no y guardar el registro.&lt;/p&gt;</info>
+        <picklistValueName>Contacto</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Inv_Welcome_pack_disponible__c</fieldNames>
+        <fieldNames>Inv_Welcome_pack_entregado__c</fieldNames>
+        <fieldNames>Inv_Linea_de_sobregiro_abierta__c</fieldNames>
+        <fieldNames>Inv_GPI_habilitado__c</fieldNames>
+        <fieldNames>Inv_Ingreso_de_activos_listo__c</fieldNames>
+        <info>&lt;p&gt;&lt;b&gt;Operaciones:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;1. Marcar &amp;quot;Welcome pack disponible&amp;quot; para retiro&lt;/p&gt;&lt;p&gt;&lt;b&gt;Ejecutivo de Cuenta:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;2. Marcar &amp;quot;Welcome pack entregado&amp;quot; al entregar contratos&lt;/p&gt;&lt;p&gt;firmados a Operaciones&lt;/p&gt;&lt;p&gt;&lt;b&gt;Operaciones:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;3. Marque &amp;quot;Línea de crédito BIA abierta&amp;quot; para informar apertura.&lt;/p&gt;&lt;p&gt;4. Gestionar prenda y habilitar GPI. Una vez realizado marcar &amp;quot;GPI habilitado&amp;quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Ejecutivo Inversiones:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;5. En &amp;quot;Formulario ingreso de activos&amp;quot; seleccionar &amp;quot;Enviado&amp;quot; (recordar seguir las etapas de acuerdo al tipo de instrumento)&lt;/p&gt;&lt;p&gt;&lt;b&gt;Operaciones:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;6. En &amp;quot;Formulario ingreso de activos&amp;quot; seleccionar &amp;quot;Recepción conforme&amp;quot; o &amp;quot;Reparos&amp;quot; según sea el caso&lt;/p&gt;&lt;p&gt;&lt;b&gt;Ejecutivo Inversiones:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;7. Realizada la inversión (AUM en cartera declarada con éxito en la apertura) marca &amp;quot;Cierre ganada&amp;quot;.&lt;/p&gt;</info>
+        <picklistValueName>Otorgamiento</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>BIA</recordTypeName>
+</PathAssistant>

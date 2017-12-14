@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BICE</letterhead>
+    <name>Resultado proceso aprobación Gerente Area Clientes</name>
+    <style>freeForm</style>
+    <subject>Resultado proceso de aprobación de {!Lead.Name}</subject>
+    <textOnly>El resultado del proceso de aprobación del lead: {!Lead.Name}, Rut:{!Lead.RUT__c} ha sido: {!Lead.Status_approval_manager_customer_area__c}
+
+Para acceder al registro y ver mas detalles, haga clic en el siguiente vínculo:
+{!Lead.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

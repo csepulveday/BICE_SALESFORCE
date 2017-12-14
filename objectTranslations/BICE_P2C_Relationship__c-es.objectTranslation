@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>BICE P2C Relationship</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>BICE P2C Relationships</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- BICE P2C Relationships --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- PersonAccount --></label>
+        <name>PersonAccount__c</name>
+        <relationshipLabel><!-- BICE P2C Relationships --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Relationship Type --></label>
+        <name>Relationship_Type__c</name>
+        <picklistValues>
+            <masterLabel>Household Dependent</masterLabel>
+            <translation><!-- Household Dependent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner Financial Advisor</masterLabel>
+            <translation><!-- Partner Financial Advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Relative</masterLabel>
+            <translation><!-- Relative --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Same Person</masterLabel>
+            <translation><!-- Same Person --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spouse</masterLabel>
+            <translation><!-- Spouse --></translation>
+        </picklistValues>
+    </fields>
+    <gender>Neuter</gender>
+</CustomObjectTranslation>

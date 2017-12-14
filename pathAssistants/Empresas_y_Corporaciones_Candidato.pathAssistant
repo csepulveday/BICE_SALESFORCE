@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Empresas y Corporaciones Candidato</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>EEFF_o_Flujo_de_caja__c</fieldNames>
+        <fieldNames>Breve_rese_a_de_la_empresa_o_Memoria__c</fieldNames>
+        <fieldNames>Informacion_de_la_Propiedad_de_empresa__c</fieldNames>
+        <fieldNames>Requerimiento_comercial_de_la_empresa_p__c</fieldNames>
+        <info>&lt;p&gt;Ejecutivo Comercial: agende reunión y visite al cliente. Luego:&lt;/p&gt;&lt;p&gt;-Indique si posee el EEFF o Flujo de caja.&lt;/p&gt;&lt;p&gt;-Ingrese breve reseña de la empresa o memoria e información de la propiedad de empresa.&lt;/p&gt;&lt;p&gt;-Indique el requerimiento comercial de la empresa (una o ambas opciones).&lt;/p&gt;&lt;p&gt;-Adjunte EEFF sólo para los productos de crédito (comex, leasing, créditos, factoring y productos mesa de dinero).&lt;/p&gt;&lt;p&gt;Para añadir más datos complete sección &amp;quot;Datos extra etapa Antecedentes&amp;quot;. &lt;/p&gt;&lt;p&gt;Para finalizar, presione &amp;quot;Marcar etapa como completada&amp;quot;.&lt;/p&gt;</info>
+        <picklistValueName>Antecedentes</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;1. Presione &amp;quot;Modificar&amp;quot;&lt;/p&gt;&lt;p&gt;2. Seleccione el Motivo de rechazo más adecuado&lt;/p&gt;&lt;p&gt;3. Guarde el registro&lt;/p&gt;</info>
+        <picklistValueName>Califica</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Result_compliance_tracker__c</fieldNames>
+        <fieldNames>Campos_para_creaci_n_clientes_OK__c</fieldNames>
+        <fieldNames>Customer_Creation__c</fieldNames>
+        <fieldNames>Observation_Customer_Area__c</fieldNames>
+        <info>&lt;p&gt;Ejecutivo comercial:&lt;/p&gt;&lt;p&gt;-Realice consulta de candidato con botón &amp;quot;Validar requisitos&amp;quot;.&lt;/p&gt;&lt;p&gt;-Completados los campos, debe adjuntar UAF, FATCA, CRS y Fotocopia RUT, valide presionando &amp;quot;Campos para creación clientes ok&amp;quot; en la sección &amp;quot;Datos extra para etapa: calificación&amp;quot; y observe resultado. Completada ésto, será enviado el candidato al área clientes para su creación.&lt;/p&gt;&lt;p&gt;Ejecutivo Área Clientes:&lt;/p&gt;&lt;p&gt;-Revise la información del candidato y si cumple los criterios, seleccione la opción &amp;quot;Crear cliente&amp;quot; en la esquina superior derecha.&lt;/p&gt;&lt;p&gt;Ejecutivo comercial:&lt;/p&gt;&lt;p&gt;Luego presione &amp;quot;Marcar Estado como completado&amp;quot;.&lt;/p&gt;&lt;p&gt;Recordatorio: los productos que requieren MAC son: Comex, Crédito, Leasing, Factoring y Productos de mesa de dinero.&lt;/p&gt;</info>
+        <picklistValueName>Calificación</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Bank_account_created__c</fieldNames>
+        <fieldNames>Resultado_comit__c</fieldNames>
+        <fieldNames>MAC_created_ammount__c</fieldNames>
+        <fieldNames>Fecha_de_vencimiento_MAC__c</fieldNames>
+        <info>&lt;p&gt;&lt;b&gt;En esta etapa, sólo debe:&lt;/b&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Si el candidato solicitó cuenta corriente, gestione la apertura de ésta en BPM y una vez completada la tarea, marque el campo &amp;quot;creación cuenta corriente&amp;quot;.&lt;/li&gt;&lt;li&gt;Si el candidato ha solicitado producto de crédito que requiera MAC, indique el resultado del comité en el campo respectivo. Además, informe la fecha de vencimiento.&lt;/li&gt;&lt;li&gt;Luego, debe presionar Convertir.&lt;/li&gt;&lt;/ol&gt;</info>
+        <picklistValueName>Cliente activado</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Motivo_rechazo__c</fieldNames>
+        <fieldNames>Otro_motivo_de_rechazo__c</fieldNames>
+        <info>&lt;p&gt;Indique los motivos de rechazo.&lt;/p&gt;</info>
+        <picklistValueName>No califica</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>RUT__c</fieldNames>
+        <fieldNames>Boletin_Comercial__c</fieldNames>
+        <fieldNames>Deuda_Leasing_Factoring__c</fieldNames>
+        <fieldNames>Deuda_SBIF__c</fieldNames>
+        <fieldNames>Actividad_Economica_SBIF__c</fieldNames>
+        <info>&lt;p&gt;En esta etapa, debe completar los campos&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Rut.&lt;/li&gt;&lt;li&gt;Boletín comercial.&lt;/li&gt;&lt;li&gt;Mora Banco/Leasing/Factoring.&lt;/li&gt;&lt;li&gt;Deuda SBIF.&lt;/li&gt;&lt;li&gt;Actividad económica.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;En caso de tener antecedentes en el boletín comercial, deuda leasing/factoring o deuda en SBIF, debe indicarlos en el campo &amp;quot;Detalles deuda&amp;quot;.&lt;/p&gt;&lt;p&gt;Si necesita incluir más información, revise la sección &amp;quot;Datos extra para etapa: Precalificación&amp;quot;.&lt;/p&gt;&lt;p&gt;Si la información comercial indica que el candidato no cumple, debe seleccionar No Califica e indicar el motivo.&lt;/p&gt;</info>
+        <picklistValueName>Precalificación</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Lead_Empresas_y_Corporaciones</recordTypeName>
+</PathAssistant>

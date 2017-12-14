@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Candidato Inversiones Persona Natural</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Perfil_de_riesgo_percibido__c</fieldNames>
+        <fieldNames>Marque_si_sera_produto_BIA__c</fieldNames>
+        <fieldNames>Result_compliance_tracker__c</fieldNames>
+        <info>&lt;p&gt;1. Contacte al candidato para ofrecer los productos de inversión y determinar si está interesado. Si no lo está, seleccione &amp;quot;No califica&amp;quot; y siga las instrucciones en pantalla.&lt;/p&gt;&lt;p&gt;2. Si le interesa, determine el &amp;quot;Perfil de inversionista percibido&amp;quot; y en Detalles, complete toda la información obtenida&lt;/p&gt;&lt;p&gt;3. Si no lo ha podido comprobar antes y en esta etapa obtenga el apellido materno, RUT y Nacionalidad, ingrésela y compruebe requisitos presionando botón &amp;quot;Validar requisitos&amp;quot;.&lt;/p&gt;&lt;p&gt;4. Si cliente está interesado en una propuesta de producto BIA, Modifique el registro y marque casilla &amp;quot;Ofrecer producto BIA&amp;quot; o deje sin marcar si está interesado en otro tipo de propuesta de inversión.&lt;/p&gt;&lt;p&gt;5. Convierta el Candidato presionando &amp;quot;Convertir&amp;quot; e indique un nombre para la oportunidad de negocio que se creará.&lt;/p&gt;</info>
+        <picklistValueName>Contacto</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Motivo_rechazo__c</fieldNames>
+        <fieldNames>Otro_motivo_de_rechazo__c</fieldNames>
+        <info>&lt;p&gt;1) Presione Modificar&lt;/p&gt;&lt;p&gt;2) Seleccione &amp;quot;Motivo de Rechazo&amp;quot; más adecuado&amp;quot; (&amp;quot;No cumple requiscitos&amp;quot;, &amp;quot;Sin interés&amp;quot;, etc...)&lt;/p&gt;&lt;p&gt;3) Presione &amp;quot;Guardar&amp;quot;&lt;/p&gt;</info>
+        <picklistValueName>No califica</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Name</fieldNames>
+        <fieldNames>Apellido_materno__c</fieldNames>
+        <fieldNames>RUT__c</fieldNames>
+        <fieldNames>Nationality__c</fieldNames>
+        <fieldNames>Result_compliance_tracker__c</fieldNames>
+        <info>&lt;p&gt;1. Si cuenta con: nombre completo, RUT y Nacionalidad del candidato verifique requisitos presionando Botón &amp;quot;Validar requisitos&amp;quot;. Confirme resultados. Si no son favorables seleccione &amp;quot;No califica&amp;quot; y siga las instrucciones en pantalla.&lt;/p&gt;&lt;p&gt;2. Si resultados son favorables o no cuenta con la información indicada para validar requisitos, avance a la etapa de &amp;quot;Contacto&amp;quot;. Para ello seleccione &amp;quot;Contacto&amp;quot; y luego seleccione &amp;quot;Marcar como Estado actual&amp;quot;.&lt;/p&gt;</info>
+        <picklistValueName>Precalificación</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Lead_Inversiones</recordTypeName>
+</PathAssistant>

@@ -1,0 +1,9 @@
+<apex:page controller="BICE_IntOnline_RedirectController">
+    <script>
+        setTimeout(Redirect, 20000);
+        function Redirect(){
+            window.location.href = '{!urlToRedirect}';
+        }
+    </script>
+    {!msg}
+</apex:page>

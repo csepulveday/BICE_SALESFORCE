@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Rechazo de perfil de lead</name>
+    <style>none</style>
+    <subject>Rechazo de perfil de lead</subject>
+    <textOnly>Ejecutivo de venta {!Lead.OwnerFullName} solicita aprobación del perfil del lead: {!Lead.Name}, Rut:{!Lead.RUT__c}.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

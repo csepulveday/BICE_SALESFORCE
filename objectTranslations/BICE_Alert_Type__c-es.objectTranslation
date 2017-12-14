@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>BICE Alert Type</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>BICE Alert types</value>
+    </caseValues>
+    <fields>
+        <label><!-- Create Case --></label>
+        <name>Create_Case__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create_Opportunity --></label>
+        <name>Create_Opportunity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create_Post --></label>
+        <name>Create_Post__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create_Task --></label>
+        <name>Create_Task__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <gender>Masculine</gender>
+</CustomObjectTranslation>

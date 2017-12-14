@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+    <html> 
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <title>
+                Banco BICE
+            </title>
+        </head>
+        <body align="center">
+            <div align="center" style="margin:0 auto;">
+            
+            <br />
+                <br />
+                <table width="714">
+                    <tr>
+                        <td align="right" style="padding-left:46px; padding-right:46px; font-family:arial; color:#5b5b5e; font-size:16px; text-align:right;">
+                    
+                            <img src="http://multimedia.bice.cl/mailings/activos/logobice.jpg" />
+                        </td>
+                    </tr>
+                </table>
+                <table width="714">
+                    
+                    <tr>
+                        <td align="left" style="padding-left:46px; padding-right:46px; font-family:arial; color:#5b5b5e; font-size:16px; text-align:justify;">
+                            <br />
+                            <br />
+                            {!Lead.Salutation} {!Lead.Name}:
+                                <br />
+                                <br />
+                            </span><span style="font-size:22px; color:#306095;">
+							<strong>Le invitamos a ser parte de Banco BICE</strong><br />y disfrutar de la mejor experiencia de servicio
+                        </span><br />
+                            <br />
+                        </td>
+                    </tr>
+                </table>
+			<img src="http://multimedia.bice.cl/bck082016/profin_menor.jpg" width="714" height="168" />
+			<br />
+                <br />
+                <table width="714">
+                    <tr>
+                        <td align="left" style="padding-left:46px; padding-right:46px; font-family:arial; color:#5b5b5e; font-size:16px; text-align:justify;">
+						En Banco BICE encontrará un servicio superior:
+						  <br>
+						  <br />
+						<br />
+						
+						</td>
+					</tr>
+                </table>
+              <img src="http://multimedia.bice.cl/bck082016/profin_ico_7.jpg" width="477" height="74" />
+			  <table width="714">
+                	<tr>
+                        <td align="left" style="padding-left:46px; padding-right:46px; font-family:arial; color:#5b5b5e; font-size:16px; text-align:justify;">
+						<br>
+						<br>
+						Además, tenemos una oferta de productos y servicios para hacerle la vida más simple: <br />
+						<br />
+						
+					  </td>
+					</tr>
+                    <tr>
+					 <td style="font-family:arial; font-size:16px; color:#5b5b5e; padding-left:20px; padding-right:20px;" align="center">
+					   <table width="100%">	
+                        	<tr>
+                           	  <td width="10%" align="center" valign="top" style="padding:10px;">
+                                	<img src="http://multimedia.bice.cl/bck082016/profin_ico_1.jpg" />
+                                </td>
+                              <td style="font-family:arial; color:#3B342E; font-size:16px; text-align:left; padding-left:20px; padding-top:10px;" width="90%" valign="middle">
+                                Para que nunca 
+								pague de más, su <strong>Cuenta Corriente</strong> tiene una <strong>Línea de Sobregiro integrada,</strong>  que una vez que 
+								tenga fondos disponibles, se abona automáticamente.
+                              </td>
+                            </tr>
+                            <tr>
+                           	  <td width="10%" align="center" valign="top" style="padding:10px;">
+                                	<img src="http://multimedia.bice.cl/bck082016/profin_ico_2.jpg" />
+                                </td>
+                                <td style="font-family:arial; color:#3B342E; font-size:16px; text-align:left; padding-left:20px; padding-top:10px;" width="90%" valign="middle">
+                                    Acumule <strong>Dólares BICE</strong>  usando 
+									sus <strong>Tarjetas de Crédito Visa Banco BICE</strong>  y 
+									canjéelos, parcial o totalmente, en las compras de cualquier aerolínea, hoteles, Seguros BICE, convenios de Beneficios BICE y otros servicios turísticos.
+                              </td>
+                            </tr>
+                            <tr>
+                           	  <td width="10%" align="center" valign="top" style="padding:10px;">
+                                	<img src="http://multimedia.bice.cl/bck082016/profin_ico_3.jpg" />
+                                </td>
+                                <td style="font-family:arial; color:#3B342E; font-size:16px; text-align:left; padding-left:20px; padding-top:10px;" width="90%" valign="middle">
+                                    Tenemos convenientes condiciones en tasas, plazos, cuotas y la flexibilidad que necesita para concretar 
+									sus ideas y proyectos, con <strong>Préstamos Personales, Créditos Hipotecarios y Crédito Automotriz BICE.</strong>
+							  </td>
+                            </tr>
+                        </table>
+                <br />
+                <br>
+                <br />
+                <table width="100%">
+							<tr>
+                            
+                            	
+								<td width="33%" align="center" valign="middle" style="text-align:center; font-family:arial; color:#306095; font-size:16px; padding:0, 20px, 20px, 0;"><img src="http://multimedia.bice.cl/bck082016/profin_ico_4.jpg" width="25" height="23" /></td>
+                                <td width="33%" align="center" valign="middle" style="text-align:center; font-family:arial; color:#306095; font-size:16px; padding:0, 20px, 20px, 0;"><img src="http://multimedia.bice.cl/bck082016/profin_ico_5.jpg" width="42" height="33" /></td>
+                                <td width="33%" align="center" valign="middle" style="text-align:center; font-family:arial; color:#306095; font-size:16px; padding:0, 20px, 20px, 0;"><img src="http://multimedia.bice.cl/bck082016/profin_ico_6.jpg" width="19" height="31";/>
+							  </td>
+				  </tr>
+                            <tr>
+                            
+                            	
+								<td width="33%" valign="top" style="text-align:center; font-family:arial; color:#306095; font-size:16px; padding:0, 20px, 20px, 0;"><span style="font-size:18px;"><b>Beneficios BICE</b></span>  <br />
+                                  <br />
+                                  Disfrute de una experiencia nueva todos los días con los convenios que tenemos pensados para 
+								usted.<br />
+                                <br />
+							  </td>
+                                <td width="33%" valign="top" style="text-align:center; font-family:arial; color:#306095; font-size:16px; padding:0, 20px, 20px, 0;"><span style="font-size:18px;"><b>Giro en Cajeros</b></span> <br />
+                                  <br />
+                                 RRetire hasta $400.000 diarios en nuestros cajeros automáticos BICE.<br />
+                                    <br />
+							  </td>
+                                <td width="33%" valign="top" style="text-align:center; font-family:arial; color:#306095; font-size:16px; padding:0, 20px, 20px, 0;">
+									
+                                    <span style="font-size:18px;"><b>App Banco BICE</b></span>
+                                    <br>
+                                    <br>
+                                    IIngrese a la aplicación con su huella y 
+									realice todas sus transacciones de manera más simple, rápida y segura.<br>
+                                    <br />
+							  </td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td align="left" style="padding-left:46px; padding-right:46px; font-family:arial; color:#5b5b5e; font-size:16px; text-align:justify;">
+                    	<br />
+                        <br />
+                    	En caso de querer más información, no 
+						dude en contactarme.<br />
+                        <br />
+                       
+					</td>
+				</tr>
+			</table>
+          	<table width="714">
+				<tr>
+					<td align="left" style="padding-left:46px; padding-right:46px; font-family:arial; color:#5b5b5e; font-size:16px; text-align:justify;">
+						Le saluda atentamente,<br />
+						<br />
+						<br />
+					</td>
+				</tr>
+				<tr>
+                        <td align="right" style="font-family:arial; color:#5b5b5e; font-size:16px; padding-right:50px; padding-left:0;" ><p><br />
+                         <b style="font-size:16px;">{!Lead.Account_Executive__c}</b>
+                          <br />
+                            bice<img src="http://multimedia.bice.cl/mailings/activos/punto_negro.png" />cl <br />
+                          <br />
+                          <br /><br />
+                          </p>
+                          <table width="100%">
+                              <tr>
+                                    <td align="left" style="padding-left:46px; width:100%;"><img  src="http://multimedia.bice.cl/mailings/activos/logoinversiones.jpg" width="248" height="19"  /></td>
+                                    <td align="right" style="width:100%;">
+                                        <img  src="http://multimedia.bice.cl/mailings/activos/logobice.jpg" width="190" height="19"  />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+              </tr>
+              </table>
+              <table width="714">
+                    <tr>
+                        <td style="padding-left:46px; padding-right:46px;">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding-left:46px; padding-right:46px; font-family:arial; color:#97999b; font-size:14px; text-align:justify;">
+                            
+                            <br />
+                            Infórmese sobre la garantía estatal de los depósitos en su banco o en www<img src="http://multimedia.bice.cl/mailings/activos/punto_gris.png" />sbif<img src="http://multimedia.bice.cl/mailings/activos/punto_gris.png" />cl
+							<br />
+							<br />
+							<br />
+					</td>
+				</tr>
+			</table>
+        </div>
+	</body>
+</html>

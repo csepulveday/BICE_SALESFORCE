@@ -1,0 +1,4 @@
+Candidato: {!Lead.Name} se le ha asignado.
+
+Para ver los detalles de este candidato en salesforce haga clic en el siguiente vínculo:
+{!Lead.Link}

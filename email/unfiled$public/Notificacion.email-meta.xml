@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BICE</letterhead>
+    <name>Notificación para retirar la Carpet Jefe Grupo</name>
+    <style>freeForm</style>
+    <subject>Notificación para retirar carpeta Candidato {!Lead.Name}</subject>
+    <textOnly>MAC creado y enviado, favor retirar carpeta del candidato {!Lead.Name}, para mas detalles haga click en el siguiente vínculo:{!Lead.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

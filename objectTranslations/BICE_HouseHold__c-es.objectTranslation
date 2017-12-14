@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>BICE HouseHold</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>BICE HouseHolds</value>
+    </caseValues>
+    <fields>
+        <label><!-- Id Cuenta Persona --></label>
+        <name>Id_Cuenta_Persona__c</name>
+    </fields>
+    <gender>Neuter</gender>
+</CustomObjectTranslation>

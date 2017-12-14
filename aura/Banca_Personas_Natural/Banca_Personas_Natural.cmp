@@ -1,0 +1,62 @@
+<aura:component controller="MyContactListController" implements="force:hasRecordId" >
+	<aura:handler name="init" value="{!this}" action="{!c.myAction}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.ActiveCampaings}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.ClientProducts}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.IconosProd}"/>
+    <aura:attribute name="contacts" type="Contact[]" />
+    <aura:attribute name="accountId" type="Id" />
+    <aura:attribute name="camps" type="Account[]" />
+    <aura:attribute name="ProdList" type="Account" />
+    <aura:attribute name="ICONFAM" type="Account" />
+    
+    
+    	<div class="slds-grid">
+              <table class="slds-table slds-table_cell-buffer">   
+                <thead class="">
+                    <tr>                     
+                        <th scope="col"><span class="slds-truncate elemento texto_titulo valigntop">Alertas</span></th>
+                        <th scope="col"><span class="slds-truncate elemento texto_titulo valigntop">Cluster</span></th>
+                        <th scope="col"><span class="slds-truncate elemento texto_titulo valigntop">Productos</span></th>
+                        <th scope="col">
+                          <span class="slds-truncate elemento texto_titulo valigntop">Margen Neto ($)</span>
+                        </th>
+                        <!--<th scope="col"><span class="slds-truncate">Fecha y Canal último contacto</span></th>-->
+                        <th scope="col"><span class="slds-truncate elemento texto_titulo valigntop">Alertas Banco</span></th>
+                        <th scope="col"><span class="slds-truncate elemento texto_titulo valigntop">Campañas Activas</span></th>
+                        <th scope="col"><span class="slds-truncate elemento texto_titulo valigntop">Score Comportamiento</span></th>
+                        <th scope="col"><span class="slds-truncate elemento texto_titulo valigntop">Segmento</span></th>
+                        <th scope="col"><span class="slds-truncate elemento texto_titulo valigntop">Ingreso Cliente</span></th>
+                        <th scope="col"><span class="slds-truncate elemento texto_titulo valigntop">Dólares BICE</span></th>
+                    </tr>
+                </thead>
+                <tbody>                   		                                                       
+                            <tr>
+                            <aura:iteration items="{!v.contacts}" var="contact">   
+                                <td class="center-middle bold26px texto-gris"><img src="/servlet/servlet.FileDownload?file=015410000026MiK" height="40" width="40" title="En Desarrollo"/></td>
+                                <td class="center-middle bold26px texto-gris">{!contact.Cluster__c}</td>
+                                <td class="bold14px texto-gris">                            
+                                      <ui:outputRichText value="{!v.ICONFAM}"/>                                   
+                                 </td>                                                                               
+                                 <td class="center-middle bold26px texto-gris">
+                                    <ui:outputNumber value="{!contact.MDR__c}" format=""/>
+                                     <ui:outputNumber value="{!contact.X360_view_Net_Profit_Group__c}" format=""/>                                    
+                                 </td>
+                                    <!--<td>{!contact.LastActivityDate} <br/> {!contact.Favorite_Channel__c}</td>-->
+                                <td class="center-middle bold26px texto-gris">
+                                    <ui:outputRichText value="{!contact.X360_View_Alertas_Banco__c}"/>
+                                </td>
+                                 <td class="center-middle bold26px texto-gris">
+                                   <aura:iteration items="{!v.camps}" var="camp">
+                                            {!camp} 
+                                   </aura:iteration>
+                                 </td>
+                                 <td class="center-middle bold26px texto-gris">{!contact.Clasificacion_de_Riesgo_SBIF__c}</td>
+                                 <td class="center-middle bold26px texto-gris">{!contact.Segmentation__c}</td>
+                                 <td class="center-middle bold26px texto-gris"><ui:outputDate value="{!contact.Cliente_desde__c}" format="DD/MM/YYYY"/></td>
+                        	   	 <td class="center-middle bold26px texto-gris"><ui:outputNumber aura:id="curr" value="{!contact.X360_View_Dolares_BICE__c}"/></td>	
+                                </aura:iteration>
+                            </tr>                    
+                </tbody>
+            </table>              
+          </div>     
+</aura:component>

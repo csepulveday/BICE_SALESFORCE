@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>BI - Asistente Comercial AA1</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>BI_Subgerente_Comercial_Administraci_n_de_Activos_1</parentRole>
+</Role>

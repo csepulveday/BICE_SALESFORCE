@@ -1,0 +1,10 @@
+{!Lead.OwnerFullName} solicita aprobación del perfil del lead:
+{!Lead.Name}, Rut:{!Lead.RUT__c}.
+
+<br>
+<br>
+Puede aprobar o rechazar esta solicitud de aprobación respondiendo este correo introduciendo APROBAR, APROBADO, SÍ o RECHAZAR, RECHAZADO o NO(con tilde si corresponde) en la primera linea. 
+<br>
+O si lo prefiere, para acceder al registro, haga clic en el siguiente vínculo:
+<br>
+{!Lead.Link}

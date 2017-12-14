@@ -1,0 +1,74 @@
+<aura:component controller="MyContactListController" implements="force:hasRecordId">
+	<aura:handler name="init" action="{!c.myAction}" value="{!this}" />
+    <aura:handler name="init" action="{!c.NumCases}" value="{!this}"/>
+	<aura:handler name="init" action="{!c.Activecampaigns}" value="{!this}"/>
+    <aura:handler name="init" action="{!c.LastContactChannel}" value="{!this}"/>
+    <aura:handler name="init" action="{!c.ClientProducts}" value="{!this}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.IconosProd}"/>
+    <!-- <aura:handler name="init" action="{!c.Alertas}" value="{!this}"/> -->
+    
+    <aura:attribute name="ProdList" type="Account" />
+    <aura:attribute name="contacts" type="Contact[]" />
+    <aura:attribute name="accountId" type="Id" />
+    <aura:attribute name="CountCases" type="Cases" />
+    <aura:attribute name="camps" type="Account"/>
+    <aura:attribute name="VarLastContact" type="String"/>
+    <aura:attribute name="ICONFAM" type="Account" />
+   <!-- <aura:attribute name="alertas" type="String"/>
+    <aura:attribute name="AlertasTrans" type="Integer"/>-->
+    
+    <div class="slds-grid">
+              <table class="slds-table slds-table_cell-buffer BackColor">   
+                <thead>
+                    <tr class="texto_titulo">
+                        <th scope="col"><span class="slds-truncate">C. Riesgo</span></th>
+                        <th scope="col"><span class="slds-truncate">IVC</span></th>
+                        <th scope="col"><span class="slds-truncate">Productos</span></th>
+                        <th scope="col"><span class="slds-truncate">Masco y Spread</span></th>
+                        <th scope="col"><span class="slds-truncate">Dias Última Actividad</span></th>
+                        <th scope="col"><span class="slds-truncate">Alertas</span></th>
+                        <!-- <th scope="col"><span class="slds-truncate">Datos Cliente</span></th>-->
+                        <th scope="col"><span class="slds-truncate">Campañas activas</span></th>
+                        <th scope="col"><span class="slds-truncate">Casos activos</span></th>
+                    	<th scope="col"><span class="slds-truncate">Oportunidades activas</span></th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <aura:iteration items="{!v.contacts}" var="contact">
+                        <tr >
+                            <td class="center-middle bold26px texto-gris">{!contact.Clasificacion_de_Riesgo_SBIF__c}</td>
+                            <td class="center-middle bold26px texto-gris">{!contact.X360_view_IVC__c}</td>
+                            <td class="center-middle bold26px texto-gris">
+                                          <ui:outputRichText value="{!v.ICONFAM}"/>      
+                                </td>
+                            <td class="center-middle bold26px texto-gris"><ui:outputNumber value="{!contact.Rentabilidad_12_meses__c+'%'}" format=""/></td>
+                            <td class="center-middle bold26px texto-gris">
+                                <aura:unescapedHtml value="{!v.VarLastContact}"/>
+                            </td>
+                            <td class="center-middle bold26px texto-gris">
+                                <ui:outputRichText value="{!contact.X360_View_Alertas_Banco__c}"/>                                  
+                            </td>
+                            <!--<td class="center-middle bold26px texto-gris">
+                                <div class="slds-progress-bar slds-progress-bar_x-medium" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" role="progressbar">
+                                      <span class="slds-progress-bar__value" style="{!'width:'+contact.X360_view_EyC_Filled_Data_Client__c+'%'}">                    
+                                        <span class="slds-assistive-text">Progress: {!contact.X360_view_EyC_Filled_Data_Client__c+'%'}</span>
+                                      </span>                                 
+                                </div>
+                            </td> -->
+                            <td class="center-middle bold26px texto-gris">
+                                <aura:iteration items="{!v.camps}" var="camp">
+                                    {!camp} 
+                                </aura:iteration>
+                            </td>
+                            <td class="center-middle bold26px texto-gris">
+                                 <aura:iteration items="{!v.CountCases}" var="cas">  
+                                     {!cas}
+                                 </aura:iteration>     
+                            </td>
+                            <td class="center-middle bold26px texto-gris">{!contact.Oportunidaes__c}</td>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>              
+          </div>      
+</aura:component>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Customer Attended Event --></label>
+        <name>Customer_Attended_Event__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Comment --></label>
+        <name>Customer_Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Outcome --></label>
+        <name>Customer_Outcome__c</name>
+        <picklistValues>
+            <masterLabel>1-Very Poor</masterLabel>
+            <translation><!-- 1-Very Poor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2-Poor</masterLabel>
+            <translation><!-- 2-Poor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3-Fair</masterLabel>
+            <translation><!-- 3-Fair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4-Good</masterLabel>
+            <translation><!-- 4-Good --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5-Very Good</masterLabel>
+            <translation><!-- 5-Very Good --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Invitation Sent Date --></label>
+        <name>Invitation_Sent_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invitation Sent --></label>
+        <name>Invitation_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Member Status --></label>
+        <name>Member_Status__c</name>
+        <picklistValues>
+            <masterLabel>Attended Event</masterLabel>
+            <translation><!-- Attended Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Did Not Attend</masterLabel>
+            <translation><!-- Did Not Attend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invitation Declined</masterLabel>
+            <translation><!-- Invitation Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invitation Sent</masterLabel>
+            <translation><!-- Invitation Sent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RSVP Completed</masterLabel>
+            <translation><!-- RSVP Completed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RSVP By Date --></label>
+        <name>RSVP_By_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RSVP Completed --></label>
+        <name>RSVP_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- RSVP Received Date --></label>
+        <name>RSVP_Received_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Activity --></label>
+        <name>et4ae5__Activity__c</name>
+        <picklistValues>
+            <masterLabel>Sent</masterLabel>
+            <translation>送信済み</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsubscribed</masterLabel>
+            <translation>購読取り消し済み</translation>
+        </picklistValues>
+    </fields>
+    <recordTypes>
+        <label><!-- Miembro de la campaña de eventos --></label>
+        <name>Event_Campaign_Member</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Miembro de la Campaña Candidato --></label>
+        <name>Lead_Member</name>
+    </recordTypes>
+</CustomObjectTranslation>

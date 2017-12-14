@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>USERNAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>PROFILE</field>
+    </columns>
+    <columns>
+        <field>ALIAS</field>
+    </columns>
+    <columns>
+        <field>ACTIVE</field>
+    </columns>
+    <columns>
+        <field>LAST_LOGIN</field>
+    </columns>
+    <filter>
+        <booleanFilter>((1 OR 2 OR 3 OR 4)) AND 5</booleanFilter>
+        <criteriaItems>
+            <column>ROLE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Retail Sales Force - Commercial Executive</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ROLE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Retail Sales Force - Group Supervisor</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ROLE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Retail Sales Force - Assistant Manager</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ROLE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Retail Sales Force - Sales Manager</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACTIVE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ROLE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Jefes de Grupo y Ejecutivos Profin</name>
+    <params>
+        <name>active</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>User</reportType>
+    <showDetails>true</showDetails>
+    <sortColumn>LAST_NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

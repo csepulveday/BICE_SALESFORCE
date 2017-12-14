@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Ejecutivos especialistas</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Corporate Banking Specialist Executives</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Corporate_Banking_Executives</parentRole>
+</Role>

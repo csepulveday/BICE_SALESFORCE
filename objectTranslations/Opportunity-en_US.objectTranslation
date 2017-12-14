@@ -1,0 +1,2121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Tipo de oportunidad --></label>
+        <name>Accion_de_Venta__c</name>
+        <picklistValues>
+            <masterLabel>Aumento de Cupo</masterLabel>
+            <translation><!-- Aumento de Cupo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compra de Cartera</masterLabel>
+            <translation><!-- Compra de Cartera --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renegociación</masterLabel>
+            <translation><!-- Renegociación --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renovación</masterLabel>
+            <translation><!-- Renovación --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upgrade</masterLabel>
+            <translation><!-- Upgrade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Venta Nueva Adicional</masterLabel>
+            <translation><!-- Venta Nueva Adicional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Venta Nueva Adicional Plus</masterLabel>
+            <translation><!-- Venta Nueva Adicional Plus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Venta Nuevo Producto</masterLabel>
+            <translation><!-- Venta Nuevo Producto --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Acepta propuesta? --></label>
+        <name>Acepta_propuesta__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pendiente</masterLabel>
+            <translation><!-- Pendiente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sí</masterLabel>
+            <translation><!-- Sí --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Activación de productos --></label>
+        <name>Activacion_de_productos__c</name>
+    </fields>
+    <fields>
+        <label><!-- Acuerdo de oferta especial --></label>
+        <name>Acuerdo_de_oferta_especial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Analista de riesgo asignado --></label>
+        <name>Analista_de_riesgo_asignado__c</name>
+        <relationshipLabel><!-- Oportunidades (Analista de riesgo asignado) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Días de antigüedad de la oportunidad --></label>
+        <name>Antig_edad_de_la_oportunidad__c</name>
+    </fields>
+    <fields>
+        <label><!-- Aprobado Comité --></label>
+        <name>Aprobado_Comite__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sí</masterLabel>
+            <translation><!-- Sí --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BPM Flow Status Last Update --></label>
+        <name>BPM_Flow_Status_Last_Update__c</name>
+    </fields>
+    <fields>
+        <label><!-- BPM Flow Status --></label>
+        <name>BPM_Flow_Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initiated</masterLabel>
+            <translation><!-- Initiated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ongoing</masterLabel>
+            <translation><!-- Ongoing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requires Input</masterLabel>
+            <translation><!-- Requires Input --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success</masterLabel>
+            <translation><!-- Success --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Financial Situation --></help>
+        <label><!-- Balance y Estado de Situación --></label>
+        <name>Balance_and_Statement_of_Income__c</name>
+    </fields>
+    <fields>
+        <label><!-- Balance y E.Situación vigentes --></label>
+        <name>Balance_y_E_Situaci_n_vigentes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Boletín comercial --></label>
+        <name>Bolet_n_comercial__c</name>
+        <picklistValues>
+            <masterLabel>Con antecedentes</masterLabel>
+            <translation><!-- Con antecedentes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sin antecedentes</masterLabel>
+            <translation><!-- Sin antecedentes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Carpeta a Ejecutivo de Cuentas --></label>
+        <name>Carpeta_a_Ejecutivo_de_Cuentas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cierre con condición --></label>
+        <name>Cierre_con_condici_n__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cliente completar y firmar el formulario --></label>
+        <name>ClienteCompletarFirmarFormulario__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comentario última actividad --></label>
+        <name>Comentario_ltima_actividad__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comisión de intermediación --></label>
+        <name>Comisi_n_de_intermediaci_n__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completar Articulo 85 --></label>
+        <name>Completar_Articulo_85__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completar Solicitud de Producto y Serv --></label>
+        <name>Completar_Solicitude_de_Producto_y_Serv__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completar y firmar formulario solicitud --></label>
+        <name>Completar_y_firmar_formulario_solicitud__c</name>
+    </fields>
+    <fields>
+        <label><!-- Condiciones del cierre --></label>
+        <name>Condiciones_del_cierre__c</name>
+    </fields>
+    <fields>
+        <label><!-- Condiciones del negocio --></label>
+        <name>Condiciones_del_negocio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subgcia evalúa necesidad nuevo informe --></label>
+        <name>Confecci_n_informe_sub_gcia_riesgo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contador de tareas --></label>
+        <name>Contador_de_tareas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cotizó? --></label>
+        <name>Cotiz__c</name>
+    </fields>
+    <fields>
+        <label><!-- Creado de Profin --></label>
+        <name>Created_By_Profin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Creado por EyC --></label>
+        <name>Created_by_EyC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Creado por EyC CtaCorriente --></label>
+        <name>Created_by_EyC_bank_account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cumple requisitos? --></label>
+        <name>Cumple_requisitos__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sí</masterLabel>
+            <translation><!-- Sí --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Detalle resultado del contacto --></label>
+        <name>Detalle_resultado_del_contacto__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detección de otras oportunidades --></label>
+        <name>Detecci_n_de_otras_oportunidades__c</name>
+        <picklistValues>
+            <masterLabel>COMEX</masterLabel>
+            <translation><!-- COMEX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cash management</masterLabel>
+            <translation><!-- Cash management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Crédito</masterLabel>
+            <translation><!-- Crédito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cuenta corriente</masterLabel>
+            <translation><!-- Cuenta corriente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cursar inversiones</masterLabel>
+            <translation><!-- Cursar inversiones --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Factoring</masterLabel>
+            <translation><!-- Factoring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leasing</masterLabel>
+            <translation><!-- Leasing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mesa de dinero</masterLabel>
+            <translation><!-- Mesa de dinero --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Deuda SBIF últimos 3 meses --></label>
+        <name>Deuda_SBIF__c</name>
+        <picklistValues>
+            <masterLabel>Con morosidad</masterLabel>
+            <translation><!-- Con morosidad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sin morosidad</masterLabel>
+            <translation><!-- Sin morosidad --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Deuda leasing/factoring --></label>
+        <name>Deuda_leasing_factoring__c</name>
+        <picklistValues>
+            <masterLabel>Con morosidad</masterLabel>
+            <translation><!-- Con morosidad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sin morosidad</masterLabel>
+            <translation><!-- Sin morosidad --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Documentación enviada a riesgo --></label>
+        <name>Docs_sended_to_risk_area__c</name>
+    </fields>
+    <fields>
+        <label><!-- Documento enviado a corredora seguros --></label>
+        <name>Documento_enviado_a_corredora_seguros__c</name>
+    </fields>
+    <fields>
+        <help><!-- indicar la cantidad de meses que dura la línea. --></help>
+        <label><!-- Duración de la línea --></label>
+        <name>Duracion_de_la_linea__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11</masterLabel>
+            <translation><!-- 11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12</masterLabel>
+            <translation><!-- 12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13</masterLabel>
+            <translation><!-- 13 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14</masterLabel>
+            <translation><!-- 14 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15</masterLabel>
+            <translation><!-- 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16</masterLabel>
+            <translation><!-- 16 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>17</masterLabel>
+            <translation><!-- 17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>18</masterLabel>
+            <translation><!-- 18 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>19</masterLabel>
+            <translation><!-- 19 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20</masterLabel>
+            <translation><!-- 20 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>21</masterLabel>
+            <translation><!-- 21 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>22</masterLabel>
+            <translation><!-- 22 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>23</masterLabel>
+            <translation><!-- 23 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24</masterLabel>
+            <translation><!-- 24 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No aplica</masterLabel>
+            <translation><!-- No aplica --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- EEFF o flujo de caja --></label>
+        <name>EEFF_o_flujo_de_caja__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ejecutivo COMEX notificado --></label>
+        <name>Ejecutivo_COMEX_notificado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ejecutivo Cash maganement notificado --></label>
+        <name>Ejecutivo_Cash_maganement_notificado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ejecutivo Cuenta --></label>
+        <name>Ejecutivo_Cuenta__c</name>
+        <relationshipLabel><!-- Oportunidades (Ejecutivo Cuenta) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Ejecutivo Factoring notificado --></label>
+        <name>Ejecutivo_Factoring_notificado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ejecutivo Inversiones --></label>
+        <name>Ejecutivo_Inversiones__c</name>
+        <relationshipLabel><!-- Oportunidades (Ejecutivo Inversiones) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Ejecutivo Leasing notificado --></label>
+        <name>Ejecutivo_Leasing_notificado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ejecutivo Mesa de dinero notificado --></label>
+        <name>Ejecutivo_Mesa_de_dinero_notificado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nombre ejecutivo especialista --></label>
+        <name>Ejecutivo_especialista_asignado__c</name>
+        <relationshipLabel><!-- Oportunidades (Nombre ejecutivo especialista) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Ejecutivo inversiones notificado --></label>
+        <name>Ejecutivo_inversiones_notificado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrolamiento Ok --></label>
+        <name>Enrolamiento_Ok__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enviado a Comité --></label>
+        <name>EnviadoComite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enviado a crear cliente --></label>
+        <name>Enviado_a_crear_cliente__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enviar BPM --></label>
+        <name>Enviar_BPM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enviar sol. desglose a gcia. de crédito --></label>
+        <name>Enviar_sol_desglose_a_gcia_de_cr_dio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Equipo de Op. Creado --></label>
+        <name>Equipo_de_Op_Creado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estructura --></label>
+        <name>Estructura__c</name>
+    </fields>
+    <fields>
+        <label><!-- Etapa calificando --></label>
+        <name>Etapa_calificando__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de asignación a Comité --></label>
+        <name>FechaAsignacionComite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha asignación ejecutivo especialista --></label>
+        <name>Fecha_asignaci_n_ejecutivo_especialista__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de cotización --></label>
+        <name>Fecha_de_cotizaci_n__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha solicitud informe --></label>
+        <name>Fecha_de_env_o_informe__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de gestión del contrato --></label>
+        <name>Fecha_de_gesti_n_del_contrato__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de gestión del contrato leasing --></label>
+        <name>Fecha_de_gesti_n_del_contrato_leasing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de recepción informe --></label>
+        <name>Fecha_de_recepci_n_informe__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de vencimiento MAC --></label>
+        <name>Fecha_de_vencimiento_MAC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de vencimiento --></label>
+        <name>Fecha_de_vencimiento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha del cierre --></label>
+        <name>Fecha_del_cierre__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha del contacto con cliente --></label>
+        <name>Fecha_del_contacto_con_cliente__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha envío a comité --></label>
+        <name>Fecha_envio_comite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de cierre --></label>
+        <name>Fecha_estimada_de_cierre__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha pronunciamiento Comité --></label>
+        <name>Fecha_pronunciamiento_Comit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha simulación --></label>
+        <name>Fecha_simulaci_n__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha tentativa entrega informe --></label>
+        <name>Fecha_tentativa_entrea_informe_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha vencimiento Calificando --></label>
+        <name>Fecha_vencimiento_Calificando__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha vencimiento póliza actual --></label>
+        <name>Fecha_vencimiento_p_liza_actual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feedback sobre el caso --></label>
+        <name>Feedback_sobre_el_caso__c</name>
+    </fields>
+    <fields>
+        <label><!-- Firma ok --></label>
+        <name>Firma_ok__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sí</masterLabel>
+            <translation><!-- Sí --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Carpeta Entregada --></label>
+        <name>Folder_delivered__c</name>
+    </fields>
+    <fields>
+        <help><!-- Formulario solicitud de productos, foto, firma y huellas --></help>
+        <label><!-- Form. de productos, foto, firma y huella --></label>
+        <name>Form_of_products_sign_fingerprint__c</name>
+    </fields>
+    <fields>
+        <label><!-- FuiElCreadorDeLaOportunidad --></label>
+        <name>FuiElCreadorDeLaOportunidad__c</name>
+    </fields>
+    <fields>
+        <label><!-- Garantías --></label>
+        <name>Garant_as__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sí</masterLabel>
+            <translation><!-- Sí --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Estado de gestión del contrato --></label>
+        <name>Gesti_n_del_contrato__c</name>
+        <picklistValues>
+            <masterLabel>Contact Center</masterLabel>
+            <translation><!-- Contact Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Operaciones</masterLabel>
+            <translation><!-- Operaciones --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visado</masterLabel>
+            <translation><!-- Visado --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Gestión del contrato leasing --></label>
+        <name>Gesti_n_del_contrato_leasing__c</name>
+        <picklistValues>
+            <masterLabel>Firmado</masterLabel>
+            <translation><!-- Firmado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fiscalía</masterLabel>
+            <translation><!-- Fiscalía --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Notaría</masterLabel>
+            <translation><!-- Notaría --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Operaciones</masterLabel>
+            <translation><!-- Operaciones --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Gestión por analista --></label>
+        <name>Gesti_n_por_analista__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gestión por ejecutivo --></label>
+        <name>Gesti_n_por_ejecutivo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gestionar nuevo MAC? --></label>
+        <name>Gestionar_nuevo_MAC__c</name>
+    </fields>
+    <fields>
+        <label>Inversión realizada</label>
+        <name>INV_InvestmentMade__c</name>
+    </fields>
+    <fields>
+        <label>Tipo de inversión</label>
+        <name>INV_InvestmentType__c</name>
+        <picklistValues>
+            <masterLabel>APV</masterLabel>
+            <translation><!-- APV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Acciones/Dólares/Renta Fija</masterLabel>
+            <translation><!-- Acciones/Dólares/Renta Fija --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fondos Mutuos</masterLabel>
+            <translation><!-- Fondos Mutuos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pershing</masterLabel>
+            <translation><!-- Pershing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Simultánea/Forward/Venta Corta</masterLabel>
+            <translation><!-- Simultánea/Forward/Venta Corta --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Proposal Delivered --></label>
+        <name>INV_ProposalDelivered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Proposal Required --></label>
+        <name>INV_ProposalRequired__c</name>
+    </fields>
+    <fields>
+        <label><!-- Indicar garantías --></label>
+        <name>Indicar_garant_as__c</name>
+    </fields>
+    <fields>
+        <label><!-- Informe creado y enviado --></label>
+        <name>Informe_recibido_y_revisado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Informes legales vigentes --></label>
+        <name>Informes_legales__c</name>
+    </fields>
+    <fields>
+        <label><!-- InvAP --></label>
+        <name>InvAP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Obtención firma FATCA --></label>
+        <name>Inv_AP_Obtencion_firma_FATCA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Obtención documentos requeridos --></label>
+        <name>Inv_AP_Obtener_documentos_requeridos__c</name>
+    </fields>
+    <fields>
+        <label><!-- ¿Requiere validación subgerente? --></label>
+        <name>Inv_AP_Requiere_validacion_subgerente__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sí</masterLabel>
+            <translation><!-- Sí --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Visita OK? --></label>
+        <name>Inv_AP_Visita_OK__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sí</masterLabel>
+            <translation><!-- Sí --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Cliente verificado --></label>
+        <name>Inv_ClienteVerificado__c</name>
+    </fields>
+    <fields>
+        <label><!-- GPI habilitado --></label>
+        <name>Inv_GPI_habilitado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Formulario de ingreso de activos: --></label>
+        <name>Inv_Ingreso_de_activos_listo__c</name>
+        <picklistValues>
+            <masterLabel>Enviado</masterLabel>
+            <translation><!-- Enviado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recepción conforme</masterLabel>
+            <translation><!-- Recepción conforme --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reparos</masterLabel>
+            <translation><!-- Reparos --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Línea de crédito BIA abierta --></label>
+        <name>Inv_Linea_de_sobregiro_abierta__c</name>
+    </fields>
+    <fields>
+        <label><!-- Propuesta Creada --></label>
+        <name>Inv_PropuestaCreada__c</name>
+    </fields>
+    <fields>
+        <label><!-- Propuesta --></label>
+        <name>Inv_Propuesta__c</name>
+        <picklistValues>
+            <masterLabel>Crear propuesta</masterLabel>
+            <translation><!-- Crear propuesta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Propuesta creada</masterLabel>
+            <translation><!-- Propuesta creada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Propuesta entregada</masterLabel>
+            <translation><!-- Propuesta entregada --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Requires credit management? --></label>
+        <name>Inv_RequiresCreditManagement__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sí</masterLabel>
+            <translation><!-- Sí --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Welcome pack disponible --></label>
+        <name>Inv_Welcome_pack_disponible__c</name>
+    </fields>
+    <fields>
+        <label><!-- Welcome pack entregado --></label>
+        <name>Inv_Welcome_pack_entregado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jefe Plataforma / Agente Sucursal --></label>
+        <name>Jefe_Plataforma_Agente_Sucursal__c</name>
+        <relationshipLabel><!-- Oportunidades (Jefe Plataforma / Agente Sucursal) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Jefe de Grupo --></label>
+        <name>Jefe_de_Grupo__c</name>
+        <relationshipLabel><!-- Oportunidades (Jefe de Grupo) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- KYC Aprobado --></label>
+        <name>KYC_Aprobado__c</name>
+    </fields>
+    <fields>
+        <label><!-- KYC Ingresado --></label>
+        <name>KYC_Ingresado__c</name>
+    </fields>
+    <fields>
+        <label><!-- MAC vigente para cursar esta oportunidad --></label>
+        <name>L_nea_vigente__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sí</masterLabel>
+            <translation><!-- Sí --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MAC gestionado y creado --></label>
+        <name>MAC_gestionado_y_creado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Producto BIA? --></label>
+        <name>Marque_si_ser_producto_BIA__c</name>
+    </fields>
+    <fields>
+        <label><!-- MeAsignaronOportunidad --></label>
+        <name>MeAsignaronOportunidad__c</name>
+    </fields>
+    <fields>
+        <label><!-- Moneda --></label>
+        <name>Moneda__c</name>
+        <picklistValues>
+            <masterLabel>Afgani</masterLabel>
+            <translation><!-- Afgani --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ariari</masterLabel>
+            <translation><!-- Ariari --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Balboa Panameño</masterLabel>
+            <translation><!-- Balboa Panameño --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bat</masterLabel>
+            <translation><!-- Bat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bir</masterLabel>
+            <translation><!-- Bir --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Boliviano</masterLabel>
+            <translation><!-- Boliviano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bolívar Fuerte</masterLabel>
+            <translation><!-- Bolívar Fuerte --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cedi De Gana</masterLabel>
+            <translation><!-- Cedi De Gana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chelín Keniano</masterLabel>
+            <translation><!-- Chelín Keniano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chelín Somalí</masterLabel>
+            <translation><!-- Chelín Somalí --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chelín Tanzaniano</masterLabel>
+            <translation><!-- Chelín Tanzaniano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chelín Ugandés</masterLabel>
+            <translation><!-- Chelín Ugandés --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colón Costarricense</masterLabel>
+            <translation><!-- Colón Costarricense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colón Salvadoreño</masterLabel>
+            <translation><!-- Colón Salvadoreño --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corona Checa</masterLabel>
+            <translation><!-- Corona Checa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corona Danesa</masterLabel>
+            <translation><!-- Corona Danesa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corona Islandesa</masterLabel>
+            <translation><!-- Corona Islandesa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corona Noruega</masterLabel>
+            <translation><!-- Corona Noruega --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corona Sueca</masterLabel>
+            <translation><!-- Corona Sueca --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Córdoba Nicaragüense</masterLabel>
+            <translation><!-- Córdoba Nicaragüense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dalasi Gambiano</masterLabel>
+            <translation><!-- Dalasi Gambiano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denar</masterLabel>
+            <translation><!-- Denar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinar</masterLabel>
+            <translation><!-- Dinar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinar De Baréin</masterLabel>
+            <translation><!-- Dinar De Baréin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinar Irakí</masterLabel>
+            <translation><!-- Dinar Irakí --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinar Jordano</masterLabel>
+            <translation><!-- Dinar Jordano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinar Kuwaití</masterLabel>
+            <translation><!-- Dinar Kuwaití --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinar Libio</masterLabel>
+            <translation><!-- Dinar Libio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinar Serbio</masterLabel>
+            <translation><!-- Dinar Serbio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinar Tunecino</masterLabel>
+            <translation><!-- Dinar Tunecino --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dobra</masterLabel>
+            <translation><!-- Dobra --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dong</masterLabel>
+            <translation><!-- Dong --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dram Armenio</masterLabel>
+            <translation><!-- Dram Armenio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dírham</masterLabel>
+            <translation><!-- Dírham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar Australiano</masterLabel>
+            <translation><!-- Dólar Australiano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar Beliceño</masterLabel>
+            <translation><!-- Dólar Beliceño --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar Canadiense</masterLabel>
+            <translation><!-- Dólar Canadiense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar De Brunei</masterLabel>
+            <translation><!-- Dólar De Brunei --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar De Las Barbados</masterLabel>
+            <translation><!-- Dólar De Las Barbados --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar De Las Islas Caimán</masterLabel>
+            <translation><!-- Dólar De Las Islas Caimán --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar De Namibia</masterLabel>
+            <translation><!-- Dólar De Namibia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar De Nueva Zelanda</masterLabel>
+            <translation><!-- Dólar De Nueva Zelanda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar Del Caribe Oriental</masterLabel>
+            <translation><!-- Dólar Del Caribe Oriental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar Jamaicano</masterLabel>
+            <translation><!-- Dólar Jamaicano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar Liberiano</masterLabel>
+            <translation><!-- Dólar Liberiano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar Micronesio</masterLabel>
+            <translation><!-- Dólar Micronesio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar Nauruano</masterLabel>
+            <translation><!-- Dólar Nauruano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar Salomonense</masterLabel>
+            <translation><!-- Dólar Salomonense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar Singapurense</masterLabel>
+            <translation><!-- Dólar Singapurense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar Surinamés</masterLabel>
+            <translation><!-- Dólar Surinamés --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar Trinitense</masterLabel>
+            <translation><!-- Dólar Trinitense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólar Zimbabuense</masterLabel>
+            <translation><!-- Dólar Zimbabuense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dólares</masterLabel>
+            <translation><!-- Dólares --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Escudo De Cabo Verde</masterLabel>
+            <translation><!-- Escudo De Cabo Verde --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Euro</masterLabel>
+            <translation><!-- Euro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florín Arubano</masterLabel>
+            <translation><!-- Florín Arubano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florín De Las Antillas Neerlandesas</masterLabel>
+            <translation><!-- Florín De Las Antillas Neerlandesas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Forinto</masterLabel>
+            <translation><!-- Forinto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Franco Burundés</masterLabel>
+            <translation><!-- Franco Burundés --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Franco Cfa</masterLabel>
+            <translation><!-- Franco Cfa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Franco Cfp</masterLabel>
+            <translation><!-- Franco Cfp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Franco Comorano</masterLabel>
+            <translation><!-- Franco Comorano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Franco Congoleño</masterLabel>
+            <translation><!-- Franco Congoleño --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Franco Guineano</masterLabel>
+            <translation><!-- Franco Guineano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Franco Ruandés</masterLabel>
+            <translation><!-- Franco Ruandés --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Franco Suizo</masterLabel>
+            <translation><!-- Franco Suizo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Franco Yibutiano</masterLabel>
+            <translation><!-- Franco Yibutiano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grivna</masterLabel>
+            <translation><!-- Grivna --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guaraní Paraguayo</masterLabel>
+            <translation><!-- Guaraní Paraguayo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gultrum Butanés</masterLabel>
+            <translation><!-- Gultrum Butanés --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gurde</masterLabel>
+            <translation><!-- Gurde --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kiat De Birmania</masterLabel>
+            <translation><!-- Kiat De Birmania --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kina</masterLabel>
+            <translation><!-- Kina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kip</masterLabel>
+            <translation><!-- Kip --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kuacha De Malaui</masterLabel>
+            <translation><!-- Kuacha De Malaui --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kuacha Zambiano</masterLabel>
+            <translation><!-- Kuacha Zambiano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kuanza De Angola</masterLabel>
+            <translation><!-- Kuanza De Angola --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kuna Croata</masterLabel>
+            <translation><!-- Kuna Croata --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lari Georgiano</masterLabel>
+            <translation><!-- Lari Georgiano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lats</masterLabel>
+            <translation><!-- Lats --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lek</masterLabel>
+            <translation><!-- Lek --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lempira</masterLabel>
+            <translation><!-- Lempira --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leona</masterLabel>
+            <translation><!-- Leona --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leu Moldavo</masterLabel>
+            <translation><!-- Leu Moldavo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leu Rumano</masterLabel>
+            <translation><!-- Leu Rumano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leva Búlgaro</masterLabel>
+            <translation><!-- Leva Búlgaro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Libra De Gibraltar</masterLabel>
+            <translation><!-- Libra De Gibraltar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Libra Egipcia</masterLabel>
+            <translation><!-- Libra Egipcia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Libra Esterlina</masterLabel>
+            <translation><!-- Libra Esterlina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Libra Libanesa</masterLabel>
+            <translation><!-- Libra Libanesa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Libra Siria</masterLabel>
+            <translation><!-- Libra Siria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Libra Sudanesa</masterLabel>
+            <translation><!-- Libra Sudanesa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Libra Sursudanesa</masterLabel>
+            <translation><!-- Libra Sursudanesa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lilangeni</masterLabel>
+            <translation><!-- Lilangeni --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lira Turca</masterLabel>
+            <translation><!-- Lira Turca --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Litas</masterLabel>
+            <translation><!-- Litas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Loti De Lesoto</masterLabel>
+            <translation><!-- Loti De Lesoto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manat Azerbayano</masterLabel>
+            <translation><!-- Manat Azerbayano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manat Turcomano</masterLabel>
+            <translation><!-- Manat Turcomano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marco Convertible De Bosnia Y Herzegovina</masterLabel>
+            <translation><!-- Marco Convertible De Bosnia Y Herzegovina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Metical</masterLabel>
+            <translation><!-- Metical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Naira Nigeriano</masterLabel>
+            <translation><!-- Naira Nigeriano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nakfa De Eritrea</masterLabel>
+            <translation><!-- Nakfa De Eritrea --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nuevo Dólar De Taiwán</masterLabel>
+            <translation><!-- Nuevo Dólar De Taiwán --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nuevo Sol Peruano</masterLabel>
+            <translation><!-- Nuevo Sol Peruano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nuevo Séquel</masterLabel>
+            <translation><!-- Nuevo Séquel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paanga</masterLabel>
+            <translation><!-- Paanga --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pataca De Macao</masterLabel>
+            <translation><!-- Pataca De Macao --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peso Argentino</masterLabel>
+            <translation><!-- Peso Argentino --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peso Chileno</masterLabel>
+            <translation><!-- Peso Chileno --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peso Colombiano</masterLabel>
+            <translation><!-- Peso Colombiano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peso Cubano</masterLabel>
+            <translation><!-- Peso Cubano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peso Dominicano</masterLabel>
+            <translation><!-- Peso Dominicano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peso Filipino</masterLabel>
+            <translation><!-- Peso Filipino --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peso Mexicano</masterLabel>
+            <translation><!-- Peso Mexicano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peso Uruguayo</masterLabel>
+            <translation><!-- Peso Uruguayo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pula De Botsuana</masterLabel>
+            <translation><!-- Pula De Botsuana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quetzal</masterLabel>
+            <translation><!-- Quetzal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rand</masterLabel>
+            <translation><!-- Rand --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Real Brasileño</masterLabel>
+            <translation><!-- Real Brasileño --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rial Catarí</masterLabel>
+            <translation><!-- Rial Catarí --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rial De Omán</masterLabel>
+            <translation><!-- Rial De Omán --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rial Iraní</masterLabel>
+            <translation><!-- Rial Iraní --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rial Saudí</masterLabel>
+            <translation><!-- Rial Saudí --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rial Yemení</masterLabel>
+            <translation><!-- Rial Yemení --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Riel Camboyano</masterLabel>
+            <translation><!-- Riel Camboyano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ringit</masterLabel>
+            <translation><!-- Ringit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rublo</masterLabel>
+            <translation><!-- Rublo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rublo Bielorruso</masterLabel>
+            <translation><!-- Rublo Bielorruso --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rufiya</masterLabel>
+            <translation><!-- Rufiya --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rupia Ceilandesa</masterLabel>
+            <translation><!-- Rupia Ceilandesa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rupia De Mauricio</masterLabel>
+            <translation><!-- Rupia De Mauricio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rupia India</masterLabel>
+            <translation><!-- Rupia India --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rupia Indonesia</masterLabel>
+            <translation><!-- Rupia Indonesia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rupia Nepalí</masterLabel>
+            <translation><!-- Rupia Nepalí --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rupia Pakistaní</masterLabel>
+            <translation><!-- Rupia Pakistaní --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rupia Seychellense</masterLabel>
+            <translation><!-- Rupia Seychellense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Som Kirguís</masterLabel>
+            <translation><!-- Som Kirguís --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Somoni</masterLabel>
+            <translation><!-- Somoni --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sum</masterLabel>
+            <translation><!-- Sum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taka De Bangladés</masterLabel>
+            <translation><!-- Taka De Bangladés --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tala</masterLabel>
+            <translation><!-- Tala --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tengue Kazajo</masterLabel>
+            <translation><!-- Tengue Kazajo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tugrik Mongol</masterLabel>
+            <translation><!-- Tugrik Mongol --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UF</masterLabel>
+            <translation><!-- UF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uguiya</masterLabel>
+            <translation><!-- Uguiya --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vatu Do Vanuatu</masterLabel>
+            <translation><!-- Vatu Do Vanuatu --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Won Norcoreano</masterLabel>
+            <translation><!-- Won Norcoreano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Won Surcoreano</masterLabel>
+            <translation><!-- Won Surcoreano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yen</masterLabel>
+            <translation><!-- Yen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yuan, Renminbi</masterLabel>
+            <translation><!-- Yuan, Renminbi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Złóti</masterLabel>
+            <translation><!-- Złóti --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Monto MAC creado --></label>
+        <name>Monto_MAC_creado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monto (MM$) --></label>
+        <name>Monto__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monto leasing (MM$) --></label>
+        <name>Monto_leasing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivo no cumple condiciones --></label>
+        <name>Motivo_no_cumple_condiciones__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivo rechazo comité --></label>
+        <name>Motivo_rechazo__c</name>
+        <picklistValues>
+            <masterLabel>Cliente no aceptó la propuesta</masterLabel>
+            <translation><!-- Cliente no aceptó la propuesta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cliente no interesado</masterLabel>
+            <translation><!-- Cliente no interesado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>El cliente no está interesado en el producto</masterLabel>
+            <translation><!-- El cliente no está interesado en el producto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No aplica</masterLabel>
+            <translation><!-- No aplica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No se ajusta a las condiciones de comportamiento</masterLabel>
+            <translation><!-- No se ajusta a las condiciones de comportamiento --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Otro</masterLabel>
+            <translation><!-- Otro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rechazado en Comité</masterLabel>
+            <translation><!-- Rechazado en Comité --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Motivos cierre no exitoso --></label>
+        <name>Motivos_cierre_no_exitoso__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número de operación --></label>
+        <name>N_mero_de_operaci_n__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número del crédito --></label>
+        <name>N_mero_del_cr_dito__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número de Productos --></label>
+        <name>Numero_de_Productos__c</name>
+    </fields>
+    <fields>
+        <label><!-- Observaciones --></label>
+        <name>Observaciones__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operaciones --></label>
+        <name>Operaciones__c</name>
+        <relationshipLabel><!-- Oportunidades (Operaciones) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Oportunidad girada --></label>
+        <name>Oportunidad_girada__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sí</masterLabel>
+            <translation><!-- Sí --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Origen referido --></label>
+        <name>Origen_referido__c</name>
+        <picklistValues>
+            <masterLabel>Asesor (Asesor, contador, Family Office u otro tercero) </masterLabel>
+            <translation><!-- Asesor (Asesor, contador, Family Office u otro tercero)  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BICE Inversiones </masterLabel>
+            <translation><!-- BICE Inversiones  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banca Persona </masterLabel>
+            <translation><!-- Banca Persona  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banca Privada </masterLabel>
+            <translation><!-- Banca Privada  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporaciones </masterLabel>
+            <translation><!-- Corporaciones  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ejecutivos AP </masterLabel>
+            <translation><!-- Ejecutivos AP  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Empresas </masterLabel>
+            <translation><!-- Empresas  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inteligencia de Negocio </masterLabel>
+            <translation><!-- Inteligencia de Negocio  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Licitaciones</masterLabel>
+            <translation><!-- Licitaciones --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referidos Clientes </masterLabel>
+            <translation><!-- Referidos Clientes  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sucursales </masterLabel>
+            <translation><!-- Sucursales  --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Descripción otro motivo --></label>
+        <name>Otro_motivo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Otro motivo rechazo --></label>
+        <name>Otro_motivo_rechazo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pasar a otorgamiento --></label>
+        <name>Pasar_a_calificaci_n__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plazo (meses) --></label>
+        <name>Plazo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Presentar Solución financiera --></label>
+        <name>Presentar_Soluci_n_financiera__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prima según frecuencia de pagos (UF) --></label>
+        <name>Prima_seg_n_frecuencia_de_pagos_UF__c</name>
+    </fields>
+    <fields>
+        <label><!-- Producto --></label>
+        <name>Producto__c</name>
+    </fields>
+    <fields>
+        <label><!-- Productos bancarios --></label>
+        <name>Productos_bancarios__c</name>
+        <picklistValues>
+            <masterLabel>COMEX</masterLabel>
+            <translation><!-- COMEX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cash management</masterLabel>
+            <translation><!-- Cash management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Crédito</masterLabel>
+            <translation><!-- Crédito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cuenta corriente</masterLabel>
+            <translation><!-- Cuenta corriente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cursar inversiones</masterLabel>
+            <translation><!-- Cursar inversiones --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Factoring</masterLabel>
+            <translation><!-- Factoring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leasing</masterLabel>
+            <translation><!-- Leasing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mesa de dinero</masterLabel>
+            <translation><!-- Mesa de dinero --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seguros</masterLabel>
+            <translation><!-- Seguros --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ejecutivo Comercial --></label>
+        <name>Profin_Executive__c</name>
+        <relationshipLabel><!-- Oportunidades (Ejecutivo Comercial) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ¿Requiere enrolamiento? --></label>
+        <name>Requiere_enrolamiento__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sí</masterLabel>
+            <translation><!-- Sí --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Requiere tarifa especial --></label>
+        <name>Requiere_tarifa_especial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resultado Comité --></label>
+        <name>Resultado_Comite__c</name>
+        <picklistValues>
+            <masterLabel>Aprobado</masterLabel>
+            <translation><!-- Aprobado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Condicionado</masterLabel>
+            <translation><!-- Condicionado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>En proceso de comité</masterLabel>
+            <translation><!-- En proceso de comité --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No aplica</masterLabel>
+            <translation><!-- No aplica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rechazado</masterLabel>
+            <translation><!-- Rechazado --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Resultado cierre --></label>
+        <name>Resultado_cierre__c</name>
+        <picklistValues>
+            <masterLabel>Exitoso</masterLabel>
+            <translation><!-- Exitoso --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No exitoso</masterLabel>
+            <translation><!-- No exitoso --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Resultado del contacto --></label>
+        <name>Resultado_del_contacto__c</name>
+        <picklistValues>
+            <masterLabel>Contactado</masterLabel>
+            <translation><!-- Contactado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No contactado</masterLabel>
+            <translation><!-- No contactado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No responde</masterLabel>
+            <translation><!-- No responde --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Informe de riesgo recibido --></label>
+        <name>Risk_report_recieved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Segmento referido --></label>
+        <name>Segmento_referido__c</name>
+        <picklistValues>
+            <masterLabel>Cliente Banco </masterLabel>
+            <translation><!-- Cliente Banco  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cliente Inversiones</masterLabel>
+            <translation><!-- Cliente Inversiones --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No es Cliente</masterLabel>
+            <translation><!-- No es Cliente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Otro</masterLabel>
+            <translation><!-- Otro --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Solicitude de Producto y Servicios --></label>
+        <name>Solicitude_de_Producto_y_Servicios__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spread (% anual) --></label>
+        <name>Spread__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subetapa --></label>
+        <name>Subetapa__c</name>
+        <picklistValues>
+            <masterLabel>Apertura productos</masterLabel>
+            <translation><!-- Apertura productos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aperturar línea de crédito BIA</masterLabel>
+            <translation><!-- Aperturar línea de crédito BIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aprobación cliente</masterLabel>
+            <translation><!-- Aprobación cliente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comité de crédito</masterLabel>
+            <translation><!-- Comité de crédito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contacto cliente</masterLabel>
+            <translation><!-- Contacto cliente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Crear KYC</masterLabel>
+            <translation><!-- Crear KYC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Crear equipo</masterLabel>
+            <translation><!-- Crear equipo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Crear propuesta</masterLabel>
+            <translation><!-- Crear propuesta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrolar</masterLabel>
+            <translation><!-- Enrolar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gestionar crédito</masterLabel>
+            <translation><!-- Gestionar crédito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gestionar inversión</masterLabel>
+            <translation><!-- Gestionar inversión --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gestionar prenda y GPI</masterLabel>
+            <translation><!-- Gestionar prenda y GPI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gestión pendiente</masterLabel>
+            <translation><!-- Gestión pendiente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inversión realizada</masterLabel>
+            <translation><!-- Inversión realizada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Presentar propuesta</masterLabel>
+            <translation><!-- Presentar propuesta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Productos activados</masterLabel>
+            <translation><!-- Productos activados --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Propuesta presentada</masterLabel>
+            <translation><!-- Propuesta presentada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Validación cliente</masterLabel>
+            <translation><!-- Validación cliente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Verificar cliente banco</masterLabel>
+            <translation><!-- Verificar cliente banco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Welcome pack disponible</masterLabel>
+            <translation><!-- Welcome pack disponible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Welcome pack entregado</masterLabel>
+            <translation><!-- Welcome pack entregado --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tipo de producto --></label>
+        <name>Subproducto__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sucursal --></label>
+        <name>Sucursal__c</name>
+    </fields>
+    <fields>
+        <help><!-- Debe completar las tareas para poder avanzar a la siguiente etapa. --></help>
+        <label><!-- Tareas de &quot;Otorgamiento&quot; completadas --></label>
+        <name>Tareas_de_Otorgamiento_completadas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de cuenta BIA --></label>
+        <name>Tipo_BIA__c</name>
+        <picklistValues>
+            <masterLabel>Ambos</masterLabel>
+            <translation><!-- Ambos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internacional (USD)</masterLabel>
+            <translation><!-- Internacional (USD) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nacional (CLP)</masterLabel>
+            <translation><!-- Nacional (CLP) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tipo de pago --></label>
+        <name>Tipo_de_pago__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ventas según IVA --></label>
+        <name>Ventas_seg_n_IVA__c</name>
+    </fields>
+    <fields>
+        <help><!-- Debe completar las actividades antes de pasar a la etapa de &quot;Otorgamiento&quot; --></help>
+        <label><!-- Actividades comité MAC completadas --></label>
+        <name>actividades_comite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subgerente/agente comercial --></label>
+        <name>alerta_al_subgerente_agente_comercial__c</name>
+        <relationshipLabel><!-- Oportunidades (Subgerente/agente comercial) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Completar y firmar Formulario EESS --></label>
+        <name>completar_y_firmar_Formulario_EESS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivo rechazo --></label>
+        <name>motivo_rechazo_opp__c</name>
+        <picklistValues>
+            <masterLabel>Cifra</masterLabel>
+            <translation><!-- Cifra --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cliente no quiso/sin interés</masterLabel>
+            <translation><!-- Cliente no quiso/sin interés --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comportamiento comercial</masterLabel>
+            <translation><!-- Comportamiento comercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No es perfil banco</masterLabel>
+            <translation><!-- No es perfil banco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No se pudo contactar</masterLabel>
+            <translation><!-- No se pudo contactar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Riesgo</masterLabel>
+            <translation><!-- Riesgo --></translation>
+        </picklistValues>
+    </fields>
+    <recordTypes>
+        <label><!-- Altos Patrimonios --></label>
+        <name>Altos_Patrimonios</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- BIA --></label>
+        <name>BIA</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Cuenta de Inversión --></label>
+        <name>Cuenta_de_Inversion</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Empresas y Corporaciones --></label>
+        <name>Empresas_y_Corporaciones</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Empresas y Corporaciones - crédito --></label>
+        <name>Empresas_y_Corporaciones_cr_dito</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Empresas y Corporaciones - cuenta corriente --></label>
+        <name>Empresas_y_Corporaciones_cuenta_corriente</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Mercado internacional --></label>
+        <name>Mercado_internacional</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Monoproducto --></label>
+        <name>Monoproducto</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Multiproducto --></label>
+        <name>Multiproducto</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Multiproducto Ejecutivo de Cuenta --></label>
+        <name>Multiproducto_Ejecutivo_de_Cuenta</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Referido --></label>
+        <name>Referido</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Venta Corta --></label>
+        <name>Venta_Corta</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Venta Línea de Crédito FYS --></label>
+        <name>Venta_Linea_de_Credito_FYS</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- No puede cerrar la oportunidad mientras no se han activado los productos. --></errorMessage>
+        <name>EC_No_puede_cerrar_oportunidad</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Una vez pasada la etapa, no puede volver a atrás. --></errorMessage>
+        <name>Empresas_Corp_Control_Etapa_Calificacion</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe completar todas las actividades asociadas a la oportunidad, antes de pasar a la siguiente etapa. --></errorMessage>
+        <name>Empresas_Corporacion_Etapa_Calificacion</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Para pasar de etapa Contacto a Calificación, debe tener todos los campos completos. --></errorMessage>
+        <name>EyC_Contacto_a_calificacion</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No puede cerrar como ganada la oportunidad si la línea no está vigente. --></errorMessage>
+        <name>EyC_No_cierra_ganada_sin_linea_vigente</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No puede cerrar ganada la oportunidad si no ha sido aprobada por el comité. --></errorMessage>
+        <name>EyC_No_puede_cerrar_ganada_sin_comite</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Para pasar de Calificación a Otorgamiento, debe tener todos los campos completos. --></errorMessage>
+        <name>EyC_calificacion_a_otorgamiento</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No puede cerrar ganada la oportunidad si el cliente no está creado en Sebra y y su cuenta no tiene CIF_ID. --></errorMessage>
+        <name>INVER_No_cierra_ganada_sin_Sebra</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No se han obtenido las firmas y documentos requeridos para pasar de etapa. --></errorMessage>
+        <name>Inv_AP_GestionarInversion</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe tener importe para poder cerrar. --></errorMessage>
+        <name>Inv_AP_ImporteCerradaGanada</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Requiere validación de subgerente. Favor asignar subgerente a oportunidad para su revisión. --></errorMessage>
+        <name>Inv_AP_RequiereValidacionSubgerente</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- La oportunidad debe ser aprobada por comité para pasar a la siguiente etapa. --></errorMessage>
+        <name>Inv_Campos_Requeridos_Otorgamiento</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No se puede editar una oportunidad ya cerrada. --></errorMessage>
+        <name>Inv_Estandar_Bloquear_Edicion</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Solo operaciones puede confirmar recepción --></errorMessage>
+        <name>Inv_FormularioActivosDisponible</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe ingresar &quot;Tipo de Inversión&quot; --></errorMessage>
+        <name>Inv_InvestmentType</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe indicar descripción de motivo por el cual no aceptó propuesta. --></errorMessage>
+        <name>Inv_No_acepta_propuesta</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Si la oportunidad requiere propuesta, pero no se ha entregado, no puede pasar de etapa. --></errorMessage>
+        <name>Inv_Personas_BloqueaEtapaCalificacion</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Operaciones no puede subir formulario de activos a sistema de reporte. --></errorMessage>
+        <name>Inv_SubirFormularioActivos</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Para pasar a la etapa &quot;Calificación&quot;, la oportunidad debe tener Ejecutivo de Inversión y Cuenta. --></errorMessage>
+        <name>Inversiones_BIA_Ejecutivos_etapa_Calif</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- El KYC debe ser ingresado antes de aprobarlo. --></errorMessage>
+        <name>Inversiones_Kyc_Aprobado</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe indicar el motivo de Pendiente del Comité de Crédito. --></errorMessage>
+        <name>Motivo_de_Pendiente_por_comite</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe indicar el motivo de rechazo del Comité. --></errorMessage>
+        <name>Motivo_de_rechazo_de_comite</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Si el campo &quot;Carpeta entregada&quot;no está marcado, no puede marcar &quot;Welcome pack disponible&quot; o &quot;Welcome pack entregado&quot; o &quot;Activación de productos&quot; --></errorMessage>
+        <name>No_puede_Activar_prod_WPD_y_WPE</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No puede cerrar la oportunidad si es que esta tiene reparos. --></errorMessage>
+        <name>No_puede_cerrar_oportunidad</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No puede marcar la casilla &quot;Carpeta entregada&quot; si el campo de casilla &quot;Form Solicitud de Productos, foto, firma y huellas&quot; no esta marcado. --></errorMessage>
+        <name>No_puede_marcar_carpeta_entregada</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Para pasar a etapa de calificación, debe tener un producto. --></errorMessage>
+        <name>Producto_asignado_en_la_oportunidad</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Complete el otro motivo de rechazo --></errorMessage>
+        <name>Regla_Otro_Motivo_Rechazo</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Introduzca motivo del rechazo. --></errorMessage>
+        <name>Regla_de_la_razon_para_el_rechazo</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No se puede editar una oportunidad ya cerrada. --></errorMessage>
+        <name>Retail_Banking_Bloquear_Edicion</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe completar las actividades asociadas a la etapa &quot;Otorgamiento&quot;, antes de avanzar. --></errorMessage>
+        <name>Retail_Banking_Completar_Activ_Otorg</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe existir fecha de envío a comité. --></errorMessage>
+        <name>Retail_Banking_Fecha_Envio_Comite</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No se puede agregar mas de un producto a la oportunidad. --></errorMessage>
+        <name>Retail_Banking_Restringir_Productos</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Antes de activar los productos debe marcar la casilla &quot;Welcome pack entregado&quot; --></errorMessage>
+        <name>Valida_activacion_de_productos</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe indicar la Duración de la línea --></errorMessage>
+        <name>Validacion_ante_Resultado_de_Comite_Apr2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe indicar la Fecha de pronunciamiento del Comité --></errorMessage>
+        <name>Validacion_ante_Resultado_de_Comite_Apr3</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe indicar la Fecha de Vencimiento --></errorMessage>
+        <name>Validacion_ante_Resultado_de_Comite_Apro</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Hay campos que deben ser completados. Favor revisar y completar. --></errorMessage>
+        <name>Validacion_para_avanzar_contacto_calific</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe retirar el Disponible antes de marcar entregado. --></errorMessage>
+        <name>Welcompack_Entregado_Disponible</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- CRM_Bolsa_opp --></label>
+        <name>CRM_Bolsa_opp</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Referir --></label>
+        <name>Referir</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Solicitud_Creacion_Cliente_en_Sebra --></label>
+        <name>Solicitud_Creacion_Cliente_en_Sebra</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Solicitud_de_Producto --></label>
+        <name>Solicitud_de_Producto</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,3969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ForecastingSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <displayCurrency>CORPORATE</displayCurrency>
+    <enableForecasts>false</enableForecasts>
+    <forecastingCategoryMappings>
+        <forecastingItemCategoryApiName>commitonly</forecastingItemCategoryApiName>
+        <weightedSourceCategories>
+            <sourceCategoryApiName>commit</sourceCategoryApiName>
+            <weight>1.0</weight>
+        </weightedSourceCategories>
+    </forecastingCategoryMappings>
+    <forecastingCategoryMappings>
+        <forecastingItemCategoryApiName>closedonly</forecastingItemCategoryApiName>
+        <weightedSourceCategories>
+            <sourceCategoryApiName>closed</sourceCategoryApiName>
+            <weight>1.0</weight>
+        </weightedSourceCategories>
+    </forecastingCategoryMappings>
+    <forecastingCategoryMappings>
+        <forecastingItemCategoryApiName>openpipeline</forecastingItemCategoryApiName>
+        <weightedSourceCategories>
+            <sourceCategoryApiName>pipeline</sourceCategoryApiName>
+            <weight>1.0</weight>
+        </weightedSourceCategories>
+        <weightedSourceCategories>
+            <sourceCategoryApiName>commit</sourceCategoryApiName>
+            <weight>1.0</weight>
+        </weightedSourceCategories>
+        <weightedSourceCategories>
+            <sourceCategoryApiName>best case</sourceCategoryApiName>
+            <weight>1.0</weight>
+        </weightedSourceCategories>
+    </forecastingCategoryMappings>
+    <forecastingCategoryMappings>
+        <forecastingItemCategoryApiName>omittedonly</forecastingItemCategoryApiName>
+        <weightedSourceCategories>
+            <sourceCategoryApiName>omitted</sourceCategoryApiName>
+            <weight>1.0</weight>
+        </weightedSourceCategories>
+    </forecastingCategoryMappings>
+    <forecastingCategoryMappings>
+        <forecastingItemCategoryApiName>bestcaseforecast</forecastingItemCategoryApiName>
+        <weightedSourceCategories>
+            <sourceCategoryApiName>closed</sourceCategoryApiName>
+            <weight>1.0</weight>
+        </weightedSourceCategories>
+        <weightedSourceCategories>
+            <sourceCategoryApiName>commit</sourceCategoryApiName>
+            <weight>1.0</weight>
+        </weightedSourceCategories>
+        <weightedSourceCategories>
+            <sourceCategoryApiName>best case</sourceCategoryApiName>
+            <weight>1.0</weight>
+        </weightedSourceCategories>
+    </forecastingCategoryMappings>
+    <forecastingCategoryMappings>
+        <forecastingItemCategoryApiName>pipelineonly</forecastingItemCategoryApiName>
+        <weightedSourceCategories>
+            <sourceCategoryApiName>pipeline</sourceCategoryApiName>
+            <weight>1.0</weight>
+        </weightedSourceCategories>
+    </forecastingCategoryMappings>
+    <forecastingCategoryMappings>
+        <forecastingItemCategoryApiName>commitforecast</forecastingItemCategoryApiName>
+        <weightedSourceCategories>
+            <sourceCategoryApiName>closed</sourceCategoryApiName>
+            <weight>1.0</weight>
+        </weightedSourceCategories>
+        <weightedSourceCategories>
+            <sourceCategoryApiName>commit</sourceCategoryApiName>
+            <weight>1.0</weight>
+        </weightedSourceCategories>
+    </forecastingCategoryMappings>
+    <forecastingCategoryMappings>
+        <forecastingItemCategoryApiName>bestcaseonly</forecastingItemCategoryApiName>
+        <weightedSourceCategories>
+            <sourceCategoryApiName>best case</sourceCategoryApiName>
+            <weight>1.0</weight>
+        </weightedSourceCategories>
+    </forecastingCategoryMappings>
+    <forecastingTypeSettings>
+        <active>true</active>
+        <adjustmentsSettings>
+            <enableAdjustments>false</enableAdjustments>
+            <enableOwnerAdjustments>false</enableOwnerAdjustments>
+        </adjustmentsSettings>
+        <displayedCategoryApiNames>closedonly</displayedCategoryApiNames>
+        <displayedCategoryApiNames>commitonly</displayedCategoryApiNames>
+        <displayedCategoryApiNames>bestcaseonly</displayedCategoryApiNames>
+        <displayedCategoryApiNames>pipelineonly</displayedCategoryApiNames>
+        <forecastRangeSettings>
+            <beginning>0</beginning>
+            <displaying>6</displaying>
+            <periodType>Month</periodType>
+        </forecastRangeSettings>
+        <forecastedCategoryApiNames>commitonly</forecastedCategoryApiNames>
+        <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
+        <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
+        <forecastedCategoryApiNames>bestcaseonly</forecastedCategoryApiNames>
+        <isAmount>true</isAmount>
+        <isAvailable>true</isAvailable>
+        <isQuantity>false</isQuantity>
+        <masterLabel>Oportunidades</masterLabel>
+        <name>OpportunityRevenue</name>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.NAME</field>
+            <label>Nombre de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>ACCOUNT.NAME</field>
+            <label>Nombre de la cuenta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <label>Importe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <label>Fecha de cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <label>Etapa</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <label>Probabilidad (%)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>FORECAST_CATEGORY</field>
+            <label>Categoría de previsión</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>FULL_NAME</field>
+            <label>Nombre completo del propietario</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <label>Número de contrato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CONTRACT.NAME</field>
+            <label>Nombre del contrato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Divisa de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CORE.USERS.ALIAS</field>
+            <label>Alias del propietario de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <label>Nombre del propietario</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CORE.USERS.LAST_NAME</field>
+            <label>Apellidos del propietario</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>DESCRIPTION</field>
+            <label>Descripción</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <label>Ingresos previstos</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <label>Origen del candidato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <label>Paso siguiente</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <label>Privada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <label>Cantidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.TYPE</field>
+            <label>Tipo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <label>Última modificación por alias</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <label>Creado por alias</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CLOSED</field>
+            <label>Cerrado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.WON</field>
+            <label>Ganadas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>ACCOUNT.SITE</field>
+            <label>Sitio de la cuenta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <label>Año fiscal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <label>Trimestre fiscal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <label>Periodo fiscal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Tipo de registro de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <label>Última actividad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <label>Fecha de creación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <label>Fecha de la última modificación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EK</field>
+            <label>¿Requiere enrolamiento?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dr</field>
+            <label>¿Requiere validación subgerente?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cs</field>
+            <label>Acepta propuesta?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Ct</field>
+            <label>Activación de productos</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0ET</field>
+            <label>Actividades comité MAC completadas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cu</field>
+            <label>Acuerdo de oferta especial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIl</field>
+            <label>Analista de riesgo asignado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cv</field>
+            <label>Aprobado Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIm</field>
+            <label>Balance y E.Situación vigentes</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cy</field>
+            <label>Balance y Estado de Situación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIn</field>
+            <label>Boletín comercial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cx</field>
+            <label>BPM Flow Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cw</field>
+            <label>BPM Flow Status Last Update</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cz</field>
+            <label>Carpeta a Ejecutivo de Cuentas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Df</field>
+            <label>Carpeta Entregada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D0</field>
+            <label>Cierre con condición</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D1</field>
+            <label>Cliente completar y firmar el formulario</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dt</field>
+            <label>Cliente verificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b2</field>
+            <label>Comentario última actividad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIo</field>
+            <label>Comisión de intermediación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D2</field>
+            <label>Completar Articulo 85</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D3</field>
+            <label>Completar Solicitud de Producto y Serv</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EV</field>
+            <label>Completar y firmar Formulario EESS</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D4</field>
+            <label>Completar y firmar formulario solicitud</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D5</field>
+            <label>Condiciones del cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIp</field>
+            <label>Condiciones del negocio</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D6</field>
+            <label>Contador de tareas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D7</field>
+            <label>Cotizó?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D8</field>
+            <label>Creado de Profin</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D9</field>
+            <label>Creado por EyC</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DA</field>
+            <label>Creado por EyC CtaCorriente</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DB</field>
+            <label>Cumple requisitos?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EF</field>
+            <label>Descripción otro motivo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DC</field>
+            <label>Detalle resultado del contacto</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DD</field>
+            <label>Detección de otras oportunidades</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIr</field>
+            <label>Deuda leasing/factoring</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIq</field>
+            <label>Deuda SBIF últimos 3 meses</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b1</field>
+            <label>Días de antigüedad de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DE</field>
+            <label>Documentación enviada a riesgo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIs</field>
+            <label>Documento enviado a corredora seguros</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DF</field>
+            <label>Duración de la línea</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIt</field>
+            <label>EEFF o flujo de caja</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DH</field>
+            <label>Ejecutivo Cash maganement notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EJ</field>
+            <label>Ejecutivo Comercial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DG</field>
+            <label>Ejecutivo COMEX notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DI</field>
+            <label>Ejecutivo Cuenta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DJ</field>
+            <label>Ejecutivo Factoring notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DK</field>
+            <label>Ejecutivo Inversiones</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DO</field>
+            <label>Ejecutivo inversiones notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DL</field>
+            <label>Ejecutivo Leasing notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DM</field>
+            <label>Ejecutivo Mesa de dinero notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DP</field>
+            <label>Enrolamiento Ok</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DQ</field>
+            <label>Enviado a Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DR</field>
+            <label>Enviado a crear cliente</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DS</field>
+            <label>Enviar BPM</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIu</field>
+            <label>Enviar sol. desglose a gcia. de crédito</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DT</field>
+            <label>Equipo de Op. Creado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Di</field>
+            <label>Estado de gestión del contrato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIv</field>
+            <label>Estructura</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DU</field>
+            <label>Etapa calificando</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIw</field>
+            <label>Fecha asignación ejecutivo especialista</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DV</field>
+            <label>Fecha de asignación a Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b4</field>
+            <label>Fecha de cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DW</field>
+            <label>Fecha de cotización</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIz</field>
+            <label>Fecha de gestión del contrato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b3</field>
+            <label>Fecha de gestión del contrato leasing</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Da</field>
+            <label>Fecha del cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ2</field>
+            <label>Fecha del contacto con cliente</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ0</field>
+            <label>Fecha de recepción informe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DZ</field>
+            <label>Fecha de vencimiento</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ1</field>
+            <label>Fecha de vencimiento MAC</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Db</field>
+            <label>Fecha envío a comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dc</field>
+            <label>Fecha pronunciamiento Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ3</field>
+            <label>Fecha simulación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIy</field>
+            <label>Fecha solicitud informe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ4</field>
+            <label>Fecha tentativa entrega informe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dd</field>
+            <label>Fecha vencimiento Calificando</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ5</field>
+            <label>Fecha vencimiento póliza actual</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ6</field>
+            <label>Feedback sobre el caso</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0De</field>
+            <label>Firma ok</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dg</field>
+            <label>Form. de productos, foto, firma y huella</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dv</field>
+            <label>Formulario de ingreso de activos:</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dh</field>
+            <label>FuiElCreadorDeLaOportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ7</field>
+            <label>Garantías</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJA</field>
+            <label>Gestionar nuevo MAC?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dj</field>
+            <label>Gestión del contrato leasing</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ8</field>
+            <label>Gestión por analista</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ9</field>
+            <label>Gestión por ejecutivo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Du</field>
+            <label>GPI habilitado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJB</field>
+            <label>Indicar garantías</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000a6NH9</field>
+            <label>Informe creado y enviado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EN</field>
+            <label>Informe de riesgo recibido</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJC</field>
+            <label>Informes legales vigentes</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Do</field>
+            <label>InvAP</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dk</field>
+            <label>Inversión realizada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E3</field>
+            <label>Jefe de Grupo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E2</field>
+            <label>Jefe Plataforma / Agente Sucursal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E4</field>
+            <label>KYC Aprobado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E5</field>
+            <label>KYC Ingresado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dw</field>
+            <label>Línea de crédito BIA abierta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E6</field>
+            <label>MAC gestionado y creado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJD</field>
+            <label>MAC vigente para cursar esta oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E8</field>
+            <label>MeAsignaronOportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b5</field>
+            <label>Moneda</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b6</field>
+            <label>Monto (MM$)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJF</field>
+            <label>Monto leasing (MM$)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJE</field>
+            <label>Monto MAC creado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJG</field>
+            <label>Motivo no cumple condiciones</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000a6NHA</field>
+            <label>Motivo rechazo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E9</field>
+            <label>Motivo rechazo comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EA</field>
+            <label>Motivos cierre no exitoso</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DN</field>
+            <label>Nombre ejecutivo especialista</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EB</field>
+            <label>Número del crédito</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJH</field>
+            <label>Número de operación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Ek</field>
+            <label>Número de Productos</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EC</field>
+            <label>Observaciones</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dq</field>
+            <label>Obtención documentos requeridos</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dp</field>
+            <label>Obtención firma FATCA</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0ED</field>
+            <label>Operaciones</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b7</field>
+            <label>Oportunidad girada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EE</field>
+            <label>Origen referido</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EG</field>
+            <label>Otro motivo rechazo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJI</field>
+            <label>Pasar a otorgamiento</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b8</field>
+            <label>Plazo (meses)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EH</field>
+            <label>Presentar Solución financiera</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJJ</field>
+            <label>Prima según frecuencia de pagos (UF)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cWrb3</field>
+            <label>Producto</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E7</field>
+            <label>Producto BIA?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EI</field>
+            <label>Productos bancarios</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dm</field>
+            <label>Proposal Delivered</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dn</field>
+            <label>Proposal Required</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dy</field>
+            <label>Propuesta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dx</field>
+            <label>Propuesta Creada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJK</field>
+            <label>Requiere tarifa especial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dz</field>
+            <label>Requires credit management?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJL</field>
+            <label>Resultado cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EL</field>
+            <label>Resultado Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EM</field>
+            <label>Resultado del contacto</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EO</field>
+            <label>Segmento referido</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EP</field>
+            <label>Solicitude de Producto y Servicios</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b9</field>
+            <label>Spread (% anual)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EQ</field>
+            <label>Subetapa</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000a6NH8</field>
+            <label>Subgcia evalúa necesidad nuevo informe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EU</field>
+            <label>Subgerente/agente comercial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJM</field>
+            <label>Sucursal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0ER</field>
+            <label>Tareas de &quot;Otorgamiento&quot; completadas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0ES</field>
+            <label>Tipo de cuenta BIA</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dl</field>
+            <label>Tipo de inversión</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cWrb2</field>
+            <label>Tipo de oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJN</field>
+            <label>Tipo de pago</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cWrb4</field>
+            <label>Tipo de producto</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJO</field>
+            <label>Ventas según IVA</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Ds</field>
+            <label>Visita OK?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E0</field>
+            <label>Welcome pack disponible</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E1</field>
+            <label>Welcome pack entregado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsSelectedSettings>
+            <field>OPPORTUNITY.NAME</field>
+            <field>ACCOUNT.NAME</field>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <field>FORECAST_CATEGORY</field>
+            <field>FULL_NAME</field>
+        </opportunityListFieldsSelectedSettings>
+        <opportunityListFieldsUnselectedSettings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <field>CORE.USERS.ALIAS</field>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <field>CORE.USERS.LAST_NAME</field>
+            <field>DESCRIPTION</field>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <field>OPPORTUNITY.TYPE</field>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <field>OPPORTUNITY.CLOSED</field>
+            <field>OPPORTUNITY.WON</field>
+            <field>ACCOUNT.SITE</field>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N4100000WD0EK</field>
+            <field>00N4100000WD0Dr</field>
+            <field>00N4100000WD0Cs</field>
+            <field>00N4100000WD0Ct</field>
+            <field>00N4100000WD0ET</field>
+            <field>00N4100000WD0Cu</field>
+            <field>00N4100000cUlIl</field>
+            <field>00N4100000WD0Cv</field>
+            <field>00N4100000cUlIm</field>
+            <field>00N4100000WD0Cy</field>
+            <field>00N4100000cUlIn</field>
+            <field>00N4100000WD0Cx</field>
+            <field>00N4100000WD0Cw</field>
+            <field>00N4100000WD0Cz</field>
+            <field>00N4100000WD0Df</field>
+            <field>00N4100000WD0D0</field>
+            <field>00N4100000WD0D1</field>
+            <field>00N4100000WD0Dt</field>
+            <field>00N4100000Z65b2</field>
+            <field>00N4100000cUlIo</field>
+            <field>00N4100000WD0D2</field>
+            <field>00N4100000WD0D3</field>
+            <field>00N4100000WD0EV</field>
+            <field>00N4100000WD0D4</field>
+            <field>00N4100000WD0D5</field>
+            <field>00N4100000cUlIp</field>
+            <field>00N4100000WD0D6</field>
+            <field>00N4100000WD0D7</field>
+            <field>00N4100000WD0D8</field>
+            <field>00N4100000WD0D9</field>
+            <field>00N4100000WD0DA</field>
+            <field>00N4100000WD0DB</field>
+            <field>00N4100000WD0EF</field>
+            <field>00N4100000WD0DC</field>
+            <field>00N4100000WD0DD</field>
+            <field>00N4100000cUlIr</field>
+            <field>00N4100000cUlIq</field>
+            <field>00N4100000Z65b1</field>
+            <field>00N4100000WD0DE</field>
+            <field>00N4100000cUlIs</field>
+            <field>00N4100000WD0DF</field>
+            <field>00N4100000cUlIt</field>
+            <field>00N4100000WD0DH</field>
+            <field>00N4100000WD0EJ</field>
+            <field>00N4100000WD0DG</field>
+            <field>00N4100000WD0DI</field>
+            <field>00N4100000WD0DJ</field>
+            <field>00N4100000WD0DK</field>
+            <field>00N4100000WD0DO</field>
+            <field>00N4100000WD0DL</field>
+            <field>00N4100000WD0DM</field>
+            <field>00N4100000WD0DP</field>
+            <field>00N4100000WD0DQ</field>
+            <field>00N4100000WD0DR</field>
+            <field>00N4100000WD0DS</field>
+            <field>00N4100000cUlIu</field>
+            <field>00N4100000WD0DT</field>
+            <field>00N4100000WD0Di</field>
+            <field>00N4100000cUlIv</field>
+            <field>00N4100000WD0DU</field>
+            <field>00N4100000cUlIw</field>
+            <field>00N4100000WD0DV</field>
+            <field>00N4100000Z65b4</field>
+            <field>00N4100000WD0DW</field>
+            <field>00N4100000cUlIz</field>
+            <field>00N4100000Z65b3</field>
+            <field>00N4100000WD0Da</field>
+            <field>00N4100000cUlJ2</field>
+            <field>00N4100000cUlJ0</field>
+            <field>00N4100000WD0DZ</field>
+            <field>00N4100000cUlJ1</field>
+            <field>00N4100000WD0Db</field>
+            <field>00N4100000WD0Dc</field>
+            <field>00N4100000cUlJ3</field>
+            <field>00N4100000cUlIy</field>
+            <field>00N4100000cUlJ4</field>
+            <field>00N4100000WD0Dd</field>
+            <field>00N4100000cUlJ5</field>
+            <field>00N4100000cUlJ6</field>
+            <field>00N4100000WD0De</field>
+            <field>00N4100000WD0Dg</field>
+            <field>00N4100000WD0Dv</field>
+            <field>00N4100000WD0Dh</field>
+            <field>00N4100000cUlJ7</field>
+            <field>00N4100000cUlJA</field>
+            <field>00N4100000WD0Dj</field>
+            <field>00N4100000cUlJ8</field>
+            <field>00N4100000cUlJ9</field>
+            <field>00N4100000WD0Du</field>
+            <field>00N4100000cUlJB</field>
+            <field>00N4100000a6NH9</field>
+            <field>00N4100000WD0EN</field>
+            <field>00N4100000cUlJC</field>
+            <field>00N4100000WD0Do</field>
+            <field>00N4100000WD0Dk</field>
+            <field>00N4100000WD0E3</field>
+            <field>00N4100000WD0E2</field>
+            <field>00N4100000WD0E4</field>
+            <field>00N4100000WD0E5</field>
+            <field>00N4100000WD0Dw</field>
+            <field>00N4100000WD0E6</field>
+            <field>00N4100000cUlJD</field>
+            <field>00N4100000WD0E8</field>
+            <field>00N4100000Z65b5</field>
+            <field>00N4100000Z65b6</field>
+            <field>00N4100000cUlJF</field>
+            <field>00N4100000cUlJE</field>
+            <field>00N4100000cUlJG</field>
+            <field>00N4100000a6NHA</field>
+            <field>00N4100000WD0E9</field>
+            <field>00N4100000WD0EA</field>
+            <field>00N4100000WD0DN</field>
+            <field>00N4100000WD0EB</field>
+            <field>00N4100000cUlJH</field>
+            <field>00N4100000WD0Ek</field>
+            <field>00N4100000WD0EC</field>
+            <field>00N4100000WD0Dq</field>
+            <field>00N4100000WD0Dp</field>
+            <field>00N4100000WD0ED</field>
+            <field>00N4100000Z65b7</field>
+            <field>00N4100000WD0EE</field>
+            <field>00N4100000WD0EG</field>
+            <field>00N4100000cUlJI</field>
+            <field>00N4100000Z65b8</field>
+            <field>00N4100000WD0EH</field>
+            <field>00N4100000cUlJJ</field>
+            <field>00N4100000cWrb3</field>
+            <field>00N4100000WD0E7</field>
+            <field>00N4100000WD0EI</field>
+            <field>00N4100000WD0Dm</field>
+            <field>00N4100000WD0Dn</field>
+            <field>00N4100000WD0Dy</field>
+            <field>00N4100000WD0Dx</field>
+            <field>00N4100000cUlJK</field>
+            <field>00N4100000WD0Dz</field>
+            <field>00N4100000cUlJL</field>
+            <field>00N4100000WD0EL</field>
+            <field>00N4100000WD0EM</field>
+            <field>00N4100000WD0EO</field>
+            <field>00N4100000WD0EP</field>
+            <field>00N4100000Z65b9</field>
+            <field>00N4100000WD0EQ</field>
+            <field>00N4100000a6NH8</field>
+            <field>00N4100000WD0EU</field>
+            <field>00N4100000cUlJM</field>
+            <field>00N4100000WD0ER</field>
+            <field>00N4100000WD0ES</field>
+            <field>00N4100000WD0Dl</field>
+            <field>00N4100000cWrb2</field>
+            <field>00N4100000cUlJN</field>
+            <field>00N4100000cWrb4</field>
+            <field>00N4100000cUlJO</field>
+            <field>00N4100000WD0Ds</field>
+            <field>00N4100000WD0E0</field>
+            <field>00N4100000WD0E1</field>
+        </opportunityListFieldsUnselectedSettings>
+        <quotasSettings>
+            <showQuotas>false</showQuotas>
+        </quotasSettings>
+    </forecastingTypeSettings>
+    <forecastingTypeSettings>
+        <active>false</active>
+        <adjustmentsSettings>
+            <enableAdjustments>false</enableAdjustments>
+            <enableOwnerAdjustments>false</enableOwnerAdjustments>
+        </adjustmentsSettings>
+        <displayedCategoryApiNames>closedonly</displayedCategoryApiNames>
+        <displayedCategoryApiNames>commitonly</displayedCategoryApiNames>
+        <displayedCategoryApiNames>bestcaseonly</displayedCategoryApiNames>
+        <displayedCategoryApiNames>pipelineonly</displayedCategoryApiNames>
+        <forecastRangeSettings>
+            <beginning>0</beginning>
+            <displaying>6</displaying>
+            <periodType>Month</periodType>
+        </forecastRangeSettings>
+        <forecastedCategoryApiNames>commitonly</forecastedCategoryApiNames>
+        <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
+        <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
+        <forecastedCategoryApiNames>bestcaseonly</forecastedCategoryApiNames>
+        <isAmount>false</isAmount>
+        <isAvailable>true</isAvailable>
+        <isQuantity>true</isQuantity>
+        <masterLabel>Oportunidades</masterLabel>
+        <name>OpportunityQuantity</name>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.NAME</field>
+            <label>Nombre de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>ACCOUNT.NAME</field>
+            <label>Nombre de la cuenta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <label>Cantidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <label>Fecha de cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <label>Etapa</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <label>Probabilidad (%)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>FORECAST_CATEGORY</field>
+            <label>Categoría de previsión</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>FULL_NAME</field>
+            <label>Nombre completo del propietario</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <label>Número de contrato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CONTRACT.NAME</field>
+            <label>Nombre del contrato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Divisa de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <label>Importe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CORE.USERS.ALIAS</field>
+            <label>Alias del propietario de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <label>Nombre del propietario</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CORE.USERS.LAST_NAME</field>
+            <label>Apellidos del propietario</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>DESCRIPTION</field>
+            <label>Descripción</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <label>Ingresos previstos</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <label>Origen del candidato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <label>Paso siguiente</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <label>Privada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.TYPE</field>
+            <label>Tipo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <label>Última modificación por alias</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <label>Creado por alias</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CLOSED</field>
+            <label>Cerrado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.WON</field>
+            <label>Ganadas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>ACCOUNT.SITE</field>
+            <label>Sitio de la cuenta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <label>Año fiscal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <label>Trimestre fiscal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <label>Periodo fiscal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Tipo de registro de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <label>Última actividad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <label>Fecha de creación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <label>Fecha de la última modificación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EK</field>
+            <label>¿Requiere enrolamiento?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dr</field>
+            <label>¿Requiere validación subgerente?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cs</field>
+            <label>Acepta propuesta?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Ct</field>
+            <label>Activación de productos</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0ET</field>
+            <label>Actividades comité MAC completadas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cu</field>
+            <label>Acuerdo de oferta especial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIl</field>
+            <label>Analista de riesgo asignado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cv</field>
+            <label>Aprobado Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIm</field>
+            <label>Balance y E.Situación vigentes</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cy</field>
+            <label>Balance y Estado de Situación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIn</field>
+            <label>Boletín comercial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cx</field>
+            <label>BPM Flow Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cw</field>
+            <label>BPM Flow Status Last Update</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cz</field>
+            <label>Carpeta a Ejecutivo de Cuentas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Df</field>
+            <label>Carpeta Entregada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D0</field>
+            <label>Cierre con condición</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D1</field>
+            <label>Cliente completar y firmar el formulario</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dt</field>
+            <label>Cliente verificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b2</field>
+            <label>Comentario última actividad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIo</field>
+            <label>Comisión de intermediación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D2</field>
+            <label>Completar Articulo 85</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D3</field>
+            <label>Completar Solicitud de Producto y Serv</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EV</field>
+            <label>Completar y firmar Formulario EESS</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D4</field>
+            <label>Completar y firmar formulario solicitud</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D5</field>
+            <label>Condiciones del cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIp</field>
+            <label>Condiciones del negocio</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D6</field>
+            <label>Contador de tareas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D7</field>
+            <label>Cotizó?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D8</field>
+            <label>Creado de Profin</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D9</field>
+            <label>Creado por EyC</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DA</field>
+            <label>Creado por EyC CtaCorriente</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DB</field>
+            <label>Cumple requisitos?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EF</field>
+            <label>Descripción otro motivo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DC</field>
+            <label>Detalle resultado del contacto</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DD</field>
+            <label>Detección de otras oportunidades</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIr</field>
+            <label>Deuda leasing/factoring</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIq</field>
+            <label>Deuda SBIF últimos 3 meses</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b1</field>
+            <label>Días de antigüedad de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DE</field>
+            <label>Documentación enviada a riesgo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIs</field>
+            <label>Documento enviado a corredora seguros</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DF</field>
+            <label>Duración de la línea</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIt</field>
+            <label>EEFF o flujo de caja</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DH</field>
+            <label>Ejecutivo Cash maganement notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EJ</field>
+            <label>Ejecutivo Comercial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DG</field>
+            <label>Ejecutivo COMEX notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DI</field>
+            <label>Ejecutivo Cuenta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DJ</field>
+            <label>Ejecutivo Factoring notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DK</field>
+            <label>Ejecutivo Inversiones</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DO</field>
+            <label>Ejecutivo inversiones notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DL</field>
+            <label>Ejecutivo Leasing notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DM</field>
+            <label>Ejecutivo Mesa de dinero notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DP</field>
+            <label>Enrolamiento Ok</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DQ</field>
+            <label>Enviado a Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DR</field>
+            <label>Enviado a crear cliente</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DS</field>
+            <label>Enviar BPM</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIu</field>
+            <label>Enviar sol. desglose a gcia. de crédito</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DT</field>
+            <label>Equipo de Op. Creado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Di</field>
+            <label>Estado de gestión del contrato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIv</field>
+            <label>Estructura</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DU</field>
+            <label>Etapa calificando</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIw</field>
+            <label>Fecha asignación ejecutivo especialista</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DV</field>
+            <label>Fecha de asignación a Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b4</field>
+            <label>Fecha de cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DW</field>
+            <label>Fecha de cotización</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIz</field>
+            <label>Fecha de gestión del contrato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b3</field>
+            <label>Fecha de gestión del contrato leasing</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Da</field>
+            <label>Fecha del cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ2</field>
+            <label>Fecha del contacto con cliente</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ0</field>
+            <label>Fecha de recepción informe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DZ</field>
+            <label>Fecha de vencimiento</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ1</field>
+            <label>Fecha de vencimiento MAC</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Db</field>
+            <label>Fecha envío a comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dc</field>
+            <label>Fecha pronunciamiento Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ3</field>
+            <label>Fecha simulación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIy</field>
+            <label>Fecha solicitud informe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ4</field>
+            <label>Fecha tentativa entrega informe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dd</field>
+            <label>Fecha vencimiento Calificando</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ5</field>
+            <label>Fecha vencimiento póliza actual</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ6</field>
+            <label>Feedback sobre el caso</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0De</field>
+            <label>Firma ok</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dg</field>
+            <label>Form. de productos, foto, firma y huella</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dv</field>
+            <label>Formulario de ingreso de activos:</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dh</field>
+            <label>FuiElCreadorDeLaOportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ7</field>
+            <label>Garantías</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJA</field>
+            <label>Gestionar nuevo MAC?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dj</field>
+            <label>Gestión del contrato leasing</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ8</field>
+            <label>Gestión por analista</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ9</field>
+            <label>Gestión por ejecutivo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Du</field>
+            <label>GPI habilitado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJB</field>
+            <label>Indicar garantías</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000a6NH9</field>
+            <label>Informe creado y enviado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EN</field>
+            <label>Informe de riesgo recibido</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJC</field>
+            <label>Informes legales vigentes</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Do</field>
+            <label>InvAP</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dk</field>
+            <label>Inversión realizada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E3</field>
+            <label>Jefe de Grupo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E2</field>
+            <label>Jefe Plataforma / Agente Sucursal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E4</field>
+            <label>KYC Aprobado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E5</field>
+            <label>KYC Ingresado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dw</field>
+            <label>Línea de crédito BIA abierta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E6</field>
+            <label>MAC gestionado y creado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJD</field>
+            <label>MAC vigente para cursar esta oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E8</field>
+            <label>MeAsignaronOportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b5</field>
+            <label>Moneda</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b6</field>
+            <label>Monto (MM$)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJF</field>
+            <label>Monto leasing (MM$)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJE</field>
+            <label>Monto MAC creado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJG</field>
+            <label>Motivo no cumple condiciones</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000a6NHA</field>
+            <label>Motivo rechazo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E9</field>
+            <label>Motivo rechazo comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EA</field>
+            <label>Motivos cierre no exitoso</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DN</field>
+            <label>Nombre ejecutivo especialista</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EB</field>
+            <label>Número del crédito</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJH</field>
+            <label>Número de operación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Ek</field>
+            <label>Número de Productos</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EC</field>
+            <label>Observaciones</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dq</field>
+            <label>Obtención documentos requeridos</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dp</field>
+            <label>Obtención firma FATCA</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0ED</field>
+            <label>Operaciones</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b7</field>
+            <label>Oportunidad girada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EE</field>
+            <label>Origen referido</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EG</field>
+            <label>Otro motivo rechazo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJI</field>
+            <label>Pasar a otorgamiento</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b8</field>
+            <label>Plazo (meses)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EH</field>
+            <label>Presentar Solución financiera</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJJ</field>
+            <label>Prima según frecuencia de pagos (UF)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cWrb3</field>
+            <label>Producto</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E7</field>
+            <label>Producto BIA?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EI</field>
+            <label>Productos bancarios</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dm</field>
+            <label>Proposal Delivered</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dn</field>
+            <label>Proposal Required</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dy</field>
+            <label>Propuesta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dx</field>
+            <label>Propuesta Creada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJK</field>
+            <label>Requiere tarifa especial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dz</field>
+            <label>Requires credit management?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJL</field>
+            <label>Resultado cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EL</field>
+            <label>Resultado Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EM</field>
+            <label>Resultado del contacto</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EO</field>
+            <label>Segmento referido</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EP</field>
+            <label>Solicitude de Producto y Servicios</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b9</field>
+            <label>Spread (% anual)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EQ</field>
+            <label>Subetapa</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000a6NH8</field>
+            <label>Subgcia evalúa necesidad nuevo informe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EU</field>
+            <label>Subgerente/agente comercial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJM</field>
+            <label>Sucursal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0ER</field>
+            <label>Tareas de &quot;Otorgamiento&quot; completadas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0ES</field>
+            <label>Tipo de cuenta BIA</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dl</field>
+            <label>Tipo de inversión</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cWrb2</field>
+            <label>Tipo de oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJN</field>
+            <label>Tipo de pago</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cWrb4</field>
+            <label>Tipo de producto</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJO</field>
+            <label>Ventas según IVA</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Ds</field>
+            <label>Visita OK?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E0</field>
+            <label>Welcome pack disponible</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E1</field>
+            <label>Welcome pack entregado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsSelectedSettings>
+            <field>OPPORTUNITY.NAME</field>
+            <field>ACCOUNT.NAME</field>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <field>FORECAST_CATEGORY</field>
+            <field>FULL_NAME</field>
+        </opportunityListFieldsSelectedSettings>
+        <opportunityListFieldsUnselectedSettings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <field>CORE.USERS.ALIAS</field>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <field>CORE.USERS.LAST_NAME</field>
+            <field>DESCRIPTION</field>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <field>OPPORTUNITY.TYPE</field>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <field>OPPORTUNITY.CLOSED</field>
+            <field>OPPORTUNITY.WON</field>
+            <field>ACCOUNT.SITE</field>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N4100000WD0EK</field>
+            <field>00N4100000WD0Dr</field>
+            <field>00N4100000WD0Cs</field>
+            <field>00N4100000WD0Ct</field>
+            <field>00N4100000WD0ET</field>
+            <field>00N4100000WD0Cu</field>
+            <field>00N4100000cUlIl</field>
+            <field>00N4100000WD0Cv</field>
+            <field>00N4100000cUlIm</field>
+            <field>00N4100000WD0Cy</field>
+            <field>00N4100000cUlIn</field>
+            <field>00N4100000WD0Cx</field>
+            <field>00N4100000WD0Cw</field>
+            <field>00N4100000WD0Cz</field>
+            <field>00N4100000WD0Df</field>
+            <field>00N4100000WD0D0</field>
+            <field>00N4100000WD0D1</field>
+            <field>00N4100000WD0Dt</field>
+            <field>00N4100000Z65b2</field>
+            <field>00N4100000cUlIo</field>
+            <field>00N4100000WD0D2</field>
+            <field>00N4100000WD0D3</field>
+            <field>00N4100000WD0EV</field>
+            <field>00N4100000WD0D4</field>
+            <field>00N4100000WD0D5</field>
+            <field>00N4100000cUlIp</field>
+            <field>00N4100000WD0D6</field>
+            <field>00N4100000WD0D7</field>
+            <field>00N4100000WD0D8</field>
+            <field>00N4100000WD0D9</field>
+            <field>00N4100000WD0DA</field>
+            <field>00N4100000WD0DB</field>
+            <field>00N4100000WD0EF</field>
+            <field>00N4100000WD0DC</field>
+            <field>00N4100000WD0DD</field>
+            <field>00N4100000cUlIr</field>
+            <field>00N4100000cUlIq</field>
+            <field>00N4100000Z65b1</field>
+            <field>00N4100000WD0DE</field>
+            <field>00N4100000cUlIs</field>
+            <field>00N4100000WD0DF</field>
+            <field>00N4100000cUlIt</field>
+            <field>00N4100000WD0DH</field>
+            <field>00N4100000WD0EJ</field>
+            <field>00N4100000WD0DG</field>
+            <field>00N4100000WD0DI</field>
+            <field>00N4100000WD0DJ</field>
+            <field>00N4100000WD0DK</field>
+            <field>00N4100000WD0DO</field>
+            <field>00N4100000WD0DL</field>
+            <field>00N4100000WD0DM</field>
+            <field>00N4100000WD0DP</field>
+            <field>00N4100000WD0DQ</field>
+            <field>00N4100000WD0DR</field>
+            <field>00N4100000WD0DS</field>
+            <field>00N4100000cUlIu</field>
+            <field>00N4100000WD0DT</field>
+            <field>00N4100000WD0Di</field>
+            <field>00N4100000cUlIv</field>
+            <field>00N4100000WD0DU</field>
+            <field>00N4100000cUlIw</field>
+            <field>00N4100000WD0DV</field>
+            <field>00N4100000Z65b4</field>
+            <field>00N4100000WD0DW</field>
+            <field>00N4100000cUlIz</field>
+            <field>00N4100000Z65b3</field>
+            <field>00N4100000WD0Da</field>
+            <field>00N4100000cUlJ2</field>
+            <field>00N4100000cUlJ0</field>
+            <field>00N4100000WD0DZ</field>
+            <field>00N4100000cUlJ1</field>
+            <field>00N4100000WD0Db</field>
+            <field>00N4100000WD0Dc</field>
+            <field>00N4100000cUlJ3</field>
+            <field>00N4100000cUlIy</field>
+            <field>00N4100000cUlJ4</field>
+            <field>00N4100000WD0Dd</field>
+            <field>00N4100000cUlJ5</field>
+            <field>00N4100000cUlJ6</field>
+            <field>00N4100000WD0De</field>
+            <field>00N4100000WD0Dg</field>
+            <field>00N4100000WD0Dv</field>
+            <field>00N4100000WD0Dh</field>
+            <field>00N4100000cUlJ7</field>
+            <field>00N4100000cUlJA</field>
+            <field>00N4100000WD0Dj</field>
+            <field>00N4100000cUlJ8</field>
+            <field>00N4100000cUlJ9</field>
+            <field>00N4100000WD0Du</field>
+            <field>00N4100000cUlJB</field>
+            <field>00N4100000a6NH9</field>
+            <field>00N4100000WD0EN</field>
+            <field>00N4100000cUlJC</field>
+            <field>00N4100000WD0Do</field>
+            <field>00N4100000WD0Dk</field>
+            <field>00N4100000WD0E3</field>
+            <field>00N4100000WD0E2</field>
+            <field>00N4100000WD0E4</field>
+            <field>00N4100000WD0E5</field>
+            <field>00N4100000WD0Dw</field>
+            <field>00N4100000WD0E6</field>
+            <field>00N4100000cUlJD</field>
+            <field>00N4100000WD0E8</field>
+            <field>00N4100000Z65b5</field>
+            <field>00N4100000Z65b6</field>
+            <field>00N4100000cUlJF</field>
+            <field>00N4100000cUlJE</field>
+            <field>00N4100000cUlJG</field>
+            <field>00N4100000a6NHA</field>
+            <field>00N4100000WD0E9</field>
+            <field>00N4100000WD0EA</field>
+            <field>00N4100000WD0DN</field>
+            <field>00N4100000WD0EB</field>
+            <field>00N4100000cUlJH</field>
+            <field>00N4100000WD0Ek</field>
+            <field>00N4100000WD0EC</field>
+            <field>00N4100000WD0Dq</field>
+            <field>00N4100000WD0Dp</field>
+            <field>00N4100000WD0ED</field>
+            <field>00N4100000Z65b7</field>
+            <field>00N4100000WD0EE</field>
+            <field>00N4100000WD0EG</field>
+            <field>00N4100000cUlJI</field>
+            <field>00N4100000Z65b8</field>
+            <field>00N4100000WD0EH</field>
+            <field>00N4100000cUlJJ</field>
+            <field>00N4100000cWrb3</field>
+            <field>00N4100000WD0E7</field>
+            <field>00N4100000WD0EI</field>
+            <field>00N4100000WD0Dm</field>
+            <field>00N4100000WD0Dn</field>
+            <field>00N4100000WD0Dy</field>
+            <field>00N4100000WD0Dx</field>
+            <field>00N4100000cUlJK</field>
+            <field>00N4100000WD0Dz</field>
+            <field>00N4100000cUlJL</field>
+            <field>00N4100000WD0EL</field>
+            <field>00N4100000WD0EM</field>
+            <field>00N4100000WD0EO</field>
+            <field>00N4100000WD0EP</field>
+            <field>00N4100000Z65b9</field>
+            <field>00N4100000WD0EQ</field>
+            <field>00N4100000a6NH8</field>
+            <field>00N4100000WD0EU</field>
+            <field>00N4100000cUlJM</field>
+            <field>00N4100000WD0ER</field>
+            <field>00N4100000WD0ES</field>
+            <field>00N4100000WD0Dl</field>
+            <field>00N4100000cWrb2</field>
+            <field>00N4100000cUlJN</field>
+            <field>00N4100000cWrb4</field>
+            <field>00N4100000cUlJO</field>
+            <field>00N4100000WD0Ds</field>
+            <field>00N4100000WD0E0</field>
+            <field>00N4100000WD0E1</field>
+        </opportunityListFieldsUnselectedSettings>
+        <quotasSettings>
+            <showQuotas>false</showQuotas>
+        </quotasSettings>
+    </forecastingTypeSettings>
+    <forecastingTypeSettings>
+        <active>false</active>
+        <adjustmentsSettings>
+            <enableAdjustments>false</enableAdjustments>
+            <enableOwnerAdjustments>false</enableOwnerAdjustments>
+        </adjustmentsSettings>
+        <displayedCategoryApiNames>closedonly</displayedCategoryApiNames>
+        <displayedCategoryApiNames>commitonly</displayedCategoryApiNames>
+        <displayedCategoryApiNames>bestcaseonly</displayedCategoryApiNames>
+        <displayedCategoryApiNames>pipelineonly</displayedCategoryApiNames>
+        <forecastRangeSettings>
+            <beginning>0</beginning>
+            <displaying>6</displaying>
+            <periodType>Month</periodType>
+        </forecastRangeSettings>
+        <forecastedCategoryApiNames>commitonly</forecastedCategoryApiNames>
+        <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
+        <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
+        <forecastedCategoryApiNames>bestcaseonly</forecastedCategoryApiNames>
+        <isAmount>true</isAmount>
+        <isAvailable>true</isAvailable>
+        <isQuantity>false</isQuantity>
+        <masterLabel>Familias de productos</masterLabel>
+        <name>OpportunityLineItemRevenue</name>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.NAME</field>
+            <label>Nombre de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>ACCOUNT.NAME</field>
+            <label>Nombre de la cuenta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <label>Importe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <label>Fecha de cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <label>Etapa</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <label>Probabilidad (%)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>FORECAST_CATEGORY</field>
+            <label>Categoría de previsión</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>FULL_NAME</field>
+            <label>Nombre completo del propietario</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <label>Número de contrato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CONTRACT.NAME</field>
+            <label>Nombre del contrato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Divisa de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CORE.USERS.ALIAS</field>
+            <label>Alias del propietario de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <label>Nombre del propietario</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CORE.USERS.LAST_NAME</field>
+            <label>Apellidos del propietario</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>DESCRIPTION</field>
+            <label>Descripción</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <label>Ingresos previstos</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <label>Origen del candidato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <label>Paso siguiente</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <label>Privada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <label>Cantidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.TYPE</field>
+            <label>Tipo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <label>Última modificación por alias</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <label>Creado por alias</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CLOSED</field>
+            <label>Cerrado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.WON</field>
+            <label>Ganadas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>ACCOUNT.SITE</field>
+            <label>Sitio de la cuenta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <label>Año fiscal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <label>Trimestre fiscal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <label>Periodo fiscal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Tipo de registro de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <label>Última actividad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <label>Fecha de creación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <label>Fecha de la última modificación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EK</field>
+            <label>¿Requiere enrolamiento?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dr</field>
+            <label>¿Requiere validación subgerente?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cs</field>
+            <label>Acepta propuesta?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Ct</field>
+            <label>Activación de productos</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0ET</field>
+            <label>Actividades comité MAC completadas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cu</field>
+            <label>Acuerdo de oferta especial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIl</field>
+            <label>Analista de riesgo asignado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cv</field>
+            <label>Aprobado Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIm</field>
+            <label>Balance y E.Situación vigentes</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cy</field>
+            <label>Balance y Estado de Situación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIn</field>
+            <label>Boletín comercial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cx</field>
+            <label>BPM Flow Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cw</field>
+            <label>BPM Flow Status Last Update</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cz</field>
+            <label>Carpeta a Ejecutivo de Cuentas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Df</field>
+            <label>Carpeta Entregada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D0</field>
+            <label>Cierre con condición</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D1</field>
+            <label>Cliente completar y firmar el formulario</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dt</field>
+            <label>Cliente verificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b2</field>
+            <label>Comentario última actividad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIo</field>
+            <label>Comisión de intermediación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D2</field>
+            <label>Completar Articulo 85</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D3</field>
+            <label>Completar Solicitud de Producto y Serv</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EV</field>
+            <label>Completar y firmar Formulario EESS</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D4</field>
+            <label>Completar y firmar formulario solicitud</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D5</field>
+            <label>Condiciones del cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIp</field>
+            <label>Condiciones del negocio</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D6</field>
+            <label>Contador de tareas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D7</field>
+            <label>Cotizó?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D8</field>
+            <label>Creado de Profin</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D9</field>
+            <label>Creado por EyC</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DA</field>
+            <label>Creado por EyC CtaCorriente</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DB</field>
+            <label>Cumple requisitos?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EF</field>
+            <label>Descripción otro motivo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DC</field>
+            <label>Detalle resultado del contacto</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DD</field>
+            <label>Detección de otras oportunidades</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIr</field>
+            <label>Deuda leasing/factoring</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIq</field>
+            <label>Deuda SBIF últimos 3 meses</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b1</field>
+            <label>Días de antigüedad de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DE</field>
+            <label>Documentación enviada a riesgo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIs</field>
+            <label>Documento enviado a corredora seguros</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DF</field>
+            <label>Duración de la línea</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIt</field>
+            <label>EEFF o flujo de caja</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DH</field>
+            <label>Ejecutivo Cash maganement notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EJ</field>
+            <label>Ejecutivo Comercial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DG</field>
+            <label>Ejecutivo COMEX notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DI</field>
+            <label>Ejecutivo Cuenta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DJ</field>
+            <label>Ejecutivo Factoring notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DK</field>
+            <label>Ejecutivo Inversiones</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DO</field>
+            <label>Ejecutivo inversiones notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DL</field>
+            <label>Ejecutivo Leasing notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DM</field>
+            <label>Ejecutivo Mesa de dinero notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DP</field>
+            <label>Enrolamiento Ok</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DQ</field>
+            <label>Enviado a Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DR</field>
+            <label>Enviado a crear cliente</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DS</field>
+            <label>Enviar BPM</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIu</field>
+            <label>Enviar sol. desglose a gcia. de crédito</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DT</field>
+            <label>Equipo de Op. Creado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Di</field>
+            <label>Estado de gestión del contrato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIv</field>
+            <label>Estructura</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DU</field>
+            <label>Etapa calificando</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIw</field>
+            <label>Fecha asignación ejecutivo especialista</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DV</field>
+            <label>Fecha de asignación a Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b4</field>
+            <label>Fecha de cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DW</field>
+            <label>Fecha de cotización</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIz</field>
+            <label>Fecha de gestión del contrato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b3</field>
+            <label>Fecha de gestión del contrato leasing</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Da</field>
+            <label>Fecha del cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ2</field>
+            <label>Fecha del contacto con cliente</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ0</field>
+            <label>Fecha de recepción informe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DZ</field>
+            <label>Fecha de vencimiento</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ1</field>
+            <label>Fecha de vencimiento MAC</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Db</field>
+            <label>Fecha envío a comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dc</field>
+            <label>Fecha pronunciamiento Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ3</field>
+            <label>Fecha simulación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIy</field>
+            <label>Fecha solicitud informe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ4</field>
+            <label>Fecha tentativa entrega informe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dd</field>
+            <label>Fecha vencimiento Calificando</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ5</field>
+            <label>Fecha vencimiento póliza actual</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ6</field>
+            <label>Feedback sobre el caso</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0De</field>
+            <label>Firma ok</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dg</field>
+            <label>Form. de productos, foto, firma y huella</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dv</field>
+            <label>Formulario de ingreso de activos:</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dh</field>
+            <label>FuiElCreadorDeLaOportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ7</field>
+            <label>Garantías</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJA</field>
+            <label>Gestionar nuevo MAC?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dj</field>
+            <label>Gestión del contrato leasing</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ8</field>
+            <label>Gestión por analista</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ9</field>
+            <label>Gestión por ejecutivo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Du</field>
+            <label>GPI habilitado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJB</field>
+            <label>Indicar garantías</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000a6NH9</field>
+            <label>Informe creado y enviado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EN</field>
+            <label>Informe de riesgo recibido</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJC</field>
+            <label>Informes legales vigentes</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Do</field>
+            <label>InvAP</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dk</field>
+            <label>Inversión realizada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E3</field>
+            <label>Jefe de Grupo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E2</field>
+            <label>Jefe Plataforma / Agente Sucursal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E4</field>
+            <label>KYC Aprobado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E5</field>
+            <label>KYC Ingresado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dw</field>
+            <label>Línea de crédito BIA abierta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E6</field>
+            <label>MAC gestionado y creado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJD</field>
+            <label>MAC vigente para cursar esta oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E8</field>
+            <label>MeAsignaronOportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b5</field>
+            <label>Moneda</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b6</field>
+            <label>Monto (MM$)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJF</field>
+            <label>Monto leasing (MM$)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJE</field>
+            <label>Monto MAC creado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJG</field>
+            <label>Motivo no cumple condiciones</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000a6NHA</field>
+            <label>Motivo rechazo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E9</field>
+            <label>Motivo rechazo comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EA</field>
+            <label>Motivos cierre no exitoso</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DN</field>
+            <label>Nombre ejecutivo especialista</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EB</field>
+            <label>Número del crédito</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJH</field>
+            <label>Número de operación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Ek</field>
+            <label>Número de Productos</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EC</field>
+            <label>Observaciones</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dq</field>
+            <label>Obtención documentos requeridos</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dp</field>
+            <label>Obtención firma FATCA</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0ED</field>
+            <label>Operaciones</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b7</field>
+            <label>Oportunidad girada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EE</field>
+            <label>Origen referido</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EG</field>
+            <label>Otro motivo rechazo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJI</field>
+            <label>Pasar a otorgamiento</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b8</field>
+            <label>Plazo (meses)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EH</field>
+            <label>Presentar Solución financiera</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJJ</field>
+            <label>Prima según frecuencia de pagos (UF)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cWrb3</field>
+            <label>Producto</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E7</field>
+            <label>Producto BIA?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EI</field>
+            <label>Productos bancarios</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dm</field>
+            <label>Proposal Delivered</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dn</field>
+            <label>Proposal Required</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dy</field>
+            <label>Propuesta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dx</field>
+            <label>Propuesta Creada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJK</field>
+            <label>Requiere tarifa especial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dz</field>
+            <label>Requires credit management?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJL</field>
+            <label>Resultado cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EL</field>
+            <label>Resultado Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EM</field>
+            <label>Resultado del contacto</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EO</field>
+            <label>Segmento referido</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EP</field>
+            <label>Solicitude de Producto y Servicios</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b9</field>
+            <label>Spread (% anual)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EQ</field>
+            <label>Subetapa</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000a6NH8</field>
+            <label>Subgcia evalúa necesidad nuevo informe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EU</field>
+            <label>Subgerente/agente comercial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJM</field>
+            <label>Sucursal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0ER</field>
+            <label>Tareas de &quot;Otorgamiento&quot; completadas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0ES</field>
+            <label>Tipo de cuenta BIA</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dl</field>
+            <label>Tipo de inversión</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cWrb2</field>
+            <label>Tipo de oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJN</field>
+            <label>Tipo de pago</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cWrb4</field>
+            <label>Tipo de producto</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJO</field>
+            <label>Ventas según IVA</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Ds</field>
+            <label>Visita OK?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E0</field>
+            <label>Welcome pack disponible</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E1</field>
+            <label>Welcome pack entregado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsSelectedSettings>
+            <field>OPPORTUNITY.NAME</field>
+            <field>ACCOUNT.NAME</field>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <field>FORECAST_CATEGORY</field>
+            <field>FULL_NAME</field>
+        </opportunityListFieldsSelectedSettings>
+        <opportunityListFieldsUnselectedSettings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <field>CORE.USERS.ALIAS</field>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <field>CORE.USERS.LAST_NAME</field>
+            <field>DESCRIPTION</field>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <field>OPPORTUNITY.TYPE</field>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <field>OPPORTUNITY.CLOSED</field>
+            <field>OPPORTUNITY.WON</field>
+            <field>ACCOUNT.SITE</field>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N4100000WD0EK</field>
+            <field>00N4100000WD0Dr</field>
+            <field>00N4100000WD0Cs</field>
+            <field>00N4100000WD0Ct</field>
+            <field>00N4100000WD0ET</field>
+            <field>00N4100000WD0Cu</field>
+            <field>00N4100000cUlIl</field>
+            <field>00N4100000WD0Cv</field>
+            <field>00N4100000cUlIm</field>
+            <field>00N4100000WD0Cy</field>
+            <field>00N4100000cUlIn</field>
+            <field>00N4100000WD0Cx</field>
+            <field>00N4100000WD0Cw</field>
+            <field>00N4100000WD0Cz</field>
+            <field>00N4100000WD0Df</field>
+            <field>00N4100000WD0D0</field>
+            <field>00N4100000WD0D1</field>
+            <field>00N4100000WD0Dt</field>
+            <field>00N4100000Z65b2</field>
+            <field>00N4100000cUlIo</field>
+            <field>00N4100000WD0D2</field>
+            <field>00N4100000WD0D3</field>
+            <field>00N4100000WD0EV</field>
+            <field>00N4100000WD0D4</field>
+            <field>00N4100000WD0D5</field>
+            <field>00N4100000cUlIp</field>
+            <field>00N4100000WD0D6</field>
+            <field>00N4100000WD0D7</field>
+            <field>00N4100000WD0D8</field>
+            <field>00N4100000WD0D9</field>
+            <field>00N4100000WD0DA</field>
+            <field>00N4100000WD0DB</field>
+            <field>00N4100000WD0EF</field>
+            <field>00N4100000WD0DC</field>
+            <field>00N4100000WD0DD</field>
+            <field>00N4100000cUlIr</field>
+            <field>00N4100000cUlIq</field>
+            <field>00N4100000Z65b1</field>
+            <field>00N4100000WD0DE</field>
+            <field>00N4100000cUlIs</field>
+            <field>00N4100000WD0DF</field>
+            <field>00N4100000cUlIt</field>
+            <field>00N4100000WD0DH</field>
+            <field>00N4100000WD0EJ</field>
+            <field>00N4100000WD0DG</field>
+            <field>00N4100000WD0DI</field>
+            <field>00N4100000WD0DJ</field>
+            <field>00N4100000WD0DK</field>
+            <field>00N4100000WD0DO</field>
+            <field>00N4100000WD0DL</field>
+            <field>00N4100000WD0DM</field>
+            <field>00N4100000WD0DP</field>
+            <field>00N4100000WD0DQ</field>
+            <field>00N4100000WD0DR</field>
+            <field>00N4100000WD0DS</field>
+            <field>00N4100000cUlIu</field>
+            <field>00N4100000WD0DT</field>
+            <field>00N4100000WD0Di</field>
+            <field>00N4100000cUlIv</field>
+            <field>00N4100000WD0DU</field>
+            <field>00N4100000cUlIw</field>
+            <field>00N4100000WD0DV</field>
+            <field>00N4100000Z65b4</field>
+            <field>00N4100000WD0DW</field>
+            <field>00N4100000cUlIz</field>
+            <field>00N4100000Z65b3</field>
+            <field>00N4100000WD0Da</field>
+            <field>00N4100000cUlJ2</field>
+            <field>00N4100000cUlJ0</field>
+            <field>00N4100000WD0DZ</field>
+            <field>00N4100000cUlJ1</field>
+            <field>00N4100000WD0Db</field>
+            <field>00N4100000WD0Dc</field>
+            <field>00N4100000cUlJ3</field>
+            <field>00N4100000cUlIy</field>
+            <field>00N4100000cUlJ4</field>
+            <field>00N4100000WD0Dd</field>
+            <field>00N4100000cUlJ5</field>
+            <field>00N4100000cUlJ6</field>
+            <field>00N4100000WD0De</field>
+            <field>00N4100000WD0Dg</field>
+            <field>00N4100000WD0Dv</field>
+            <field>00N4100000WD0Dh</field>
+            <field>00N4100000cUlJ7</field>
+            <field>00N4100000cUlJA</field>
+            <field>00N4100000WD0Dj</field>
+            <field>00N4100000cUlJ8</field>
+            <field>00N4100000cUlJ9</field>
+            <field>00N4100000WD0Du</field>
+            <field>00N4100000cUlJB</field>
+            <field>00N4100000a6NH9</field>
+            <field>00N4100000WD0EN</field>
+            <field>00N4100000cUlJC</field>
+            <field>00N4100000WD0Do</field>
+            <field>00N4100000WD0Dk</field>
+            <field>00N4100000WD0E3</field>
+            <field>00N4100000WD0E2</field>
+            <field>00N4100000WD0E4</field>
+            <field>00N4100000WD0E5</field>
+            <field>00N4100000WD0Dw</field>
+            <field>00N4100000WD0E6</field>
+            <field>00N4100000cUlJD</field>
+            <field>00N4100000WD0E8</field>
+            <field>00N4100000Z65b5</field>
+            <field>00N4100000Z65b6</field>
+            <field>00N4100000cUlJF</field>
+            <field>00N4100000cUlJE</field>
+            <field>00N4100000cUlJG</field>
+            <field>00N4100000a6NHA</field>
+            <field>00N4100000WD0E9</field>
+            <field>00N4100000WD0EA</field>
+            <field>00N4100000WD0DN</field>
+            <field>00N4100000WD0EB</field>
+            <field>00N4100000cUlJH</field>
+            <field>00N4100000WD0Ek</field>
+            <field>00N4100000WD0EC</field>
+            <field>00N4100000WD0Dq</field>
+            <field>00N4100000WD0Dp</field>
+            <field>00N4100000WD0ED</field>
+            <field>00N4100000Z65b7</field>
+            <field>00N4100000WD0EE</field>
+            <field>00N4100000WD0EG</field>
+            <field>00N4100000cUlJI</field>
+            <field>00N4100000Z65b8</field>
+            <field>00N4100000WD0EH</field>
+            <field>00N4100000cUlJJ</field>
+            <field>00N4100000cWrb3</field>
+            <field>00N4100000WD0E7</field>
+            <field>00N4100000WD0EI</field>
+            <field>00N4100000WD0Dm</field>
+            <field>00N4100000WD0Dn</field>
+            <field>00N4100000WD0Dy</field>
+            <field>00N4100000WD0Dx</field>
+            <field>00N4100000cUlJK</field>
+            <field>00N4100000WD0Dz</field>
+            <field>00N4100000cUlJL</field>
+            <field>00N4100000WD0EL</field>
+            <field>00N4100000WD0EM</field>
+            <field>00N4100000WD0EO</field>
+            <field>00N4100000WD0EP</field>
+            <field>00N4100000Z65b9</field>
+            <field>00N4100000WD0EQ</field>
+            <field>00N4100000a6NH8</field>
+            <field>00N4100000WD0EU</field>
+            <field>00N4100000cUlJM</field>
+            <field>00N4100000WD0ER</field>
+            <field>00N4100000WD0ES</field>
+            <field>00N4100000WD0Dl</field>
+            <field>00N4100000cWrb2</field>
+            <field>00N4100000cUlJN</field>
+            <field>00N4100000cWrb4</field>
+            <field>00N4100000cUlJO</field>
+            <field>00N4100000WD0Ds</field>
+            <field>00N4100000WD0E0</field>
+            <field>00N4100000WD0E1</field>
+        </opportunityListFieldsUnselectedSettings>
+        <quotasSettings>
+            <showQuotas>false</showQuotas>
+        </quotasSettings>
+    </forecastingTypeSettings>
+    <forecastingTypeSettings>
+        <active>false</active>
+        <adjustmentsSettings>
+            <enableAdjustments>false</enableAdjustments>
+            <enableOwnerAdjustments>false</enableOwnerAdjustments>
+        </adjustmentsSettings>
+        <displayedCategoryApiNames>closedonly</displayedCategoryApiNames>
+        <displayedCategoryApiNames>commitonly</displayedCategoryApiNames>
+        <displayedCategoryApiNames>bestcaseonly</displayedCategoryApiNames>
+        <displayedCategoryApiNames>pipelineonly</displayedCategoryApiNames>
+        <forecastRangeSettings>
+            <beginning>0</beginning>
+            <displaying>6</displaying>
+            <periodType>Month</periodType>
+        </forecastRangeSettings>
+        <forecastedCategoryApiNames>commitonly</forecastedCategoryApiNames>
+        <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
+        <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
+        <forecastedCategoryApiNames>bestcaseonly</forecastedCategoryApiNames>
+        <isAmount>false</isAmount>
+        <isAvailable>true</isAvailable>
+        <isQuantity>true</isQuantity>
+        <masterLabel>Familias de productos</masterLabel>
+        <name>OpportunityLineItemQuantity</name>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.NAME</field>
+            <label>Nombre de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>ACCOUNT.NAME</field>
+            <label>Nombre de la cuenta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <label>Cantidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <label>Fecha de cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <label>Etapa</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <label>Probabilidad (%)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>FORECAST_CATEGORY</field>
+            <label>Categoría de previsión</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>FULL_NAME</field>
+            <label>Nombre completo del propietario</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <label>Número de contrato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CONTRACT.NAME</field>
+            <label>Nombre del contrato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <label>Divisa de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <label>Importe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CORE.USERS.ALIAS</field>
+            <label>Alias del propietario de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <label>Nombre del propietario</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CORE.USERS.LAST_NAME</field>
+            <label>Apellidos del propietario</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>DESCRIPTION</field>
+            <label>Descripción</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <label>Ingresos previstos</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <label>Origen del candidato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <label>Paso siguiente</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <label>Privada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.TYPE</field>
+            <label>Tipo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <label>Última modificación por alias</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <label>Creado por alias</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CLOSED</field>
+            <label>Cerrado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.WON</field>
+            <label>Ganadas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>ACCOUNT.SITE</field>
+            <label>Sitio de la cuenta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <label>Año fiscal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <label>Trimestre fiscal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <label>Periodo fiscal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <label>Tipo de registro de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <label>Última actividad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <label>Fecha de creación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <label>Fecha de la última modificación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EK</field>
+            <label>¿Requiere enrolamiento?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dr</field>
+            <label>¿Requiere validación subgerente?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cs</field>
+            <label>Acepta propuesta?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Ct</field>
+            <label>Activación de productos</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0ET</field>
+            <label>Actividades comité MAC completadas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cu</field>
+            <label>Acuerdo de oferta especial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIl</field>
+            <label>Analista de riesgo asignado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cv</field>
+            <label>Aprobado Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIm</field>
+            <label>Balance y E.Situación vigentes</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cy</field>
+            <label>Balance y Estado de Situación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIn</field>
+            <label>Boletín comercial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cx</field>
+            <label>BPM Flow Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cw</field>
+            <label>BPM Flow Status Last Update</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Cz</field>
+            <label>Carpeta a Ejecutivo de Cuentas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Df</field>
+            <label>Carpeta Entregada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D0</field>
+            <label>Cierre con condición</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D1</field>
+            <label>Cliente completar y firmar el formulario</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dt</field>
+            <label>Cliente verificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b2</field>
+            <label>Comentario última actividad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIo</field>
+            <label>Comisión de intermediación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D2</field>
+            <label>Completar Articulo 85</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D3</field>
+            <label>Completar Solicitud de Producto y Serv</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EV</field>
+            <label>Completar y firmar Formulario EESS</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D4</field>
+            <label>Completar y firmar formulario solicitud</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D5</field>
+            <label>Condiciones del cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIp</field>
+            <label>Condiciones del negocio</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D6</field>
+            <label>Contador de tareas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D7</field>
+            <label>Cotizó?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D8</field>
+            <label>Creado de Profin</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0D9</field>
+            <label>Creado por EyC</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DA</field>
+            <label>Creado por EyC CtaCorriente</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DB</field>
+            <label>Cumple requisitos?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EF</field>
+            <label>Descripción otro motivo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DC</field>
+            <label>Detalle resultado del contacto</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DD</field>
+            <label>Detección de otras oportunidades</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIr</field>
+            <label>Deuda leasing/factoring</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIq</field>
+            <label>Deuda SBIF últimos 3 meses</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b1</field>
+            <label>Días de antigüedad de la oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DE</field>
+            <label>Documentación enviada a riesgo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIs</field>
+            <label>Documento enviado a corredora seguros</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DF</field>
+            <label>Duración de la línea</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIt</field>
+            <label>EEFF o flujo de caja</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DH</field>
+            <label>Ejecutivo Cash maganement notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EJ</field>
+            <label>Ejecutivo Comercial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DG</field>
+            <label>Ejecutivo COMEX notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DI</field>
+            <label>Ejecutivo Cuenta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DJ</field>
+            <label>Ejecutivo Factoring notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DK</field>
+            <label>Ejecutivo Inversiones</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DO</field>
+            <label>Ejecutivo inversiones notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DL</field>
+            <label>Ejecutivo Leasing notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DM</field>
+            <label>Ejecutivo Mesa de dinero notificado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DP</field>
+            <label>Enrolamiento Ok</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DQ</field>
+            <label>Enviado a Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DR</field>
+            <label>Enviado a crear cliente</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DS</field>
+            <label>Enviar BPM</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIu</field>
+            <label>Enviar sol. desglose a gcia. de crédito</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DT</field>
+            <label>Equipo de Op. Creado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Di</field>
+            <label>Estado de gestión del contrato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIv</field>
+            <label>Estructura</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DU</field>
+            <label>Etapa calificando</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIw</field>
+            <label>Fecha asignación ejecutivo especialista</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DV</field>
+            <label>Fecha de asignación a Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b4</field>
+            <label>Fecha de cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DW</field>
+            <label>Fecha de cotización</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIz</field>
+            <label>Fecha de gestión del contrato</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b3</field>
+            <label>Fecha de gestión del contrato leasing</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Da</field>
+            <label>Fecha del cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ2</field>
+            <label>Fecha del contacto con cliente</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ0</field>
+            <label>Fecha de recepción informe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DZ</field>
+            <label>Fecha de vencimiento</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ1</field>
+            <label>Fecha de vencimiento MAC</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Db</field>
+            <label>Fecha envío a comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dc</field>
+            <label>Fecha pronunciamiento Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ3</field>
+            <label>Fecha simulación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlIy</field>
+            <label>Fecha solicitud informe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ4</field>
+            <label>Fecha tentativa entrega informe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dd</field>
+            <label>Fecha vencimiento Calificando</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ5</field>
+            <label>Fecha vencimiento póliza actual</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ6</field>
+            <label>Feedback sobre el caso</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0De</field>
+            <label>Firma ok</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dg</field>
+            <label>Form. de productos, foto, firma y huella</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dv</field>
+            <label>Formulario de ingreso de activos:</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dh</field>
+            <label>FuiElCreadorDeLaOportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ7</field>
+            <label>Garantías</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJA</field>
+            <label>Gestionar nuevo MAC?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dj</field>
+            <label>Gestión del contrato leasing</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ8</field>
+            <label>Gestión por analista</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJ9</field>
+            <label>Gestión por ejecutivo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Du</field>
+            <label>GPI habilitado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJB</field>
+            <label>Indicar garantías</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000a6NH9</field>
+            <label>Informe creado y enviado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EN</field>
+            <label>Informe de riesgo recibido</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJC</field>
+            <label>Informes legales vigentes</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Do</field>
+            <label>InvAP</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dk</field>
+            <label>Inversión realizada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E3</field>
+            <label>Jefe de Grupo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E2</field>
+            <label>Jefe Plataforma / Agente Sucursal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E4</field>
+            <label>KYC Aprobado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E5</field>
+            <label>KYC Ingresado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dw</field>
+            <label>Línea de crédito BIA abierta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E6</field>
+            <label>MAC gestionado y creado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJD</field>
+            <label>MAC vigente para cursar esta oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E8</field>
+            <label>MeAsignaronOportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b5</field>
+            <label>Moneda</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b6</field>
+            <label>Monto (MM$)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJF</field>
+            <label>Monto leasing (MM$)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJE</field>
+            <label>Monto MAC creado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJG</field>
+            <label>Motivo no cumple condiciones</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000a6NHA</field>
+            <label>Motivo rechazo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E9</field>
+            <label>Motivo rechazo comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EA</field>
+            <label>Motivos cierre no exitoso</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0DN</field>
+            <label>Nombre ejecutivo especialista</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EB</field>
+            <label>Número del crédito</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJH</field>
+            <label>Número de operación</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Ek</field>
+            <label>Número de Productos</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EC</field>
+            <label>Observaciones</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dq</field>
+            <label>Obtención documentos requeridos</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dp</field>
+            <label>Obtención firma FATCA</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0ED</field>
+            <label>Operaciones</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b7</field>
+            <label>Oportunidad girada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EE</field>
+            <label>Origen referido</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EG</field>
+            <label>Otro motivo rechazo</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJI</field>
+            <label>Pasar a otorgamiento</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b8</field>
+            <label>Plazo (meses)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EH</field>
+            <label>Presentar Solución financiera</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJJ</field>
+            <label>Prima según frecuencia de pagos (UF)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cWrb3</field>
+            <label>Producto</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E7</field>
+            <label>Producto BIA?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EI</field>
+            <label>Productos bancarios</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dm</field>
+            <label>Proposal Delivered</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dn</field>
+            <label>Proposal Required</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dy</field>
+            <label>Propuesta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dx</field>
+            <label>Propuesta Creada</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJK</field>
+            <label>Requiere tarifa especial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dz</field>
+            <label>Requires credit management?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJL</field>
+            <label>Resultado cierre</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EL</field>
+            <label>Resultado Comité</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EM</field>
+            <label>Resultado del contacto</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EO</field>
+            <label>Segmento referido</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EP</field>
+            <label>Solicitude de Producto y Servicios</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000Z65b9</field>
+            <label>Spread (% anual)</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EQ</field>
+            <label>Subetapa</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000a6NH8</field>
+            <label>Subgcia evalúa necesidad nuevo informe</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0EU</field>
+            <label>Subgerente/agente comercial</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJM</field>
+            <label>Sucursal</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0ER</field>
+            <label>Tareas de &quot;Otorgamiento&quot; completadas</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0ES</field>
+            <label>Tipo de cuenta BIA</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dl</field>
+            <label>Tipo de inversión</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cWrb2</field>
+            <label>Tipo de oportunidad</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJN</field>
+            <label>Tipo de pago</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cWrb4</field>
+            <label>Tipo de producto</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJO</field>
+            <label>Ventas según IVA</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Ds</field>
+            <label>Visita OK?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E0</field>
+            <label>Welcome pack disponible</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0E1</field>
+            <label>Welcome pack entregado</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsSelectedSettings>
+            <field>OPPORTUNITY.NAME</field>
+            <field>ACCOUNT.NAME</field>
+            <field>OPPORTUNITY.QUANTITY</field>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <field>OPPORTUNITY.PROBABILITY</field>
+            <field>FORECAST_CATEGORY</field>
+            <field>FULL_NAME</field>
+        </opportunityListFieldsSelectedSettings>
+        <opportunityListFieldsUnselectedSettings>
+            <field>CONTRACT.CONTRACT_NUMBER</field>
+            <field>CONTRACT.NAME</field>
+            <field>OPPORTUNITY.CURRENCY_ISO_CODE</field>
+            <field>OPPORTUNITY.AMOUNT</field>
+            <field>CORE.USERS.ALIAS</field>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <field>CORE.USERS.LAST_NAME</field>
+            <field>DESCRIPTION</field>
+            <field>OPPORTUNITY.EXP_AMOUNT</field>
+            <field>OPPORTUNITY.LEAD_SOURCE</field>
+            <field>OPPORTUNITY.NEXT_STEP</field>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <field>OPPORTUNITY.TYPE</field>
+            <field>UPDATEDBY_USER.ALIAS</field>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <field>OPPORTUNITY.CLOSED</field>
+            <field>OPPORTUNITY.WON</field>
+            <field>ACCOUNT.SITE</field>
+            <field>OPPORTUNITY.FISCAL_YEAR</field>
+            <field>OPPORTUNITY.FISCAL_QUARTER</field>
+            <field>OPPORTUNITY.FISCAL_PERIOD</field>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <field>OPPORTUNITY.LAST_ACTIVITY</field>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00N4100000WD0EK</field>
+            <field>00N4100000WD0Dr</field>
+            <field>00N4100000WD0Cs</field>
+            <field>00N4100000WD0Ct</field>
+            <field>00N4100000WD0ET</field>
+            <field>00N4100000WD0Cu</field>
+            <field>00N4100000cUlIl</field>
+            <field>00N4100000WD0Cv</field>
+            <field>00N4100000cUlIm</field>
+            <field>00N4100000WD0Cy</field>
+            <field>00N4100000cUlIn</field>
+            <field>00N4100000WD0Cx</field>
+            <field>00N4100000WD0Cw</field>
+            <field>00N4100000WD0Cz</field>
+            <field>00N4100000WD0Df</field>
+            <field>00N4100000WD0D0</field>
+            <field>00N4100000WD0D1</field>
+            <field>00N4100000WD0Dt</field>
+            <field>00N4100000Z65b2</field>
+            <field>00N4100000cUlIo</field>
+            <field>00N4100000WD0D2</field>
+            <field>00N4100000WD0D3</field>
+            <field>00N4100000WD0EV</field>
+            <field>00N4100000WD0D4</field>
+            <field>00N4100000WD0D5</field>
+            <field>00N4100000cUlIp</field>
+            <field>00N4100000WD0D6</field>
+            <field>00N4100000WD0D7</field>
+            <field>00N4100000WD0D8</field>
+            <field>00N4100000WD0D9</field>
+            <field>00N4100000WD0DA</field>
+            <field>00N4100000WD0DB</field>
+            <field>00N4100000WD0EF</field>
+            <field>00N4100000WD0DC</field>
+            <field>00N4100000WD0DD</field>
+            <field>00N4100000cUlIr</field>
+            <field>00N4100000cUlIq</field>
+            <field>00N4100000Z65b1</field>
+            <field>00N4100000WD0DE</field>
+            <field>00N4100000cUlIs</field>
+            <field>00N4100000WD0DF</field>
+            <field>00N4100000cUlIt</field>
+            <field>00N4100000WD0DH</field>
+            <field>00N4100000WD0EJ</field>
+            <field>00N4100000WD0DG</field>
+            <field>00N4100000WD0DI</field>
+            <field>00N4100000WD0DJ</field>
+            <field>00N4100000WD0DK</field>
+            <field>00N4100000WD0DO</field>
+            <field>00N4100000WD0DL</field>
+            <field>00N4100000WD0DM</field>
+            <field>00N4100000WD0DP</field>
+            <field>00N4100000WD0DQ</field>
+            <field>00N4100000WD0DR</field>
+            <field>00N4100000WD0DS</field>
+            <field>00N4100000cUlIu</field>
+            <field>00N4100000WD0DT</field>
+            <field>00N4100000WD0Di</field>
+            <field>00N4100000cUlIv</field>
+            <field>00N4100000WD0DU</field>
+            <field>00N4100000cUlIw</field>
+            <field>00N4100000WD0DV</field>
+            <field>00N4100000Z65b4</field>
+            <field>00N4100000WD0DW</field>
+            <field>00N4100000cUlIz</field>
+            <field>00N4100000Z65b3</field>
+            <field>00N4100000WD0Da</field>
+            <field>00N4100000cUlJ2</field>
+            <field>00N4100000cUlJ0</field>
+            <field>00N4100000WD0DZ</field>
+            <field>00N4100000cUlJ1</field>
+            <field>00N4100000WD0Db</field>
+            <field>00N4100000WD0Dc</field>
+            <field>00N4100000cUlJ3</field>
+            <field>00N4100000cUlIy</field>
+            <field>00N4100000cUlJ4</field>
+            <field>00N4100000WD0Dd</field>
+            <field>00N4100000cUlJ5</field>
+            <field>00N4100000cUlJ6</field>
+            <field>00N4100000WD0De</field>
+            <field>00N4100000WD0Dg</field>
+            <field>00N4100000WD0Dv</field>
+            <field>00N4100000WD0Dh</field>
+            <field>00N4100000cUlJ7</field>
+            <field>00N4100000cUlJA</field>
+            <field>00N4100000WD0Dj</field>
+            <field>00N4100000cUlJ8</field>
+            <field>00N4100000cUlJ9</field>
+            <field>00N4100000WD0Du</field>
+            <field>00N4100000cUlJB</field>
+            <field>00N4100000a6NH9</field>
+            <field>00N4100000WD0EN</field>
+            <field>00N4100000cUlJC</field>
+            <field>00N4100000WD0Do</field>
+            <field>00N4100000WD0Dk</field>
+            <field>00N4100000WD0E3</field>
+            <field>00N4100000WD0E2</field>
+            <field>00N4100000WD0E4</field>
+            <field>00N4100000WD0E5</field>
+            <field>00N4100000WD0Dw</field>
+            <field>00N4100000WD0E6</field>
+            <field>00N4100000cUlJD</field>
+            <field>00N4100000WD0E8</field>
+            <field>00N4100000Z65b5</field>
+            <field>00N4100000Z65b6</field>
+            <field>00N4100000cUlJF</field>
+            <field>00N4100000cUlJE</field>
+            <field>00N4100000cUlJG</field>
+            <field>00N4100000a6NHA</field>
+            <field>00N4100000WD0E9</field>
+            <field>00N4100000WD0EA</field>
+            <field>00N4100000WD0DN</field>
+            <field>00N4100000WD0EB</field>
+            <field>00N4100000cUlJH</field>
+            <field>00N4100000WD0Ek</field>
+            <field>00N4100000WD0EC</field>
+            <field>00N4100000WD0Dq</field>
+            <field>00N4100000WD0Dp</field>
+            <field>00N4100000WD0ED</field>
+            <field>00N4100000Z65b7</field>
+            <field>00N4100000WD0EE</field>
+            <field>00N4100000WD0EG</field>
+            <field>00N4100000cUlJI</field>
+            <field>00N4100000Z65b8</field>
+            <field>00N4100000WD0EH</field>
+            <field>00N4100000cUlJJ</field>
+            <field>00N4100000cWrb3</field>
+            <field>00N4100000WD0E7</field>
+            <field>00N4100000WD0EI</field>
+            <field>00N4100000WD0Dm</field>
+            <field>00N4100000WD0Dn</field>
+            <field>00N4100000WD0Dy</field>
+            <field>00N4100000WD0Dx</field>
+            <field>00N4100000cUlJK</field>
+            <field>00N4100000WD0Dz</field>
+            <field>00N4100000cUlJL</field>
+            <field>00N4100000WD0EL</field>
+            <field>00N4100000WD0EM</field>
+            <field>00N4100000WD0EO</field>
+            <field>00N4100000WD0EP</field>
+            <field>00N4100000Z65b9</field>
+            <field>00N4100000WD0EQ</field>
+            <field>00N4100000a6NH8</field>
+            <field>00N4100000WD0EU</field>
+            <field>00N4100000cUlJM</field>
+            <field>00N4100000WD0ER</field>
+            <field>00N4100000WD0ES</field>
+            <field>00N4100000WD0Dl</field>
+            <field>00N4100000cWrb2</field>
+            <field>00N4100000cUlJN</field>
+            <field>00N4100000cWrb4</field>
+            <field>00N4100000cUlJO</field>
+            <field>00N4100000WD0Ds</field>
+            <field>00N4100000WD0E0</field>
+            <field>00N4100000WD0E1</field>
+        </opportunityListFieldsUnselectedSettings>
+        <quotasSettings>
+            <showQuotas>false</showQuotas>
+        </quotasSettings>
+    </forecastingTypeSettings>
+</ForecastingSettings>

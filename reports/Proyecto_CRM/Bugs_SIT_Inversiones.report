@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>agf__ADM_Work__c.agf__Type__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>agf__ADM_Work__c.Prueba_QA__c</field>
+    </columns>
+    <columns>
+        <field>agf__ADM_Work__c.agf__Status__c</field>
+    </columns>
+    <columns>
+        <field>agf__ADM_Work__c.agf__Subject__c</field>
+    </columns>
+    <columns>
+        <field>agf__ADM_Work__c.agf__Found_in_Build__c</field>
+    </columns>
+    <columns>
+        <field>agf__ADM_Work__c.agf__Assignee__c</field>
+    </columns>
+    <columns>
+        <field>CUST_LAST_UPDATE</field>
+    </columns>
+    <currency>CLP</currency>
+    <description>Bugs correspondientes a  SIT Inversiones y Smoke Test</description>
+    <filter>
+        <criteriaItems>
+            <column>agf__ADM_Work__c.agf__Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Bug</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>agf__ADM_Work__c.agf__Subject__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>startsWith</operator>
+            <value>BI</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>agf__ADM_Work__c.agf__Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>New,In Progress,QA In Progress,Not a bug,Not Reproducible,Ready for QA,QA Not Fixed</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Bugs - SIT - Inversiones</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$agf__ADM_Work__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>agf__ADM_Work__c.agf__Assigned_On__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

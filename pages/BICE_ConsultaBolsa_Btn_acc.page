@@ -1,0 +1,5 @@
+<apex:page standardController="Account" extensions="BICE_ConsultaBolsa_Controller" action="{!ConsultaBolsaCallout}" >
+<!-- Begin Default Content REMOVE THIS -->
+<apex:pageMessage severity="WARNING"></apex:pageMessage>
+<!-- End Default Content REMOVE THIS -->
+</apex:page>

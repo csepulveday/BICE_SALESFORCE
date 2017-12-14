@@ -1,0 +1,1534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Objeto para indicar las cuentas bancarias de los Clientes de Banca inversiones. Información requerida para la creación de clientes en Sebra</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Banco__c</fullName>
+        <externalId>false</externalId>
+        <label>Banco</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Origen_de_la_Cuenta__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 FIRST BANK</fullName>
+                    <default>false</default>
+                    <label>1 FIRST BANK</label>
+                </value>
+                <value>
+                    <fullName>ABN AMRO BANK</fullName>
+                    <default>false</default>
+                    <label>ABN AMRO BANK</label>
+                </value>
+                <value>
+                    <fullName>ABN AMRO BANK (CHILE)</fullName>
+                    <default>false</default>
+                    <label>ABN AMRO BANK (CHILE)</label>
+                </value>
+                <value>
+                    <fullName>AMERICAN EXPRESS BANK</fullName>
+                    <default>false</default>
+                    <label>AMERICAN EXPRESS BANK</label>
+                </value>
+                <value>
+                    <fullName>AMERICAN NATIONAL BANK</fullName>
+                    <default>false</default>
+                    <label>AMERICAN NATIONAL BANK</label>
+                </value>
+                <value>
+                    <fullName>AMTRADE BANK</fullName>
+                    <default>false</default>
+                    <label>AMTRADE BANK</label>
+                </value>
+                <value>
+                    <fullName>BAC FLORIDA BANK</fullName>
+                    <default>false</default>
+                    <label>BAC FLORIDA BANK</label>
+                </value>
+                <value>
+                    <fullName>BANCA COMMERCIALE ITALIANA</fullName>
+                    <default>false</default>
+                    <label>BANCA COMMERCIALE ITALIANA</label>
+                </value>
+                <value>
+                    <fullName>BANCOINTERNACIONAL</fullName>
+                    <default>false</default>
+                    <label>BANCOINTERNACIONAL</label>
+                </value>
+                <value>
+                    <fullName>BANCO ATLANTICO</fullName>
+                    <default>false</default>
+                    <label>BANCO ATLANTICO</label>
+                </value>
+                <value>
+                    <fullName>BANCO BBVA</fullName>
+                    <default>false</default>
+                    <label>BANCO BBVA</label>
+                </value>
+                <value>
+                    <fullName>BANCO BICE</fullName>
+                    <default>false</default>
+                    <label>BANCO BICE</label>
+                </value>
+                <value>
+                    <fullName>BANCO BILBAO VIZCAYA</fullName>
+                    <default>false</default>
+                    <label>BANCO BILBAO VIZCAYA</label>
+                </value>
+                <value>
+                    <fullName>BANCO CENTRAL DE CHILE</fullName>
+                    <default>false</default>
+                    <label>BANCO CENTRAL DE CHILE</label>
+                </value>
+                <value>
+                    <fullName>BANCO CONSORCIO</fullName>
+                    <default>false</default>
+                    <label>BANCO CONSORCIO</label>
+                </value>
+                <value>
+                    <fullName>BANCO CREDITO INVERSIONES</fullName>
+                    <default>false</default>
+                    <label>BANCO CREDITO INVERSIONES</label>
+                </value>
+                <value>
+                    <fullName>BANCO DE CHILE</fullName>
+                    <default>false</default>
+                    <label>BANCO DE CHILE</label>
+                </value>
+                <value>
+                    <fullName>BANCO DE CHILE/EDWARDS-CITI</fullName>
+                    <default>false</default>
+                    <label>BANCO DE CHILE/EDWARDS-CITI</label>
+                </value>
+                <value>
+                    <fullName>BANCO DE CREDITO E INVERSIONES</fullName>
+                    <default>false</default>
+                    <label>BANCO DE CREDITO E INVERSIONES</label>
+                </value>
+                <value>
+                    <fullName>BANCO DEL DESARROLLO</fullName>
+                    <default>false</default>
+                    <label>BANCO DEL DESARROLLO</label>
+                </value>
+                <value>
+                    <fullName>BANCO DEL ESTADO DE CHILE</fullName>
+                    <default>false</default>
+                    <label>BANCO DEL ESTADO DE CHILE</label>
+                </value>
+                <value>
+                    <fullName>BANCO DO BRASIL</fullName>
+                    <default>false</default>
+                    <label>BANCO DO BRASIL</label>
+                </value>
+                <value>
+                    <fullName>BANCO DO BRASIL S A</fullName>
+                    <default>false</default>
+                    <label>BANCO DO BRASIL S A</label>
+                </value>
+                <value>
+                    <fullName>BANCO ECONOMICO</fullName>
+                    <default>false</default>
+                    <label>BANCO ECONOMICO</label>
+                </value>
+                <value>
+                    <fullName>BANCO EDWARDS CITI</fullName>
+                    <default>false</default>
+                    <label>BANCO EDWARDS CITI</label>
+                </value>
+                <value>
+                    <fullName>BANCO EXTERIOR DE ESPANA</fullName>
+                    <default>false</default>
+                    <label>BANCO EXTERIOR DE ESPANA</label>
+                </value>
+                <value>
+                    <fullName>BANCO FALABELLA</fullName>
+                    <default>false</default>
+                    <label>BANCO FALABELLA</label>
+                </value>
+                <value>
+                    <fullName>BANCO INTERNACIONAL</fullName>
+                    <default>false</default>
+                    <label>BANCO INTERNACIONAL</label>
+                </value>
+                <value>
+                    <fullName>BANCO ITAÚ CHILE</fullName>
+                    <default>false</default>
+                    <label>BANCO ITAÚ CHILE</label>
+                </value>
+                <value>
+                    <fullName>BANCO MERCANTIL</fullName>
+                    <default>false</default>
+                    <label>BANCO MERCANTIL</label>
+                </value>
+                <value>
+                    <fullName>BANCO PARIS</fullName>
+                    <default>false</default>
+                    <label>BANCO PARIS</label>
+                </value>
+                <value>
+                    <fullName>BANCO PENTA</fullName>
+                    <default>false</default>
+                    <label>BANCO PENTA</label>
+                </value>
+                <value>
+                    <fullName>BANCO POPULAR</fullName>
+                    <default>false</default>
+                    <label>BANCO POPULAR</label>
+                </value>
+                <value>
+                    <fullName>BANCO POPULAR DE PUERTO RICO</fullName>
+                    <default>false</default>
+                    <label>BANCO POPULAR DE PUERTO RICO</label>
+                </value>
+                <value>
+                    <fullName>BANCO RIPLEY</fullName>
+                    <default>false</default>
+                    <label>BANCO RIPLEY</label>
+                </value>
+                <value>
+                    <fullName>BANCO SANTANDER</fullName>
+                    <default>false</default>
+                    <label>BANCO SANTANDER</label>
+                </value>
+                <value>
+                    <fullName>BANCO SANTANDER-(CHILE)</fullName>
+                    <default>false</default>
+                    <label>BANCO SANTANDER-(CHILE)</label>
+                </value>
+                <value>
+                    <fullName>BANCO SANTIAGO</fullName>
+                    <default>false</default>
+                    <label>BANCO SANTIAGO</label>
+                </value>
+                <value>
+                    <fullName>BANCO SECURITY</fullName>
+                    <default>false</default>
+                    <label>BANCO SECURITY</label>
+                </value>
+                <value>
+                    <fullName>BANK FUND STAFF FEDERAL CREDIT</fullName>
+                    <default>false</default>
+                    <label>BANK FUND STAFF FEDERAL CREDIT</label>
+                </value>
+                <value>
+                    <fullName>BANK HAPOALIM BM</fullName>
+                    <default>false</default>
+                    <label>BANK HAPOALIM BM</label>
+                </value>
+                <value>
+                    <fullName>BANK OF AMERICA</fullName>
+                    <default>false</default>
+                    <label>BANK OF AMERICA</label>
+                </value>
+                <value>
+                    <fullName>BANK OF BOSTON</fullName>
+                    <default>false</default>
+                    <label>BANK OF BOSTON</label>
+                </value>
+                <value>
+                    <fullName>BANK ONE COLUMBUS N.A.</fullName>
+                    <default>false</default>
+                    <label>BANK ONE COLUMBUS N.A.</label>
+                </value>
+                <value>
+                    <fullName>BANKBOSTON N.A.</fullName>
+                    <default>false</default>
+                    <label>BANKBOSTON N.A.</label>
+                </value>
+                <value>
+                    <fullName>BANKERS TRUST COMPANY</fullName>
+                    <default>false</default>
+                    <label>BANKERS TRUST COMPANY</label>
+                </value>
+                <value>
+                    <fullName>BANQUE NATIONALE DE PARIS</fullName>
+                    <default>false</default>
+                    <label>BANQUE NATIONALE DE PARIS</label>
+                </value>
+                <value>
+                    <fullName>BANQUE SUDAMERIS</fullName>
+                    <default>false</default>
+                    <label>BANQUE SUDAMERIS</label>
+                </value>
+                <value>
+                    <fullName>BARCLAYS BANK</fullName>
+                    <default>false</default>
+                    <label>BARCLAYS BANK</label>
+                </value>
+                <value>
+                    <fullName>BARNETT BANK</fullName>
+                    <default>false</default>
+                    <label>BARNETT BANK</label>
+                </value>
+                <value>
+                    <fullName>BHIF</fullName>
+                    <default>false</default>
+                    <label>BHIF</label>
+                </value>
+                <value>
+                    <fullName>CALIFORNIA COMMERCE BANK</fullName>
+                    <default>false</default>
+                    <label>CALIFORNIA COMMERCE BANK</label>
+                </value>
+                <value>
+                    <fullName>CAMBRIDGE TRUST COMPANY</fullName>
+                    <default>false</default>
+                    <label>CAMBRIDGE TRUST COMPANY</label>
+                </value>
+                <value>
+                    <fullName>CAPITAL BANK</fullName>
+                    <default>false</default>
+                    <label>CAPITAL BANK</label>
+                </value>
+                <value>
+                    <fullName>CENTRAL HISPANO USA</fullName>
+                    <default>false</default>
+                    <label>CENTRAL HISPANO USA</label>
+                </value>
+                <value>
+                    <fullName>CHEMICAL BANK</fullName>
+                    <default>false</default>
+                    <label>CHEMICAL BANK</label>
+                </value>
+                <value>
+                    <fullName>CHITTENDEN BANK</fullName>
+                    <default>false</default>
+                    <label>CHITTENDEN BANK</label>
+                </value>
+                <value>
+                    <fullName>CITIBANK</fullName>
+                    <default>false</default>
+                    <label>CITIBANK</label>
+                </value>
+                <value>
+                    <fullName>CITIBANK DELAWARE</fullName>
+                    <default>false</default>
+                    <label>CITIBANK DELAWARE</label>
+                </value>
+                <value>
+                    <fullName>CITIBANK N.A.</fullName>
+                    <default>false</default>
+                    <label>CITIBANK N.A.</label>
+                </value>
+                <value>
+                    <fullName>CITIBANK NEW YORK</fullName>
+                    <default>false</default>
+                    <label>CITIBANK NEW YORK</label>
+                </value>
+                <value>
+                    <fullName>CITIBANK-SANTIAGO</fullName>
+                    <default>false</default>
+                    <label>CITIBANK-SANTIAGO</label>
+                </value>
+                <value>
+                    <fullName>CITICORP</fullName>
+                    <default>false</default>
+                    <label>CITICORP</label>
+                </value>
+                <value>
+                    <fullName>CITY NATIONAL BANK</fullName>
+                    <default>false</default>
+                    <label>CITY NATIONAL BANK</label>
+                </value>
+                <value>
+                    <fullName>COLONIAL BANK</fullName>
+                    <default>false</default>
+                    <label>COLONIAL BANK</label>
+                </value>
+                <value>
+                    <fullName>COMMERCE BANK OF KANSAS CITY</fullName>
+                    <default>false</default>
+                    <label>COMMERCE BANK OF KANSAS CITY</label>
+                </value>
+                <value>
+                    <fullName>CONSOLIDATED BANK</fullName>
+                    <default>false</default>
+                    <label>CONSOLIDATED BANK</label>
+                </value>
+                <value>
+                    <fullName>CORESTATES BANK OF DELAWARE NA</fullName>
+                    <default>false</default>
+                    <label>CORESTATES BANK OF DELAWARE NA</label>
+                </value>
+                <value>
+                    <fullName>CORP BANCA</fullName>
+                    <default>false</default>
+                    <label>CORP BANCA</label>
+                </value>
+                <value>
+                    <fullName>CORPBANCA</fullName>
+                    <default>false</default>
+                    <label>CORPBANCA</label>
+                </value>
+                <value>
+                    <fullName>CREDICHILE</fullName>
+                    <default>false</default>
+                    <label>CREDICHILE</label>
+                </value>
+                <value>
+                    <fullName>CREDIT SUISSE</fullName>
+                    <default>false</default>
+                    <label>CREDIT SUISSE</label>
+                </value>
+                <value>
+                    <fullName>CREDIT UNION</fullName>
+                    <default>false</default>
+                    <label>CREDIT UNION</label>
+                </value>
+                <value>
+                    <fullName>CREDITO</fullName>
+                    <default>false</default>
+                    <label>CREDITO</label>
+                </value>
+                <value>
+                    <fullName>DEUTSCHE BANK</fullName>
+                    <default>false</default>
+                    <label>DEUTSCHE BANK</label>
+                </value>
+                <value>
+                    <fullName>DEUTSCHE BANK (CHILE)</fullName>
+                    <default>false</default>
+                    <label>DEUTSCHE BANK (CHILE)</label>
+                </value>
+                <value>
+                    <fullName>DEUTSCHE SUDAMERIKANISCHE BANK</fullName>
+                    <default>false</default>
+                    <label>DEUTSCHE SUDAMERIKANISCHE BANK</label>
+                </value>
+                <value>
+                    <fullName>DO BRAZIL</fullName>
+                    <default>false</default>
+                    <label>DO BRAZIL</label>
+                </value>
+                <value>
+                    <fullName>DRAWEE BANK</fullName>
+                    <default>false</default>
+                    <label>DRAWEE BANK</label>
+                </value>
+                <value>
+                    <fullName>DRESDNER BANK LATEINAMERIKA AG</fullName>
+                    <default>false</default>
+                    <label>DRESDNER BANK LATEINAMERIKA AG</label>
+                </value>
+                <value>
+                    <fullName>FEDERAL CREDIT UNION</fullName>
+                    <default>false</default>
+                    <label>FEDERAL CREDIT UNION</label>
+                </value>
+                <value>
+                    <fullName>FIDELITY BANK N.A.</fullName>
+                    <default>false</default>
+                    <label>FIDELITY BANK N.A.</label>
+                </value>
+                <value>
+                    <fullName>FLEET BANK</fullName>
+                    <default>false</default>
+                    <label>FLEET BANK</label>
+                </value>
+                <value>
+                    <fullName>FROST NATIONAL BANK</fullName>
+                    <default>false</default>
+                    <label>FROST NATIONAL BANK</label>
+                </value>
+                <value>
+                    <fullName>GRANITE STATE BANK</fullName>
+                    <default>false</default>
+                    <label>GRANITE STATE BANK</label>
+                </value>
+                <value>
+                    <fullName>HARRIS TRUST AND SAVINGS BANK</fullName>
+                    <default>false</default>
+                    <label>HARRIS TRUST AND SAVINGS BANK</label>
+                </value>
+                <value>
+                    <fullName>HNS BANCO</fullName>
+                    <default>false</default>
+                    <label>HNS BANCO</label>
+                </value>
+                <value>
+                    <fullName>HONGKONG BANK</fullName>
+                    <default>false</default>
+                    <label>HONGKONG BANK</label>
+                </value>
+                <value>
+                    <fullName>HSBC BANK (CHILE)</fullName>
+                    <default>false</default>
+                    <label>HSBC BANK (CHILE)</label>
+                </value>
+                <value>
+                    <fullName>HSBC BANK USA</fullName>
+                    <default>false</default>
+                    <label>HSBC BANK USA</label>
+                </value>
+                <value>
+                    <fullName>INTERBANK</fullName>
+                    <default>false</default>
+                    <label>INTERBANK</label>
+                </value>
+                <value>
+                    <fullName>ISRAEL DISCOUNT BANK</fullName>
+                    <default>false</default>
+                    <label>ISRAEL DISCOUNT BANK</label>
+                </value>
+                <value>
+                    <fullName>JP MORGAN</fullName>
+                    <default>false</default>
+                    <label>JP MORGAN</label>
+                </value>
+                <value>
+                    <fullName>JP MORGAN CHASE BANK, N.A.</fullName>
+                    <default>false</default>
+                    <label>JP MORGAN CHASE BANK, N.A.</label>
+                </value>
+                <value>
+                    <fullName>KREDIETBANK</fullName>
+                    <default>false</default>
+                    <label>KREDIETBANK</label>
+                </value>
+                <value>
+                    <fullName>LASALLE BANK FSB</fullName>
+                    <default>false</default>
+                    <label>LASALLE BANK FSB</label>
+                </value>
+                <value>
+                    <fullName>LEHMAN BROTHERS INC.</fullName>
+                    <default>false</default>
+                    <label>LEHMAN BROTHERS INC.</label>
+                </value>
+                <value>
+                    <fullName>LLOYDS BANK</fullName>
+                    <default>false</default>
+                    <label>LLOYDS BANK</label>
+                </value>
+                <value>
+                    <fullName>M &amp; I BANK</fullName>
+                    <default>false</default>
+                    <label>M &amp; I BANK</label>
+                </value>
+                <value>
+                    <fullName>M&amp;T BUFFALO</fullName>
+                    <default>false</default>
+                    <label>M&amp;T BUFFALO</label>
+                </value>
+                <value>
+                    <fullName>MARINE MIDLAND BANK</fullName>
+                    <default>false</default>
+                    <label>MARINE MIDLAND BANK</label>
+                </value>
+                <value>
+                    <fullName>MELLON BANK N.A.</fullName>
+                    <default>false</default>
+                    <label>MELLON BANK N.A.</label>
+                </value>
+                <value>
+                    <fullName>MERRILL LYNCH</fullName>
+                    <default>false</default>
+                    <label>MERRILL LYNCH</label>
+                </value>
+                <value>
+                    <fullName>MOODY NATIONAL BANK</fullName>
+                    <default>false</default>
+                    <label>MOODY NATIONAL BANK</label>
+                </value>
+                <value>
+                    <fullName>MTB BANK</fullName>
+                    <default>false</default>
+                    <label>MTB BANK</label>
+                </value>
+                <value>
+                    <fullName>NATIONAL BANK</fullName>
+                    <default>false</default>
+                    <label>NATIONAL BANK</label>
+                </value>
+                <value>
+                    <fullName>NATIONSBANK OF TEXAS</fullName>
+                    <default>false</default>
+                    <label>NATIONSBANK OF TEXAS</label>
+                </value>
+                <value>
+                    <fullName>NORTHERN TRUST BANK FLORIDA</fullName>
+                    <default>false</default>
+                    <label>NORTHERN TRUST BANK FLORIDA</label>
+                </value>
+                <value>
+                    <fullName>NORWEST BANK MINNESOTA N.A.</fullName>
+                    <default>false</default>
+                    <label>NORWEST BANK MINNESOTA N.A.</label>
+                </value>
+                <value>
+                    <fullName>OCEAN BANK</fullName>
+                    <default>false</default>
+                    <label>OCEAN BANK</label>
+                </value>
+                <value>
+                    <fullName>PACIFIC NATIONAL BANK</fullName>
+                    <default>false</default>
+                    <label>PACIFIC NATIONAL BANK</label>
+                </value>
+                <value>
+                    <fullName>PAINE WEBBER</fullName>
+                    <default>false</default>
+                    <label>PAINE WEBBER</label>
+                </value>
+                <value>
+                    <fullName>PEOPLES BANK</fullName>
+                    <default>false</default>
+                    <label>PEOPLES BANK</label>
+                </value>
+                <value>
+                    <fullName>PINEBANK</fullName>
+                    <default>false</default>
+                    <label>PINEBANK</label>
+                </value>
+                <value>
+                    <fullName>PNC NATIONAL BANK</fullName>
+                    <default>false</default>
+                    <label>PNC NATIONAL BANK</label>
+                </value>
+                <value>
+                    <fullName>REPUBLIC NATIONAL BANK</fullName>
+                    <default>false</default>
+                    <label>REPUBLIC NATIONAL BANK</label>
+                </value>
+                <value>
+                    <fullName>RIGGS BANK N.A.</fullName>
+                    <default>false</default>
+                    <label>RIGGS BANK N.A.</label>
+                </value>
+                <value>
+                    <fullName>ROYAL BANK</fullName>
+                    <default>false</default>
+                    <label>ROYAL BANK</label>
+                </value>
+                <value>
+                    <fullName>S&amp;T BANK</fullName>
+                    <default>false</default>
+                    <label>S&amp;T BANK</label>
+                </value>
+                <value>
+                    <fullName>SCOTIABANK</fullName>
+                    <default>false</default>
+                    <label>SCOTIABANK</label>
+                </value>
+                <value>
+                    <fullName>SMITH BARNEY</fullName>
+                    <default>false</default>
+                    <label>SMITH BARNEY</label>
+                </value>
+                <value>
+                    <fullName>STATE STREET BANK AND TRUST CO</fullName>
+                    <default>false</default>
+                    <label>STATE STREET BANK AND TRUST CO</label>
+                </value>
+                <value>
+                    <fullName>SUMMIT BANK</fullName>
+                    <default>false</default>
+                    <label>SUMMIT BANK</label>
+                </value>
+                <value>
+                    <fullName>SUNTRUST BANK</fullName>
+                    <default>false</default>
+                    <label>SUNTRUST BANK</label>
+                </value>
+                <value>
+                    <fullName>SWISS BANK CORPORATION</fullName>
+                    <default>false</default>
+                    <label>SWISS BANK CORPORATION</label>
+                </value>
+                <value>
+                    <fullName>TERRABANK N.A</fullName>
+                    <default>false</default>
+                    <label>TERRABANK N.A</label>
+                </value>
+                <value>
+                    <fullName>THE BANCK OF LUNINK LATINIC</fullName>
+                    <default>false</default>
+                    <label>THE BANCK OF LUNINK LATINIC</label>
+                </value>
+                <value>
+                    <fullName>THE BANK OF CHERRY CREEK</fullName>
+                    <default>false</default>
+                    <label>THE BANK OF CHERRY CREEK</label>
+                </value>
+                <value>
+                    <fullName>THE BANK OF NEW YORK</fullName>
+                    <default>false</default>
+                    <label>THE BANK OF NEW YORK</label>
+                </value>
+                <value>
+                    <fullName>THE BANK OF TELLURIDE</fullName>
+                    <default>false</default>
+                    <label>THE BANK OF TELLURIDE</label>
+                </value>
+                <value>
+                    <fullName>THE BANK OF TOKYO TRUST CO</fullName>
+                    <default>false</default>
+                    <label>THE BANK OF TOKYO TRUST CO</label>
+                </value>
+                <value>
+                    <fullName>THE CHASE MANHATTAN BANK</fullName>
+                    <default>false</default>
+                    <label>THE CHASE MANHATTAN BANK</label>
+                </value>
+                <value>
+                    <fullName>THE INTERNATIONAL BANK OF MIAM</fullName>
+                    <default>false</default>
+                    <label>THE INTERNATIONAL BANK OF MIAM</label>
+                </value>
+                <value>
+                    <fullName>THE PARK AVENUE BANK N.A.</fullName>
+                    <default>false</default>
+                    <label>THE PARK AVENUE BANK N.A.</label>
+                </value>
+                <value>
+                    <fullName>THE PRUDENTIAL BANK</fullName>
+                    <default>false</default>
+                    <label>THE PRUDENTIAL BANK</label>
+                </value>
+                <value>
+                    <fullName>THE RIGGS NATIONAL BANK</fullName>
+                    <default>false</default>
+                    <label>THE RIGGS NATIONAL BANK</label>
+                </value>
+                <value>
+                    <fullName>TOWERBANK</fullName>
+                    <default>false</default>
+                    <label>TOWERBANK</label>
+                </value>
+                <value>
+                    <fullName>TRADE &amp; COMMERCE BANK</fullName>
+                    <default>false</default>
+                    <label>TRADE &amp; COMMERCE BANK</label>
+                </value>
+                <value>
+                    <fullName>TSB BANK</fullName>
+                    <default>false</default>
+                    <label>TSB BANK</label>
+                </value>
+                <value>
+                    <fullName>UBS NEW YORK BRANCH</fullName>
+                    <default>false</default>
+                    <label>UBS NEW YORK BRANCH</label>
+                </value>
+                <value>
+                    <fullName>UBS SA STAMFORD</fullName>
+                    <default>false</default>
+                    <label>UBS SA STAMFORD</label>
+                </value>
+                <value>
+                    <fullName>UNITED MISSOURI BANK</fullName>
+                    <default>false</default>
+                    <label>UNITED MISSOURI BANK</label>
+                </value>
+                <value>
+                    <fullName>VALLEY BANK N.A</fullName>
+                    <default>false</default>
+                    <label>VALLEY BANK N.A</label>
+                </value>
+                <value>
+                    <fullName>VISA INTERNATIONAL</fullName>
+                    <default>false</default>
+                    <label>VISA INTERNATIONAL</label>
+                </value>
+                <value>
+                    <fullName>WACHOVIA BANK N.A.</fullName>
+                    <default>false</default>
+                    <label>WACHOVIA BANK N.A.</label>
+                </value>
+                <value>
+                    <fullName>WASHINGTON MUTUAL BANK</fullName>
+                    <default>false</default>
+                    <label>WASHINGTON MUTUAL BANK</label>
+                </value>
+                <value>
+                    <fullName>WELLS FARGO BANK</fullName>
+                    <default>false</default>
+                    <label>WELLS FARGO BANK</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>ABN AMRO BANK (CHILE)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO BBVA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO BICE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO CENTRAL DE CHILE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO CONSORCIO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO CREDITO INVERSIONES</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO DE CHILE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO DE CHILE/EDWARDS-CITI</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO DE CREDITO E INVERSIONES</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO DEL DESARROLLO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO DEL ESTADO DE CHILE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO EDWARDS CITI</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO FALABELLA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO INTERNACIONAL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO ITAÚ CHILE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO PENTA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO RIPLEY</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO SANTANDER-(CHILE)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO SANTIAGO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>BANCO SECURITY</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>CITIBANK-SANTIAGO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>CORPBANCA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>CREDICHILE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>DEUTSCHE BANK (CHILE)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chile</controllingFieldValue>
+                <valueName>HSBC BANK (CHILE)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>1 FIRST BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>ABN AMRO BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>AMERICAN EXPRESS BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>AMERICAN NATIONAL BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>AMTRADE BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BAC FLORIDA BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANCA COMMERCIALE ITALIANA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANCOINTERNACIONAL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANCO ATLANTICO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANCO BILBAO VIZCAYA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANCO DO BRASIL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANCO DO BRASIL S A</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANCO ECONOMICO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANCO EXTERIOR DE ESPANA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANCO MERCANTIL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANCO PARIS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANCO POPULAR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANCO POPULAR DE PUERTO RICO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANCO SANTANDER</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANK FUND STAFF FEDERAL CREDIT</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANK HAPOALIM BM</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANK OF AMERICA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANK OF BOSTON</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANK ONE COLUMBUS N.A.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANKBOSTON N.A.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANKERS TRUST COMPANY</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANQUE NATIONALE DE PARIS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BANQUE SUDAMERIS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BARCLAYS BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BARNETT BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>BHIF</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CALIFORNIA COMMERCE BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CAMBRIDGE TRUST COMPANY</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CAPITAL BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CENTRAL HISPANO USA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CHEMICAL BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CHITTENDEN BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CITIBANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CITIBANK DELAWARE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CITIBANK N.A.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CITIBANK NEW YORK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CITICORP</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CITY NATIONAL BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>COLONIAL BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>COMMERCE BANK OF KANSAS CITY</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CONSOLIDATED BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CORESTATES BANK OF DELAWARE NA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CORP BANCA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CREDIT SUISSE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CREDIT UNION</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>CREDITO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>DEUTSCHE BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>DEUTSCHE SUDAMERIKANISCHE BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>DO BRAZIL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>DRAWEE BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>DRESDNER BANK LATEINAMERIKA AG</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>FEDERAL CREDIT UNION</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>FIDELITY BANK N.A.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>FLEET BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>FROST NATIONAL BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>GRANITE STATE BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>HARRIS TRUST AND SAVINGS BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>HNS BANCO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>HONGKONG BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>HSBC BANK USA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>INTERBANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>ISRAEL DISCOUNT BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>JP MORGAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>JP MORGAN CHASE BANK, N.A.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>KREDIETBANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>LASALLE BANK FSB</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>LEHMAN BROTHERS INC.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>LLOYDS BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>M &amp; I BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>M&amp;T BUFFALO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>MARINE MIDLAND BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>MELLON BANK N.A.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>MERRILL LYNCH</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>MOODY NATIONAL BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>MTB BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>NATIONAL BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>NATIONSBANK OF TEXAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>NORTHERN TRUST BANK FLORIDA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>NORWEST BANK MINNESOTA N.A.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>OCEAN BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>PACIFIC NATIONAL BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>PAINE WEBBER</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>PEOPLES BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>PINEBANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>PNC NATIONAL BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>REPUBLIC NATIONAL BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>RIGGS BANK N.A.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>ROYAL BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>S&amp;T BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>SCOTIABANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>SMITH BARNEY</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>STATE STREET BANK AND TRUST CO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>SUMMIT BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>SUNTRUST BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>SWISS BANK CORPORATION</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>TERRABANK N.A</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>THE BANCK OF LUNINK LATINIC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>THE BANK OF CHERRY CREEK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>THE BANK OF NEW YORK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>THE BANK OF TELLURIDE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>THE BANK OF TOKYO TRUST CO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>THE CHASE MANHATTAN BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>THE INTERNATIONAL BANK OF MIAM</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>THE PARK AVENUE BANK N.A.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>THE PRUDENTIAL BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>THE RIGGS NATIONAL BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>TOWERBANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>TRADE &amp; COMMERCE BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>TSB BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>UBS NEW YORK BRANCH</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>UBS SA STAMFORD</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>UNITED MISSOURI BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>VALLEY BANK N.A</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>VISA INTERNATIONAL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>WACHOVIA BANK N.A.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>WASHINGTON MUTUAL BANK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bancos extranjeros</controllingFieldValue>
+                <valueName>WELLS FARGO BANK</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Cliente__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Cliente</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Cuentas Bancarias Inv</relationshipLabel>
+        <relationshipName>Cuentas_Bancarias_Inv</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Esta_es_la_Cuenta_Principal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Marque la casilla para indicar que es la cuenta principal del Cliente</inlineHelpText>
+        <label>Esta es la Cuenta Principal</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Moneda__c</fullName>
+        <externalId>false</externalId>
+        <label>Moneda</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CLP</fullName>
+                    <default>false</default>
+                    <label>Peso</label>
+                </value>
+                <value>
+                    <fullName>USD</fullName>
+                    <default>false</default>
+                    <label>Dolar</label>
+                </value>
+                <value>
+                    <fullName>EUR</fullName>
+                    <default>false</default>
+                    <label>Euro</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Numero__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Número de la cuenta</inlineHelpText>
+        <label>Número</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Origen_de_la_Cuenta__c</fullName>
+        <externalId>false</externalId>
+        <label>Origen de la Cuenta</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Chile</fullName>
+                    <default>true</default>
+                    <label>Chile</label>
+                </value>
+                <value>
+                    <fullName>Bancos extranjeros</fullName>
+                    <default>false</default>
+                    <label>Bancos extranjeros</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sucursal__c</fullName>
+        <externalId>false</externalId>
+        <label>Sucursal</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tipo_de_Cuenta__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de Cuenta</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cuenta Corriente</fullName>
+                    <default>true</default>
+                    <label>Cuenta Corriente</label>
+                </value>
+                <value>
+                    <fullName>Cuenta Ahorro</fullName>
+                    <default>false</default>
+                    <label>Cuenta Ahorro</label>
+                </value>
+                <value>
+                    <fullName>Cuenta Vista</fullName>
+                    <default>false</default>
+                    <label>Cuenta Vista</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Cuenta Bancaria Inv</label>
+    <nameField>
+        <displayFormat>CB-{0000000}</displayFormat>
+        <label>ID Cuenta Bancaria en SF</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Cuentas Bancarias Inv</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

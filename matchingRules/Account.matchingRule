@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MatchingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <matchingRules>
+        <fullName>Duplicado_en_cuenta</fullName>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <description>Busca duplicados en cuentas por: Rut o Razón Social.</description>
+        <label>Duplicado en cuenta</label>
+        <matchingRuleItems>
+            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
+            <fieldName>RUT__c</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
+            <fieldName>Raz_n_Social__c</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <ruleStatus>Active</ruleStatus>
+    </matchingRules>
+    <matchingRules>
+        <fullName>Duplicado_en_cuenta_Banco_solo_RUT_y_EjBanco</fullName>
+        <description>Busca duplicados en cuentas Banco por: Rut y Registro Banco)</description>
+        <label>Duplicado en cuenta Banco solo RUT y EjBanco</label>
+        <matchingRuleItems>
+            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
+            <fieldName>RUT__c</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
+            <fieldName>Tiene_Ejecutivo_de_Cuenta__c</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <ruleStatus>Active</ruleStatus>
+    </matchingRules>
+    <matchingRules>
+        <fullName>Duplicado_en_cuenta_Inversiones_solo_RUT_y_EjInversiones</fullName>
+        <description>Busca duplicados en cuentas Inversiones en Salesforce por: Rut y Registro Inversiones</description>
+        <label>Duplicado en cuenta Inversiones solo RUT y EjInversiones</label>
+        <matchingRuleItems>
+            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
+            <fieldName>RUT__c</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
+            <fieldName>Tiene_Ejecutivo_de_Inversiones__c</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <ruleStatus>Active</ruleStatus>
+    </matchingRules>
+</MatchingRules>

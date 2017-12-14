@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>Oportunidad Multiproducto Ejec de Cuenta</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>EnviadoComite__c</fieldNames>
+        <fieldNames>Resultado_Comite__c</fieldNames>
+        <fieldNames>Motivo_rechazo__c</fieldNames>
+        <info>&lt;p&gt;1. Revise, ingrese y actualice información de RIB y MAC&lt;/p&gt;&lt;p&gt;2. Digitalice la información correspondiente que sea necesaria&lt;/p&gt;&lt;p&gt;3. Solicite Aprobación a Comité electrónico. Marque &amp;quot;Enviado a Comité&amp;quot; cuando lo haga.&lt;/p&gt;&lt;p&gt;4. Espere pronunciamiento del Comité e informe resultado actualizando &amp;quot;Resultado de Comité&amp;quot;.&lt;/p&gt;&lt;p&gt;5. Si el pronunciamiento es &amp;quot;Condicionado&amp;quot;. Subsánelos y espere pronunciamiento definitivo.&lt;/p&gt;&lt;p&gt;6. Si el pronunciamiento es negativo, indique el motivo del rechazo y guarde el registro.&lt;/p&gt;</info>
+        <picklistValueName>Calificación</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Motivo_rechazo__c</fieldNames>
+        <fieldNames>Otro_motivo_rechazo__c</fieldNames>
+        <info>&lt;ol&gt;&lt;li&gt;Indique Motivo de Rechazo más adecuado&lt;/li&gt;&lt;li&gt;Guarde el Registro&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Cerrada Perdida</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;1.- Verificar interés del cliente en el Producto que se le va a ofrecer.&lt;/p&gt;&lt;p&gt;2.- Si no hay interés cerrar perdida la oportunidad y motivo sin interés. Si hay interés, pedir la documentación financiera y sustentatoria necesaria requerida por el Banco.&lt;/p&gt;</info>
+        <picklistValueName>Contacto</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Form_of_products_sign_fingerprint__c</fieldNames>
+        <fieldNames>Folder_delivered__c</fieldNames>
+        <fieldNames>Inv_Welcome_pack_disponible__c</fieldNames>
+        <fieldNames>Inv_Welcome_pack_entregado__c</fieldNames>
+        <fieldNames>Activacion_de_productos__c</fieldNames>
+        <info>&lt;p&gt;Ejecutivo:&lt;/p&gt;&lt;p&gt;1. Obtenga Formulario de solicitud de Productos firmado, registro fotográfico, Registro de huellas y firma; selecciónelo cuando los obtenga&lt;/p&gt;&lt;p&gt;2. Prepare carpeta con expediente de documentos completos para entregar a Operaciones.&lt;/p&gt;&lt;p&gt;3. Marque &amp;quot;Carpeta entregada&amp;quot; al solicitar a Operaciones la apertura de Productos&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Operaciones:&lt;/p&gt;&lt;p&gt;4. Prepara Welcome pack y cuando lo deja disponible para entregar al cliente marca &amp;quot;Welcome pack disponible&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Ejecutivo:&lt;/p&gt;&lt;p&gt;5. Entregue el Welcome pack al cliente y entregue a Operaciones el contrato (TCrédito) y pagaré (LSobregiro) firmados. Entonces seleccione &amp;quot;Welcome pack entregado&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Operaciones:&lt;/p&gt;&lt;p&gt;6. Recibidos los contratos proceder con la activación de productos. Una vez realizado marque &amp;quot;Activación de productos&amp;quot; y guarde el registro.&lt;/p&gt;</info>
+        <picklistValueName>Otorgamiento</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Multiproducto_Ejecutivo_de_Cuenta</recordTypeName>
+</PathAssistant>

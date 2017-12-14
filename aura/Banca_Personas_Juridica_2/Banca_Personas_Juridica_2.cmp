@@ -1,0 +1,202 @@
+<aura:component controller="MyContactListController" implements="force:hasRecordId">
+    <aura:handler name="init" value="{!this}" action="{!c.myAction}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.CampaignList}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.FinAccountList}"/>
+    <aura:attribute name="contacts" type="Contact[]" />
+    <aura:attribute name="accountId" type="Id" />
+    <aura:attribute name="campList" type="CampaignMember"/>
+    <aura:attribute name="FinList" type="String"/>
+	
+    <div class="slds-grid slds-text-align_center">
+            <div>
+                <div>
+                  <table class="slds-table slds-table_cell-buffer">   
+                    <thead class="">
+                        <tr >
+                            <th scope="col" class="elemento texto_titulo titulo_inferior left-top">
+                                <span class="slds-truncate slds-border_bottom">Actividad &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody >
+                        
+                            <tr>
+                                <aura:iteration items="{!v.contacts}" var="contact">
+                                	<td class=" elemento texto_titulo texto-gris bold26px left-top"><span class="slds-truncate">{!contact.Actividad_Economica_SBIF__c}</span></td>
+                            	</aura:iteration>
+                           </tr>                             
+                        
+                        	<tr>
+                                <td></td>
+                            </tr>
+                        	<tr>
+                              <td></td>
+                            </tr>                        	
+                    </tbody>
+                </table>
+        	</div>
+              <div>
+                <table class="slds-table slds-table_cell-buffer" style="margin-top: 1.25cm;">   
+                    <thead>
+                        <tr>
+                            <th scope="col" class="elemento texto_titulo titulo_inferior left-top">
+                                <span class="slds-truncate">Línea aprobada</span>
+                            </th>
+                        </tr>
+                        
+                             <tr >                      
+                                 <td class="slds-border_top bold18px texto-gris">Vencimiento de Línea</td>
+                                 <aura:iteration items="{!v.contacts}" var="fin">
+                                 	<td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputDate value="{!fin.PRIOR_MAC_EXPIRATION_DATE_C}" format="DD/MM/YYYY"/></td> 
+                            	</aura:iteration>
+                             </tr>                       
+                    </thead>
+                    <tbody>                                                               		                          
+                                                      
+                            <aura:iteration items="{!v.contacts}" var="ops">
+                                <tr>                            
+                                     <td class="Labels bold18px texto-gris">Riesgo total</td>
+                                     <td class="plain18px texto_titulo texto-gris right-top celda50">{!ops.PRIOR_MAC_CREDIT_LIMIT_C}</td> 
+                                </tr>
+                            </aura:iteration>  
+                            <tr>                            
+                                 <td></td>                    
+                            </tr>
+                            <tr>                            
+                                 <td></td>                    
+                            </tr>                        
+                    </tbody>               
+                </table>
+            </div>     
+      </div>
+			<div>
+        		<div>
+                    <table class="slds-table slds-table_cell-buffer">   
+                        <thead  class="">
+                            <tr>
+                                <th scope="col" class="elemento texto_titulo titulo_inferior left-top"><span class="slds-truncate slds-border_bottom">Campañas Vigentes</span></th>
+                            </tr>
+                        </thead>
+                        <tbody> 
+                             
+                                <tr>
+                                 <aura:iteration items="{!v.campList}" var="camp">                             
+                                    <td class="bold18px texto-gris">{!camp.Campaign.Name}</td> 
+                                    <td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputCurrency value="160000" format="" currencySymbol="$" currencyCode="CLP"/></td>
+                                 </aura:iteration>
+                                </tr>                               
+                           
+                            	<tr>                            
+                                  <td></td> 
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+        		<div>
+                    <table class="slds-table slds-table_cell-buffer" style="margin-top: 2.6cm;">   <!-- style="margin-left: -30px;" -->
+                        <thead >
+                            <tr class="slds-border_bottom">
+                                <th scope="col" class="elemento texto_titulo titulo_inferior left-top">
+                                    <span class="slds-truncate">Oportunidades</span>                            
+                                </th>                        
+                            </tr>                                     
+                        </thead>
+                        <tbody>                    
+                            <aura:iteration items="{!v.contacts}" var="ops">  
+                                <tr>                           
+                                    <td  class="bold18px texto-gris">Abiertas</td> 
+                                    <td class="plain18px texto_titulo texto-gris right-top celda50">{!ops.Oportunidaes__c}</td>
+                                </tr>
+                                <tr>                            
+                                    <td  class="bold18px texto-gris">Monto Total</td> 
+                                    <td class="plain18px texto_titulo texto-gris right-top celda50"><lightning:formattedNumber value="{!ops.Amount_Opps__c}" style="currency" currencyCode="CLP"/></td>
+                                </tr>
+                                <!-- <tr>                            
+                                    <td></td>
+                                </tr>
+                                <tr>                            
+                                    <td></td>
+                                </tr>-->
+                            </aura:iteration>
+                        </tbody>
+                </table>
+            </div>  
+        </div>
+        <div>         
+            <div>
+                <table class="slds-table slds-table_cell-buffer">   
+                    <thead class="slds-border_bottom">
+                        <tr>
+                            <th scope="col"><span class="slds-truncate elemento texto_titulo titulo_inferior left-top">Consolidado</span></th>
+                            <th scope="col"><span class="slds-truncate elemento texto_titulo titulo_inferior left-top">Pesos</span></th>
+                            <th scope="col"><span class="slds-truncate elemento texto_titulo titulo_inferior left-top">Dólares</span></th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <aura:iteration items="{!v.contacts}" var="ops">  
+                            <tr>                            
+                                <td class="texto-tabla-larga-entrada">Cuentas</td> 
+                                <td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputNumber value="0" format=""/></td> 
+                                <td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputNumber value="0" format="#,##0.##"/></td>  
+                            </tr>
+                            <tr>                                                       
+                                <td class="texto-tabla-larga-entrada">Inversiones</td>
+                                <td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputNumber value="0" format=""/></td> 
+                                <td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputNumber value="0" format="#,##0.##"/></td>  
+                            </tr>
+                            <tr>                                                        
+                                <td class="texto-tabla-larga-entrada">Créditos</td>
+                                <td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputNumber value="0" format=""/></td>
+                                <td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputNumber value="0" format="#,##0.##"/></td>  
+                            </tr>
+                            <tr>                            
+                                <td class="texto-tabla-larga-entrada">Tarjetas de Crédito</td>
+                                <td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputNumber value="0" format=""/></td>
+                                <td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputNumber value="0" format="#,##0.##"/></td>  
+                            </tr>
+                            <tr>                            
+                                <td></td>    
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <table class="slds-table slds-table_cell-buffer">   
+                    <thead class="slds-border_bottom">
+                        <tr>
+                            <th scope="col"><span class="slds-truncate elemento texto_titulo titulo_inferior left-top">BIA</span></th>
+                            <th scope="col"><span class="slds-truncate elemento texto_titulo titulo_inferior left-top">Pesos</span></th>
+                            <th scope="col"><span class="slds-truncate elemento texto_titulo titulo_inferior left-top">Dólares</span></th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <aura:iteration items="{!v.contacts}" var="ops">  
+                            <tr>                            
+                                <td  class="texto-tabla-larga-entrada">Cuentas</td> 
+                                <td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputNumber value="0" format=""/></td> 
+                                <td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputNumber value="0" format="#,##0.##"/></td>  
+                            </tr>
+                            <tr>                                                       
+                                <td  class="texto-tabla-larga-entrada">Inversiones</td>
+                                <td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputNumber value="0" format=""/></td> 
+                                <td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputNumber value="0" format="#,##0.##"/></td>  
+                            </tr>
+                            <tr>                                                        
+                                <td class="texto-tabla-larga-entrada">Créditos</td>
+                                <td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputNumber value="0" format=""/></td>
+                                <td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputNumber value="0" format="#,##0.##"/></td>  
+                            </tr>
+                            <tr>                            
+                                <td class="texto-tabla-larga-entrada">Tarjetas de Crédito</td>
+                                <td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputNumber value="0" format=""/></td>
+                                <td class="plain18px texto_titulo texto-gris right-top celda50"><ui:outputNumber value="0" format="#,##0.##"/></td>  
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+ 		</div>        
+</div>  
+    
+</aura:component>

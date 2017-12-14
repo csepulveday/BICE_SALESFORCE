@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>BICE Alert</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>BICE Alerts</value>
+    </caseValues>
+    <fields>
+        <label><!-- AccountId --></label>
+        <name>AccountId__c</name>
+        <relationshipLabel><!-- BICE Alerts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label>Número de cuenta</label>
+        <name>BICE_Fin_Account__c</name>
+        <relationshipLabel>Alertas BICE</relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- CaseId --></label>
+        <name>CaseId__c</name>
+        <relationshipLabel><!-- BICE Alerts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label>Descripción</label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Link Account --></label>
+        <name>Link_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- MDM ID --></label>
+        <name>MDM_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- OpportunityId --></label>
+        <name>OpportunityId__c</name>
+        <relationshipLabel><!-- BICE Alerts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Type of alert --></label>
+        <name>Type_of_alert__c</name>
+        <relationshipLabel><!-- BICE Alerts --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The user that should receive the notification --></help>
+        <label><!-- User --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- BICE Alerts --></relationshipLabel>
+    </fields>
+    <gender>Neuter</gender>
+</CustomObjectTranslation>

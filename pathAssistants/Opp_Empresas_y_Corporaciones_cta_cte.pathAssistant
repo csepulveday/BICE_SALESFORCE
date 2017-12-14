@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>Opp Empresas y Corporaciones - cta cte</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Detecci_n_de_otras_oportunidades__c</fieldNames>
+        <picklistValueName>Cerrada Ganada</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Detecci_n_de_otras_oportunidades__c</fieldNames>
+        <fieldNames>Motivo_rechazo__c</fieldNames>
+        <fieldNames>Otro_motivo__c</fieldNames>
+        <fieldNames>Otro_motivo_rechazo__c</fieldNames>
+        <info>&lt;p&gt;Indique el motivo de rechazo de la oportunidad según corresponda.&lt;/p&gt;</info>
+        <picklistValueName>Cerrada Perdida</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Condiciones_del_negocio__c</fieldNames>
+        <info>&lt;p&gt;Indique las condiciones generales del negocio y marque &amp;quot;Etapa como completado&amp;quot;.&lt;/p&gt;</info>
+        <picklistValueName>Estudio</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Detecci_n_de_otras_oportunidades__c</fieldNames>
+        <info>&lt;p&gt;Indique si ha detectado otras oportunidades.&lt;/p&gt;&lt;p&gt;Luego, cierre la oportunidad.&lt;/p&gt;</info>
+        <picklistValueName>Negociación</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Empresas_y_Corporaciones_cuenta_corriente</recordTypeName>
+</PathAssistant>

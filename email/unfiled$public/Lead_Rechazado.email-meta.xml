@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para aviso de rechazo de Jefe de Grupo Lead</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BICE</letterhead>
+    <name>Lead Rechazado</name>
+    <style>freeForm</style>
+    <subject>Candidato {!Lead.Name} -  Rechazado por Jefe Grupo</subject>
+    <textOnly>El candidato {!Lead.Name} ha sido rechazado por el Jefe de Grupo, para ver el detalle entre al siguiente link: {!Lead.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

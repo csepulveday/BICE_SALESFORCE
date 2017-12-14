@@ -1,0 +1,47 @@
+.THIS .BackColor{
+    background-color: #f7f9fb;  
+}
+.THIS .CenterRows{
+    text-align:center;  
+}
+.THIS .Labels{
+     color : #16325c;
+     font-size: 12px;
+    font-weight: bold;
+    line-height: 5px;   
+}
+.THIS .Campos{
+     color : #9faab5;
+     font-size: 13px;
+    font-weight: bold;
+    line-height: 5px;   
+}
+.THIS .valigntop {
+    vertical-align: top;
+}
+.THIS .texto_titulo {
+    font-family: 'Open Sans', arial;
+    font-size: 14px;
+    color: #000000;    
+}
+.THIS .padding10px {
+    padding: 5px;
+}
+.THIS .elemento {
+    display: inline-block;
+}
+.THIS .texto-gris {
+    color: #6a6a6a !important;
+}
+.THIS .center-middle {
+    /*text-align: center;*/
+    vertical-align: middle;
+}
+.THIS .bold26px {
+	font-weight: bold;
+	font-size: 16px !important;
+}
+.THIS .bold14px {
+	font-weight: bold;
+	font-size: 12px !important;
+}

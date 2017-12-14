@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Ejemplo</name>
+    <style>none</style>
+    <subject>En Banco BICE le hacemos la vida más simple</subject>
+    <textOnly>{!Lead.Salutation} {!Lead.FirstName}:
+
+
+Tenemos una oferta de productos y servicios pensada para usted
+
+
+
+
+Le invitamos a ser parte de Banco BICE y disfrutar de la mejor experiencia de servicio. Para contarle más detalles, me gustaría reunirme con usted. Cuénteme si le interesa y cuál es su disponibilidad para que nos juntemos.
+
+
+Tenemos una oferta de productos y servicios para hacerle la vida más simple:
+
+Para que nunca pague de más, contamos con una Cuenta Corriente única con Línea de Sobregiro integrada, que se paga automáticamente si se deposita en la cuenta.
+Nuestra Tarjeta de Débito Check Card permite efectuar giros y pagos en Chile y el extranjero. Con ella, puede acceder a la Family Card, una tarjeta que entrega independencia para sus hijos, sin costo para menores de 25 años.
+Nuestras Tarjetas de Crédito Visa Banco BICE tienen beneficios exclusivos en todo el mundo; y con ellas puede acceder a la Tarjeta Virtual BICE Net para comprar por Internet con el resguardo de sus datos personales. Además, acumula Dólares BICE, con los que puede pagar el total o parte de sus pasajes, hoteles, agencia de viajes y otros servicios turísticos.
+Con las Tarjetas de Banco BICE puede disfrutar de Beneficios BICE en restaurantes, hogar, salud, belleza y mucho más.
+En nuestro Portal de Inversiones puede realizar todas sus inversiones en línea, con la asesoría de nuestros especialistas.
+
+
+
+
+
+
+Un cordial saludo,
+
+
+
+
+
+
+
+
+Infórmese sobre la garantía estatal de los depósitos en su banco o en wwwsbifcl</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,7 @@
+<apex:page standardController="Lead" extensions="BICE_Lead_Int10lController" action="{!validarcampos}">
+     <apex:form >
+      <apex:pageMessages />
+      <apex:commandButton value="Volver al registro" action="{!volver}"/>
+    </apex:form>
+   {!mensajePagina}
+</apex:page>

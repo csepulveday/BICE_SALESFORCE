@@ -1,0 +1,76 @@
+<aura:component controller="MyContactListController" implements="force:hasRecordId">
+	<aura:handler name="init" action="{!c.myAction}" value="{!this}"/>
+    <aura:handler name="init" action="{!c.ActiveCampaigns}" value="{!this}"/>
+    <aura:handler name="init" action="{!c.FinAccountList}" value="{!this}"/>
+    <aura:handler name="init" action="{!c.LastContactChannel}" value="{!this}"/>
+    <aura:handler name="init" action="{!c.ClientProducts}" value="{!this}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.IconosProd}"/>
+    
+    <aura:attribute name="contacts" type="Contact[]"/>
+    <aura:attribute name="accountId" type="Id"/>
+    <aura:attribute name="camps" type="Account[]"/>
+    <aura:attribute name="FinList" type="Account"/>
+    <aura:attribute name="VarLastContact" type="String"/>
+    <aura:attribute name="ProdList" type="Account" />
+    <aura:attribute name="ICONFAM" type="Account" />
+    
+    <div class="slds-grid">
+              <table class="slds-table BackColor">   
+                <thead class="Labels">
+                    <tr>
+                        <th scope="col"><span class="slds-truncate">Canal Preferido</span></th> 
+                        <th scope="col"><span class="slds-truncate">Productos</span></th>
+                        <th scope="col"><span class="slds-truncate">Margen Neto (%)</span></th>
+                        <th scope="col"><span class="slds-truncate">Días Última Actividad</span></th>
+                        <th scope="col"><span class="slds-truncate">Alertas</span></th>
+                        <!-- <th scope="col"><span class="slds-truncate">Datos Cliente</span></th> -->
+                        <th scope="col"><span class="slds-truncate">Perfil Inversionista</span></th>
+                        <th scope="col"><span class="slds-truncate">Campañas Activas</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.contacts}" var="contact">
+                        <tr >
+                            <td class="Campos"><ui:outputRichText value="{!contact.X360_view_mail_icon__c}"/></td>
+                            <td class="Productos">
+                                          <ui:outputRichText value="{!v.ICONFAM}"/>      
+                            </td>
+                            <tr >
+                            	<td class="margenNeto font center texto-gris">Pesos<ui:outputNumber value="{!contact.Rentabilidad_12_meses__c}" format=""/></td>                               
+                            </tr>
+                            <tr >
+                            	<td class="margenNeto font center texto-gris">APV<ui:outputNumber value="{!contact.X360_view_Inv_Rentabilidad_12_APV__c}" format=""/></td>
+                            </tr>
+                            <tr >
+                            	<td class="margenNeto font center texto-gris">USD<ui:outputNumber value="{!contact.X360_view_Inv_Rentabilidad_12_USD__c}" format=""/></td>                               
+                            </tr>
+                            
+                                 <td class="dias center-middle font texto-gris">
+                                <aura:unescapedHtml value="{!v.VarLastContact}"/>
+                            </td>              
+                            <td class="Campos">En desarrollo</td>                          
+                            <!--<td class="Campos"><ui:outputNumber value="{!contact.Filled_Client_Data__c}" format=""/></td>-->
+                           <!-- <td>
+                            <div class="slds-progress-bar slds-progress-bar_x-medium" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" role="progressbar">
+                              <aura:iteration items="{!v.contacts}" var="contact">
+                                  <span class="slds-progress-bar__value" style="{!'width:'+contact.Filled_Client_Data__c+'%'}">                    
+                                    <span class="slds-assistive-text">Progress: {!contact.Filled_Client_Data__c+'%'}</span>
+                                  </span>
+                              </aura:iteration> 
+                            </div> 
+                            </td> -->
+                            <td style="perfil labels valigntop padding10px elemento">{!contact.Perfil_de_inversionista__c}<br/>
+                                Exposición actual: <ui:outputNumber value="{!contact.X360_view_Current_Exposure_Level__c+'%'}"/><br/>
+                                Nivel máximo de exposición según perfil: <ui:outputNumber value="{!contact.X360_view_Maximum_exposure_level__c+'%'}"/>           
+                            </td>
+                            <td class="margenNeto font center texto-gris">
+                                <aura:iteration items="{!v.camps}" var="camp">
+                                    {!camp} 
+                                </aura:iteration>
+                            </td>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>              
+          </div> 
+</aura:component>

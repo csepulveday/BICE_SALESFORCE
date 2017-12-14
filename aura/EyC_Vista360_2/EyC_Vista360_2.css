@@ -1,0 +1,29 @@
+.THIS .valigntop {
+    vertical-align: top;
+}
+.THIS .texto_titulo {
+    font-family: 'Open Sans', arial;
+    font-size: 16px;
+    color: #000000;    
+}
+.THIS .padding10px {
+    padding: 5px;
+}
+.THIS .elemento {
+    display: inline-block;
+}
+.THIS .texto-gris {
+    color: #6a6a6a !important;
+}
+.THIS .center-middle {
+    text-align: center;
+    vertical-align: middle;
+}
+.THIS .bold26px {
+	font-weight: bold;
+	font-size: 26px !important;
+}
+.THIS .bold18px {
+	font-weight: bold;
+	font-size: 18px !important;
+}

@@ -1,0 +1,183 @@
+<aura:component controller="MyContactListController" implements="force:hasRecordId">
+    <aura:handler name="init" action="{!c.myAction}" value="{!this}"/>
+    <aura:handler name="init" action="{!c.NumCases}" value="{!this}"/>
+    <aura:handler name="init" action="{!c.AUM}" value="{!this}"/>
+    <aura:attribute name="contacts" type="Contact[]" />
+    <aura:attribute name="accountId" type="Id" />
+    <aura:attribute name="aumAPV" type="Decimal"/>    
+    <aura:attribute name="CountCases" type="Case"/>  
+    
+    
+    <div class="slds-grid">
+       		<div>
+                <div>
+                  <table class="slds-table slds-table_cell-buffer">   
+                    <thead class="Labels">
+                        <tr>
+                            <th scope="col" class="slds-border_bottom"><span class="slds-truncate">Tipo Cliente</span></th>
+                        </tr>
+                    </thead>
+                   <!-- <tbody >
+                        <aura:iteration items="{!v.contacts}" var="contact">
+                            <tr>                               
+                                <td class="bold26 texto-gris left-top caja_inferior elemento">{!contact.Inv_Tipo_Cliente__c}</td>
+                            </tr> 
+                            <tr>
+                                <td class=""></td>
+                            </tr> 
+                        </aura:iteration>
+                    </tbody> -->
+                </table>
+           </div> 
+            <div class="MargenTabla"> 
+                 <table class="slds-table slds-table_cell-buffer">   
+                    <thead>
+                        <tr>
+                            <th scope="col"><span class="slds-truncate"></span></th>
+                        </tr>
+                        <tr>
+                            <th scope="col"><span class="slds-truncate"></span></th>
+                        </tr>
+                    </thead>
+                     <tbody>
+                        <aura:iteration items="{!v.contacts}" var="contact">
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>                           
+                            <tr>
+                                <td class=" bold26 texto-gris left-top elemento align-center">{!contact.X360_Nmb_Subsegmento__c}</td>
+                            </tr>                                                       
+                        </aura:iteration>   
+                    </tbody>
+                </table>   
+            </div>
+    	 </div> 
+        <div>                
+      			<table class="slds-table slds-table_cell-buffer">   
+                    <thead class="Labels">
+                        <tr>
+                            <th scope="col" class="slds-border_bottom"><span class="slds-truncate">BICE Inversiones</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>                  
+                           <tr>                                                                               
+                               <td class="Labels left-top bold18 texto-gris celda50">AUM APV</td> 
+                                <td class="Campos">{!v.aumAPV[0]}</td>  
+                            </tr> 
+                        	<tr>                                                                               
+                               <td class="Labels left-top bold18 texto-gris celda50">AUM €</td> 
+                                <td class="Campos">{!v.aumAPV[1]}</td>  
+                            </tr>
+                        	<tr>                                                                               
+                               <td class="Labels left-top bold18 texto-gris celda50">AUM $</td> 
+                                <td class="Campos">{!v.aumAPV[2]}</td>  
+                            </tr>
+                        	<tr>                                                                               
+                               <td class="Labels left-top bold18 texto-gris celda50">AUM USD</td> 
+                                <td class="Campos">{!v.aumAPV[3]}</td>  
+                            </tr>
+                    </tbody>
+                </table>
+            	
+            	<div>
+                <table class="slds-table slds-table_cell-buffer">   
+                    <thead class="Labels">
+                        <tr>
+                            <th scope="col" class="slds-border_bottom">
+                                <span class="slds-truncate">Oportunidades</span>
+                            </th>                        
+                        </tr>                                     
+                    </thead>
+                    <tbody>
+                        
+                        <aura:iteration items="{!v.contacts}" var="ops">  
+                            <tr>                           
+                                <td class="bold18 Labels texto-gris celda50">Abiertas</td> 
+                                <td class="Campos">{!ops.Oportunidaes__c}</td>
+                            </tr>
+                            <tr>                            
+                                <td class="bold18 Labels texto-gris celda50">Monto Total</td> 
+                                <td class="Campos"><lightning:formattedNumber value="{!ops.Amount_Opps__c}" style="currency" currencyCode="CLP"/></td>
+                            </tr>
+                            <tr>                            
+                                <td></td>
+                            </tr>
+                            <tr>                            
+                                <td></td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+            
+            </div>
+        
+        <div>
+            
+            <div>
+                <table class="slds-table slds-table_cell-buffer">   
+                    <thead class="Labels">
+                        <tr>
+                            <th scope="col" class="slds-border_bottom"><span class="slds-truncate">Banco BICE</span></th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <aura:iteration items="{!v.contacts}" var="ops">  
+                            <tr>                            
+                                <td class="bold18 Labels texto-gris celda50">Assets</td> 
+                                <td class="Campos">0</td>  
+                            </tr>
+                            <tr>                                                       
+                                <td class="bold18 Labels texto-gris celda50">Liabilities</td>
+                                <td class="Campos">0</td> 
+                            </tr>   
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                             <tr>
+                                <td></td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <table class="slds-table slds-table_cell-buffer">   
+                    <thead class="Labels">
+                        <tr>
+                            <th scope="col" class="slds-border_bottom"><span class="slds-truncate">Casos</span></th>
+                        </tr>                       
+                    </thead>
+                    <tbody>                      
+                         <tr>                            
+                             <td class="bold18 Labels texto-gris celda50">N° Casos</td>
+                             	
+                             	<td class="Campos">
+                                    <aura:iteration items="{!v.CountCases}" var="cas">  
+                                        {!cas}
+                                     </aura:iteration>     
+                                </td>                       	 
+                         </tr>                           
+                        <tr>                            
+                             <td class="bold18 Labels texto-gris celda50">Satisfacción</td>
+                             <td class="Campos">-</td> 
+                        </tr>
+                    </tbody>
+                </table>
+ 			</div>  
+ 		</div>
+        
+</div>     
+</aura:component>

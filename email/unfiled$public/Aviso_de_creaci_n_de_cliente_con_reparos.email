@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Se le comunica que el candidato {!Lead.Name} no ha sido creado por los siguientes&nbsp;reparos:<br><br>{!Lead.Observation_Customer_Area__c}<br><br><font face="arial">Para ver más detalles, haga clic en el link: {!Lead.Link}</font><br><br><br><br><br>]]></td>
+</tr>
+</table>

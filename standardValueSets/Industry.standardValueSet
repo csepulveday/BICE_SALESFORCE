@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>ADMINISTRADORAS DE FONDOS DE PENSIONES</fullName>
+        <default>false</default>
+        <label>ADMINISTRADORAS DE FONDOS DE PENSIONES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AGENCIA, CORREDORA, ADMIN. Y SOCIEDAD DE INVERSIÓN</fullName>
+        <default>false</default>
+        <label>AGENCIA, CORREDORA, ADMIN. Y SOCIEDAD DE INVERSIÓN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AGRICULTURA TRADICIONAL</fullName>
+        <default>false</default>
+        <label>AGRICULTURA TRADICIONAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ALIMENTOS, BEBIDAS Y TABACO</fullName>
+        <default>false</default>
+        <label>ALIMENTOS, BEBIDAS Y TABACO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ARRIENDO DE EQUIPOS Y MAQUINARIAS</fullName>
+        <default>false</default>
+        <label>ARRIENDO DE EQUIPOS Y MAQUINARIAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ARRIENDO DE VEHÍCULOS</fullName>
+        <default>false</default>
+        <label>ARRIENDO DE VEHÍCULOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ASERRADEROS</fullName>
+        <default>false</default>
+        <label>ASERRADEROS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ASTILLEROS</fullName>
+        <default>false</default>
+        <label>ASTILLEROS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BANCOS</fullName>
+        <default>false</default>
+        <label>BANCOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CLÍNICAS Y HOSPITALES</fullName>
+        <default>false</default>
+        <label>CLÍNICAS Y HOSPITALES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>COMERCIALIZADORES MAYORISTAS</fullName>
+        <default>false</default>
+        <label>COMERCIALIZADORES MAYORISTAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CONCESIONARIOS Y DISTRIBUIDORES DE VEHÍCULOS</fullName>
+        <default>false</default>
+        <label>CONCESIONARIOS Y DISTRIBUIDORES DE VEHÍCULOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CONSERVERAS Y CONGELADOS</fullName>
+        <default>false</default>
+        <label>CONSERVERAS Y CONGELADOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CONSTRUCTORAS HABITACIONALES</fullName>
+        <default>false</default>
+        <label>CONSTRUCTORAS HABITACIONALES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CONTRATISTAS Y TRANPORTISTAS FORESTALES</fullName>
+        <default>false</default>
+        <label>CONTRATISTAS Y TRANPORTISTAS FORESTALES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CRIADEROS Y VIVEROS DE PECES Y MARISCOS</fullName>
+        <default>false</default>
+        <label>CRIADEROS Y VIVEROS DE PECES Y MARISCOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EDITORIALES</fullName>
+        <default>false</default>
+        <label>EDITORIALES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ELEMENTOS PARA LA CONSTRUCCIÓN</fullName>
+        <default>false</default>
+        <label>ELEMENTOS PARA LA CONSTRUCCIÓN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EMPRESAS HOLDINGS</fullName>
+        <default>false</default>
+        <label>EMPRESAS HOLDINGS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EMPRESAS PERIODÍSTICAS</fullName>
+        <default>false</default>
+        <label>EMPRESAS PERIODÍSTICAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EMPRESAS PRODUCTORAS DE VINO</fullName>
+        <default>false</default>
+        <label>EMPRESAS PRODUCTORAS DE VINO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EXPORT. Y COMERCIO DE HARINA DE PESCADO</fullName>
+        <default>false</default>
+        <label>EXPORT. Y COMERCIO DE HARINA DE PESCADO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EXPORTADORES DE PRODUCTOS MINEROS</fullName>
+        <default>false</default>
+        <label>EXPORTADORES DE PRODUCTOS MINEROS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EXPORTADORES DE ACERO</fullName>
+        <default>false</default>
+        <label>EXPORTADORES DE ACERO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EXPORTADORES DE FRUTAS</fullName>
+        <default>false</default>
+        <label>EXPORTADORES DE FRUTAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EXPORTADORES DE PRODUCTOS DE MADERA</fullName>
+        <default>false</default>
+        <label>EXPORTADORES DE PRODUCTOS DE MADERA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FABRICACIÓN DE MAQUINARIAS Y EQUIPOS</fullName>
+        <default>false</default>
+        <label>FABRICACIÓN DE MAQUINARIAS Y EQUIPOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FABRICACIÓN DE PRODUCTOS FARMACÉUTICOS</fullName>
+        <default>false</default>
+        <label>FABRICACIÓN DE PRODUCTOS FARMACÉUTICOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FABRICACIÓN DE PRODUCTOS METÁLICOS</fullName>
+        <default>false</default>
+        <label>FABRICACIÓN DE PRODUCTOS METÁLICOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FABRICACIÓN DE VEHÍCULOS, PARTES Y PIEZAS</fullName>
+        <default>false</default>
+        <label>FABRICACIÓN DE VEHÍCULOS, PARTES Y PIEZAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FUERZAS DE ARMADA Y ORGANISMOS NACIONALES</fullName>
+        <default>false</default>
+        <label>FUERZAS DE ARMADA Y ORGANISMOS NACIONALES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GANADERIA</fullName>
+        <default>false</default>
+        <label>GANADERIA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GRANDES TIENDAS</fullName>
+        <default>false</default>
+        <label>GRANDES TIENDAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HIPOTECARIO</fullName>
+        <default>false</default>
+        <label>HIPOTECARIO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IMPOR. Y COMERCIO DE PRODUCTOS METÁLICOS</fullName>
+        <default>false</default>
+        <label>IMPOR. Y COMERCIO DE PRODUCTOS METÁLICOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IMPORT, COMERCIO Y EXPORT. MAQUINARIAS Y EQUIPOS</fullName>
+        <default>false</default>
+        <label>IMPORT, COMERCIO Y EXPORT. MAQUINARIAS Y EQUIPOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IMPORTADORES MAYORISTAS</fullName>
+        <default>false</default>
+        <label>IMPORTADORES MAYORISTAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IMPORTADORES Y COMERCIALIZADORES DE REPUESTOS</fullName>
+        <default>false</default>
+        <label>IMPORTADORES Y COMERCIALIZADORES DE REPUESTOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IMPORTADORES Y DISTRIBUIDORES DE VEHÍCULOS</fullName>
+        <default>false</default>
+        <label>IMPORTADORES Y DISTRIBUIDORES DE VEHÍCULOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IMPRENTAS</fullName>
+        <default>false</default>
+        <label>IMPRENTAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>INDUSTRIA DEL OCIO Y ENTRETENCIÓN</fullName>
+        <default>false</default>
+        <label>INDUSTRIA DEL OCIO Y ENTRETENCIÓN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>INMOBILIARIAS</fullName>
+        <default>false</default>
+        <label>INMOBILIARIAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>INSTITUCIONES DE EDUCACIÓN</fullName>
+        <default>false</default>
+        <label>INSTITUCIONES DE EDUCACIÓN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ISAPRES</fullName>
+        <default>false</default>
+        <label>ISAPRES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LABORATORIOS</fullName>
+        <default>false</default>
+        <label>LABORATORIOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MINERÍA</fullName>
+        <default>false</default>
+        <label>MINERÍA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MINERÍA NO METÁLICA</fullName>
+        <default>false</default>
+        <label>MINERÍA NO METÁLICA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MINORISTAS</fullName>
+        <default>false</default>
+        <label>MINORISTAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OBRAS CIVILES</fullName>
+        <default>false</default>
+        <label>OBRAS CIVILES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ORGANISMOS INTERNACIONALES</fullName>
+        <default>false</default>
+        <label>ORGANISMOS INTERNACIONALES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ORGANIZACIONES COMUNALES, REGIONALES Y MUNICIPALES</fullName>
+        <default>false</default>
+        <label>ORGANIZACIONES COMUNALES, REGIONALES Y MUNICIPALES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OTROS SERVICIOS</fullName>
+        <default>false</default>
+        <label>OTROS SERVICIOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PESQUERAS</fullName>
+        <default>false</default>
+        <label>PESQUERAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PRODUCCION Y EXPLOTACIÓN DE BOSQUES</fullName>
+        <default>false</default>
+        <label>PRODUCCION Y EXPLOTACIÓN DE BOSQUES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PRODUCTORES DE FRUTAS</fullName>
+        <default>false</default>
+        <label>PRODUCTORES DE FRUTAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PRODUCTORES CELULOSA, PAPEL Y DERIVADOS</fullName>
+        <default>false</default>
+        <label>PRODUCTORES CELULOSA, PAPEL Y DERIVADOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PRODUCTORES Y EXPORTADORES DE CHIPS Y ROLLIZOS</fullName>
+        <default>false</default>
+        <label>PRODUCTORES Y EXPORTADORES DE CHIPS Y ROLLIZOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PRODUCTOS QUÍMICOS Y COMBUSTIBLES</fullName>
+        <default>false</default>
+        <label>PRODUCTOS QUÍMICOS Y COMBUSTIBLES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RECOLECCIÓN Y PROCESAMIENTO DE ALGAS</fullName>
+        <default>false</default>
+        <label>RECOLECCIÓN Y PROCESAMIENTO DE ALGAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SALMONERAS</fullName>
+        <default>false</default>
+        <label>SALMONERAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SECTOR ARTEFACTOS PARA EL HOGAR</fullName>
+        <default>false</default>
+        <label>SECTOR ARTEFACTOS PARA EL HOGAR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SECTOR ARTÍCULOS DE OFICINA</fullName>
+        <default>false</default>
+        <label>SECTOR ARTÍCULOS DE OFICINA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SECTOR ENVASES</fullName>
+        <default>false</default>
+        <label>SECTOR ENVASES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SECTOR TEXTIL, VESTUARIO Y ARTÍCULOS DE CUERO</fullName>
+        <default>false</default>
+        <label>SECTOR TEXTIL, VESTUARIO Y ARTÍCULOS DE CUERO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SERVICIOS AGRÍCOLAS</fullName>
+        <default>false</default>
+        <label>SERVICIOS AGRÍCOLAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SERVICIOS BASICOS</fullName>
+        <default>false</default>
+        <label>SERVICIOS BASICOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SERVICIOS DE INGENIERÍA</fullName>
+        <default>false</default>
+        <label>SERVICIOS DE INGENIERÍA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SERVICIOS DE INGENIERÍA Y ARQUITECTURA</fullName>
+        <default>false</default>
+        <label>SERVICIOS DE INGENIERÍA Y ARQUITECTURA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SERVICIOS DE MANTENCIÓN, REPARACIÓN Y SEGURIDAD</fullName>
+        <default>false</default>
+        <label>SERVICIOS DE MANTENCIÓN, REPARACIÓN Y SEGURIDAD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SERVICIOS DE PESQUERÍA</fullName>
+        <default>false</default>
+        <label>SERVICIOS DE PESQUERÍA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SERVICIOS MÉDICOS</fullName>
+        <default>false</default>
+        <label>SERVICIOS MÉDICOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SERVICIOS PROFESIONALES Y DE PUBLICIDAD</fullName>
+        <default>false</default>
+        <label>SERVICIOS PROFESIONALES Y DE PUBLICIDAD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SOCIEDADES DE INVERSIÓN PERSONAS</fullName>
+        <default>false</default>
+        <label>SOCIEDADES DE INVERSIÓN PERSONAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SOFTWARE COMPUTACIONAL Y SERVICIOS</fullName>
+        <default>false</default>
+        <label>SOFTWARE COMPUTACIONAL Y SERVICIOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SUPERMERCADO Y FARMACIA</fullName>
+        <default>false</default>
+        <label>SUPERMERCADO Y FARMACIA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TELECOMUNICACIONES</fullName>
+        <default>false</default>
+        <label>TELECOMUNICACIONES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TELEVISIÓN Y RADIO</fullName>
+        <default>false</default>
+        <label>TELEVISIÓN Y RADIO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TRANSPORTE AÉREO</fullName>
+        <default>false</default>
+        <label>TRANSPORTE AÉREO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TRANSPORTE MARÍTIMO</fullName>
+        <default>false</default>
+        <label>TRANSPORTE MARÍTIMO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TRANSPORTE TERRESTRE</fullName>
+        <default>false</default>
+        <label>TRANSPORTE TERRESTRE</label>
+    </standardValue>
+</StandardValueSet>

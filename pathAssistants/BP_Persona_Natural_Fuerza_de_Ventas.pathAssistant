@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>BP Persona Natural (Fuerza de Ventas)</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>EjecutivoCAC__c</fieldNames>
+        <fieldNames>Situacion_Anomala__c</fieldNames>
+        <fieldNames>Customer_Creation__c</fieldNames>
+        <fieldNames>MAC_creado_y_enviado__c</fieldNames>
+        <fieldNames>Scanned_Documents__c</fieldNames>
+        <info>&lt;p&gt;1. EJECUTIVO PROFIN: Si es buen candidato, presione &amp;quot;Enviar para aprobación&amp;quot;. Si no, seleccione &amp;quot;No califica&amp;quot; y siga instrucciones.&lt;/p&gt;&lt;p&gt;2. JEFE DE GRUPO: Si es buen perfil, &amp;quot;Apruebe&amp;quot; la solicitud y solicite al CAC crear MAC correspondiente. Si es mal perfil &amp;quot;Rechace&amp;quot; la solicitud y seleccione motivo de rechazo&lt;/p&gt;&lt;p&gt;3. CAC: Ingrese su nombre en &amp;quot;Ejecutivo CAC&amp;quot;. Indique si hay Situación Anómala. Si no, solicite la creación del Cliente&lt;/p&gt;&lt;p&gt;4. ÁREA CLIENTES: Presione &amp;quot;Modificar&amp;quot; para incorporar información. Presione &amp;quot;Crear Cliente&amp;quot;. Puede solicitar Aprobación antes de crearlo.&lt;/p&gt;&lt;p&gt;5. CAC: Cree RIB y MAC e indique &amp;quot;MAC realizado&amp;quot;&lt;/p&gt;&lt;p&gt;6. GERENTE VENTA: Apruebe perfil&lt;/p&gt;&lt;p&gt;7. CAC: Digitalice y marque &amp;quot;Documentos digitalizados&amp;quot; &lt;/p&gt;&lt;p&gt;8. AGENTE: Si es buen Candidato conviertalo asignándo a un ejecutivo, o presione &amp;quot;No califica&amp;quot; y siga instrucciones para descartarlo.&lt;/p&gt;</info>
+        <picklistValueName>Calificación</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Sucursal_de_Apertura_del__c</fieldNames>
+        <fieldNames>Jefe_Plataforma_Agente_Sucursal__c</fieldNames>
+        <info>&lt;p&gt;1. Averigüe si el Candidato está interesado: si lo está, agende reunión en Salesforce. Si no, seleccione &amp;quot;No califica&amp;quot; y siga instrucciones.&lt;/p&gt;&lt;p&gt;2. Obtenga la documentación requerida por BICE y la Sucursal preferida de atención: Modifique y complete &amp;quot;Sucursal de Apertura&amp;quot;, &amp;quot;Jefe Plataforma/Agente Sucursal&amp;quot;&lt;/p&gt;&lt;p&gt;3. Edite el Registro y complete el máximo de información que disponga, especialmente la requerida para la la creación del cliente marcada con asterisco. Verifique que no falte ninguna marcando &amp;quot;Datos para creación de Clientes ok&amp;quot;.&lt;/p&gt;&lt;p&gt;4. Consiga todos los documentos indicados en la sección &amp;quot;Recordatorio para estado de Candidato&amp;quot; y márquelos cuando los obtenga.&lt;/p&gt;&lt;p&gt;5. Luego prepare la &amp;quot;Carpeta Comercial&amp;quot; y la &amp;quot;Carpeta Operativa&amp;quot; y marque las casillas correspondientes cuando lo haya realizado.&lt;/p&gt;</info>
+        <picklistValueName>Contacto</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Motivo_rechazo__c</fieldNames>
+        <fieldNames>Otro_motivo_de_rechazo__c</fieldNames>
+        <info>&lt;p&gt;1. Seleccione Modificar&lt;/p&gt;&lt;p&gt;2. Indique el motivo de rechazo&lt;/p&gt;&lt;p&gt;3. Guarde el registro&lt;/p&gt;</info>
+        <picklistValueName>No califica</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>RUT__c</fieldNames>
+        <fieldNames>Resultado_SINACOFI__c</fieldNames>
+        <info>&lt;p&gt;1. Consiga y complete el RUT del Candidato&lt;/p&gt;&lt;p&gt;2. Revise la Información del Candidato en sistema SINACOFI&lt;/p&gt;&lt;p&gt;3. En campo &amp;quot;&lt;b&gt;Resultado SINACOFI&lt;/b&gt;&amp;quot; seleccione el resultado de su análisis y guarde el registro&lt;/p&gt;</info>
+        <picklistValueName>Precalificación</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Lead_persona_natural_Fuerza_de_Ventas</recordTypeName>
+</PathAssistant>

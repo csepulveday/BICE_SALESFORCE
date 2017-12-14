@@ -1,0 +1,1 @@
+Informamos que Lead {!Lead.FirstName} {!Lead.LastName} del ejecutivo {!Contact.OwnerFirstName}, no ha sido contactado en 5 días desde que se creó.

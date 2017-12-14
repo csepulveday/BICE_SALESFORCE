@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>Opp Empresas y Corporaciones - crédito</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Resultado_cierre__c</fieldNames>
+        <fieldNames>Detecci_n_de_otras_oportunidades__c</fieldNames>
+        <picklistValueName>Cerrada Ganada</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>motivo_rechazo_opp__c</fieldNames>
+        <fieldNames>Motivo_rechazo__c</fieldNames>
+        <fieldNames>Otro_motivo__c</fieldNames>
+        <fieldNames>Otro_motivo_rechazo__c</fieldNames>
+        <fieldNames>Detecci_n_de_otras_oportunidades__c</fieldNames>
+        <info>&lt;p&gt;Indique el motivo de rechazo de la oportunidad según corresponda.&lt;/p&gt;</info>
+        <picklistValueName>Cerrada Perdida</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>L_nea_vigente__c</fieldNames>
+        <fieldNames>Garant_as__c</fieldNames>
+        <fieldNames>Indicar_garant_as__c</fieldNames>
+        <info>&lt;p&gt;&lt;b&gt;Ejecutivo comercial:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;En esta etapa, usted deberá verificar las condiciones para el negocio, indicando si:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;El cliente posee un MAC vigente para cursar esta oportunidad.&lt;/li&gt;&lt;li&gt;Indicar si son necesarias garantías y registrar cuales.&lt;/li&gt;&lt;li&gt;En el caso que requiera un nuevo informe de riesgo, evalúe con su jefe comercial si la solicitud de informe al área respectiva es necesaria. Si es el caso, revise la sección &amp;quot;Confección informe de riesgo&amp;quot;.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;Luego, presione &amp;quot;Marcar Estado como completado&amp;quot;.&lt;/p&gt;</info>
+        <picklistValueName>Estudio</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Resultado_cierre__c</fieldNames>
+        <fieldNames>Detecci_n_de_otras_oportunidades__c</fieldNames>
+        <info>&lt;p&gt;En esta etapa, se procede al cierre de la oportunidad. Para esto, usted deberá:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Indicar el resultado del negocio.&lt;/li&gt;&lt;li&gt;Informar la detección de otras oportunidades.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;Recuerde que para cerrar la oportunidad como ganada, la línea debe estar vigente. Si no ha marcado esta opción, diríjase a la etapa &amp;quot;Estudio&amp;quot; y marque la opción.&lt;/p&gt;</info>
+        <picklistValueName>Negociación</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Empresas_y_Corporaciones_cr_dito</recordTypeName>
+</PathAssistant>

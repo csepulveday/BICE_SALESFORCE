@@ -1,0 +1,3 @@
+El prospecto {!Lead.Link} se ha rechazado por la(s) siguiente(s) razón(es):
+
+{!Lead.Motivo_rechazo__c}

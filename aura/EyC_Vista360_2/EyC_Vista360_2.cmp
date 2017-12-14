@@ -1,0 +1,174 @@
+<aura:component controller="MyContactListController" implements="force:hasRecordId">
+    <aura:handler name="init" action="{!c.myAction}" value="{!this}" />
+    <aura:attribute name="contacts" type="Contact[]" />
+    <aura:attribute name="accountId" type="Id" />
+    
+	<div class="slds-grid">
+        	<div>
+                <div>
+                  <table class="slds-table slds-table_cell-buffer">   
+                    <thead>
+                        <tr>
+                            <th scope="col" class="slds-border_bottom texto_titulo"><span class="slds-truncate ">Saldo Deuda Vigente</span></th>
+                        </tr>
+                    </thead>
+                    <tbody >
+                        <aura:iteration items="{!v.contacts}" var="contact">
+                            <tr>
+                                <td class="bold18px texto_titulo texto-gris">Saldos MN</td>
+                                 <td class="texto_titulo texto-gris"><ui:outputCurrency aura:id="mnact" value="{!contact.X360_view_MN_Saldos_Activos__c}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="bold18px texto_titulo texto-gris">Saldos MX</td>
+                                <td class="texto_titulo texto-gris"><ui:outputCurrency aura:id="mxact" value="{!contact.X360_view_MX_Saldos_Activos__c}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="bold18px texto_titulo texto-gris">Saldo Leasing</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+        	</div>    
+                <br/>
+                 <div>
+                    <table class="slds-table slds-table_cell-buffer">   
+                    <thead>
+                        <tr>
+                            <th scope="col" class="slds-border_bottom texto_titulo">Saldo Cuenta e Inversiones
+                                <span class="slds-truncate"></span></th>
+                        </tr>
+                    </thead>
+                     <tbody>
+                        <aura:iteration items="{!v.contacts}" var="contact">
+                            <tr>
+                                <td class="bold18px texto_titulo texto-gris">Saldo Cta. Cte.</td>
+                                <td class="texto_titulo texto-gris"><ui:outputCurrency aura:id="mnpas" value="{!contact.X360_View_MN_Creditos_Pasivos__c}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="bold18px texto_titulo texto-gris">Saldo Inversiones</td>
+                                <td class="texto_titulo texto-gris"><ui:outputCurrency aura:id="mxpas" value="{!contact.X360_View_MX_Creditos_Pasivos__c}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="bold18px texto_titulo texto-gris">Cierre Mes Anterior</td>
+                                <td class="texto_titulo texto-gris"><ui:outputCurrency aura:id="mxpas" value="{!contact.X360_View_MX_Creditos_Pasivos__c}"/></td>
+                            </tr>                                                                          
+                        </aura:iteration>   
+                    </tbody>
+                </table>   
+               </div>
+		</div>
+        <div>                
+      		<div>	
+                <table class="slds-table slds-table_cell-buffer">   
+                        <thead>
+                            <tr>
+                                <th scope="col" class="slds-border_bottom texto_titulo"><span class="slds-truncate">Línea Aprobada</span></th>
+                            </tr>
+                        </thead>
+                        <tbody> 
+                            <aura:iteration items="{!v.contacts}" var="ops">  
+                                <tr>                            
+                                    <td class="bold18px texto_titulo texto-gris">Número MAC aprobado</td> 
+                                    <td class="texto_titulo texto-gris"><ui:outputCurrency aura:id="mxpas" value="{!ops.Monto_MAC_creado__c}"/></td>  
+                                </tr>
+                                <tr>                                                       
+                                    <td class="bold18px texto_titulo texto-gris">Fecha Vencimiento</td>
+                                    <td class="texto_titulo texto-gris"><ui:outputDate aura:id="oDate" value="{!ops.Current_MAC_Expiration_Date__c}" format="DD/MM/YYYY"/></td> 
+                                </tr>
+                                <tr>                                                       
+                                    <td class="bold18px texto_titulo texto-gris">Riesgo total</td>
+                                    <td class="texto_titulo texto-gris">{!ops.X360_view_Total_Risk__c}</td> 
+                                </tr>                            
+                            </aura:iteration>
+                        </tbody>
+                    </table>
+        		</div>
+            	<div>
+                    <br/><br/>
+                <table class="slds-table slds-table_cell-buffer">   
+                    <thead>
+                        <tr>
+                            <th scope="col" class="slds-border_bottom texto_titulo">
+                                <span class="slds-truncate">Información Financiera</span>
+                            </th>                        
+                        </tr>                                     
+                    </thead>
+                    <tbody>
+                        
+                        <aura:iteration items="{!v.contacts}" var="ops">  
+                            <tr>                           
+                                <td class="bold18px texto_titulo texto-gris">Fecha último balance ingresado</td> 
+                                <td class="texto_titulo texto-gris"><ui:outputDate aura:id="oDate" value="{!ops.X360_View_Fecha_Ultimo_Balance__c}" format="DD/MM/YYYY"/></td>
+                            </tr>
+                            <tr>                            
+                                <td class="bold18px texto_titulo texto-gris">Fecha último IVA ingresado</td> 
+                                <td class="texto_titulo texto-gris"><ui:outputDate aura:id="oDate" value="{!ops.X360_View_Fecha_Ultimo_IVA__c}" format="DD/MM/YYYY" /></td>
+                            </tr>
+                            <tr>                            
+                                <td></td>
+                            </tr>
+                            <tr>                            
+                                <td></td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+            
+            </div>
+        
+        <div>
+            
+            <div>
+                <table class="slds-table slds-table_cell-buffer">   
+                    <thead>
+                        <tr>
+                            <th scope="col" class="slds-border_bottom texto_titulo">
+                                <span class="slds-truncate">Deuda</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <aura:iteration items="{!v.contacts}" var="ops">  
+                            <tr>                            
+                                <td class="bold18px texto_titulo texto-gris">Deuda total BICE</td> 
+                                <td class="texto_titulo texto-gris"><ui:outputCurrency aura:id="mxpas" value="{!ops.X360_View_Deuda_BICE__c}"/></td>  
+                            </tr>
+                            <tr>                                                       
+                                <td class="bold18px texto_titulo texto-gris">Deuda total SBIF</td>
+                                <td class="texto_titulo texto-gris"><ui:outputCurrency aura:id="mxpas" value="{!ops.X360_View_Deuda_SBIF__c}"/></td> 
+                            </tr> 
+                            <tr>                                                       
+                               <td class="bold18px texto_titulo texto-gris">Deuda Leasing</td> 
+                            </tr> 
+                            <tr>                                                       
+                                <td class="bold18px texto_titulo texto-gris">Deuda Factoring</td> 
+                            </tr> 
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <table class="slds-table slds-table_cell-buffer">   
+                    <thead>
+                        <tr>
+                            <th scope="col" class="slds-border_bottom texto_titulo"><span class="slds-truncate">Riesgo de Crédito</span></th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <aura:iteration items="{!v.contacts}" var="acc">
+                         <tr>                            
+                             <td class="texto_titulo texto-gris">{!acc.Clasificacion_de_Riesgo_SBIF__c}</td>
+                         </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+ 			</div>  
+ 		</div>
+        
+</div>  	
+    
+</aura:component>

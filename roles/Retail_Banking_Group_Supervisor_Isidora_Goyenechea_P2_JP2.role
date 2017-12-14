@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Retail Banking - Group Supervisor - Isidora Goyenechea - P2 - JP2</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>Retail_Banking_Branch_Manager_Isidora_Goyenechea_P2_JP2</parentRole>
+</Role>

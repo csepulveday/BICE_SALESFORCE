@@ -1,0 +1,58 @@
+.THIS .BackColor{
+    background-color: #f7f9fb;  
+}
+.THIS .Labels{
+     color : #16325c;
+     font-size: 13px;
+    font-weight: bold;
+    line-height: 5px;
+    
+}
+.THIS .Campos{
+     color : #9faab5;
+     font-size: 14px;
+    font-weight: bold;
+    line-height: 5px;
+}
+
+.THIS .titulo_inferior {
+    padding-bottom: 15px;
+    
+}
+.THIS .texto_titulo {
+    font-family: 'Open Sans', arial;
+    font-size: 16px;
+    color: #000000;
+
+}
+.THIS .left-top {
+    text-align: left;
+    vertical-align: top;
+}
+.THIS .texto-gris {
+    color: #6a6a6a !important;
+}
+.THIS .caja_inferior {
+    padding-right: 30px;
+    width: 240px;
+    height: 200px;
+}
+.THIS .bold26px {
+    font-weight: bold;
+    font-size: 14px !important;
+}
+.THIS .bold18px {
+    font-weight: bold;
+    font-size: 14px !important;
+}
+.THIS .plain18px {
+    font-weight: normal;
+    font-size: 14px;
+}
+.THIS .texto-tabla-larga-entrada {
+    font-family: 'Open Sans', arial;
+    font-size: 16px;
+    color: #6a6a6a !important;
+    font-weight: bold;
+    padding: 5px;
+}

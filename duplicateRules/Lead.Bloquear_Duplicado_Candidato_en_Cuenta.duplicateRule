@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DuplicateRule xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionOnInsert>Block</actionOnInsert>
+    <actionOnUpdate>Block</actionOnUpdate>
+    <alertText>El Lead que está creando ya existe  en Salesforce como Cliente del Banco. Búsquelo y cree oportunidad directamente.</alertText>
+    <description>Al crear un Candidato Banco busca y bloque si ya existe en Salesforce como Cuentas personales o Empresariales del Banco.</description>
+    <duplicateRuleFilter xsi:nil="true"/>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>Account</matchRuleSObjectType>
+        <matchingRule>Duplicado_en_cuenta_Banco_solo_RUT_y_EjBanco</matchingRule>
+        <objectMapping>
+            <inputObject>Lead</inputObject>
+            <mappingFields>
+                <inputField>Registro_Banco__c</inputField>
+                <outputField>Tiene_Ejecutivo_de_Cuenta__c</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>RUT__c</inputField>
+                <outputField>RUT__c</outputField>
+            </mappingFields>
+            <outputObject>Account</outputObject>
+        </objectMapping>
+    </duplicateRuleMatchRules>
+    <isActive>true</isActive>
+    <masterLabel>Bloquear Duplicado Candidato Jurídico Banco en Cuenta Banco</masterLabel>
+    <securityOption>BypassSharingRules</securityOption>
+    <sortOrder>1</sortOrder>
+</DuplicateRule>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Portal xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <admin>fleon@bice.cl</admin>
+    <description>Customer Portal</description>
+    <emailSenderAddress>mramsey@salesforce.com</emailSenderAddress>
+    <emailSenderName>admin@servicecloud.trial</emailSenderName>
+    <enableSelfCloseCase>false</enableSelfCloseCase>
+    <footerDocument>Trial_Documents/Trial_Customer_Portal_Footer_HTML.html</footerDocument>
+    <forgotPassTemplate>Sem_Support/CustomerPortalChangePwdEmail</forgotPassTemplate>
+    <headerDocument>Trial_Documents/Trial_Customer_Portal_Header_HTML.html</headerDocument>
+    <isSelfRegistrationActivated>true</isSelfRegistrationActivated>
+    <loginHeaderDocument>Trial_Documents/Trial_Customer_Portal_Login_HTML.html</loginHeaderDocument>
+    <logoDocument>Trial_Documents/serviceCloudLogo.png</logoDocument>
+    <newPassTemplate>Sem_Support/CustomerPortalChangePwdEmail</newPassTemplate>
+    <newUserTemplate>Sem_Support/CustomerPortalNewUserEmail</newUserTemplate>
+    <selfRegUserDefaultProfile>trial customer portal user</selfRegUserDefaultProfile>
+    <selfRegUserTemplate>Sem_Support/CustomerPortalSelfRegUserEmail</selfRegUserTemplate>
+    <showActionConfirmation>false</showActionConfirmation>
+    <type>CustomerSuccess</type>
+</Portal>

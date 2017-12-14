@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DuplicateRule xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionOnInsert>Block</actionOnInsert>
+    <actionOnUpdate>Block</actionOnUpdate>
+    <alertText>El Lead de Inversiones que está creando ya existe como Cliente de Inversiones en Salesforce. Búsquelo y cree la oportunidad directamente.</alertText>
+    <description>Al crear un Candidato de Inversiones busca y bloquea si ya existe en Cuentas con Ejecutivo de Inversiones</description>
+    <duplicateRuleFilter xsi:nil="true"/>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>Account</matchRuleSObjectType>
+        <matchingRule>Duplicado_en_cuenta_Inversiones_solo_RUT_y_EjInversiones</matchingRule>
+        <objectMapping>
+            <inputObject>Lead</inputObject>
+            <mappingFields>
+                <inputField>RUT__c</inputField>
+                <outputField>RUT__c</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>Registro_Inversiones__c</inputField>
+                <outputField>Tiene_Ejecutivo_de_Inversiones__c</outputField>
+            </mappingFields>
+            <outputObject>Account</outputObject>
+        </objectMapping>
+    </duplicateRuleMatchRules>
+    <isActive>true</isActive>
+    <masterLabel>Bloquear Duplicado Candidato Jurídico Inversiones en Cuenta Inversiones</masterLabel>
+    <securityOption>BypassSharingRules</securityOption>
+    <sortOrder>2</sortOrder>
+</DuplicateRule>

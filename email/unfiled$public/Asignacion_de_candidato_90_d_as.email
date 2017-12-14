@@ -1,0 +1,4 @@
+Candidato: {!Lead.Name} se le ha asignado. Ya que no se han realizado modificaciones en los últimos 90 días.
+
+Para ver los detalles de este candidato en salesforce haga clic en el siguiente vínculo:
+{!Lead.Link}

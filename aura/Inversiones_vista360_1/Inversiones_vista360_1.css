@@ -1,0 +1,53 @@
+.THIS .BackColor{
+   background-color: #f4f6f9;
+}
+.THIS .Campos{
+     color : #9faab5;
+     font-size: 13px;
+    
+}
+.THIS .Productos{
+     color : #9faab5;
+     font-size: 13px;
+    text-align:left;
+}
+.THIS .Labels{
+    font-family: 'Open Sans', arial;
+	font-size: 11px;
+	color: #000000;
+}
+
+.THIS .texto-gris {
+    color: #6a6a6a !important;
+}
+
+.THIS .margenNeto.center{
+    
+    vertical-align: middle;
+}
+.THIS .margenNeto.font {
+    font-weight: bold;
+    font-size: 16px !important;
+}
+
+.THIS .dias.center-middle {
+    
+    vertical-align: middle;
+}
+
+.THIS .dias.font {
+    font-weight: bold;
+    font-size: 16px !important;
+}
+
+.THIS .perfil.valigntop {
+	vertical-align: top;
+}
+.THIS .perfil.padding10px {
+	padding: 10px;
+}
+.THIS .perfil.elemento {
+	display: inline-block;
+	*zoom:1;
+ 	*display:inline;
+}

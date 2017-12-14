@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BICE_Inversiones</letterhead>
+    <name>mail_1_inversiones</name>
+    <style>formalLetter</style>
+    <subject>Mejora Pesion  y APV - BICE Inversiones</subject>
+    <textOnly>{!Contact.OwnerFullName}
+
+Mejora tu pensiÃ³n y maximiza tu beneficio tributario con APV de BICE Inversiones¹ 
+
+Si aún no has realizado aportes a tu cuenta APV de BICE Inversiones durante el aÃ±o 2016 o no has completado el tope legal de 600 UF anuales, tienes hasta el 29 dediciembre para hacerlo y asÃ­ maximizar tu beneficio tributario. 
+
+
+Contacta a tu ejecutivo especialista en APV, escrÃ­benos a apv@biceinversionescl o llÃ¡manos al 6004004000
+
+
+AdemÃ¡s, si quieres saber el monto de tu futura pensiÃ³n o descubrir a quÃ© edad te puedes pensionar, ingresa a biceinversionescl y conoce nuestro Simulador de PensiÃ³n.
+
+
+
+
+
+Asegurar tu futuro hoy con APV de BICE Inversiones.
+Simple para ti.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

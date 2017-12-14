@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cuentas</fullName>
+        <default>false</default>
+        <label>Cuentas</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Medios de pago</fullName>
+        <default>false</default>
+        <label>Medios de pago</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Créditos</fullName>
+        <default>false</default>
+        <label>Créditos</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Seguros</fullName>
+        <default>false</default>
+        <label>Seguros</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inversiones</fullName>
+        <default>false</default>
+        <label>Inversiones</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Comex</fullName>
+        <default>false</default>
+        <label>Comex</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cobranza de letras</fullName>
+        <default>false</default>
+        <label>Cobranza de letras</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cambios</fullName>
+        <default>false</default>
+        <label>Cambios</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cash Management</fullName>
+        <default>false</default>
+        <label>Cash Management</label>
+    </standardValue>
+</StandardValueSet>

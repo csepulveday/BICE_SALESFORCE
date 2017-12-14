@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.RUT__c</field>
+    </columns>
+    <columns>
+        <field>Account.Deuda_Sistema_Financiero_MM_pesos__c</field>
+    </columns>
+    <columns>
+        <field>Account.Requerimiento_comercial_de_la_empresa__c</field>
+    </columns>
+    <columns>
+        <field>Account.Monto_MAC_creado__c</field>
+    </columns>
+    <columns>
+        <field>Account.Tiene_Cuenta_Corriente__c</field>
+    </columns>
+    <columns>
+        <field>Account.Sucursal_Banco__c</field>
+    </columns>
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <currency>CLP</currency>
+    <description>Muestra los clientes nuevos creados en períodos dispuestos por el ejecutivo</description>
+    <format>Tabular</format>
+    <name>Clientes Nuevos por Períodos</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CURRENTQ</interval>
+    </timeFrameFilter>
+</Report>

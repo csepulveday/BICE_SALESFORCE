@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Candidato Inversiones Persona Jurídica</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Perfil_de_riesgo_percibido__c</fieldNames>
+        <fieldNames>Result_compliance_tracker__c</fieldNames>
+        <fieldNames>Marque_si_sera_produto_BIA__c</fieldNames>
+        <info>&lt;p&gt;1. Contacte al candidato. Ofrezca los productos de inversión y determine si le interesa invertir. Si No le interesa, seleccione &amp;quot;No califica&amp;quot; y siga las instrucciones.&lt;/p&gt;&lt;p&gt;2. Si le interesa, determine perfil de inversionista percibido, complete toda la información obtenida en Detalles.&lt;/p&gt;&lt;p&gt;3. Si no lo comprobó antes compruebe requisitos presionando botón &amp;quot;Validar requisitos&amp;quot; y espere resultados favorables para continuar. Si son adversos presione &amp;quot;No califica&amp;quot; y siga instrucciones.&lt;/p&gt;&lt;p&gt;4. Si cliente está interesado en una propuesta de producto BIA marque casilla &amp;quot;Ofrecer producto BIA&amp;quot;, si está interesado en otro tipo de inversión déjela sin marcar.&lt;/p&gt;&lt;p&gt;5. Convierta el Candidato presionando &amp;quot;Convertir&amp;quot;, haga clic en Nombre cliente, Añadir nuevo y seleccionar Cuenta empresa e indique un nombre para la oportunidad de negocio que se creará para continuar.&lt;/p&gt;</info>
+        <picklistValueName>Contacto</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Motivo_rechazo__c</fieldNames>
+        <fieldNames>Otro_motivo_de_rechazo__c</fieldNames>
+        <info>&lt;p&gt;1. Presione Modificar&lt;/p&gt;&lt;p&gt;2. Seleccione &amp;quot;Motivo de Rechazo&amp;quot; más adecuado&amp;quot; (&amp;quot;No cumple requisitos&amp;quot;, &amp;quot;Sin interés&amp;quot;, etc...)&lt;/p&gt;&lt;p&gt;3. Presione &amp;quot;Guardar&amp;quot;&lt;/p&gt;</info>
+        <picklistValueName>No califica</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Company</fieldNames>
+        <fieldNames>RUT__c</fieldNames>
+        <fieldNames>Raz_n_Social__c</fieldNames>
+        <fieldNames>Result_compliance_tracker__c</fieldNames>
+        <info>&lt;p&gt;Obtenga la información básica del Candidato (Compañia, RUT y Razón Social) y Valide Requisitos.&lt;/p&gt;&lt;p&gt;Precalifique el Candidato y si considera que este no tiene inconvenientes pase a la fase de contacto y gestione una reunión con él para presentar los productos disponibles y ver si prospera el interés de este por invertir. &lt;/p&gt;</info>
+        <picklistValueName>Precalificación</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Lead_Inversiones_Persona_Jur_dica</recordTypeName>
+</PathAssistant>

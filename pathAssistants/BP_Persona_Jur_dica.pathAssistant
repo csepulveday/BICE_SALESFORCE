@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>BP Persona Jurídica</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Result_compliance_tracker__c</fieldNames>
+        <fieldNames>Request_to_Create_Client_Area__c</fieldNames>
+        <fieldNames>Customer_Creation__c</fieldNames>
+        <fieldNames>Observation_Customer_Area__c</fieldNames>
+        <info>&lt;p&gt;&lt;b&gt;Ejecutivo&lt;/b&gt;:&lt;/p&gt;&lt;p class=&quot;ql-indent-1&quot;&gt;1. Conforme a toda la información obtenida y determine si es buen o mal candidato. Verifique Requisitos.&lt;/p&gt;&lt;p class=&quot;ql-indent-1&quot;&gt;2. Si es mal candidato, presione &amp;quot;No califica&amp;quot; y siga instrucciones en pantalla&lt;/p&gt;&lt;p class=&quot;ql-indent-1&quot;&gt;3. Si es buen candidato, digitalice los documentos necesarios.&lt;/p&gt;&lt;p class=&quot;ql-indent-1&quot;&gt;4. Solicite la Creación del Cliente a Área Cliente. Marque &amp;quot;Solicita creación Área Cliente&amp;quot; cuando lo haga.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Área Cliente:&lt;/b&gt;&lt;/p&gt;&lt;p class=&quot;ql-indent-1&quot;&gt;5. Indique si creó al cliente o tiene Reparos en cuyo caso complete &amp;quot;Observación Área Cliente&amp;quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Ejecutivo:&lt;/b&gt;&lt;/p&gt;&lt;p class=&quot;ql-indent-1&quot;&gt;6. Si hubo reparos, rectifique la información y vuelva a Marcar &amp;quot;Solicita Creación Área Clientes&amp;quot;.&lt;/p&gt;&lt;p class=&quot;ql-indent-1&quot;&gt;7. Si la Creación del Cliente fue Realizada, conviértalo y cree Oportunidad.&lt;/p&gt;</info>
+        <picklistValueName>Calificación</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Name_and_RUT_from_BICE_client__c</fieldNames>
+        <fieldNames>Form_EESS__c</fieldNames>
+        <fieldNames>Form_Art_85__c</fieldNames>
+        <fieldNames>Form_FATCA__c</fieldNames>
+        <info>&lt;p&gt;1. Contacte al candidato para averiguar si está interesado. Si está interesado, agende una reunión en Salesforce; si no, seleccione &amp;quot;No califica&amp;quot; y siga instrucciones.&lt;/p&gt;&lt;p&gt;2. Indique nombre y RUT del Socio cliente en BICE. &lt;/p&gt;&lt;p&gt;3. Obtenga la documentación requerida por BICE y márquela cuando la obtenga.&lt;/p&gt;&lt;p&gt;4. Edite el registro presionando Modificar y en Detalles ingrese el máximo de información obtenida, especialmente la requerida para la creación del cliente marcada con asterisco.&lt;/p&gt;&lt;p&gt;5. Prepare las carpetas comercial y operativa. Marque las casillas respectivas cuando lo haya realizado.&lt;/p&gt;</info>
+        <picklistValueName>Contacto</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Motivo_rechazo__c</fieldNames>
+        <fieldNames>Otro_motivo_de_rechazo__c</fieldNames>
+        <info>&lt;p&gt;1. Seleccione Modificar&lt;/p&gt;&lt;p&gt;2. Indique el motivo de rechazo&lt;/p&gt;&lt;p&gt;3. Guarde el registro&lt;/p&gt;</info>
+        <picklistValueName>No califica</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>RUT__c</fieldNames>
+        <fieldNames>Deuda_SBIF__c</fieldNames>
+        <fieldNames>Deuda_SBIF_Historica__c</fieldNames>
+        <fieldNames>Boletin_Comercial__c</fieldNames>
+        <info>&lt;p&gt;1. Complete &amp;quot;RUT&amp;quot; y toda la información que consiga del Candidato&lt;/p&gt;&lt;p&gt;2. Revise la información financiera del candidato y complete:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Complete &amp;quot;Deuda SBIF últimos 3 meses&amp;quot;&lt;/li&gt;&lt;li&gt;Complete &amp;quot;Deuda SBIF histórica&amp;quot;&lt;/li&gt;&lt;li&gt;Complete &amp;quot;Boletín Comercial&amp;quot;&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Precalificación</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Lead_persona_juridica</recordTypeName>
+</PathAssistant>

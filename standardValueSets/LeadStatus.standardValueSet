@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Precalificación</fullName>
+        <color>#0B6FCE</color>
+        <default>true</default>
+        <label>Precalificación</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>No Contactado</fullName>
+        <color>#78C953</color>
+        <default>false</default>
+        <label>No Contactado</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contactado</fullName>
+        <color>#E27001</color>
+        <default>false</default>
+        <label>Contactado</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Antecedentes</fullName>
+        <default>false</default>
+        <label>Antecedentes</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacto</fullName>
+        <color>#A845DC</color>
+        <default>false</default>
+        <label>Contacto</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Calificación</fullName>
+        <color>#F3D904</color>
+        <default>false</default>
+        <label>Calificación</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Cliente activado</fullName>
+        <color>#A53711</color>
+        <default>false</default>
+        <label>Candidato activado</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Califica</fullName>
+        <color>#66E9BD</color>
+        <default>false</default>
+        <label>Califica</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>No califica</fullName>
+        <color>#0B24BE</color>
+        <default>false</default>
+        <label>No califica</label>
+        <converted>false</converted>
+    </standardValue>
+</StandardValueSet>

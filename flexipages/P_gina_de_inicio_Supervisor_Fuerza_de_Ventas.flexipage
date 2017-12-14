@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>cacheAge</name>
+                <value>1440</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>label</name>
+                <value>Enviados a Sucursal</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>reportName</name>
+                <value>Productos_Profin2</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showRefreshButton</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:reportChart</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>cacheAge</name>
+                <value>1440</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>label</name>
+                <value>Candidatos con MAC aprobado este mes</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>reportName</name>
+                <value>X1_Candidatos_por_estado_de_MAC</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showRefreshButton</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:reportChart</componentName>
+        </componentInstances>
+        <name>top</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>home:eventContainer</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>entityName</name>
+                <value>Lead</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>filterName</name>
+                <value>X2_Candidatos_pendientes_de_aprobaci_n</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>pageSize</name>
+                <value>10</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:filterListCard</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>home:recentRecordContainer</componentName>
+        </componentInstances>
+        <name>bottomLeft</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>runtime_sales_activities:todayTaskContainer</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>entityName</name>
+                <value>Lead</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>filterName</name>
+                <value>Cola_enviados_a_CAC</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>pageSize</name>
+                <value>10</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:filterListCard</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>context</name>
+                <value>GLOBAL</value>
+            </componentInstanceProperties>
+            <componentName>forceChatter:publisher</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>context</name>
+                <value>BOOKMARKS</value>
+            </componentInstanceProperties>
+            <componentName>forceChatter:exposedFeed</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>home:assistant</componentName>
+        </componentInstances>
+        <name>bottomRight</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>cacheAge</name>
+                <value>1440</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>label</name>
+                <value>Candidatos creados últimos 30 días</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>reportName</name>
+                <value>00O41000007SWPe</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showRefreshButton</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:reportChart</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>runtime_approval_process:pendingApprovalCard</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>entityName</name>
+                <value>Lead</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>filterName</name>
+                <value>X7_Crear_MAC</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>pageSize</name>
+                <value>10</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:filterListCard</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;br /&gt;
+&lt;i&gt;&lt;b&gt;LINKS RELACIONADOS&lt;/b&gt;&lt;/i&gt;
+
+&lt;ol dir=&quot;ltr&quot;&gt;
+	&lt;li&gt;&lt;b id=&quot;docs-internal-guid-fc08a5d0-8ec7-9438-1084-76bfe7400680&quot;&gt;KIT DE VENTAS &amp;nbsp;&lt;/b&gt;&lt;a href=&quot;http://multimedia.bice.cl/kit/home.html&quot; target=&quot;_blank&quot;&gt;http://multimedia.bice.cl/kit/home.html&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;b id=&quot;docs-internal-guid-fc08a5d0-8ec7-9438-1084-76bfe7400680&quot;&gt;CAPACITACION&lt;/b&gt;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;a href=&quot;https://bice.capacitacion.digital&quot; target=&quot;_blank&quot;&gt;https://bice.capacitacion.digital&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;b&gt;LINKEDIN&amp;nbsp;&lt;/b&gt;&lt;a href=&quot;https://www.linkedin.com/home?trk=nav_responsive_tab_home&quot; target=&quot;_blank&quot;&gt;https://www.linkedin.com/home?trk=nav_responsive_tab_home&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;b id=&quot;docs-internal-guid-fc08a5d0-8ec7-9438-1084-76bfe7400680&quot;&gt;PODER JUDICIAL&amp;nbsp;&lt;/b&gt;&lt;a href=&quot;http://www.pjud.cl/143&quot; target=&quot;_blank&quot;&gt;http://www.pjud.cl/143&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;b&gt;COLEGIO MEDICO&amp;nbsp;&lt;/b&gt;&lt;a href=&quot;http://directoriomedico.colegiomedico.cl/&quot; target=&quot;_blank&quot;&gt;http://directoriomedico.colegiomedico.cl/&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;b id=&quot;docs-internal-guid-fc08a5d0-8ec7-9438-1084-76bfe7400680&quot;&gt;E-SIGN&amp;nbsp;&lt;/b&gt;&lt;a href=&quot;http://www.servisign.cl/validar/verificar.aspx&quot; target=&quot;_blank&quot;&gt;http://www.servisign.cl/validar/verificar.aspx&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;b id=&quot;docs-internal-guid-fc08a5d0-8ec7-9438-1084-76bfe7400680&quot;&gt;SUPER DE SALUD&lt;/b&gt;&lt;br /&gt;
+	&lt;a href=&quot;http://webserver.superdesalud.gob.cl/bases/prestadoresindividuales.nsf/buscarPrestador?OpenForm&quot; target=&quot;_blank&quot;&gt;http://webserver.superdesalud.gob.cl/bases/prestadoresindividuales.nsf/buscarPrestador?OpenForm&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;b&gt;REGISTRO CIVIL&amp;nbsp;&lt;/b&gt;&lt;a href=&quot;http://www.registrocivil.gob.cl/&quot; target=&quot;_blank&quot;&gt;http://www.registrocivil.gob.cl/&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;b&gt;SII&amp;nbsp;&lt;/b&gt;&lt;a href=&quot;http://homer.sii.cl/&quot; target=&quot;_blank&quot;&gt;http://homer.sii.cl/&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;b&gt;TESORERIA&amp;nbsp;&lt;/b&gt;&lt;a href=&quot;http://www.tesoreria.cl/web/index.jsp&quot; target=&quot;_blank&quot;&gt;http://www.tesoreria.cl/web/index.jsp&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;b id=&quot;docs-internal-guid-fc08a5d0-8ec7-9438-1084-76bfe7400680&quot;&gt;VALIDACI&amp;Oacute;N CERTIFICADOS&amp;nbsp;&lt;/b&gt;
+
+&lt;ol dir=&quot;ltr&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;http://certificadosdigitales.udd.cl/validar&quot; target=&quot;_blank&quot;&gt;http://certificadosdigitales.udd.cl/validar&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://certificados.ucv.cl/&quot; target=&quot;_blank&quot;&gt;https://certificados.ucv.cl/&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;http://validacert.uft.cl/&quot; target=&quot;_blank&quot;&gt;http://validacert.uft.cl/&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;http://certificados.unab.cl/&quot; target=&quot;_blank&quot;&gt;http://certificados.unab.cl/&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://registro.usach.cl/index.php?ct=cert&quot; target=&quot;_blank&quot;&gt;https://registro.usach.cl/index.php?ct=cert&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;http://miportal.umayor.cl/valida_certificados/valida_certificados.php&quot; target=&quot;_blank&quot;&gt;http://miportal.umayor.cl/valida_certificados/valida_certificados.php&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://www4.uc.cl/validcert/inicio/inicio.jsp&quot; target=&quot;_blank&quot;&gt;https://www4.uc.cl/validcert/inicio/inicio.jsp&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://siga.usm.cl/verificaciondocumento&quot; target=&quot;_blank&quot;&gt;https://siga.usm.cl/verificaciondocumento&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://validacion-en-linea.uchile.cl/contenido/portada.xhtml&quot; target=&quot;_blank&quot;&gt;https://validacion-en-linea.uchile.cl/contenido/portada.xhtml&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;http://www.uchile.cl/portal/canal-egresados/titulados-y-graduados/132514/2016&quot; target=&quot;_blank&quot;&gt;http://www.uchile.cl/portal/canal-egresados/titulados-y-graduados/132514/2016&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://certificados.udec.cl/ConsultaCert.aspx&quot; target=&quot;_blank&quot;&gt;https://certificados.udec.cl/ConsultaCert.aspx&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://mi.uandes.cl/pls/PROD/bwwkcert.P_DispValidaCerti&quot; target=&quot;_blank&quot;&gt;https://mi.uandes.cl/pls/PROD/bwwkcert.P_DispValidaCerti&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
+        </componentInstances>
+        <name>sidebar</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Página de inicio Supervisor Fuerza de Ventas</masterLabel>
+    <template>
+        <name>home:desktopTemplate</name>
+    </template>
+    <type>HomePage</type>
+</FlexiPage>
