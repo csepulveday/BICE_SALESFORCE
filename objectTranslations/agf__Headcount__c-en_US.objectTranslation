@@ -17,7 +17,22 @@
         <name>agf__Candidate_Name__c</name>
     </fields>
     <fields>
-        <label><!-- Cloud --></label>
+        <label><!-- City --></label>
+        <name>agf__City__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use Parent_Cloud__c instead of this field as this field is deprecated now. Use this field only to refer to old values --></help>
+        <label><!-- Cloud_Deprecated(Use Parent Cloud) --></label>
+        <name>agf__Cloud_LU__c</name>
+        <relationshipLabel><!-- Positions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Parent Cloud has been separated from Team --></help>
+        <label><!-- Parent Cloud Lock --></label>
+        <name>agf__Cloud_Lock__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cloud (Deprecated) --></label>
         <name>agf__Cloud__c</name>
         <picklistValues>
             <masterLabel>Analytics</masterLabel>
@@ -157,9 +172,17 @@
         <name>agf__Cost_Center__c</name>
     </fields>
     <fields>
+        <label><!-- Country --></label>
+        <name>agf__Country__c</name>
+    </fields>
+    <fields>
         <help><!-- Free-text area to record notes on this Headcount. --></help>
         <label><!-- Description --></label>
         <name>agf__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>agf__Division__c</name>
     </fields>
     <fields>
         <help><!-- Effective quarter to hire headcount.  Only Finance can move headcount from quarter to quarter. --></help>
@@ -263,7 +286,7 @@
         <name>agf__Initial_Status_Value__c</name>
     </fields>
     <fields>
-        <label><!-- Location --></label>
+        <label><!-- Location_Deprecated --></label>
         <name>agf__Location__c</name>
         <picklistValues>
             <masterLabel>CA - San Francisco</masterLabel>
@@ -437,6 +460,19 @@ Blue: May close before assigned quarter --></help>
         <name>agf__Manager_Update__c</name>
     </fields>
     <fields>
+        <label><!-- OOM Transfer Date --></label>
+        <name>agf__OOM_Transfer_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- OOM Transfer? --></label>
+        <name>agf__OOM_Transfer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open Market Opportunity --></label>
+        <name>agf__OOM__c</name>
+        <relationshipLabel><!-- Roster --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Organization --></label>
         <name>agf__Organization__c</name>
         <picklistValues>
@@ -505,6 +541,12 @@ Blue: May close before assigned quarter --></help>
         <name>agf__Original_Effective_Date__c</name>
     </fields>
     <fields>
+        <help><!-- The parent cloud is what finance uses to track headcount with roster. The cloud object is what engineering leadership uses to drive engineering workflows. --></help>
+        <label><!-- Parent Cloud --></label>
+        <name>agf__Parent_Cloud__c</name>
+        <relationshipLabel><!-- Roster --></relationshipLabel>
+    </fields>
+    <fields>
         <help><!-- Blank: no activity on this position 
 Green: Likely to close within the assigned quarter 
 Yellow: May close within the assigned quarter but I&apos;m not confident 
@@ -541,7 +583,7 @@ Blue: May close before assigned quarter --></help>
     </fields>
     <fields>
         <help><!-- Region is set by Finance. --></help>
-        <label><!-- Region --></label>
+        <label><!-- Region_Deprecated --></label>
         <name>agf__Region__c</name>
         <picklistValues>
             <masterLabel>APAC - All Countries</masterLabel>
@@ -707,6 +749,10 @@ Blue: May close before assigned quarter --></help>
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- State --></label>
+        <name>agf__State__c</name>
+    </fields>
+    <fields>
         <help><!-- Open - New = New position added by Finance
 Open - Backfill = Existing position available for Backfill
 Offer - In Progress = Offer extended to candidate
@@ -744,6 +790,11 @@ Filled = Position filled by an employee --></help>
         <help><!-- Target start date for candidates that have accepted an offer --></help>
         <label><!-- Target Start Date --></label>
         <name>agf__Target_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- The cloud field is calculated by the team assigned to the roster record. --></help>
+        <label><!-- Cloud --></label>
+        <name>agf__Team_Cloud__c</name>
     </fields>
     <fields>
         <help><!-- Scrum Team assigned to the position. --></help>

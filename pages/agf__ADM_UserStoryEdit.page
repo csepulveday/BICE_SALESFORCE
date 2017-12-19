@@ -1,10 +1,10 @@
-<apex:page id="userStoryWorkPage" standardController="agf__ADM_Work__c" extensions="agf.ADM_UserStoryExtension,agf.ADM_WorkRemoteActionsExtension" showHeader="true" sidebar="false" docType="html-5.0" title="{!title}">
+<apex:page id="userStoryWorkPage" standardController="agf__ADM_Work__c" extensions="agf.ADM_UserStoryExtension,agf.ADM_WorkRemoteActionsExtension" showHeader="true" sidebar="true" docType="html-5.0" title="{!title}">
 <meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1.0,maximum-scale=1.0" />
-<apex:stylesheet value="{!URLFOR($Resource.agf__jquery_ui_1_11_4, 'jquery-ui-1.11.4/jquery-ui.structure.min.css')}" /> 
+<apex:stylesheet value="{!URLFOR($Resource.agf__jquery_ui_1_11_4, 'jquery-ui-1.11.4/jquery-ui.structure.min.css')}" />
 <apex:styleSheet value="{!$Resource.agf__ADM_common_css}" />
 <apex:styleSheet value="{!$Resource.agf__ADM_work_css}" />
 <apex:includeScript value="{!$Resource.agf__jquery_1_8_3_min}" />
-<apex:includeScript value="{!URLFOR($Resource.agf__jquery_ui_1_11_4, 'jquery-ui-1.11.4/jquery-ui.min.js')}" /> 
+<apex:includeScript value="{!URLFOR($Resource.agf__jquery_ui_1_11_4, 'jquery-ui-1.11.4/jquery-ui.min.js')}" />
 <apex:includeScript value="{!$Resource.agf__ADM_common_js}" />
 <apex:includeScript value="{!$Resource.agf__productTag_js}" />
 <apex:includeScript value="{!$Resource.agf__ADM_autocomplete2js}" />
@@ -22,6 +22,7 @@ $(function() {
         recordTypeId: '{!JSINHTMLENCODE(ADM_Work__c.RecordTypeId)}',
         isNew: {!isNew}
     });
+
 });
 
 </script>
@@ -41,6 +42,9 @@ $(function() {
 </div>
 
 <apex:form id="storyWorkForm">
+     <apex:actionFunction name="callgetTeamCapexEligibility" action="{!setCapexEligibilityByTeam}" rerender="capexPanel">
+        <apex:param name="myParamId" value="" assignTo="{!myProdTag}"/>
+     </apex:actionFunction>
      <apex:actionFunction name="callgetAdditionalFields" action="{!getMyAdditionalFieldsForUserStory}" rerender="refreshPanelId,myId">
      <apex:param name="myParamId" value="" assignTo="{!myProdTag}"/>
      </apex:actionFunction>
@@ -117,6 +121,11 @@ $(function() {
                 
                 <apex:outputPanel layout="none" rendered="{!OR(AND(isNew, $ObjectType.agf__ADM_Work__c.fields.agf__Perforce_Status__c.createable), AND(NOT(isNew), $ObjectType.agf__ADM_Work__c.fields.agf__Perforce_Status__c.updateable))}">
                     <c:ADM_FormRow object="{!agf__ADM_Work__c}" id="perforceStatusInput" type="ADM_Work__c" required="false" field="Perforce_Status__c" value="{!agf__ADM_Work__c.agf__Perforce_Status__c}" cssClass="perforceStatusInput" />
+                </apex:outputPanel>
+                <apex:outputPanel id="capexPanel">
+                    <apex:outputPanel layout="none" rendered="{! OR(AND(isNew, $ObjectType.ADM_Work__c.fields.Capex_Enabled__c.createable, teamCapexEligibility), AND(NOT(isNew), $ObjectType.ADM_Work__c.fields.Capex_Enabled__c.updateable, teamCapexEligibility))}">
+                    <c:ADM_FormRow object="{!agf__ADM_Work__c}" id="capexEnabledInput" type="ADM_Work__c" required="false" field="Capex_Enabled__c" value="{!agf__ADM_Work__c.agf__Capex_Enabled__c}" cssClass="capexEnabledInput" />
+                </apex:outputPanel>
                 </apex:outputPanel>
             </div>
         </div>

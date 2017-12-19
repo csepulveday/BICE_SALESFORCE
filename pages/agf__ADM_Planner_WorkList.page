@@ -61,12 +61,12 @@ $(function() {
 	   dropdownValues += '>' + columnLabels[i] + '</option>';
 	}
 	
-	var dscLink = decodeURIComponent(window.location.href).replace('lsi=','lsi=-');
-	var ascLink = decodeURIComponent(window.location.href).replace('lsi=-','lsi=');
+	var dscLink = encodeURIComponent(window.location.href).replace('lsi=','lsi=-');
+	var ascLink = encodeURIComponent(window.location.href).replace('lsi=-','lsi=');
 	var sortDropdown = '<select id="sortOrderDropdown" onchange="location.href=$(this).val();"><option value="' + ascLink + '"';
-	if (decodeURIComponent(window.location.href).indexOf("=-") == -1) { sortDropdown += ' selected'; }
+	if (encodeURIComponent(window.location.href).indexOf("=-") == -1) { sortDropdown += ' selected'; }
 	sortDropdown += '>Asending</option><option value="' + dscLink + '"'
-	if (decodeURIComponent(window.location.href).indexOf("=-") > 0) { sortDropdown += ' selected'; }
+	if (encodeURIComponent(window.location.href).indexOf("=-") > 0) { sortDropdown += ' selected'; }
 	sortDropdown += '>Decending</option></select>';
 	
 	$('span.fBody select').attr('onchange','listViewChange(this)');
@@ -138,7 +138,7 @@ $(function() {
 
 function qs(key) {
     var vars = [], hash;
-    var hashes = decodeURIComponent(window.location.href).slice(window.location.href.indexOf('?') + 1).split(':');
+    var hashes = encodeURIComponent(window.location.href).slice(window.location.href.indexOf('?') + 1).split(':');
     for(var i = 0; i < hashes.length; i++) {
 		hash = hashes[i].split('=');
 		vars.push(hash[0]);

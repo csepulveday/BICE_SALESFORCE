@@ -90,6 +90,17 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>agf__Cloud__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>agf__Scrum_Team__r.agf__Cloud_LU__r.Name</formula>
+        <label>Cloud</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>agf__Coupa_Record__c</fullName>
         <deprecated>false</deprecated>
         <description>For commercial products only.</description>
@@ -100,6 +111,57 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>agf__Date_Approval_Needed_By__c</fullName>
+        <defaultValue>Today() + 28</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Date equivalent to your teams feature freeze date. Please account for 3PP SLA time frames referenced on site</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date equivalent to your teams feature freeze date. Please account for 3PP SLA time frames referenced on site</inlineHelpText>
+        <label>Date Approval Needed By</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>agf__Does_this_contain_JavaScript__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Does this contain JS or similar code articulated in a client browser? Do portions of the package run in the user’s browser?</inlineHelpText>
+        <label>Old does this contain JavaScript?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>agf__Does_this_contain_client_side_code__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Does this project contain JavaScript or similar code articulated in a client browser? Do portions of the package run in the user’s browser?</inlineHelpText>
+        <label>Is there any client-side code?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>agf__External_ID__c</fullName>
@@ -125,6 +187,31 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__License_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>License Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Commercial</fullName>
+                    <default>false</default>
+                    <label>Commercial</label>
+                </value>
+                <value>
+                    <fullName>Open Source</fullName>
+                    <default>false</default>
+                    <label>Open Source</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>agf__License_URL__c</fullName>
@@ -214,7 +301,7 @@
         <description>Link to Perforce Path or Direct Download Link</description>
         <externalId>false</externalId>
         <inlineHelpText>Link to Perforce Path or Direct Download Link</inlineHelpText>
-        <label>Source Code Path</label>
+        <label>Source Code Path or URL</label>
         <length>100</length>
         <required>true</required>
         <trackFeedHistory>false</trackFeedHistory>
@@ -235,11 +322,141 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>agf__Request_Sub_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Request Sub Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>agf__Request_Type__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Clients</fullName>
+                    <default>false</default>
+                    <label>Clients</label>
+                </value>
+                <value>
+                    <fullName>Compiler</fullName>
+                    <default>false</default>
+                    <label>Compiler</label>
+                </value>
+                <value>
+                    <fullName>Framework</fullName>
+                    <default>false</default>
+                    <label>Framework</label>
+                </value>
+                <value>
+                    <fullName>IDE</fullName>
+                    <default>false</default>
+                    <label>IDE</label>
+                </value>
+                <value>
+                    <fullName>Other Software</fullName>
+                    <default>false</default>
+                    <label>Other Software</label>
+                </value>
+                <value>
+                    <fullName>Plug-In</fullName>
+                    <default>false</default>
+                    <label>Plug-In</label>
+                </value>
+                <value>
+                    <fullName>SDK</fullName>
+                    <default>false</default>
+                    <label>SDK</label>
+                </value>
+                <value>
+                    <fullName>Tool</fullName>
+                    <default>false</default>
+                    <label>Tool</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Software</controllingFieldValue>
+                <valueName>Clients</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Software</controllingFieldValue>
+                <valueName>Compiler</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Software</controllingFieldValue>
+                <valueName>Framework</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Software</controllingFieldValue>
+                <valueName>IDE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Software</controllingFieldValue>
+                <valueName>Other Software</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Software</controllingFieldValue>
+                <valueName>Plug-In</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Software</controllingFieldValue>
+                <valueName>SDK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Software</controllingFieldValue>
+                <valueName>Tool</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>agf__Request_Type_Other__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Request Type Other</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Request_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Request Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Software</fullName>
+                    <default>false</default>
+                    <label>Software</label>
+                </value>
+                <value>
+                    <fullName>Trademarks, Logos and Icons</fullName>
+                    <default>false</default>
+                    <label>Trademarks, Logos and Icons</label>
+                </value>
+                <value>
+                    <fullName>Fonts</fullName>
+                    <default>false</default>
+                    <label>Fonts</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>agf__Scheduled_Build__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Scheduled Build</label>
+        <label>Scheduled Build or Release</label>
         <referenceTo>agf__ADM_Build__c</referenceTo>
         <relationshipLabel>Third Party Software</relationshipLabel>
         <relationshipName>Third_Party_Software</relationshipName>
@@ -268,7 +485,7 @@
         <description>Link to product information page.</description>
         <externalId>false</externalId>
         <inlineHelpText>Link to product information page.</inlineHelpText>
-        <label>URL</label>
+        <label>Third Party Property product info URL</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
@@ -309,6 +526,71 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>agf__Will_this_code_be_distributed__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Will this code be distributed outside of Salesforce?</inlineHelpText>
+        <label>Will this code be distributed?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>agf__Will_you_actually_modify_the_code__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Will you modify the code, or simply use it as-is?</inlineHelpText>
+        <label>Will you modify the code?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>agf__Will_you_modify_the_code__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Will you use the code as-is or will you modify it?</inlineHelpText>
+        <label>Old will you modify the code?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
     <label>Third Party Software</label>
     <listViews>
         <fullName>agf__All</fullName>
@@ -337,7 +619,7 @@
         <label>No owner</label>
     </listViews>
     <nameField>
-        <label>Software Name</label>
+        <label>Third Party Property Name</label>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
     </nameField>
@@ -349,5 +631,13 @@
         <customTabListAdditionalFields>agf__Used_By__c</customTabListAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>agf__DateApprovalNeeded</fullName>
+        <active>true</active>
+        <description>Date Approval Needed</description>
+        <errorConditionFormula>agf__Date_Approval_Needed_By__c  &lt;  TODAY() + 28</errorConditionFormula>
+        <errorDisplayField>agf__Date_Approval_Needed_By__c</errorDisplayField>
+        <errorMessage>Date Approval Needed By can not be less than 28 days from today.</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
 </CustomObject>

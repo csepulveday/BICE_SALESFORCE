@@ -13307,9 +13307,9 @@ ISPICKVAL(Favorite_Channel__c, &apos;Teléfono&apos;),
         <externalId>false</externalId>
         <formula>IMAGE( 
 CASE(Favorite_Channel__c, 
-&quot;Correo&quot;, &quot;/servlet/servlet.FileDownload?file=0152C000000FLtH&quot;,
-&quot;Teléfono&quot;, &quot;/servlet/servlet.FileDownload?file=0152C00000090HW&quot;,
-&quot;/servlet/servlet.FileDownload?file=0152C00000090Hb&quot;), 
+&quot;Correo&quot;, &quot;/servlet/servlet.FileDownload?file=01541000002cZSl&quot;,
+&quot;Teléfono&quot;, &quot;/servlet/servlet.FileDownload?file=01541000002cZSq&quot;,
+&quot;/servlet/servlet.FileDownload?file=015410000026LjI&quot;), 
 &quot;&quot;,30,30)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>360 view mail icon</label>

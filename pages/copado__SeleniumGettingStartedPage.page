@@ -101,7 +101,7 @@
                     <p>&nbsp;</p>
                 </apex:outputPanel>
                 
-                <iframe frameBorder="0" src="https://sites.google.com/a/copa.do/documentation/copado-selenium-testing/getting-started" style="width: 100%; min-height: 1200px"></iframe>
+                <iframe frameBorder="0" src="https://docs.copa.do/copado-selenium-testing/getting-started" style="width: 100%; min-height: 1200px"></iframe>
             </apex:outputPanel>
         </div>
     </body>

@@ -286,6 +286,24 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>agf__Certified_Product_Owner__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Certified Product Owner</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>agf__Certified_Scrum_Master__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Certified Scrum Master</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>agf__External_ID__c</fullName>
         <caseSensitive>true</caseSensitive>
         <deprecated>false</deprecated>
@@ -370,6 +388,24 @@ The Whole Enchilada: All notifications (Default)</inlineHelpText>
         </valueSet>
     </fields>
     <fields>
+        <fullName>agf__Product_Owner_Certified_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Product Owner Certified Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>agf__Scrum_Master_Certified_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Scrum Master Certified Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
         <fullName>agf__Show_All_Work_Comments__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
@@ -397,6 +433,16 @@ The Whole Enchilada: All notifications (Default)</inlineHelpText>
         <required>false</required>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__User_Preference__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>User Preference</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>agf__Wall_Preference__c</fullName>

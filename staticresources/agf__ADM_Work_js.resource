@@ -1,22 +1,22 @@
 function AssignmentComponent() {
     this.initialize = function(options) {
-        
+
         //get the controller
         this.controller = options.controller;
         if(!this.controller) {
             throw new Error('Controller is required');
         }
-        
+
         //get the form
         this.form = options.form;
         if(!this.form) {
             throw new Error('Form is required');
         }
-        
+
     };
-    
+
     this.update = function() {
-            var severityLevel = this.form.getSeverityLevel(), 
+            var severityLevel = this.form.getSeverityLevel(),
             productTag = this.form.getProductTag(),
             recordType = this.form.getRecordType(),
             workType = this.form.getWorkType(),
@@ -37,12 +37,12 @@ function AssignmentComponent() {
                 if(!assignee && 'Assignee__r' in assignments) {
                     view.form.setAssignee(assignments.Assignee__r);
                 }
-                
+
                 var productOwner = view.form.getProductOwner();
                 if(!productOwner && 'Product_Owner__r' in assignments) {
                     view.form.setProductOwner(assignments.Product_Owner__r);
                 }
-                
+
                 var qaEngineer = view.form.getQaEngineer();
                 if(!qaEngineer && 'QA_Engineer__r' in assignments) {
                     view.form.setQaEngineer(assignments.QA_Engineer__r);
@@ -53,13 +53,13 @@ function AssignmentComponent() {
                 if(!seniorManagementPOC && 'Senior_Management_POC__r' in assignments) {
                     view.form.setSeniorManagementPOC(assignments.Senior_Management_POC__r);
                 }
-        
+
                 var techWriter = view.form.getTechWriter();
                 if(!techWriter && 'Tech_Writer__r' in assignments) {
                     view.form.setTechWriter(assignments.Tech_Writer__r);
                 }
 
-                
+
 
                 var ueEngineer = view.form.getUeEngineer();
                 if(!ueEngineer && 'UE_Engineer__r' in assignments) {
@@ -69,18 +69,18 @@ function AssignmentComponent() {
                 var perfEngineer = view.form.getPerfEngineer();
                 if(!perfEngineer && 'System_Test_Engineer__r' in assignments) {
                     view.form.setPerfEngineer(assignments.System_Test_Engineer__r);
-                }           
+                }
             };
-            
+
             var fail = function(result){
                 console.warn('Failed to retrieve the work assignments: ' + result[0].message);
             };
-            
+
             this.controller.getWorkAssignments({
-                severityLevel: severityLevel, 
-                productTag: productTag, 
-                recordType: recordType, 
-                workType: workType, 
+                severityLevel: severityLevel,
+                productTag: productTag,
+                recordType: recordType,
+                workType: workType,
                 recipients: recipients,
                 success: success,
                 fail: fail
@@ -89,11 +89,11 @@ function AssignmentComponent() {
             console.log('unable to update assignments because not all required fields are entered');
         }
     };
-    
+
     this.initialize.apply(this, arguments);
 }
 /*
-  A method to check whether the current page is running in a GlobalAction context or not. 
+  A method to check whether the current page is running in a GlobalAction context or not.
   If the var is not defined false will be returned which indicates the page is not a Global Action page.
 */
 function getGlobalAction(){
@@ -111,23 +111,23 @@ function PriorityComponent() {
         if(!this.controller) {
             throw new Error('Controller is required');
         }
-        
+
         //get the form
         this.form = options.form;
         if(!this.form) {
             throw new Error('Form is required');
         }
-        
+
         //initialize the impact field, then we need to calculate the priority
         this.form.on('change:impact', function() {
             self.calculatePriority();
         });
-        
+
         //when the frequency field changes, then we need to calculate the priority
         this.form.on('change:frequency', function() {
             self.calculatePriority();
         });
-        
+
         //when the priority is changed, then we need to update the UI
         this.form.on('change:priority', function() {
             self.renderPriority();
@@ -137,7 +137,7 @@ function PriorityComponent() {
         this.form.on('change:priorityCalculated', function() {
             self.renderPriority();
         });
-        
+
         this.renderPriority();
         //Only show override dialog if this is not MDP (Global Action)
         if(false === getGlobalAction()){
@@ -147,7 +147,7 @@ function PriorityComponent() {
 
     this.initializePriorityOverrideDialog = function() {
         var self = this;
-        
+
         //setup the override priority dialog
         var $dialog = $('#dialog-priorityOverride').dialog({
             modal: true,
@@ -171,7 +171,7 @@ function PriorityComponent() {
         $('.priority').on('click', '#priorityOverrideLink', function(event) {
             event.stopPropagation();
             event.preventDefault();
-            
+
             $dialog.dialog('open');
             $dialog.find('.priorityCalculated').text(self.form.getCalculatedPriority());
             $dialog.find('#priorityOverrideInput').val(self.form.getPriority()).change();
@@ -184,9 +184,9 @@ function PriorityComponent() {
         var frequencyId = this.form.getFrequencyId();
         return !!impactId && !!frequencyId;
     };
-    
+
     this.calculatePriority = function() {
-        
+
         var self = this;
         if(this.canCalculatePriority()) {
             var showPriorityWorkingIndicator = function() {
@@ -198,7 +198,7 @@ function PriorityComponent() {
                 $('.priority').show();
             };
             showPriorityWorkingIndicator();
-            
+
             var impactId = this.form.getImpactId();
             var frequencyId = this.form.getFrequencyId();
             var success = function(result) {
@@ -210,7 +210,7 @@ function PriorityComponent() {
                 hidePriorityWorkingIndicator();
                 alert('failed to update priority');
             };
-            
+
             this.controller.calculatePriority({
                 impactId: impactId,
                 frequencyId: frequencyId,
@@ -224,42 +224,42 @@ function PriorityComponent() {
 
     this.renderPriority = function() {
         isGlobalAction = getGlobalAction();
-        
+
         var $priority = $('.priority').empty(),
             priority = this.form.getPriority(),
             priorityCurrent = this.form.getPriorityCurrent(),
             canCalculate = this.canCalculatePriority(),
             calculatedPriority = this.form.getCalculatedPriority(),
             isNew = this.form.isNew();
-        
+
         if((priorityCurrent && isNew) || !canCalculate) {
             $('<span style="color: gray">To Be Calculated</span>').appendTo($priority);
         }
-        
+
         //if a value was loaded from the database but it currently cannot be calculated
         if(priorityCurrent && !canCalculate) {
             $priority.append($('<span style="color: gray">').text(' - Previously ' + priority));
         }
-        
+
         //if the priority is the same as the calculated, then it has not been overwritten
         //if it is MDP display the priority here
         if(priority && ((priority == calculatedPriority) || isGlobalAction)) {
             $priority.append(document.createTextNode(priority));
         }
-        
+
         //if the user has already overwritten the priority
         //No need to provide override priority link if it is MDP
         if(priority && priority != calculatedPriority && canCalculate && !isGlobalAction ) {
             $('<span style="padding:0 3px; margin:0 3px 0 0; color: white; background-color: orange; font-weight: bold;">').text(priority).appendTo($priority);
             $('<i>').text('Overridden (Default ' + calculatedPriority + ')').appendTo($priority);
         }
-        
+
         //allow the user to overwrite the priority if it can be calculated (and a value is specified)
         if(priority && canCalculate && !isGlobalAction) {
             $('<a id="priorityOverrideLink" href="#" style="padding-left: 1em;">Override</a>').appendTo($priority);
         }
     };
-    
+
     this.initialize.apply(this, arguments);
 }
 
@@ -269,13 +269,13 @@ function extend(protoProperties) {
     var child = function() {
         return parent.apply(this, arguments);
     };
-    
+
     function Proxy(){};
     Proxy.prototype = parent.prototype;
     child.prototype = new Proxy();
-    
+
     $.extend(child.prototype, protoProperties);
-    
+
     return child;
 }
 
@@ -292,12 +292,12 @@ $.extend(WorkEditView.prototype, {
         this._isNew = (typeof options.isNew !== 'undefined') ? options.isNew : true;
         this.app = options.app;
         var view = this;
-        
+
         //initialize the product tag component
         this.productTagComponent = options.productTagComponent;
         if(this.productTagComponent) {
-        
-            //whenever the product tag is removed from the form, we want to clear the 
+
+            //whenever the product tag is removed from the form, we want to clear the
             //fields used during auto assignment
             $(this.productTagComponent).bind('remove', function() {
                 //clear the standard fields
@@ -309,7 +309,7 @@ $.extend(WorkEditView.prototype, {
         view.setPerfEngineer(null);
         view.setSeniorManagementPOC(null);
 
-       
+
             });
 
             $('.severityLevelInput').bind('change', function() {
@@ -323,17 +323,38 @@ $.extend(WorkEditView.prototype, {
                     view.setSeniorManagementPOC(null);
                 }
 
-       
+
             });
-            
+
+
+            $('.statusInput').bind('change', function() {
+                var value = $('.statusInput').val();
+                var testResolution = $('.resolutionInput').val();
+                var typeInput = $('.typeInput').val();
+                if((value == 'Duplicate')){
+                    if(typeInput == 'Test Failure'){
+                        if(testResolution == null || testResolution == ''){
+                            $('.resolutionInput').val('Duplicate Test Failure');
+                        }
+                    }
+                }
+                else{
+                    if(testResolution == 'Duplicate Test Failure'){
+                        $('.resolutionInput').val(null);
+                    }
+                }
+
+
+            });
+
         }
-        
+
         //initialize the assignment component
         this.assignmentComponent = new AssignmentComponent({
             controller: this.controller,
             form: this
         });
-        
+
         //if the product tag is changed, then we need update the assignments
         if(this.productTagComponent) {
             $(this.productTagComponent).bind('change:tag', function() {
@@ -345,50 +366,50 @@ $.extend(WorkEditView.prototype, {
             view.assignmentComponent.update();
             });
     },
-    
+
     getWorkType: function() {
         return $(document.getElementById(this.inputIds.typeInput)).val();
     },
-    
+
     setWorkType: function(value) {
         $(document.getElementById(this.inputIds.typeInput)).val(value);
     },
-    
+
     getRecordTypeId: function() {
         return this.recordTypeId;
     },
-    
+
     getRecordType: function() {
         var recordTypeId = this.getRecordTypeId();
         if(!recordTypeId) {
             return;
-        } 
+        }
         return {
             Id: recordTypeId
         };
     },
-    
+
     getAssignee: function() {
         var input = this._getRichUserAutocompleteForInput($('.assigneeInput'));
         return (input) ? input.getSelected() : null;
     },
-    
+
     setAssignee: function(value) {
         var input = this._getRichUserAutocompleteForInput($('.assigneeInput'));
-        if(input) { 
+        if(input) {
             input.set(value);
         }
     },
 
-    
+
     getProductOwner: function() {
         var input = this._getRichUserAutocompleteForInput($('.productOwnerInput'));
         return (input) ? input.getSelected() : null;
     },
-    
+
     setProductOwner: function(value) {
         var input = this._getRichUserAutocompleteForInput($('.productOwnerInput'));
-        if(input) { 
+        if(input) {
             input.set(value);
         }
     },
@@ -399,22 +420,22 @@ $.extend(WorkEditView.prototype, {
         var input = this._getRichUserAutocompleteForInput($('.seniorManagementPOCInput'));
         return (input) ? input.getSelected() : null;
     },
-    
+
     setSeniorManagementPOC: function(value) {
         var input = this._getRichUserAutocompleteForInput($('.seniorManagementPOCInput'));
-        if(input) { 
+        if(input) {
             input.set(value);
         }
     },
-    
+
     getQaEngineer: function() {
         var input = this._getRichUserAutocompleteForInput($('.qaEngineerInput'));
         return (input) ? input.getSelected() : null;
     },
-    
+
     setQaEngineer: function(value) {
         var input = this._getRichUserAutocompleteForInput($('.qaEngineerInput'));
-        if(input) { 
+        if(input) {
             input.set(value);
         }
     },
@@ -423,10 +444,10 @@ $.extend(WorkEditView.prototype, {
         var input = this._getRichUserAutocompleteForInput($('.techWriterInput'));
         return (input) ? input.getSelected() : null;
     },
-    
+
     setTechWriter: function(value) {
         var input = this._getRichUserAutocompleteForInput($('.techWriterInput'));
-        if(input) { 
+        if(input) {
             input.set(value);
         }
     },
@@ -435,10 +456,10 @@ $.extend(WorkEditView.prototype, {
         var input = this._getRichUserAutocompleteForInput($('.ueEngineerInput'));
         return (input) ? input.getSelected() : null;
     },
-    
+
     setUeEngineer: function(value) {
         var input = this._getRichUserAutocompleteForInput($('.ueEngineerInput'));
-        if(input) { 
+        if(input) {
             input.set(value);
         }
     },
@@ -447,18 +468,18 @@ $.extend(WorkEditView.prototype, {
         var input = this._getRichUserAutocompleteForInput($('.perfEngineerInput'));
         return (input) ? input.getSelected() : null;
     },
-    
+
     setPerfEngineer: function(value) {
         var input = this._getRichUserAutocompleteForInput($('.performanceEngineerInput'));
-        if(input) { 
+        if(input) {
             input.set(value);
         }
-    },      
-    
+    },
+
     getEncodedRecipients: function(value) {
         return;
     },
-    
+
     getSeverityLevel: function() {
         var severity = $('.severityLevelInput').val();
         return severity;
@@ -467,14 +488,14 @@ $.extend(WorkEditView.prototype, {
     isNew: function() {
         return this._isNew;
     },
-    
+
     /**
      * Gets the currently selected product tag
      * @returns {Object} returns the currently selected product tag or null
      */
     getProductTag: function() {
         //the default implementation will try and retrieve the product tag ID
-        //from the component and wrap into a lightweight sObject 
+        //from the component and wrap into a lightweight sObject
         //TODO: return full tag sObject instance
         if(!this.productTagComponent) {
             console.warn('Product Tag component could not found. Make sure the page contains ADM_ProductTagInput and that it is populating window.productTag.');
@@ -489,15 +510,15 @@ $.extend(WorkEditView.prototype, {
             }
         }
     },
-    
+
     trigger: function() {
         return $.prototype.trigger.apply($(this), arguments);
     },
-    
+
     on: function() {
         return $.prototype.on.apply($(this), arguments);
     },
-    
+
     _getRichUserAutocompleteForInput: function($input) {
         return $input.closest('.gusRichAutoComplete').data('gus.RichAutoComplete');
     }
@@ -519,50 +540,50 @@ var InvestigationEditView = WorkEditView.extend({
 var BugEditView = WorkEditView.extend({
     initialize: function(options) {
         WorkEditView.prototype.initialize.apply(this, arguments);
-        
+
         //get the form fields
         this.$impactInput = $('.impactInput');
         this.$impactInput.on('change', function() {
             view.trigger('change:impact');
         });
-        
+
         this.$frequencyInput = $('.frequencyInput');
         this.$frequencyInput.on('change', function() {
             view.trigger('change:frequency');
         });
-        
+
         this.$priorityInput = $(document.getElementById(options.inputIds.priorityInput));
         this.$priorityInput.on('change', function() {
             view.trigger('change:priority');
         });
-        
+
         this.$priorityCalculatedInput = $(document.getElementById(options.inputIds.priorityCalculatedInput));
         this.$priorityCalculatedInput.on('change', function() {
             view.trigger('change:priorityCalculated');
         });
-        
+
         this.$priorityCurrentInput = $(document.getElementById(options.inputIds.priorityCurrentInput));
         this.$priorityOverrideReasonInput = $(document.getElementById(options.inputIds.priorityOverrideReasonInput));
-        
+
         //initialize the priority component
         this.priorityComponent = new PriorityComponent({
             controller: options.controller,
             form: this
         });
-        
+
         //whenever the impact changes, we need to update the frequency field
         this.updateFrequency();
         $(this).on('change:impact', function() {
             view.updateFrequency();
         });
-        
+
         getGlobalAction();
     },
-    
+
     getImpactId: function() {
         return this.$impactInput.val();
     },
-    
+
     getImpact: function() {
         var impactId = this.getImpactId();
         if(!impactId) {
@@ -576,11 +597,11 @@ var BugEditView = WorkEditView.extend({
     getFrequencyId: function() {
         return this.$frequencyInput.val();
     },
-    
+
     disableFrequency: function() {
         this.$frequencyInput.attr('disabled', 'disabled');
     },
-    
+
     enableFrequency: function() {
         this.$frequencyInput.removeAttr('disabled');
     },
@@ -588,11 +609,11 @@ var BugEditView = WorkEditView.extend({
     getPriorityCurrent: function() {
         return this.$priorityCurrentInput.val();
     },
-    
+
     getPriority: function() {
         return this.$priorityInput.val();
     },
-    
+
     setPriority: function(value) {
         this.$priorityInput.val(value).change();
     },
@@ -617,11 +638,11 @@ var BugEditView = WorkEditView.extend({
             return this.$typeInput;
         }
     },
-    
+
     setCalculatedPriority: function(value) {
         this.$priorityCalculatedInput.val(value).change();
     },
-    
+
     updateFrequency: function() {
         var impactValue = this.getImpact();
         if(impactValue) {
@@ -630,7 +651,7 @@ var BugEditView = WorkEditView.extend({
             this.disableFrequency();
         }
     }
-    
+
 });
 
 
@@ -652,15 +673,15 @@ function calculatePriority(options) {
     if(!options) {
         options = {};
     }
-    
+
     if(!options.frequencyId) {
         throw new Error('Frequency ID is required to calculate priority');
     }
-    
+
     if(!options.impactId) {
         throw new Error('Impact ID is required to calculate priority');
     }
-    
+
     agf.ADM_WorkRemoteActionsExtension.calculatePriority(options.frequencyId, options.impactId, handleWithCallbacks(options), {escape: false});
 };
 
@@ -672,19 +693,19 @@ function getWorkAssignments(options) {
         recipients = options.recipients || '',
         success = options.success,
         fail = options.fail;
-    
+
     agf.ADM_WorkRemoteActionsExtension.getAssignments(severityLevel, productTag, recordType, workType, recipients, function(result, event){
-        
+
         if(event.type === 'exception') {
             fail([{message:event.message}]);
-            
+
         } else if(result != null) {
-        
+
             if('errorMessages' in result && result.errorMessages != null && result.errorMessages.length > 0) {
                 fail([{messages:result.errorMessages}]);
                 return;
             }
-            
+
             //the current implementation returns a ADM_AutoAssignWorkAction.Assignment variable, which
             //has properties that don't match the sObject properties. We try to correct for that here.
             var mapping = {
@@ -694,44 +715,44 @@ function getWorkAssignments(options) {
                 'QA_Engineer': 'QA_Engineer__r',
                 'UE_Engineer': 'UE_Engineer__r',
                 'System_Test_Engineer': 'System_Test_Engineer__r',
-                'Senior_Management_POC': 'Senior_Management_POC__r', 
+                'Senior_Management_POC': 'Senior_Management_POC__r',
                 'Scrum_Team': 'Scrum_Team__c',
                 'Email_Subscription_ID': 'Email_Subscription_ID__c'
             };
-            
+
             Object.keys(mapping).forEach(function(value) {
                 if(value in result.assignments) {
                     result.assignments[mapping[value]] = result.assignments[value];
                     delete result.assignments[value];
                 }
             })
-            
+
             success(result);
         }
-        
+
     }, {escape:false});
 };
 
 function SObjectCollection(sObjects) {
     var byId = {};
-    
+
     this.models = [];
     this.length = 0;
-    
+
     /**
      * Calls the callback with each of the models
      */
     this.each = function(callback) {
         this.models.forEach(callback);
     };
-    
+
     /**
      * Gets the index of the specified model from the collection
      */
     this.indexOf = function(value) {
         return this.models.indexOf(value);
     };
-    
+
     /**
      * Removes the specified model (or an array of models) from the collection
      * @param value A model or an array of models
@@ -744,19 +765,19 @@ function SObjectCollection(sObjects) {
             if(!sObject) {
                 return this;
             }
-            
+
             delete byId[sObject.Id];
-            
+
             index = this.indexOf(sObject);
             this.models.splice(index, 1);
-            
+
             this.length--;
         }
-        
+
         this.trigger('remove');
         return this;
     };
-    
+
     /**
      * Adds the specified model (or an array of models) to the collection
      * @param value A model or an array of models
@@ -768,14 +789,14 @@ function SObjectCollection(sObjects) {
         var i;
         var at = options.at;
         var toAdd = [];
-        
+
         for(i = 0; i < value.length; i++) {
             if(value[i].Id) {
-                byId[value[i].Id] = value[i]; 
+                byId[value[i].Id] = value[i];
             }
             toAdd.push(value[i]);
         }
-        
+
         //add the items at the specified index or just push them on them on the exisiting
         if (toAdd.length) {
             this.length += toAdd.length;
@@ -784,10 +805,10 @@ function SObjectCollection(sObjects) {
             } else {
                 Array.prototype.push.apply(this.models, toAdd);
             }
-            
+
             this.sort();
         }
-        
+
         return this;
     };
 
@@ -797,14 +818,14 @@ function SObjectCollection(sObjects) {
     this.get = function(value) {
         return byId[value.Id || value];
     };
-    
-    /** 
+
+    /**
      * Gets the sObject at the specified index
      */
     this.at = function(index) {
         return this.models[index];
     };
-    
+
     var stringCompare = function(string1, string2) {
         if(string1 < string2) {
             return -1;
@@ -813,7 +834,7 @@ function SObjectCollection(sObjects) {
         }
         return 0;
     };
-    
+
     /**
      * Sorts the collection by the Name property
      */
@@ -823,28 +844,28 @@ function SObjectCollection(sObjects) {
             if(nameCompare !== 0) {
                 return nameCompare;
             }
-            
+
             var idCompare = stringCompare(model1.Id, model2.Id);
             return idCompare;
         });
         this.trigger('sort', this);
         return this;
     };
-    
+
     //jQuery has built in support for eventing on plain objects however it doesnt
     //like it when the plain object has a 'length' property. I think jquery thinks
     //it's an array like object instead of just a normal object. To get around this,
     //we use an inner object for the eventing.
     var eventSupport = {};
-    
+
     this.on = function() {
         $.prototype.on.apply($(eventSupport), arguments);
     };
-    
+
     this.trigger = function() {
         $.prototype.trigger.apply($(eventSupport), arguments);
     };
-    
+
     //add each of the models
     Array.prototype.forEach.call(sObjects, $.proxy(this.add, this));
 };
@@ -856,39 +877,39 @@ function ThemeContainerView(options) {
         $themeList = $el.find('.themeList'),
         $errorContainer = $el.find('.errorMsg'),
         workId = this.workId = options.workId;
-    
+
     var themes = this.themes = options.themes;
     rebuildThemeList();
-    
+
     themes.on('sort', $.proxy(rebuildThemeList, this));
     themes.on('remove', $.proxy(rebuildThemeList, this));
-    
+
     $themeInput.autocomplete({
         source: function(request, response) {
             var term = request.term;
-            
+
             agf.ADM_ThemeInputController.queryThemes(term, handleResponse(function(result, event) {
                 var exactMatch = false,
                     items = [];
-                
+
                 //convert the response for jquery
                 result.forEach(function(element) {
                     //check to see if the element is an exact match
                     if(element.Name.toLowerCase() === term.toLowerCase()) {
                         exactMatch = true;
                     }
-                    
+
                     //make sure the theme is active
                     if(!element.agf__Active__c) {
                         return;
                     }
-                    
+
                     items.push({
                         value: element.Name,
                         data: element
                     });
                 });
-                
+
                 //if there is no exact match, then we need to add an entry to create a new theme
                 if(!exactMatch) {
                     items.push({
@@ -897,13 +918,13 @@ function ThemeContainerView(options) {
                         create: true
                     });
                 }
-                
+
                 response(items);
             }, function(result, event) {
                 response([]);
                 console.warn('Unable to query for themes');
             }), {escape: false});
-        }, 
+        },
         select: function(event, data) {
             if(data.item.create) {
                 selectThemeWithName(data.item.value);
@@ -930,20 +951,20 @@ function ThemeContainerView(options) {
         var $item = $('<li>').data('item.autocomplete', item)
             .append($('<a>').text(item.label))
             .appendTo(ul );
-            
+
         if(item.create) {
             $item.addClass('themeInput-createNewThemeItem')
         }
-        
+
         return $item;
     };
-    
+
     $themeList.delegate('.removeTheme', 'click', function(event){
         event.preventDefault();
-        
+
         var $themeEl = $(this).closest('li').hide();
         var themeId = $themeEl.data('theme-id');
-        
+
         //get the theme with the specified ID and remove it from the theme collection
         var selectedTheme = themes.get(themeId);
         var selectedThemeIndex = -1;
@@ -951,39 +972,39 @@ function ThemeContainerView(options) {
             selectedThemeIndex = themes.indexOf(selectedTheme);
             themes.remove(selectedTheme);
         }
-        
+
         agf.ADM_ThemeInputController.removeThemeFromWork(workId, themeId, handleResponse(function(result, event) {
             $themeEl.remove();
         }, function(result, event) {
             $themeEl.show();
-            
+
             //add the theme back in the collection
             if(selectedTheme) {
                 themes.add(selectedTheme, {at: selectedThemeIndex});
             }
-            
+
             showErrors('Failed to contact server');
             console.log(event);
         }), {escape: false});
     });
-    
+
     $el.delegate('.addThemeButton', 'click', function(event) {
         event.preventDefault();
         addThemeFromInput();
     });
-    
+
     function addThemeFromInput() {
         selectThemeWithName($themeInput.val());
-        
+
         //make sure the autocomplete is closed
         clearOnClose = true;
         $themeInput.val('').autocomplete('close');
     }
-    
+
     function clearErrors() {
         $errorContainer.empty().hide();
     }
-    
+
     function showErrors(messages) {
         $errorContainer
             .empty()
@@ -992,13 +1013,13 @@ function ThemeContainerView(options) {
         if(typeof(messages) === 'string') {
             messages = [messages];
         }
-        
+
         Array.prototype.forEach.call(messages, function(message) {
             $errorContainer.append($('<span>').text(message))
                 .append(document.createTextNode(' '));
         });
     };
-    
+
     function handleResponse(success, fail) {
         return function(result, event) {
             if(event.status && success) {
@@ -1009,30 +1030,30 @@ function ThemeContainerView(options) {
             }
         };
     };
-    
+
     function createThemeItemView(theme) {
         var $theme = $('<li>').addClass('theme').text(theme.Name).wrapInner( "<a href='/" + theme.Id + "' class='theme'></a>").attr('data-theme-id', theme.Id).appendTo($themeList);
         $theme.append(document.createTextNode(' '));
         $theme.append('<a href="javascript: void 0;" class="removeTheme" title="Remove">X</a>');
     };
-    
+
     function addTheme(theme) {
         //check to make sure this theme isn't already on the page
         var found = themes.get(theme.Id);
         if(found) {
             return;
         }
-        
+
         //add the theme to the javascript collection
         themes.add(theme);
     };
-    
+
     function selectThemeWithName(themeName) {
         clearErrors();
         agf.ADM_ThemeInputController.addThemeToWork(workId, themeName, handleResponse(function(result, event) {
             if(result.success) {
                 addTheme(result.theme);
-                
+
             } else {
                 //show the failure to user
                 showErrors(result.messages);
@@ -1042,7 +1063,7 @@ function ThemeContainerView(options) {
             console.log(event);
         }), {escape:false});
     };
-    
+
     function rebuildThemeList() {
         //render the theme items
         $themeList.empty();
@@ -1051,10 +1072,115 @@ function ThemeContainerView(options) {
 };
 
 if (this.$) {
-    $(function() {
-        // change the title of the rich-text editor for accessibility
-        setTimeout(function() {
-            $('.cke_wysiwyg_frame').contents().find('title').attr('data-cke-title','Details and Steps to Reproduce').text('Details and Steps to Reproduce');
-        }, 5000);
-    });
+	$(function() {
+		// change the title of the rich-text editor for accessibility
+	    setTimeout(function() {
+			$('.cke_wysiwyg_frame').contents().find('title').attr('data-cke-title','Details and Steps to Reproduce').text('Details and Steps to Reproduce');
+	    }, 5000);
+	});
 };
+
+var WorkPriority = {
+    nameSpace : '',
+    priorityMap : [],
+
+    calculatePriority : function() {
+      var defaultPriorityName = this.calculateDefaultPriority() || 'To Be Calculated';
+
+      $('#priorityText').removeClass('priorityFound').text('To Be Calculated');
+      $('.priorityInput').val('');
+
+      this.updatePriority(defaultPriorityName);
+
+      $('.defaultPriorityText').each(function(index, obj) {
+        $(this).text(defaultPriorityName);
+      });
+    },
+
+    calculateDefaultPriority : function() {
+        var priorityName = '';
+
+        $('#frequencyInput').removeAttr("disabled");
+
+        this.priorityMap.forEach(function(option, index) {
+            if ($("select[id$='impactInput']").val() === option['agf__Impact__c'] && $("select[id$='frequencyInput']").val() === option['agf__Frequency__c']) {
+                priorityName = option['agf__Priority__r'].Name;
+            }
+        });
+
+      if (priorityName) {
+        $('#priorityOverrideLink').removeClass('slds-hide');
+      }
+
+      return priorityName;
+    },
+
+    updatePriority : function(priorityName) {
+      $('#priorityText').addClass('priorityFound').text(priorityName);
+      $('.priorityInput').val(priorityName);
+      $('.priorityInputOverride').val(priorityName);
+    },
+
+    openPriorityOverride : function() {
+        $('#priorityModal').removeClass('slds-hide');
+        $('#priorityModal .slds-modal').addClass('slds-fade-in-open');
+        $('#priorityModal .slds-modal-backdrop').addClass('slds-modal-backdrop--open');
+
+        $('#priorityModal select:first').focus();
+    },
+
+    closePriorityOverride : function() {
+        $('#priorityModal').addClass('slds-hide');
+        $('#priorityModal .slds-modal').removeClass('slds-fade-in-open');
+        $('#priorityModal .slds-modal-backdrop').removeClass('slds-modal-backdrop--open');
+
+        $('button#priorityOverrideLink').focus();
+    },
+
+    overridePriority : function() {
+      var priorityOverrideVal = $('#priorityModal .priorityInputOverride').val();
+
+      if ($('.priorityInput').val() != priorityOverrideVal) {
+        this.updatePriority(priorityOverrideVal);
+
+        $('#priorityText').addClass('overridden');
+        $('#priorityOverridden').removeClass('slds-hide');
+      }
+    }
+}
+
+var makeModalAccessible = function(modalId, firstSelector, lastSelector, escFunc) {
+    var focusOnFirstElement = function() { $(modalId + ' ' + firstSelector).focus(); }
+    var focusOnLastElement = function() { $(modalId + ' ' + lastSelector).focus(); }
+    var isTab = function(e) { return e.keyCode === 9; }
+    var isShift = function(e) { return e.shiftKey; }
+    var isEscape = function(e) { return e.keyCode === 27; }
+
+    focusOnFirstElement();
+
+    $(modalId).on('keydown', lastSelector, function(e) {
+      if (isTab(e) && !isShift(e)) {
+        e.preventDefault();
+        focusOnFirstElement();
+      }
+    });
+
+    $(modalId).on('keydown', firstSelector, function(e) {
+        if(isShift(e) && isTab(e)) {
+          e.preventDefault();
+          focusOnLastElement();
+        }
+    });
+
+    $(modalId).on('keydown', function(e) {
+        if(isEscape(e)) {
+          e.preventDefault();
+          $(modalId + ' .slds-modal').removeClass('slds-fade-in-open');
+          $(modalId + ' .slds-modal-backdrop').removeClass('slds-modal-backdrop--open');
+
+          if (typeof escFunc === 'function') {
+              escFunc();
+          }
+        }
+    });
+}

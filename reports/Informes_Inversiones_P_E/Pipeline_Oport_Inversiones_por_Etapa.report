@@ -68,15 +68,6 @@
     </columns>
     <currency>CLP</currency>
     <description>Muestra pipe de oportunidades por etapa del proceso</description>
-    <filter>
-        <criteriaItems>
-            <column>RECORDTYPE</column>
-            <isUnlocked>true</isUnlocked>
-            <operator>equals</operator>
-            <value>Opportunity.Cuenta_de_Inversion</value>
-        </criteriaItems>
-        <language>es</language>
-    </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
@@ -100,7 +91,7 @@
     <scope>team</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>
-        <dateColumn>CLOSE_DATE</dateColumn>
-        <interval>INTERVAL_CURRENT</interval>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
     </timeFrameFilter>
 </Report>

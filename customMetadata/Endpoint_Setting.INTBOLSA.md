@@ -4,7 +4,7 @@
     <protected>false</protected>
     <values>
         <field>Endpoint__c</field>
-        <value xsi:type="xsd:string">https://sf.bice.cl/desarrollo/ConsultaBolsaFacade/Consultar</value>
+        <value xsi:type="xsd:string">https://sf.bice.cl/bus/ConsultaBolsa/Consultar</value>
     </values>
     <values>
         <field>Namespace__c</field>

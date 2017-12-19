@@ -1,8 +1,8 @@
 
-@font-face{font-family:'ProximaNova';src:url(/resource/agf__proximanovasoft_regular_webfont) format('truetype');font-weight:300;font-style:normal;}
-@font-face{font-family:'ProximaNova';src:url(/resource/agf__proximanovasoft_medium_webfont) format('truetype');font-weight:500;font-style:normal;}
-@font-face{font-family:'ProximaNova';src:url(/resource/agf__proximanovasoft_semibold_webfont) format('truetype');font-weight:700;font-style:normal;}
-@font-face{font-family:'ProximaNova';src:url(/resource/agf__proximanovasoft_bold_webfont) format('truetype');font-weight:900;font-style:normal;}
+@font-face{font-family:'ProximaNova';src:url(/resource/proximanovasoft_regular_webfont) format('truetype');font-weight:300;font-style:normal;}
+@font-face{font-family:'ProximaNova';src:url(/resource/proximanovasoft_medium_webfont) format('truetype');font-weight:500;font-style:normal;}
+@font-face{font-family:'ProximaNova';src:url(/resource/proximanovasoft_semibold_webfont) format('truetype');font-weight:700;font-style:normal;}
+@font-face{font-family:'ProximaNova';src:url(/resource/proximanovasoft_bold_webfont) format('truetype');font-weight:900;font-style:normal;}
 
 div.bodyDiv,div.bodyDiv td{font-family:'ProximaNova','Lucida Grande','Arial';font-size:13px;color:#666;}
 div.bodyDiv *{box-sizing:border-box;}
@@ -189,14 +189,19 @@ button#saveButton[disabled]{border:1px transparent;}
 .workList .spacer{padding-top:5px;text-align:center;}
 #backlogDialogHeader{margin-bottom:12px;}
 #backlogColumnSelect{display:inline-block;}
+#backlogFilterSearch{display:inline-block;}
+.textSpan{padding-left:5px;}
+.backlogFilterSearchContainer{display:inline-block;}
 .backlogRow{display:table-row;}
-.backlogRow:first-child > div{padding-top:10px;}
+.backlogRow:first-child > div{padding-top:10px;padding-bottom:10px;}
 .backlogRow:hover > div{background-color:#E4E4E4;}
 .backlogRow > div{display:table-cell;padding:2px 5px;}
-.backlogRow > div.backlogSubject{width:100%;}
 .backlogRow > div.backlogSubject label{display:block;}
 .backlogRow > div.backlogRecordType,
 .backlogRow > div.backlogWorkId{white-space:nowrap;}
+.backlogRow > div.backlogSprint{white-space:nowrap;}
+.backlogRow > div.backlogEpic{white-space:nowrap;}
+.backlogRow > div.backlogBuild{white-space:nowrap;}
 #backlogDialog #backlogDialogLoading{display:none;}
 #backlogDialog.dialogloading #backlogDialogLoading{display:block;position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);text-align:center;z-index:10;}
 #backlogDialog.dialogloading #backlogDialogLoading .fa{color:#fff;font-size:30px;margin-top:220px;}
@@ -207,6 +212,7 @@ button#saveButton[disabled]{border:1px transparent;}
 .itemList{display:table;width:100%;background:#F0F0F0;overflow-y:auto;border:1px #C0C0C0 solid;border-radius:5px;margin:5px 0px 15px 0px;user-select:none;-webkit-user-select:none;-moz-user-select:none;}
 .itemList:last-child{margin-bottom:0;}
 .itemList .spacer{padding-top:5px;text-align:center;}
+.backlogRowHeader{padding-bottom:5px;}
 /*.itemRow:first-child > div{padding-top:10px;}*/
 .itemRow{display:table-row;}
 .itemRow:hover > div{background-color:#DDD;}

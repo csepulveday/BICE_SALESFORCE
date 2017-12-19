@@ -38,9 +38,9 @@
                   <apex:outputPanel layout="none" rendered="{!editable}">
                     <input type="button" class="editButton" onClick="checkAndNavigateToURL('/{!agf__ADM_Scrum_Team__c.Id}/e?retURL=%2Fapex%2Fagf__adm_scrumteamdetail%3Fid%3D{!agf__ADM_Scrum_Team__c.Id}');" value="Edit" />
                   </apex:outputPanel>
-                    <input type="button" onClick="checkAndNavigateToURL('/apex/adm_wall?teamid={!agf__ADM_Scrum_Team__c.Id}&retURL=%2Fapex%2Fadm_scrumteamdetail%3Fid%3D{!agf__ADM_Scrum_Team__c.Id}');" value="Backlog Manager" />
+                    <input type="button" onClick="checkAndNavigateToURL('/apex/adm_WorkManager?teamid={!agf__ADM_Scrum_Team__c.Id}&retURL=%2Fapex%2Fadm_scrumteamdetail%3Fid%3D{!agf__ADM_Scrum_Team__c.Id}');" value="Work Manager" />
                     <input type="button" onClick="checkAndNavigateToURL('/apex/adm_kanbansplash?teamid={!agf__ADM_Scrum_Team__c.Id}&retURL=%2Fapex%2Fadm_scrumteamdetail%3Fid%3D{!agf__ADM_Scrum_Team__c.Id}');" value="Kanban Board" />
-                    
+
                 </div>
 
                 <apex:form >
@@ -50,29 +50,44 @@
                             <c:ADM_FormRow object="{!agf__ADM_Scrum_Team__c}" type="ADM_Scrum_Team__c" readonly="true" required="false" field="Story_Point_Scale__c" value="{!agf__ADM_Scrum_Team__c.agf__Story_Point_Scale__c}" />
                             <c:ADM_FormRow object="{!agf__ADM_Scrum_Team__c}" type="ADM_Scrum_Team__c" readonly="true" required="false" field="Distribution_Lists__c" value="{!agf__ADM_Scrum_Team__c.agf__Distribution_Lists__c}" />
 
-                             <c:ADM_FormRow object="{!agf__ADM_Scrum_Team__c}" type="ADM_Scrum_Team__c" readonly="true" required="true"  field="Cloud__c" value="{!agf__ADM_Scrum_Team__c.agf__Cloud__c}" />
-                            <c:ADM_FormRow object="{!agf__ADM_Scrum_Team__c}" type="ADM_Scrum_Team__c" readonly="true" required="false" field="Domain__c" value="{!agf__ADM_Scrum_Team__c.agf__Domain__c}" info="Depends on &quot;Cloud&quot;" />
-                            <c:ADM_FormRow object="{!agf__ADM_Scrum_Team__c}" type="ADM_Scrum_Team__c" readonly="true" required="false" field="Team_Home_Page__c" value="{!agf__ADM_Scrum_Team__c.agf__Team_Home_Page__c}"  />
-                            
+
+                             <c:ADM_FormRow object="{!agf__ADM_Scrum_Team__c}" type="ADM_Scrum_Team__c" readonly="true" required="true"  field="Cloud_LU__c" value="{!agf__ADM_Scrum_Team__c.agf__Cloud_LU__c}" rendered="{!NOT(packagedOrg)}" />
+                               <c:ADM_FormRow object="{!agf__ADM_Scrum_Team__c}" type="ADM_Scrum_Team__c" readonly="true" required="false" field="Domain__c" value="{!agf__ADM_Scrum_Team__c.agf__Domain__c}"  />
+                               <c:ADM_FormRow object="{!agf__ADM_Scrum_Team__c}" type="ADM_Scrum_Team__c" readonly="true" required="false" field="Scrum_Master__c" value="{!agf__ADM_Scrum_Team__c.agf__Scrum_Master__c}"  />
+                               <c:ADM_FormRow object="{!agf__ADM_Scrum_Team__c}" type="ADM_Scrum_Team__c" readonly="true" required="false" field="Product_Owner__c" value="{!agf__ADM_Scrum_Team__c.agf__Product_Owner__c}"  />
+
 
                         </div>
                         <div class="gusForm2Column">
                             <c:ADM_FormRow object="{!agf__ADM_Scrum_Team__c}" type="ADM_Scrum_Team__c" readonly="true" required="false" field="Active__c" value="{!agf__ADM_Scrum_Team__c.agf__Active__c}" />
-                            
-                          
-                            <div class="gusFormRow">
-                                <div class="gusFormField gusFormFieldLeft"><label>Created By</label></div>
-                                <div class="gusFormField gusFormFieldRight"><a href="/{!agf__ADM_Scrum_Team__c.CreatedById}">{!agf__ADM_Scrum_Team__c.CreatedBy.Name}</a>,<span> </span><apex:outputField value=" {!agf__ADM_Scrum_Team__c.CreatedDate}" /></div>
-                            </div>
+                            <!-- Business Hours, for GUS Investigation SLAs -->
+                            <c:ADM_FormRow object="{!agf__ADM_Scrum_Team__c}" type="ADM_Scrum_Team__c" readonly="true" required="false" field="Business_Hours__c" value="{!agf__ADM_Scrum_Team__c.agf__Business_Hours__c}" />
+                            <!-- Business Hours end -->
+                            <apex:outputPanel layout="none" rendered="{!NOT(packagedOrg)}">
+                                <c:ADM_FormRow object="{!agf__ADM_Scrum_Team__c}" type="ADM_Scrum_Team__c" readonly="true" required="false" field="Lock_Report__c" value="{!agf__ADM_Scrum_Team__c.agf__Lock_Report__c}" />
+                            </apex:outputPanel>
+                            <c:ADM_FormRow object="{!agf__ADM_Scrum_Team__c}" type="ADM_Scrum_Team__c" readonly="true" required="false" field="Release_Coverage_Needed__c" value="{!agf__ADM_Scrum_Team__c.agf__Release_Coverage_Needed__c}" />
+                            <c:ADM_FormRow object="{!agf__ADM_Scrum_Team__c}" type="ADM_Scrum_Team__c" readonly="true" required="false" field="Capex_Enabled__c" value="{!agf__ADM_Scrum_Team__c.agf__Capex_Enabled__c}" />
+                            <c:ADM_FormRow object="{!agf__ADM_Scrum_Team__c}" type="ADM_Scrum_Team__c" readonly="true" required="false" field="Capex_Lead__c" value="{!agf__ADM_Scrum_Team__c.agf__Capex_Lead__c}" />
                             <div class="gusFormRow">
                                 <div class="gusFormField gusFormFieldLeft"><label>Last Modified By</label></div>
                                 <div class="gusFormField gusFormFieldRight"><a href="/{!agf__ADM_Scrum_Team__c.LastModifiedById}">{!agf__ADM_Scrum_Team__c.LastModifiedBy.Name}</a>,<span> </span><apex:outputField value=" {!agf__ADM_Scrum_Team__c.LastModifiedDate}" /></div>
                             </div>
-                            
+
 
                         </div>
                     </div>
                 </apex:form>
+            </div>
+            <div class="gusFieldset">
+                <div class="gusLegend">Definition of Ready</div>
+                <br/>
+                <apex:outputField value="{!agf__ADM_Scrum_Team__c.agf__Definition_of_Ready__c}"/>
+            </div>
+            <div class="gusFieldset">
+                <div class="gusLegend">Definition of Done</div>
+                <br/>
+                <apex:outputField value="{!agf__ADM_Scrum_Team__c.agf__Definition_of_Done__c}"/>
             </div>
             <div class="gusFieldset">
                 <div class="gusLegend">Team Chatter</div>

@@ -48,13 +48,13 @@
         <name>agf__Date_Approved__c</name>
     </fields>
     <fields>
-        <label><!-- Dev Approval --></label>
+        <label><!-- Engineering Exec Approval --></label>
         <name>agf__Dev_Approval__c</name>
     </fields>
     <fields>
-        <label><!-- Dev --></label>
+        <label><!-- Engineering Exec --></label>
         <name>agf__Dev__c</name>
-        <relationshipLabel><!-- Release Signoff (Dev) --></relationshipLabel>
+        <relationshipLabel><!-- Release Signoff (Engineering Exec) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Doc Approval --></label>
@@ -97,13 +97,13 @@
         <relationshipLabel><!-- Release Signoff (Product) --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- QA Approval --></label>
+        <label><!-- Cross-Cloud Exec Approval --></label>
         <name>agf__QA_Approval__c</name>
     </fields>
     <fields>
-        <label><!-- QA --></label>
+        <label><!-- Cross-Cloud Exec --></label>
         <name>agf__QA__c</name>
-        <relationshipLabel><!-- Release Signoff (QA) --></relationshipLabel>
+        <relationshipLabel><!-- Release Signoff (Cross-Cloud Exec) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- TQE --></label>

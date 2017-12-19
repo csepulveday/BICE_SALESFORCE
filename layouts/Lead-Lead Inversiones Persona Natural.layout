@@ -2,6 +2,7 @@
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
     <customButtons>Validar_Requisitos</customButtons>
     <excludeButtons>ChangeRecordType</excludeButtons>
+    <excludeButtons>DataDotComClean</excludeButtons>
     <layoutSections>
         <customLabel>true</customLabel>
         <detailHeading>false</detailHeading>
@@ -15,10 +16,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Apellido_materno__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Referido_por__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -188,6 +185,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>CT_Request_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Referido_por__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

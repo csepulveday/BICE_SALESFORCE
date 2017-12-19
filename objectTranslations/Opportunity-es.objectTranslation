@@ -648,11 +648,11 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Proposal Delivered --></label>
+        <label>Propuesta entregada</label>
         <name>INV_ProposalDelivered__c</name>
     </fields>
     <fields>
-        <label><!-- Proposal Required --></label>
+        <label>Requiere propuesta</label>
         <name>INV_ProposalRequired__c</name>
     </fields>
     <fields>
@@ -752,7 +752,7 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Requires credit management? --></label>
+        <label>¿Requiere gestionar línea?</label>
         <name>Inv_RequiresCreditManagement__c</name>
         <picklistValues>
             <masterLabel>No</masterLabel>

@@ -1,4 +1,4 @@
-<apex:page id="bugDetailPage" standardController="agf__ADM_Work__c" extensions="agf.ADM_BugExtension,agf.ADM_WorkRemoteActionsExtension" showHeader="true" sidebar="false" docType="html-5.0" title="{!title}">
+<apex:page id="bugDetailPage" standardController="agf__ADM_Work__c" extensions="agf.ADM_BugExtension,agf.ADM_WorkRemoteActionsExtension" showHeader="true" sidebar="true" docType="html-5.0" title="{!title}">
 <meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1.0,maximum-scale=1.0" />
 <apex:stylesheet value="{!URLFOR($Resource.agf__jquery_ui_1_9_2_redmond, 'css/redmond/jquery-ui-1.9.2.custom.css')}" />  
 <apex:styleSheet value="{!$Resource.agf__ADM_common_css}" />
@@ -8,7 +8,6 @@
 <apex:includeScript value="{!$Resource.agf__ADM_common_js}" />
 <apex:includeScript value="{!$Resource.agf__ADM_autocomplete2js}" />
 <apex:includeScript value="{!$Resource.agf__ADM_Work_js}" />
-
 <div class="bPageTitle">
     <div class="ptBody">
         <div class="content">
@@ -106,6 +105,9 @@ $(function() {
                 <c:ADM_Input id="priorityInput" object="{!agf__ADM_Work__c}" inputFieldName="Priority__c" inputObjectName="ADM_Work__c" renderRow="true" readonly="true" inlineEdit="false" inputStyleClass="priorityInput gusStyle" />
                 <c:ADM_Input id="rootCauseAnalysisInput" object="{!agf__ADM_Work__c}" inputFieldName="Root_Cause_Analysis_2__c" inputObjectName="ADM_Work__c" renderRow="true" readonly="true" inlineEdit="true" inputStyleClass="rootCauseAnalysisInput gusStyle" />
                 <c:ADM_Input id="perforceStatusInput" object="{!agf__ADM_Work__c}" inputFieldName="Perforce_Status__c" inputObjectName="ADM_Work__c" renderRow="true" readonly="true" inlineEdit="true" inputStyleClass="rootCauseAnalysisInput gusStyle" />
+                <apex:outputPanel layout="none" rendered="{!teamCapexEligibility}" id="capexPanel">
+                    <c:ADM_Input id="capexEnabledInput" object="{!agf__ADM_Work__c}" inputFieldName="Capex_Enabled__c" inputObjectName="ADM_Work__c" renderRow="true" readonly="true" inlineEdit="true" inputStyleClass="capexEnabledInput gusStyle" />
+                </apex:outputPanel>
             </div>
         </div>
         <apex:outputPanel id="refreshPanelId">
@@ -115,11 +117,11 @@ $(function() {
                         <apex:repeat var="af" value="{!additionalFieldsForBug}">
                             <div style="width:33%;" >
                                 <c:ADM_Input id="myId" object="{!agf__ADM_Work__c}" inputFieldName="{!af.agf__Field_API_Name__c}" inputObjectName="ADM_Work__c" readonly="true" inlineEdit="true" renderRow="true" inputStyleClass="scheduledBuildInput gusStyle" />
-                            </div>
+            </div>
                         </apex:repeat>
                     </div>
-                </div>
-            </apex:outputPanel>  
+        </div>
+            </apex:outputPanel>
         </apex:outputPanel>
 
         <c:ADM_WorkHiddenPanel workObject="{!agf__ADM_Work__c}" workPanelViewPreference="{!workPanelViewPreference}" packagedOrg="{!packagedOrg}" readonly="true" />

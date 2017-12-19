@@ -239,6 +239,38 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>agf__All_Supported_one_app_Browsers_Tested__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used to track if teams who have features that are surfaced in the S1 Mobile application have tested their functionality on one.app of all the supported browsers (as per the current S1 Support Matrix).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Has the team tested their functionality on one.app for all the supported browsers as per the current S1 Support Matrix?</inlineHelpText>
+        <label>Release Tested on all one.app Browsers</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A for this team</fullName>
+                    <default>false</default>
+                    <label>N/A for this team</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>agf__Assessment_Details__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -419,6 +451,70 @@ https://docs.google.com/a/salesforce.com/spreadsheet/ccc?key=0AkkHOEHyPs0CdG54ak
         </valueSet>
     </fields>
     <fields>
+        <fullName>agf__Core_Release_against_Hybrid_Apps_in_Dev__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used to track if teams who have features that are surfaced in the S1 Mobile application have tested the S1 application *currently being developed* (all supported Hybrid Containers, as per the current S1 Support Matrix) against the new core Major Release that is being developed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Has the team certified the Core Major Release candidate against all versions of the supported Hybrid Containers that are in development to be part of the S1 Major Release as per the current S1 Support Matrix?  (e.g. iOS, Android, Windows)</inlineHelpText>
+        <label>Release Tested on in-dev S1 Hybrid Apps</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A for this team</fullName>
+                    <default>false</default>
+                    <label>N/A for this team</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>agf__Core_Release_against_Prod_Hybrid_Apps__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used to track if teams who have features that are surfaced in the S1 Mobile application have tested the S1 application currently in production (all supported Hybrid Containers, as per the current S1 Support Matrix) against the new core Major Release that is being developed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Has the team certified the Core Major Release candidate against all &apos;Production&apos; versions of the supported Hybrid Containers as per the current S1 Support Matrix?  (e.g. iOS, Android, Windows)</inlineHelpText>
+        <label>Release Tested on Prod S1 Hybrid Apps</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A for this team</fullName>
+                    <default>false</default>
+                    <label>N/A for this team</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>agf__DB_Upgrade_Scripts_Complete_and_Verified__c</fullName>
         <deprecated>false</deprecated>
         <description>DB Upgrade Scripts Complete and Verified (Yes/No)</description>
@@ -485,8 +581,9 @@ https://docs.google.com/a/salesforce.com/spreadsheet/ccc?key=0AkkHOEHyPs0CdG54ak
     <fields>
         <fullName>agf__Dev_Leadership_Confirmation_Details__c</fullName>
         <deprecated>false</deprecated>
+        <description>For the Engineering Cloud Lead (or their delegate) to optionally leave details regarding the Team Signoff Status.</description>
         <externalId>false</externalId>
-        <label>Dev Leadership Confirmation Details</label>
+        <label>Cloud Leadership Confirmation Details</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
@@ -496,9 +593,10 @@ https://docs.google.com/a/salesforce.com/spreadsheet/ccc?key=0AkkHOEHyPs0CdG54ak
         <fullName>agf__Dev_Leadership_Sign_Off_Confirmed__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
+        <description>For confirming that the Cloud Engineering Lead associated to that team has reviewed the status and confirmed the signoff, especially if the team has not signed off or is signing off without meeting criteria.</description>
         <externalId>false</externalId>
         <inlineHelpText>Used by Development Leader responsible for confirming team signoff.</inlineHelpText>
-        <label>Dev Leadership Sign Off Confirmed</label>
+        <label>Cloud Leadership Sign Off Confirmed</label>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -507,8 +605,9 @@ https://docs.google.com/a/salesforce.com/spreadsheet/ccc?key=0AkkHOEHyPs0CdG54ak
         <fullName>agf__Dev_Signoff_By__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>To document who is providing the Cloud Leadership Signoff</description>
         <externalId>false</externalId>
-        <label>Dev Signoff By</label>
+        <label>Cloud Lead Name</label>
         <referenceTo>User</referenceTo>
         <relationshipName>Feature_Freeze_Team_Status1</relationshipName>
         <required>false</required>
@@ -1119,6 +1218,18 @@ Has your team completed the required BUTC/Maven work?</description>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>agf__Explain_Open_Non_Deterministic_Test_NDT__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Explain Open Non Deterministic Test (NDT) Not Required for Sign-off</inlineHelpText>
+        <label>Explain Open Non Deterministic Test</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>agf__Explain_Open_P012_Bugs__c</fullName>
@@ -1962,6 +2073,20 @@ Completed all action items assigned to them by ZD Team</inlineHelpText>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>agf__LINK_to_S1_Chatter_Group__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Point people to the main Chatter Group where they can ask questions or find links to important information (e.g. the current S1 Support Matrix).</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;https://gus.my.salesforce.com/0F9B0000000068B&apos;,&apos;Click to find Current S1 Support Matrix&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Links you to the best place to ask questions or find important information, like the S1 Support Matrix for the current release.</inlineHelpText>
+        <label>LINK to S1 Chatter Group</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>agf__Large_Invasive_changes_are_behind_a_perm__c</fullName>
         <deprecated>false</deprecated>
         <description>No team should put the release at risk – Any Feature or change that is large enough or invasive enough to risk the release is behind a permission or equivalent safety valve</description>
@@ -2658,6 +2783,18 @@ Features with known performance risk are disabled by default (behind perm, confi
         <visibleLines>5</visibleLines>
     </fields>
     <fields>
+        <fullName>agf__Provide_Details_for_Core_Hybrid_in_Dev__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used for details around if a team has not completed their testing of the Core Release against the Hybrid Applications that are in development and slated for the S1 Major Release.  Only needed if &quot;No&quot; is selected.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provide details if &quot;No&quot; is selected for the &quot;Core Release against Hybrid Apps in Dev&quot; field.</inlineHelpText>
+        <label>Provide Details for Core/In-dev Hybrid</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>agf__Provide_Details_for_Scale_Impact__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -2669,11 +2806,35 @@ Features with known performance risk are disabled by default (behind perm, confi
         <type>TextArea</type>
     </fields>
     <fields>
+        <fullName>agf__Provide_Details_for_one_app_Testing__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used for details around if a team has not completed their testing of the supported one.app browsers.  Only needed if &quot;No&quot; is selected.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provide details if &quot;No&quot; is selected for the &quot;All supported one.app browsers tested&quot; field.</inlineHelpText>
+        <label>Provide Details for one.app Testing</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>agf__Provide_behind_perm_details__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Provide details explaining how a perm is used to disable incomplete features.</inlineHelpText>
         <label>Provide details on your features perm</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>agf__Provide_details_for_Core_Prod_Hybrid__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used for details around if a team has not completed their testing of the Core Release against the Production Hybrid Applications.  Only needed if &quot;No&quot; is selected.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provide details if &quot;No&quot; is selected for the &quot;Core Release against Prod Hybrid Apps&quot; field.</inlineHelpText>
+        <label>Provide Details for Core/Prod Hybrid</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>

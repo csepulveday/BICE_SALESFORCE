@@ -47,14 +47,14 @@
                                              </div>
                                              <div class="slds-media__body">
                                                 <h2>
-                                                    <a href="https://sites.google.com/a/copa.do/documentation/home/release-notes" target="{!IF($User.UIThemeDisplayed=='Theme3','_blank','')}" class="slds-card__header-link slds-truncate" title="Documentation">
+                                                    <a href="https://docs.copa.do/home/release-notes" target="{!IF($User.UIThemeDisplayed=='Theme3','_blank','')}" class="slds-card__header-link slds-truncate" title="Documentation">
                                                     <span class="slds-text-heading_small">{!$Label.Documentation}</span>
                                                 </a>
                                                 </h2>
                                             </div>
                                         </header>
                                         <div class="slds-no-flex">
-                                            <a href="https://sites.google.com/a/copa.do/documentation/home/release-notes" target="{!IF($User.UIThemeDisplayed=='Theme3','_blank','')}">
+                                            <a href="https://docs.copa.do/home/release-notes" target="{!IF($User.UIThemeDisplayed=='Theme3','_blank','')}">
                                                 <button class="slds-button slds-button_neutral">{!$Label.LEARN}
                                                 </button>
                                             </a>

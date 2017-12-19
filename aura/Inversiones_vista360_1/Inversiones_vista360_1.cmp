@@ -48,7 +48,7 @@
                                  <td class="dias center-middle font texto-gris">
                                 <aura:unescapedHtml value="{!v.VarLastContact}"/>
                             </td>              
-                            <td class="Campos">En desarrollo</td>                          
+                            <td class="Campos"><img src="{!'/servlet/servlet.FileDownload?file='+'015410000026MiK'}" width="50" height="50" title="En Desarrollo"/> </td>                          
                             <!--<td class="Campos"><ui:outputNumber value="{!contact.Filled_Client_Data__c}" format=""/></td>-->
                            <!-- <td>
                             <div class="slds-progress-bar slds-progress-bar_x-medium" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" role="progressbar">

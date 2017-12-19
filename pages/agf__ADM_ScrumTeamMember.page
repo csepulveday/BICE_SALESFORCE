@@ -18,6 +18,8 @@
 </div>
 
 <apex:form >
+<apex:pageMessage summary="Warning if you change the team member allocation, and this is a core team, please make sure at least one member has an allocation > 0%"
+                      strength="3" severity="warning"/>  
 <apex:messages styleClass="message gusFormMessage" />
 	<div class="gusFieldset">
 	    <div class="gusLegend">Member Detail</div>

@@ -181,7 +181,9 @@ window,"sortable");</script>
                       <apex:repeat value="{!$ObjectType.copado__Deployment__c.FieldSets.copado__Copado_Header_Fields}" var="f"> 
                         <apex:outputPanel layout="block" rendered="{!rowNum < 8}">
                         <li class="slds-page-header__detail-block slds-truncate" style="padding-right: 2em; padding-left: 2em; ">
-                            <c:LightningReadyOutputFields dividerBottom="false" SObject="{!copado__Deployment__c}" Field="{!f}"></c:LightningReadyOutputFields>
+                            <!--<c:LightningReadyOutputFields dividerBottom="false" SObject="{!Deployment__c}" Field="{!f}"></c:LightningReadyOutputFields>-->
+                            <apex:outputLabel value="{!f.Label}" for="hf" /><br/>
+                            <apex:outputField value="{!copado__Deployment__c[f]}"  id="hf"/>
                         </li>
                         </apex:outputPanel>
                         <apex:variable var="rowNum" value="{!rowNum + 1}"/>

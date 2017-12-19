@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- CBM Fields --></label>
+        <name>CBM_Fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Commit Files Information --></label>
+        <name>Commit_Files_Information</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Copado Header Fields --></label>
+        <name>Copado_Header_Fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Promotion Related List --></label>
+        <name>PromotionRelatedList</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- SprintWall_MassUpdate --></label>
+        <name>SprintWall_MassUpdate</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Work Manager Columns --></label>
+        <name>Work_Manager_Columns</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Work Manager Relations --></label>
+        <name>Work_Manager_Relations</name>
+    </fieldSets>
     <fields>
         <label><!-- Acceptance Criteria Status --></label>
         <name>copado__Acceptance_Criteria_Status__c</name>

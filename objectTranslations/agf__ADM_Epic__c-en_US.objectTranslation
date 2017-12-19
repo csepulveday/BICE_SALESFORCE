@@ -47,6 +47,10 @@
         <relationshipLabel><!-- Epics (Development Lead) --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- End Date --></label>
+        <name>agf__End_Date__c</name>
+    </fields>
+    <fields>
         <label><!-- Health --></label>
         <name>agf__Health__c</name>
         <picklistValues>
@@ -63,6 +67,11 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Performance Lead --></label>
+        <name>agf__Performance_Lead__c</name>
+        <relationshipLabel><!-- Epics (Performance Lead) --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Priority --></label>
         <name>agf__Priority__c</name>
     </fields>
@@ -70,6 +79,15 @@
         <label><!-- Quality Lead --></label>
         <name>agf__Quality_Lead__c</name>
         <relationshipLabel><!-- Epics (Quality Lead) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Build --></label>
+        <name>agf__Scheduled_Build__c</name>
+        <relationshipLabel><!-- Epics --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>agf__Start_Date__c</name>
     </fields>
     <fields>
         <label><!-- T-Shirt Size --></label>

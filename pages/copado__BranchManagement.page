@@ -668,7 +668,7 @@
                                        <div class="slds-grid" style="padding-bottom: 10px;">
                                             <div class="slds-col" style="width: 0%;">
                                                 <label class="slds-form-element__label" for="rebaseSourceList">
-                                                <apex:outputText value="ource Environment" /><!-- TODO: Replace hard coded value with SOURCE_ENVIRONMENT -->
+                                                <apex:outputText value="Source Environment" /><!-- TODO: Replace hard coded value with SOURCE_ENVIRONMENT -->
                                                 </label>
                                                 <apex:selectList id="rebaseSourceList" html-data-id="rebaseSourceList" value="{!rebaseSource}" multiselect="false" size="1" styleClass="slds-select" >
                                                     <apex:selectOptions value="{!rebaseSourceEnvironments}" />

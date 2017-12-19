@@ -1726,6 +1726,42 @@
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Registro_Banco_NO</fullName>
+        <field>Registro_Banco__c</field>
+        <formula>&quot;NO&quot;</formula>
+        <name>Registro Banco NO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Registro_Banco_SI</fullName>
+        <field>Registro_Banco__c</field>
+        <formula>&quot;Sí&quot;</formula>
+        <name>Registro Banco SI</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Registro_Inversiones_NO</fullName>
+        <field>Registro_Inversiones__c</field>
+        <formula>&quot;No&quot;</formula>
+        <name>Registro Inversiones NO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Registro_Inversiones_SI</fullName>
+        <field>Registro_Inversiones__c</field>
+        <formula>&quot;Sí&quot;</formula>
+        <name>Registro Inversiones SI</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Setea_campo_Motivo_rechazo_a_vacio</fullName>
         <field>Motivo_rechazo__c</field>
         <name>Setea campo Motivo rechazo a vacio</name>
@@ -1923,6 +1959,36 @@
         </criteriaItems>
         <description>Cuando la casilla &quot;MAC recibido Jefe de Grupo&quot; es verdadera se actualiza &quot;Fecha recepción MAC&quot;</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Actualiza Registro Inversiones Sí%2C Banco No en Leads de Inversiones</fullName>
+        <actions>
+            <name>Registro_Banco_NO</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Registro_Inversiones_SI</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Cuando el Owner pertenezca a Inversiones, actualiza los valores de Registro Inversiones =Sí y Registro Banco=No.</description>
+        <formula>OR(Owner:User.Profile.Name =&quot;Banca Inversiones Ejecutivo&quot;,Owner:User.Profile.Name =&quot;Banca Inversiones AP Ejecutivo&quot;,Owner:User.Profile.Name =&quot;Banca Inversiones Supervisor&quot;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Actualiza Registro Inversiones%3DNo%2C Banco%3DSí en Leads de Banco</fullName>
+        <actions>
+            <name>Registro_Banco_SI</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Registro_Inversiones_NO</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Cuando el Owner No pertenezca a Inversiones, actualiza los valores de Registro Inversiones =No y Registro Banco=Sí.</description>
+        <formula>AND(Owner:User.Profile.Name &lt;&gt;&quot;Banca Inversiones Ejecutivo&quot;,Owner:User.Profile.Name &lt;&gt;&quot;Banca Inversiones AP Ejecutivo&quot;,Owner:User.Profile.Name &lt;&gt;&quot;Banca Inversiones Supervisor&quot;)</formula>
+        <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
         <fullName>Actualiza campo Creacion Cliente</fullName>
@@ -2268,7 +2334,7 @@
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7 AND 8 AND 9</booleanFilter>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7 AND 8 AND 9 AND 10</booleanFilter>
         <criteriaItems>
             <field>Lead.RecordTypeId</field>
             <operation>equals</operation>
@@ -2308,6 +2374,10 @@
         </criteriaItems>
         <criteriaItems>
             <field>Lead.Boletin_Comercial__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Name_and_RUT_from_BICE_client__c</field>
             <operation>notEqual</operation>
         </criteriaItems>
         <description>Retail Banking Persona Jurídica Ejecutivos de Cuenta.

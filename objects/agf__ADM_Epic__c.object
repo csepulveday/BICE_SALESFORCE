@@ -162,6 +162,17 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>agf__End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
         <fullName>agf__Health__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -193,6 +204,20 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>agf__Performance_Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Performance Lead</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Performance_Lead_Epics</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>agf__Priority__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -219,6 +244,32 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>agf__Scheduled_Build__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Scheduled Build</label>
+        <referenceTo>agf__ADM_Build__c</referenceTo>
+        <relationshipLabel>Epics</relationshipLabel>
+        <relationshipName>Epics</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>agf__Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
     </fields>
     <fields>
         <fullName>agf__T_Shirt_Size__c</fullName>

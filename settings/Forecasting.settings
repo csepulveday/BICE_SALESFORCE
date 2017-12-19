@@ -97,6 +97,7 @@
         <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>bestcaseonly</forecastedCategoryApiNames>
+        <hasProductFamily>false</hasProductFamily>
         <isAmount>true</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>false</isQuantity>
@@ -239,6 +240,10 @@
             <label>¿Requiere enrolamiento?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dz</field>
+            <label>¿Requiere gestionar línea?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4100000WD0Dr</field>
             <label>¿Requiere validación subgerente?</label>
         </opportunityListFieldsLabelMappings>
@@ -751,14 +756,6 @@
             <label>Productos bancarios</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4100000WD0Dm</field>
-            <label>Proposal Delivered</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N4100000WD0Dn</field>
-            <label>Proposal Required</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N4100000WD0Dy</field>
             <label>Propuesta</label>
         </opportunityListFieldsLabelMappings>
@@ -767,12 +764,16 @@
             <label>Propuesta Creada</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4100000cUlJK</field>
-            <label>Requiere tarifa especial</label>
+            <field>00N4100000WD0Dm</field>
+            <label>Propuesta entregada</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4100000WD0Dz</field>
-            <label>Requires credit management?</label>
+            <field>00N4100000WD0Dn</field>
+            <label>Requiere propuesta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJK</field>
+            <label>Requiere tarifa especial</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4100000cUlJL</field>
@@ -891,6 +892,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00N4100000WD0EK</field>
+            <field>00N4100000WD0Dz</field>
             <field>00N4100000WD0Dr</field>
             <field>00N4100000WD0Cs</field>
             <field>00N4100000WD0Ct</field>
@@ -1019,12 +1021,11 @@
             <field>00N4100000cWrb3</field>
             <field>00N4100000WD0E7</field>
             <field>00N4100000WD0EI</field>
-            <field>00N4100000WD0Dm</field>
-            <field>00N4100000WD0Dn</field>
             <field>00N4100000WD0Dy</field>
             <field>00N4100000WD0Dx</field>
+            <field>00N4100000WD0Dm</field>
+            <field>00N4100000WD0Dn</field>
             <field>00N4100000cUlJK</field>
-            <field>00N4100000WD0Dz</field>
             <field>00N4100000cUlJL</field>
             <field>00N4100000WD0EL</field>
             <field>00N4100000WD0EM</field>
@@ -1069,6 +1070,7 @@
         <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>bestcaseonly</forecastedCategoryApiNames>
+        <hasProductFamily>false</hasProductFamily>
         <isAmount>false</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>true</isQuantity>
@@ -1211,6 +1213,10 @@
             <label>¿Requiere enrolamiento?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dz</field>
+            <label>¿Requiere gestionar línea?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4100000WD0Dr</field>
             <label>¿Requiere validación subgerente?</label>
         </opportunityListFieldsLabelMappings>
@@ -1723,14 +1729,6 @@
             <label>Productos bancarios</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4100000WD0Dm</field>
-            <label>Proposal Delivered</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N4100000WD0Dn</field>
-            <label>Proposal Required</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N4100000WD0Dy</field>
             <label>Propuesta</label>
         </opportunityListFieldsLabelMappings>
@@ -1739,12 +1737,16 @@
             <label>Propuesta Creada</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4100000cUlJK</field>
-            <label>Requiere tarifa especial</label>
+            <field>00N4100000WD0Dm</field>
+            <label>Propuesta entregada</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4100000WD0Dz</field>
-            <label>Requires credit management?</label>
+            <field>00N4100000WD0Dn</field>
+            <label>Requiere propuesta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJK</field>
+            <label>Requiere tarifa especial</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4100000cUlJL</field>
@@ -1863,6 +1865,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00N4100000WD0EK</field>
+            <field>00N4100000WD0Dz</field>
             <field>00N4100000WD0Dr</field>
             <field>00N4100000WD0Cs</field>
             <field>00N4100000WD0Ct</field>
@@ -1991,12 +1994,11 @@
             <field>00N4100000cWrb3</field>
             <field>00N4100000WD0E7</field>
             <field>00N4100000WD0EI</field>
-            <field>00N4100000WD0Dm</field>
-            <field>00N4100000WD0Dn</field>
             <field>00N4100000WD0Dy</field>
             <field>00N4100000WD0Dx</field>
+            <field>00N4100000WD0Dm</field>
+            <field>00N4100000WD0Dn</field>
             <field>00N4100000cUlJK</field>
-            <field>00N4100000WD0Dz</field>
             <field>00N4100000cUlJL</field>
             <field>00N4100000WD0EL</field>
             <field>00N4100000WD0EM</field>
@@ -2041,6 +2043,7 @@
         <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>bestcaseonly</forecastedCategoryApiNames>
+        <hasProductFamily>true</hasProductFamily>
         <isAmount>true</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>false</isQuantity>
@@ -2183,6 +2186,10 @@
             <label>¿Requiere enrolamiento?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dz</field>
+            <label>¿Requiere gestionar línea?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4100000WD0Dr</field>
             <label>¿Requiere validación subgerente?</label>
         </opportunityListFieldsLabelMappings>
@@ -2695,14 +2702,6 @@
             <label>Productos bancarios</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4100000WD0Dm</field>
-            <label>Proposal Delivered</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N4100000WD0Dn</field>
-            <label>Proposal Required</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N4100000WD0Dy</field>
             <label>Propuesta</label>
         </opportunityListFieldsLabelMappings>
@@ -2711,12 +2710,16 @@
             <label>Propuesta Creada</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4100000cUlJK</field>
-            <label>Requiere tarifa especial</label>
+            <field>00N4100000WD0Dm</field>
+            <label>Propuesta entregada</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4100000WD0Dz</field>
-            <label>Requires credit management?</label>
+            <field>00N4100000WD0Dn</field>
+            <label>Requiere propuesta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJK</field>
+            <label>Requiere tarifa especial</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4100000cUlJL</field>
@@ -2835,6 +2838,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00N4100000WD0EK</field>
+            <field>00N4100000WD0Dz</field>
             <field>00N4100000WD0Dr</field>
             <field>00N4100000WD0Cs</field>
             <field>00N4100000WD0Ct</field>
@@ -2963,12 +2967,11 @@
             <field>00N4100000cWrb3</field>
             <field>00N4100000WD0E7</field>
             <field>00N4100000WD0EI</field>
-            <field>00N4100000WD0Dm</field>
-            <field>00N4100000WD0Dn</field>
             <field>00N4100000WD0Dy</field>
             <field>00N4100000WD0Dx</field>
+            <field>00N4100000WD0Dm</field>
+            <field>00N4100000WD0Dn</field>
             <field>00N4100000cUlJK</field>
-            <field>00N4100000WD0Dz</field>
             <field>00N4100000cUlJL</field>
             <field>00N4100000WD0EL</field>
             <field>00N4100000WD0EM</field>
@@ -3013,6 +3016,7 @@
         <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>bestcaseonly</forecastedCategoryApiNames>
+        <hasProductFamily>true</hasProductFamily>
         <isAmount>false</isAmount>
         <isAvailable>true</isAvailable>
         <isQuantity>true</isQuantity>
@@ -3155,6 +3159,10 @@
             <label>¿Requiere enrolamiento?</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N4100000WD0Dz</field>
+            <label>¿Requiere gestionar línea?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N4100000WD0Dr</field>
             <label>¿Requiere validación subgerente?</label>
         </opportunityListFieldsLabelMappings>
@@ -3667,14 +3675,6 @@
             <label>Productos bancarios</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4100000WD0Dm</field>
-            <label>Proposal Delivered</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N4100000WD0Dn</field>
-            <label>Proposal Required</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N4100000WD0Dy</field>
             <label>Propuesta</label>
         </opportunityListFieldsLabelMappings>
@@ -3683,12 +3683,16 @@
             <label>Propuesta Creada</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4100000cUlJK</field>
-            <label>Requiere tarifa especial</label>
+            <field>00N4100000WD0Dm</field>
+            <label>Propuesta entregada</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4100000WD0Dz</field>
-            <label>Requires credit management?</label>
+            <field>00N4100000WD0Dn</field>
+            <label>Requiere propuesta</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N4100000cUlJK</field>
+            <label>Requiere tarifa especial</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00N4100000cUlJL</field>
@@ -3807,6 +3811,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00N4100000WD0EK</field>
+            <field>00N4100000WD0Dz</field>
             <field>00N4100000WD0Dr</field>
             <field>00N4100000WD0Cs</field>
             <field>00N4100000WD0Ct</field>
@@ -3935,12 +3940,11 @@
             <field>00N4100000cWrb3</field>
             <field>00N4100000WD0E7</field>
             <field>00N4100000WD0EI</field>
-            <field>00N4100000WD0Dm</field>
-            <field>00N4100000WD0Dn</field>
             <field>00N4100000WD0Dy</field>
             <field>00N4100000WD0Dx</field>
+            <field>00N4100000WD0Dm</field>
+            <field>00N4100000WD0Dn</field>
             <field>00N4100000cUlJK</field>
-            <field>00N4100000WD0Dz</field>
             <field>00N4100000cUlJL</field>
             <field>00N4100000WD0EL</field>
             <field>00N4100000WD0EM</field>

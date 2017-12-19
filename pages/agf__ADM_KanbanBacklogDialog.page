@@ -1,5 +1,7 @@
 <apex:page id="kanbanBacklogDialog" sidebar="false" controller="agf.ADM_KanbanBoardController" standardstylesheets="false">
-
+<style>
+	#backlogFilterSearch{display:inline-block;}
+</style>
 <div id="backlogDialog" class="ui-dialog">
 		<div id="backlogDialogLoading">
 			<div class="fa fa-refresh fa-spin"></div>
@@ -13,22 +15,34 @@
 			
 			<div class="ui-dialog-error"></div>
 	
-			<center>
+				<div class="backlogFilterSearchContainer">
 				Select column to add work to:
 				<select id="backlogColumnSelect"></select>
-			</center>
+				
+				<span class="textSpan">Type word to filter work:</span>
+				<input id="backlogFilterSearch" type="text" name="text" value="" autocomplete="off" onkeyup="updateFilterForImport();" />
+				</div>
+			
+
 		</div>
 
-		<div class="workList" id="backlogDialogWorkList"></div>
+
+		<div class="workList" id="backlogDialogWorkList">
+		text
+		</div>
 		<div class="workList" id="backlogDialogRecentWorkList" style="display:none;"></div>
 </div>
 
+
 <script id="backlog-dialog-worklist-template" type="text/x-handlebars-template">
-	<div class="backlogRow">
+	<div class="backlogRow backlog-workId-{{ workId }} backlog-sprint-{{ sprint }}">
 		<div class="backlogCheckbox"><input type="checkbox" name="workList" id="work-{{ id }}" value="{{ id }}" /></div>
 		<div class="backlogWorkId"><label for="work-{{ id }}"><a href="/{{ id }}" target="_blank">{{ workId }}</a></label></div>
 		<div class="backlogRecordType"><label for="work-{{ id }}">{{ recordType }}</label></div>
 		<div class="backlogSubject"><label for="work-{{ id }}">{{ workSubject }}</label></div>
+		<div class="backlogSprint"><label for="work-{{ id }}">{{ sprint }}</label></div>
+		<div class="backlogEpic"><label for="work-{{ id }}">{{ epic }}</label></div>
+		<div class="backlogBuild"><label for="work-{{ id }}">{{ build }}</label></div>
 	</div>
 </script>
 
@@ -42,6 +56,37 @@ function displayBacklogDialogError(message) {
 		$('#backlogDialog .ui-dialog-error').html('Transaction rolled back: ' + trimErrorMessage(message)).show();
 	}
 }
+
+function updateFilterForImport() {
+	console.log('Inside update');
+	var text = $('#backlogFilterSearch').val();
+	console.log(text);
+	$('.backlogRow').hide();
+	var className = '';
+	
+	// Search:
+	if ($('#backlogFilterSearch').val().length > 0) {
+		console.log('Filter search');
+		console.log($('#backlogFilterSearch').val());
+		className += '.backlogRow:icontains("' + $('#backlogFilterSearch').val() + '")'
+	}
+
+	if (className.length === 0) {
+		$('.backlogRow').show();
+	}
+	else {
+		$('.backlogRowHeader').show();
+		$(className).show();
+	}
+		
+
+}	
+
+jQuery.expr[":"].icontains = jQuery.expr.createPseudo(function (arg) {                                                                                                                                                                
+    return function (elem) {                                                            
+        return jQuery(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;        
+    };                                                                                  
+});
 
 function showBox(box,tab) {
 	$('#backlogDialogHeader > ul.sTabs > li').removeClass('on');
@@ -64,7 +109,10 @@ function loadBacklogDialog() {
     showBox('#backlogDialogWorkList','#tabBacklog a'); // set tab default back to Backlog
     $('#backlogSaveButton').hide();
 	$('#backlogDialog').find('select').empty();
-    $('#backlogDialog .workList').html('<div class="spacer"></div>');
+    //$('#backlogDialog .workList').html('<div class="spacer"></div>');
+    $('#backlogDialog .workList').html('<div class="spacer"></div><div class="backlogRow backlogRowHeader"><div class="backlogCheckbox">SELECT</div><div class="backlogWorkId">WORK ID</div><div class="backlogRecordType">RECORD TYPE</div><div class="backlogSubject">SUBJECT</div><div class="backlogSprint">SPRINT</div><div class="backlogEpic">EPIC</div><div class="backlogBuild">BUILD</div></div>');
+
+   // $('#backlogDialog .workList').html('<div class="spacer"></div><div class="spacer"></div>');
     displayBacklogDialogError(null);
 	resizeBacklogDialog();
     var backLogCount = 100;
@@ -77,11 +125,22 @@ function loadBacklogDialog() {
 			// backlog
 			if (result.backLogWorks.length > 0) {
 				$.each(result.backLogWorks, function(index, value) {
+					var epicval = value[nameSpace + 'Epic_Name__c'];
+					if(value[nameSpace + 'Epic_Name__c']==null)
+						value[nameSpace + 'Epic_Name__c'] = '-';
+					if(value[nameSpace + 'Sprint_Name__c']==null)
+						value[nameSpace + 'Sprint_Name__c'] = '-';
+					if(value[nameSpace + 'Scheduled_Build_Name__c']==null)
+						value[nameSpace + 'Scheduled_Build_Name__c'] = '-';
+					console.log('Value epic : ', value[nameSpace + 'Epic_Name__c']);
 					$('#backlogDialogWorkList').append(backlogWorkListTemplate({
 		                id:value.Id,
 		                workId:value.Name,
 		                workSubject:value[nameSpace + 'Subject__c'],
-		                recordType:value.RecordType.Name
+		                recordType:value.RecordType.Name,
+		                sprint:value[nameSpace + 'Sprint_Name__c'],
+		                epic:value[nameSpace + 'Epic_Name__c'],
+		                build:value[nameSpace + 'Scheduled_Build_Name__c'],
 					}));
 				});
 			} else {
@@ -91,11 +150,20 @@ function loadBacklogDialog() {
 			// recent
 			if (result.recentNewWorks.length > 0) {
 				$.each(result.recentNewWorks, function(index, value) {
+					if(value[nameSpace + 'Epic_Name__c']==null)
+						value[nameSpace + 'Epic_Name__c'] = '-';
+					if(value[nameSpace + 'Sprint_Name__c']==null)
+						value[nameSpace + 'Sprint_Name__c'] = '-';
+					if(value[nameSpace + 'Scheduled_Build_Name__c']==null)
+						value[nameSpace + 'Scheduled_Build_Name__c'] = '-';
 					$('#backlogDialogRecentWorkList').append(backlogWorkListTemplate({
 		                id:value.Id,
 		                workId:value.Name,
 		                workSubject:value[nameSpace + 'Subject__c'],
-		                recordType:value.RecordType.Name
+		                recordType:value.RecordType.Name,
+		                sprint:value[nameSpace + 'Sprint_Name__c'],
+		                epic:value[nameSpace + 'Epic_Name__c'],
+		                build:value[nameSpace + 'Scheduled_Build_Name__c'],
 					}));
 				});
 			} else {
@@ -122,7 +190,7 @@ $(function() {
 	backlogDialog = $("#backlogDialog").dialog({
         autoOpen: false,
         resizable: false,
-        width:700,
+        width:750,
         height:$(window).height() - 100,
         modal: true,
         title: "Backlog",

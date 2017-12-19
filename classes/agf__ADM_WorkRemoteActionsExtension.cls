@@ -15,6 +15,10 @@ global class ADM_WorkRemoteActionsExtension {
         return null;
     }
     @RemoteAction
+    global static agf.ADM_WorkAssignment.PriorityMetaData getPriorityMetaData(String Id) {
+        return null;
+    }
+    @RemoteAction
     global static void setWorkPanelViewPreference(Boolean toggleValue) {
 
     }

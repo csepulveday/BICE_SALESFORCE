@@ -34,21 +34,18 @@
             var defaultSprints = {!defaultSprints};
             var totalSprints = {!totalSprints};
             var maxSprints = {!maxSprints};  
-            var statusValues = {!statusValuesAsJson};
+	    var statusValues =  vfJsonVar('{!JSINHTMLENCODE(statusValuesAsJson)}')
+
     </script>
     
     <div id="dialog" title="Saving">
         <div id="progressbar"></div>
     </div>
  
-
-<div style="border:1px #ccc solid;background:#eee;padding:10px;border-radius:10px;margin:0px 26px 20px 0px;line-height:1.5;">
-	<b>Goodbye Prioritizer. Hello Unified Wall.</b><br/>
-	In a few weeks the Prioritizer will be replaced by the Unified Wall. If has a very similar feature set plus a
-	number of brand new features including multi item drag and drop, customizable columns, a richer work editor as
-	well as full screen support. To view your team's Unified Wall now, <a href="/apex/ADM_Wall?teamid={!team.Id}">click here</a>. To read more about what the
-	Unified Wall has to offer view our documentation here:
-	<a target="_blank" href="https://sites.google.com/a/salesforce.com/gus/gus-tools/unified-wall">https://sites.google.com/a/salesforce.com/gus/gus-tools/unified-wall</a>
+<div style="position:fixed;top:0;left:0;right:0;z-index:5000;text-align:center;">
+	<div style="display:inline-block;padding:6px 10px;background:orange;color:#fff;font-weight:bold;font-size:10px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;">
+	This tool is being replaced by the <a href="/apex/ADM_WorkManager?teamid={!teamId}" style="text-decoration:underline;color:#fff;">Work Manager</a>. Please visit the <a target="_blank" href="https://gus.my.salesforce.com/0F9B000000066Nz" style="text-decoration:underline;color:#fff;">Work Manager Chatter Group</a> for questions and feedback.
+	</div>
 </div>
 
     <div id="dropContainer">

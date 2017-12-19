@@ -42,6 +42,11 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>agf__Team</fullName>
+        <fields>Name</fields>
+        <label>Team</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
@@ -78,6 +83,31 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>agf__Capex_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This team can mark User Stories and Tasks as Capital Expenditures</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This team can mark User Stories and Tasks as Capital Expenditures</inlineHelpText>
+        <label>Capitalizable</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>agf__Capex_Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Capitalization Lead</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Capex_Leads</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>agf__Chatter_Groups__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -89,6 +119,20 @@ Valid IDs will be rendered into links to Chatter Groups.</inlineHelpText>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>agf__Cloud_LU__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cloud</label>
+        <referenceTo>agf__ADM_Cloud__c</referenceTo>
+        <relationshipLabel>Teams</relationshipLabel>
+        <relationshipName>Teams</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>agf__Cloud__c</fullName>
@@ -221,6 +265,18 @@ Valid IDs will be rendered into links to Chatter Groups.</inlineHelpText>
         </valueSet>
     </fields>
     <fields>
+        <fullName>agf__Colocation__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Colocation</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
         <fullName>agf__Copy_Record_Type_Name__c</fullName>
         <defaultValue>$RecordType.Name</defaultValue>
         <deprecated>false</deprecated>
@@ -232,6 +288,48 @@ Valid IDs will be rendered into links to Chatter Groups.</inlineHelpText>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Definition_of_Done_Check__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Definition of Done Check</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>agf__Definition_of_Done__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Definition of Done</label>
+        <length>32768</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>agf__Definition_of_Ready_Check__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Definition of Ready Check</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>agf__Definition_of_Ready__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Definition of Ready</label>
+        <length>32768</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
     </fields>
     <fields>
         <fullName>agf__Distribution_Lists__c</fullName>
@@ -556,6 +654,40 @@ Valid IDs will be rendered into links to Chatter Groups.</inlineHelpText>
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>agf__PO_Certified__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Is Product Owner certified?</description>
+        <externalId>false</externalId>
+        <formula>agf__Product_Owner__r.agf__Certified_Product_Owner__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Is Product Owner certified?</inlineHelpText>
+        <label>PO Certified</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>agf__PO_more_than_one_team__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>PO more than one team</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>agf__Parent_Cloud__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>agf__Cloud_LU__r.agf__Parent_Cloud__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Parent Cloud</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>agf__Product_Area__c</fullName>
@@ -906,6 +1038,19 @@ Valid IDs will be rendered into links to Chatter Groups.</inlineHelpText>
         </valueSet>
     </fields>
     <fields>
+        <fullName>agf__Product_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Product Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Product_Owner_For_Team</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>agf__Release_Coverage_Needed__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
@@ -989,6 +1134,41 @@ Valid IDs will be rendered into links to Chatter Groups.</inlineHelpText>
         <visibleLines>10</visibleLines>
     </fields>
     <fields>
+        <fullName>agf__SM_Certified__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Is ScrumMaster certified?</description>
+        <externalId>false</externalId>
+        <formula>agf__Scrum_Master__r.agf__Certified_Scrum_Master__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Is ScrumMaster certified?</inlineHelpText>
+        <label>SM Certified</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>agf__SM_more_than_one_team__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>SM more than one team</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>agf__Scrum_Master__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Scrum Master</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Scrum_Master_For_Team</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>agf__Scrum_Meeting_Time_Location__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -1036,6 +1216,16 @@ Valid IDs will be rendered into links to Chatter Groups.</inlineHelpText>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>agf__Status_Change_Notify__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Status Change Notify</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>agf__Status_Report_Format__c</fullName>
@@ -1112,6 +1302,31 @@ Valid IDs will be rendered into links to Chatter Groups.</inlineHelpText>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Team_Size__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Team Size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Tenure_on_team__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>One year tenure on team</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
     </fields>
     <fields>
         <fullName>agf__Total_Dev_Allocation__c</fullName>
@@ -2124,6 +2339,18 @@ Valid IDs will be rendered into links to Chatter Groups.</inlineHelpText>
     </validationRules>
     <visibility>Public</visibility>
     <webLinks>
+        <fullName>agf__Kanban_Sfx_Button</fullName>
+        <availability>online</availability>
+        <description>Button to link to Kanban page from Team SFX page</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Kanban</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/agf__adm_kanbansplash?teamid={!agf__ADM_Scrum_Team__c.Id}</url>
+    </webLinks>
+    <webLinks>
         <fullName>agf__Prioritizer</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
@@ -2132,7 +2359,7 @@ Valid IDs will be rendered into links to Chatter Groups.</inlineHelpText>
         <masterLabel>Prioritizer</masterLabel>
         <openType>replace</openType>
         <protected>false</protected>
-        <url>/apex/adm_prior3?retURL=&apos;/scrumteamid&apos;&amp;scrumteamId={!agf__ADM_Scrum_Team__c.Id}</url>
+        <url>/apex/agf__adm_prior3?retURL=&apos;/scrumteamid&apos;&amp;scrumteamId={!agf__ADM_Scrum_Team__c.Id}</url>
     </webLinks>
     <webLinks>
         <fullName>agf__Unified_Wall</fullName>
@@ -2143,6 +2370,18 @@ Valid IDs will be rendered into links to Chatter Groups.</inlineHelpText>
         <masterLabel>Unified Wall</masterLabel>
         <openType>replace</openType>
         <protected>false</protected>
-        <url>/apex/ADM_Wall?retURL=&apos;/scrumteamid&apos;&amp;teamId={!agf__ADM_Scrum_Team__c.Id}</url>
+        <url>/apex/agf__ADM_Wall?retURL=&apos;/scrumteamid&apos;&amp;teamId={!agf__ADM_Scrum_Team__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>agf__Work_Manager_SFX_Button</fullName>
+        <availability>online</availability>
+        <description>Button on Team page to link to Work Manager</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Work Manager</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/agf__adm_WorkManager?teamid={!agf__ADM_Scrum_Team__c.Id}</url>
     </webLinks>
 </CustomObject>

@@ -170,7 +170,7 @@
         <fullName>agf__Dev_Approval__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Dev Approval</label>
+        <label>Engineering Exec Approval</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
@@ -181,7 +181,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Dev</label>
+        <label>Engineering Exec</label>
         <referenceTo>User</referenceTo>
         <relationshipName>R00NT0000000tzRbMAI</relationshipName>
         <required>false</required>
@@ -298,7 +298,7 @@
         <fullName>agf__QA_Approval__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>QA Approval</label>
+        <label>Cross-Cloud Exec Approval</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
@@ -309,7 +309,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>QA</label>
+        <label>Cross-Cloud Exec</label>
         <referenceTo>User</referenceTo>
         <relationshipName>R00NT0000000tzTHMAY</relationshipName>
         <required>false</required>

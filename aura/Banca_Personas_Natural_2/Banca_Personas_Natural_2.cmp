@@ -61,10 +61,10 @@
                     </tr>
                 </thead>
                 <tbody> 
-                    <aura:iteration items="{!v.campList}" var="camp">  
+                    <aura:iteration items="{!v.contacts}" var="camp">  
                         <tr>                            
-                            <td class="bold18px texto_titulo texto-gris">{!camp.Campaign.Name}</td> 
-                            <td class="texto_titulo texto-gris"><ui:outputCurrency value="230000" format="" currencySymbol="$"/></td>
+                            <td class="bold18px texto_titulo texto-gris">Preaprobado</td> <!-- {!camp.Campaign.Name} -->
+                            <td class="texto_titulo texto-gris"><ui:outputCurrency value="{!camp.Monto_Preaprobado__c}" format="" currencySymbol="$"/></td>
                         </tr>
                     </aura:iteration>
                 </tbody>

@@ -292,7 +292,7 @@ function saveMisc() {
 
 	kanbanPreferences = { laneScrolling: laneScrolling };
 
-	Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.ADM_KanbanBoardController.saveKanbanPreferences}', kanbanPreferences, function(result, event) {
+	Visualforce.remoting.Manager.invokeAction('{!JSENCODE($RemoteAction.ADM_KanbanBoardController.saveKanbanPreferences)}', kanbanPreferences, function(result, event) {
 		$("#settingsDialog").removeClass('boardloading');
         $('button#saveButton').removeAttr('disabled');
         $('button#saveButton span').text('Save');
@@ -400,7 +400,7 @@ function refreshSettings() {
 	    $('.hiddenSetting').css('display','table-row');
     }
     
-    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.ADM_KanbanBoardController.getColumnsAndWorksAsJSON}', '{!teamId}', function(result, event) {
+    Visualforce.remoting.Manager.invokeAction('{!JSENCODE($RemoteAction.ADM_KanbanBoardController.getColumnsAndWorksAsJSON)}', '{!teamId}', function(result, event) {
 		if (event.status) {
 			kanbanData = (new Function('return ' + result))();
 		    kanbanObject = kanbanData.columns;
@@ -732,7 +732,7 @@ function columnUpdate() {
     $('.propertyFormOptions').css('visibility','hidden');
 
 	console.log(columns);
-    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.ADM_KanbanBoardController.saveColumns}', columns, function(result, event) {
+    Visualforce.remoting.Manager.invokeAction('{!JSENCODE($RemoteAction.ADM_KanbanBoardController.saveColumns)}', columns, function(result, event) {
         if (event.status) {
             // Save good, assign ID, clear errors
             console.log('Save good!');
@@ -806,7 +806,7 @@ function columnRemove() {
 	$('#propertyPanel input[type=radio]').prop('checked',false).removeAttr('disabled');
 
 	console.log(columns);
-    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.ADM_KanbanBoardController.saveColumns}', columns, function(result, event) {
+    Visualforce.remoting.Manager.invokeAction('{!JSENCODE($RemoteAction.ADM_KanbanBoardController.saveColumns)}', columns, function(result, event) {
         if (event.status) {
 			$('#typeUpdate,#typeChild,#typeSibling,#typeSwimlane').prop('checked',false);
             $('.settingsColumn.remove').remove();
@@ -1097,8 +1097,8 @@ $(function() {
 		recordtype:'userstory',
 		id:'000',
 		worktitle:'W-123456',
-		assigneepicurl:'{!currentUserPhoto}',
-		qePicUrl:'{!currentUserPhoto}',
+		assigneepicurl:'{!HTMLENCODE(currentUserPhoto)}',
+		qePicUrl:'{!HTMLENCODE(currentUserPhoto)}',
 		numberOfTasks:3,
         numberOfPosts:2,
         priority:'P1',

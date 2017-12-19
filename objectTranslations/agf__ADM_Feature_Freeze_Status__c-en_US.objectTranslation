@@ -94,6 +94,23 @@
         </picklistValues>
     </fields>
     <fields>
+        <help><!-- Has the team tested their functionality on one.app for all the supported browsers as per the current S1 Support Matrix? --></help>
+        <label><!-- Release Tested on all one.app Browsers --></label>
+        <name>agf__All_Supported_one_app_Browsers_Tested__c</name>
+        <picklistValues>
+            <masterLabel>N/A for this team</masterLabel>
+            <translation><!-- N/A for this team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <help><!-- Please provide details on why the team is in Yellow or Red status in  terms of meeting FF --></help>
         <label><!-- Assessment Details --></label>
         <name>agf__Assessment_Details__c</name>
@@ -168,6 +185,40 @@
         </picklistValues>
     </fields>
     <fields>
+        <help><!-- Has the team certified the Core Major Release candidate against all versions of the supported Hybrid Containers that are in development to be part of the S1 Major Release as per the current S1 Support Matrix?  (e.g. iOS, Android, Windows) --></help>
+        <label><!-- Release Tested on in-dev S1 Hybrid Apps --></label>
+        <name>agf__Core_Release_against_Hybrid_Apps_in_Dev__c</name>
+        <picklistValues>
+            <masterLabel>N/A for this team</masterLabel>
+            <translation><!-- N/A for this team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Has the team certified the Core Major Release candidate against all &apos;Production&apos; versions of the supported Hybrid Containers as per the current S1 Support Matrix?  (e.g. iOS, Android, Windows) --></help>
+        <label><!-- Release Tested on Prod S1 Hybrid Apps --></label>
+        <name>agf__Core_Release_against_Prod_Hybrid_Apps__c</name>
+        <picklistValues>
+            <masterLabel>N/A for this team</masterLabel>
+            <translation><!-- N/A for this team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <help><!-- DB Upgrade Scripts Complete and Verified (Yes/No) --></help>
         <label><!-- DB Upgrade Scripts Complete and Verified --></label>
         <name>agf__DB_Upgrade_Scripts_Complete_and_Verified__c</name>
@@ -199,18 +250,18 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Dev Leadership Confirmation Details --></label>
+        <label><!-- Cloud Leadership Confirmation Details --></label>
         <name>agf__Dev_Leadership_Confirmation_Details__c</name>
     </fields>
     <fields>
         <help><!-- Used by Development Leader responsible for confirming team signoff. --></help>
-        <label><!-- Dev Leadership Sign Off Confirmed --></label>
+        <label><!-- Cloud Leadership Sign Off Confirmed --></label>
         <name>agf__Dev_Leadership_Sign_Off_Confirmed__c</name>
     </fields>
     <fields>
-        <label><!-- Dev Signoff By --></label>
+        <label><!-- Cloud Lead Name --></label>
         <name>agf__Dev_Signoff_By__c</name>
-        <relationshipLabel><!-- Freeze Team Status (Dev Signoff By) --></relationshipLabel>
+        <relationshipLabel><!-- Freeze Team Status (Cloud Lead Name) --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- Explain what your next steps are and what assistance you need. --></help>
@@ -449,6 +500,11 @@
     <fields>
         <label><!-- Explain Open Feature Requests --></label>
         <name>agf__Explain_Open_Feature_Requests__c</name>
+    </fields>
+    <fields>
+        <help><!-- Explain Open Non Deterministic Test (NDT) Not Required for Sign-off --></help>
+        <label><!-- Explain Open Non Deterministic Test --></label>
+        <name>agf__Explain_Open_Non_Deterministic_Test_NDT__c</name>
     </fields>
     <fields>
         <help><!-- P012 Bugs = Zero --></help>
@@ -832,6 +888,11 @@ Completed all action items assigned to them by ZD Team --></help>
         <name>agf__Java_Package_PLSQL_Coverage__c</name>
     </fields>
     <fields>
+        <help><!-- Links you to the best place to ask questions or find important information, like the S1 Support Matrix for the current release. --></help>
+        <label><!-- LINK to S1 Chatter Group --></label>
+        <name>agf__LINK_to_S1_Chatter_Group__c</name>
+    </fields>
+    <fields>
         <help><!-- No team should put the release at risk – Any Feature or change that is large enough or invasive enough to risk the release is behind a permission or equivalent safety valve (Yes/No) --></help>
         <label><!-- Large/Invasive changes are behind a perm --></label>
         <name>agf__Large_Invasive_changes_are_behind_a_perm__c</name>
@@ -1129,14 +1190,29 @@ Features with known performance risk are disabled by default (behind perm, confi
         <name>agf__Post_Feature_Freeze_Updates__c</name>
     </fields>
     <fields>
+        <help><!-- Provide details if &quot;No&quot; is selected for the &quot;Core Release against Hybrid Apps in Dev&quot; field. --></help>
+        <label><!-- Provide Details for Core/In-dev Hybrid --></label>
+        <name>agf__Provide_Details_for_Core_Hybrid_in_Dev__c</name>
+    </fields>
+    <fields>
         <help><!-- Provide details if Scale Impact is not documented. --></help>
         <label><!-- Provide Details for Scale Impact --></label>
         <name>agf__Provide_Details_for_Scale_Impact__c</name>
     </fields>
     <fields>
+        <help><!-- Provide details if &quot;No&quot; is selected for the &quot;All supported one.app browsers tested&quot; field. --></help>
+        <label><!-- Provide Details for one.app Testing --></label>
+        <name>agf__Provide_Details_for_one_app_Testing__c</name>
+    </fields>
+    <fields>
         <help><!-- Provide details explaining how a perm is used to disable incomplete features. --></help>
         <label><!-- Provide details on your features perm --></label>
         <name>agf__Provide_behind_perm_details__c</name>
+    </fields>
+    <fields>
+        <help><!-- Provide details if &quot;No&quot; is selected for the &quot;Core Release against Prod Hybrid Apps&quot; field. --></help>
+        <label><!-- Provide Details for Core/Prod Hybrid --></label>
+        <name>agf__Provide_details_for_Core_Prod_Hybrid__c</name>
     </fields>
     <fields>
         <help><!-- FF Criteria: Feature Enablement must be detailed in Solutions Overview (SO) --></help>

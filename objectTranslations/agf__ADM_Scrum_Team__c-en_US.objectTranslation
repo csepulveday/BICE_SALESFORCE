@@ -10,11 +10,26 @@
         <relationshipLabel><!-- Teams --></relationshipLabel>
     </fields>
     <fields>
+        <help><!-- This team can mark User Stories and Tasks as Capital Expenditures --></help>
+        <label><!-- Capitalizable --></label>
+        <name>agf__Capex_Enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Capitalization Lead --></label>
+        <name>agf__Capex_Lead__c</name>
+        <relationshipLabel><!-- Teams (Capitalization Lead) --></relationshipLabel>
+    </fields>
+    <fields>
         <help><!-- Enter a list of Chatter Group IDs separated by commas (ie: 0F9B000000000qR, 0F9B000000000q2). The ID can be found in a Group&apos;s URL.
 
 Valid IDs will be rendered into links to Chatter Groups. --></help>
         <label><!-- Chatter Groups --></label>
         <name>agf__Chatter_Groups__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cloud --></label>
+        <name>agf__Cloud_LU__c</name>
+        <relationshipLabel><!-- Teams --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Department --></label>
@@ -113,8 +128,28 @@ Valid IDs will be rendered into links to Chatter Groups. --></help>
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Colocation --></label>
+        <name>agf__Colocation__c</name>
+    </fields>
+    <fields>
         <label><!-- Copy Record Type Name --></label>
         <name>agf__Copy_Record_Type_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Definition of Done Check --></label>
+        <name>agf__Definition_of_Done_Check__c</name>
+    </fields>
+    <fields>
+        <label><!-- Definition of Done --></label>
+        <name>agf__Definition_of_Done__c</name>
+    </fields>
+    <fields>
+        <label><!-- Definition of Ready Check --></label>
+        <name>agf__Definition_of_Ready_Check__c</name>
+    </fields>
+    <fields>
+        <label><!-- Definition of Ready --></label>
+        <name>agf__Definition_of_Ready__c</name>
     </fields>
     <fields>
         <label><!-- Distribution Lists --></label>
@@ -296,6 +331,19 @@ Valid IDs will be rendered into links to Chatter Groups. --></help>
             <masterLabel>Yellow</masterLabel>
             <translation><!-- Yellow --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Is Product Owner certified? --></help>
+        <label><!-- PO Certified --></label>
+        <name>agf__PO_Certified__c</name>
+    </fields>
+    <fields>
+        <label><!-- PO more than one team --></label>
+        <name>agf__PO_more_than_one_team__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Cloud --></label>
+        <name>agf__Parent_Cloud__c</name>
     </fields>
     <fields>
         <label><!-- Product Area --></label>
@@ -499,6 +547,11 @@ Valid IDs will be rendered into links to Chatter Groups. --></help>
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Product Owner --></label>
+        <name>agf__Product_Owner__c</name>
+        <relationshipLabel><!-- Teams (Product Owner) --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Release Coverage Needed --></label>
         <name>agf__Release_Coverage_Needed__c</name>
     </fields>
@@ -552,6 +605,20 @@ Valid IDs will be rendered into links to Chatter Groups. --></help>
         </picklistValues>
     </fields>
     <fields>
+        <help><!-- Is ScrumMaster certified? --></help>
+        <label><!-- SM Certified --></label>
+        <name>agf__SM_Certified__c</name>
+    </fields>
+    <fields>
+        <label><!-- SM more than one team --></label>
+        <name>agf__SM_more_than_one_team__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scrum Master --></label>
+        <name>agf__Scrum_Master__c</name>
+        <relationshipLabel><!-- Teams (Scrum Master) --></relationshipLabel>
+    </fields>
+    <fields>
         <help><!-- The time and location of the team&apos;s scrum meeting. Include dial-in #, if applicable. --></help>
         <label><!-- Scrum Meeting Time/Location --></label>
         <name>agf__Scrum_Meeting_Time_Location__c</name>
@@ -568,6 +635,10 @@ Valid IDs will be rendered into links to Chatter Groups. --></help>
     <fields>
         <label><!-- Start Date --></label>
         <name>agf__Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Change Notify --></label>
+        <name>agf__Status_Change_Notify__c</name>
     </fields>
     <fields>
         <help><!-- For Status reports for this team, allows you to specify the sections that should be displayed in that report and the order they should be displayed in. Use a space to separate each section. May include: decisions risks blockers milestones participants --></help>
@@ -595,6 +666,14 @@ Valid IDs will be rendered into links to Chatter Groups. --></help>
     <fields>
         <label><!-- Team Queue --></label>
         <name>agf__Team_Queue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Team Size --></label>
+        <name>agf__Team_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- One year tenure on team --></label>
+        <name>agf__Tenure_on_team__c</name>
     </fields>
     <fields>
         <label><!-- Total Dev Allocation --></label>
@@ -674,11 +753,19 @@ Valid IDs will be rendered into links to Chatter Groups. --></help>
         <name>agf__No_Ampersand_in_names</name>
     </validationRules>
     <webLinks>
+        <label><!-- Kanban_Sfx_Button --></label>
+        <name>agf__Kanban_Sfx_Button</name>
+    </webLinks>
+    <webLinks>
         <label><!-- Prioritizer --></label>
         <name>agf__Prioritizer</name>
     </webLinks>
     <webLinks>
         <label><!-- Unified_Wall --></label>
         <name>agf__Unified_Wall</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Work_Manager_SFX_Button --></label>
+        <name>agf__Work_Manager_SFX_Button</name>
     </webLinks>
 </CustomObjectTranslation>

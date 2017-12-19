@@ -13,4 +13,27 @@
     <tab>QA_Test_Cases__c</tab>
     <uiType>Lightning</uiType>
     <utilityBar>LightningService_UtilityBar</utilityBar>
+    <workspaceMappings>
+        <mapping>
+            <tab>QA_Test_Cases__c</tab>
+        </mapping>
+        <mapping>
+            <tab>standard-Account</tab>
+        </mapping>
+        <mapping>
+            <tab>standard-Case</tab>
+        </mapping>
+        <mapping>
+            <tab>standard-Contact</tab>
+        </mapping>
+        <mapping>
+            <tab>standard-Dashboard</tab>
+        </mapping>
+        <mapping>
+            <tab>standard-home</tab>
+        </mapping>
+        <mapping>
+            <tab>standard-report</tab>
+        </mapping>
+    </workspaceMappings>
 </CustomApplication>

@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldUpdates>
+        <fullName>Actualiza_Tiene_Ejecutivo_de_Cuenta</fullName>
+        <field>Tiene_Ejecutivo_de_Cuenta__c</field>
+        <formula>IF( ISBLANK( Ejecutivo_de_Cuenta__c  ) , &quot;&quot;, &quot;Sí&quot;)</formula>
+        <name>Actualiza Tiene Ejecutivo de Cuenta</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualiza_Tiene_Ejecutivo_de_Inversiones</fullName>
+        <field>Tiene_Ejecutivo_de_Inversiones__c</field>
+        <formula>IF( ISBLANK(  Ejecutivo_de_Inversiones__c ) , &quot;&quot;, &quot;Sí&quot;)</formula>
+        <name>Actualiza Tiene Ejecutivo de Inversiones</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Cambia_TR_Cliente_Empresa_en_CIF</fullName>
         <field>RecordTypeId</field>
         <lookupValue>Cuenta_Empresa_en_CIF</lookupValue>
@@ -73,6 +92,21 @@
         <protected>false</protected>
         <useDeadLetterQueue>false</useDeadLetterQueue>
     </outboundMessages>
+    <rules>
+        <fullName>Actualiza Si Tiene Ejecutivo de Cuenta y%2Fo Inversiones</fullName>
+        <actions>
+            <name>Actualiza_Tiene_Ejecutivo_de_Cuenta</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Actualiza_Tiene_Ejecutivo_de_Inversiones</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Actualiza variables requeridas para validación de Leads duplicados vs Cuentas</description>
+        <formula>OR(ISCHANGED( Ejecutivo_de_Inversiones__c ) ,ISCHANGED(  Ejecutivo_de_Cuenta__c ), NOT( ISBLANK(Ejecutivo_de_Inversiones__c) ), NOT( ISBLANK(Ejecutivo_de_Cuenta__c) ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
     <rules>
         <fullName>Cambia tipo Registro de Cliente Empresa en CIF</fullName>
         <actions>

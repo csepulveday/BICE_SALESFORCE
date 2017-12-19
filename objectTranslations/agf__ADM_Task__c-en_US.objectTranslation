@@ -10,8 +10,16 @@
         <relationshipLabel><!-- Tasks --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Quality --></label>
+        <name>agf__Capex_Enabled__c</name>
+    </fields>
+    <fields>
         <label><!-- Comments --></label>
         <name>agf__Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completed On --></label>
+        <name>agf__Completed_On__c</name>
     </fields>
     <fields>
         <label><!-- Due By --></label>

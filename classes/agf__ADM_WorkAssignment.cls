@@ -14,4 +14,9 @@ global class AssignmentContext {
 
     }
 }
+global class PriorityMetaData {
+    global PriorityMetaData() {
+
+    }
+}
 }

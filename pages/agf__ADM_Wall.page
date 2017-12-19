@@ -13,8 +13,8 @@
 	</apex:outputPanel>
 
 <script>
-var currentUserLightningDesktopPreference = {!IF($CurrentPage.parameters.isdtp == 'p1','true', 'false')};
-	
+var currentUserLightningDesktopPreference = {!IF(JSINHTMLENCODE($CurrentPage.parameters.isdtp) == 'p1','true', 'false')};
+
 window.onmousemove = function (e) {
     if ($('#cursorInfo:visible')) {
         var x = e.clientX, y = e.clientY;
@@ -447,12 +447,12 @@ var scrumTeamId = '{!JSENCODE(teamId)}';
 var defaultPanelsArray = [ {
                                 "name": "backlog",
                                 "order": 1,
-                   
-                            },   
+
+                            },
                             {
                                 "name": "backburner",
                                 "order": 2,
-                   
+
                             } ];
 var defaultColumns = ["ICONS","ASSIGNEE PICTURE","STORY POINTS","STATUS","SUBJECT"];
 var qualifiedName='{!$ObjectType.ADM_Work__c.Name}';
@@ -464,7 +464,7 @@ var hideWorkWithSprint =  '{!backlogSprintToggleValue}';
 function resetIcons(panelTitle){
     var refreshButtonClassName = '.btn-refresh-' + removeSpecialCharacters(panelTitle);
     $(refreshButtonClassName+' button').removeAttr('disabled');
-    $(refreshButtonClassName).attr('style','display:inline-block;opacity:100'); 
+    $(refreshButtonClassName).attr('style','display:inline-block;opacity:100');
     //enable sprint toggle - only one on the page so we can use id
     $('#btn-sprinttoggle button').removeAttr('disabled');
 }
@@ -478,11 +478,11 @@ gus.WorkModel.fromData = function(records) {
     if(!_.isArray(records)) {
         records = [records];
     }
-    
+
     var cache = gus.getCache(gus.WorkModel);
     var models = [];
     _.each(records, function(record) {
-        
+
         if(record[nameSpace + 'Theme_Assignments__r']) {
             var themeCache = gus.getCache(gus.ThemeModel);
        _.each(record[nameSpace + 'Theme_Assignments__r'], function(themeAssignment) {
@@ -490,17 +490,17 @@ gus.WorkModel.fromData = function(records) {
        	themeAssignment[nameSpace + 'Theme__r'] = themeCache.get(themeAssignment[nameSpace + 'Theme__c']);
             });
         }
-        
+
         if(record[nameSpace + 'Scheduled_Build__r']) {
             gus.getCache(gus.BuildModel).add(record[nameSpace + 'Scheduled_Build__r'], {merge: true});
             delete record[nameSpace + 'Scheduled_Build__r'];
         }
-        
+
         if(record[nameSpace + 'Assignee__r']) {
             gus.getCache(gus.UserModel).add(record[nameSpace + 'Assignee__r'], {merge: true});
             delete record[nameSpace + 'Assignee__r'];
         }
-        
+
         if(record[nameSpace + 'QA_Engineer__r']) {
             gus.getCache(gus.UserModel).add(record[nameSpace + 'QA_Engineer__r'], {merge: true});
             delete record[nameSpace + 'QA_Engineer__r'];
@@ -515,28 +515,28 @@ gus.WorkModel.fromData = function(records) {
             gus.getCache(gus.SprintModel).add(record[nameSpace + 'Sprint__r'], {merge: true});
             delete record[nameSpace + 'Sprint__r'];
         }
-        
+
         if(record[nameSpace + 'Tasks__r']) {
             record[nameSpace + 'Tasks__r'] = gus.TaskModel.fromData(record[nameSpace + 'Tasks__r']);
         }
-        
+
         cache.add(record, {merge:true});
         models.push(cache.get(record.Id));
     });
     return models;
-};  
+};
 gus.TaskModel.fromData = function(records) {
     if(!_.isArray(records)) {
         records = [records];
     }
-    
+
     var cache = gus.getCache(gus.TaskModel);
     return _.map(records, function(record) {
         if(record.Assigned_To__r) {
             gus.getCache(gus.UserModel).add(record.Assigned_To__r, {merge:true});
             delete record.Assigned_To__r;
         }
-        
+
         cache.add(record, {merge:true});
         return cache.get(record.Id);
     });
@@ -624,12 +624,12 @@ _.extend(gus.QueryString.prototype, {
 gus.QueryString.parse = function(queryStringValue) {
     var args = queryStringValue.split('&');
     var parsed = {};
-    
+
     for(var index = 0; index < args.length; index++) {
         var arg = decodeURI(args[index]);
-        
+
         var key, value;
-        
+
         if(arg.indexOf('=') === -1) {
             key = arg;
             value = true;
@@ -638,7 +638,7 @@ gus.QueryString.parse = function(queryStringValue) {
             key = keyValuePair[0];
             value = keyValuePair[1];
         }
-        
+
         parsed[key.trim()] = value;
     }
     return new gus.QueryString(parsed);
@@ -763,7 +763,7 @@ gus.setJSONValues = function(/*String*/ jsonValue) {
 };
 
 gus.Window = {
-    
+
     isFullscreen:function() {
         var fullscreenElement = document.fullscreenElement || document.msFullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;
         return _.isElement(fullscreenElement); // || (!window.screenTop && !window.screenY)
@@ -809,7 +809,7 @@ gus.PanelContainer = Backbone.View.extend({
         'click li#button-build': 'showBuildDialog',
         'click li#button-sprint': 'showSprintDialog'
     },
-    
+
     fullscreenTurnOn: function() {
         this.isFullscreen = true;
         this.$('#btn-fullscreen button').addClass('on');
@@ -818,7 +818,7 @@ gus.PanelContainer = Backbone.View.extend({
         $('div.bPageHeader,div.bPageFooter').addClass('ui-helper-hidden');
         this.resize();
     },
-    
+
     fullscreenTurnOff: function() {
         this.isFullscreen = false;
         this.$('#btn-fullscreen button').removeClass('on');
@@ -837,18 +837,18 @@ gus.PanelContainer = Backbone.View.extend({
         }
         return this;
     },
-    
+
     initialize: function(options) {
     try{
         this.panels = [];
-        
+
         this.teamId = options.teamId;
         uwTeamId = this.teamId;
-        
+
         if(!this.teamId) {
             throw 'Unable to load the team because teamId is not set';
         }
-        
+
         //create the "Add Panel" menu
         this.addPanelMenu = new gus.menu.Menu({
             buttons: [
@@ -862,17 +862,17 @@ gus.PanelContainer = Backbone.View.extend({
                 {id: 'buildBacklog'}
             ]
         });
-        
+
         //bind internal events
         this.addPanelMenu.on('change:visible', this._updateAddPanelButton, this);
         this.addPanelMenu.on('change:visible', this._updateAddPanelMenu, this);
         this._initializeAddPanelMenu();
-        
+
         //bind external events
         $(window).on('resize', _.bind(_.throttle(this.resize, 100), this));
         gus.Window.on('enterFullscreen', _.bind(this.fullscreenTurnOn, this));
         gus.Window.on('exitFullscreen', _.bind(this.fullscreenTurnOff, this));
-        
+
         //retrieve the team associated to the team ID
         var panelContainer = this;
         this.teamDeferred = gus.getCache(gus.TeamModel).getOrFetch(options.teamId)
@@ -882,14 +882,14 @@ gus.PanelContainer = Backbone.View.extend({
                 .fail(function() {
                     panelContainer._onError('Team ID specified is not valid: ' + options.teamId);
                 });
-        
+
         //create object that loads the panels
         var panelRouter = new gus.PanelRouter({
             panelContainer: this,
             teamDeferred: this.teamDeferred
         });
         this.loadingPanels = true;
-        
+
         //lets go ahead load the starting panels
         var panelLoadingDeferred = panelRouter.start();
         panelLoadingDeferred.always(_.bind(function() {
@@ -903,10 +903,10 @@ gus.PanelContainer = Backbone.View.extend({
       console.log('Error while loading panels and initializing columns : '+err);
       }
     },
-    
+
     render: function() {
         this.resize();
-        
+
         //if we are loading the panels, then we need to show the loading indicator
         if(this.loadingPanels) {
             this.$('#panel-list').hide();
@@ -932,28 +932,28 @@ gus.PanelContainer = Backbone.View.extend({
             }
             $('title').text('Wall: ' + team.get('Name') + ' ~ ' + this.baseTitle);
             $('.slds-media--rec-home__title ').text(team.get('Name'));
-            
+
             //change the title of the container
             this.$('.uw-title').text(team.get('Name'));
         }, this));
-        
+
         this._renderAddPanelMenu();
-        
+
         return this;
     },
-    
+
     showThemeDialog: function() {
         if(!this.themeDialog) {
             //create the build dialog
             this.themeDialog = new gus.ThemeSelectionDialog().render();
-            
+
             this.themeDialog.on('select', _.bind(function() {
                 var selected = this.themeDialog.getSelected();
                 if(selected) {
                     this.showThemePanel(selected);
                 }
             }, this));
-            
+
             this.themeDialog.on('close', _.bind(function() {
                 this.themeDialog.remove();
                 this.themeDialog = null;
@@ -970,14 +970,14 @@ gus.PanelContainer = Backbone.View.extend({
                 label: 'Build',
                 modelClass: gus.BuildModel
             }).render();
-            
+
             this.buildDialog.on('select', _.bind(function() {
                 var selected = this.buildDialog.getSelected();
                 if(selected) {
                     this.showScheduledBuildPanel(selected);
                 }
             }, this));
-            
+
             this.buildDialog.on('close', _.bind(function() {
                 this.buildDialog.remove();
                 this.buildDialog = null;
@@ -992,68 +992,68 @@ gus.PanelContainer = Backbone.View.extend({
                 var lookupComponent = new gus.EpicLookupComponent({
                     teamId: team.get('Id')
                 });
-                
+
                 this.epicDialog = new gus.LookupDialog({
                     title: 'Add Panel By Epic',
                     label: 'Epic',
                     modelClass: gus.EpicModel,
                     nameComponent: lookupComponent
                 }).render();
-                
+
                 this.epicDialog.on('select', _.bind(function() {
                     var selected = this.epicDialog.getSelected();
                     if(selected) {
                         this.showEpicPanel(selected);
                     }
                 }, this));
-                
+
                 this.epicDialog.on('close', _.bind(function() {
                     this.epicDialog.remove();
                     this.epicDialog = null;
                 }, this));
-            
+
             }, this));
         }
         this.epicDialog.clear().open();
     },
-    
+
     showSprintDialog: function() {
         if(!this.sprintDialog) {
             this._fetchTeam().done(_.bind(function(team) {
                 var lookupComponent = new gus.SprintLookupComponent({
                     teamId: team.get('Id')
                 });
-                
+
                 this.sprintDialog = new gus.LookupDialog({
                     title: 'Add Panel By Sprint',
                     label: 'Sprint',
                     modelClass: gus.SprintModel,
                     nameComponent: lookupComponent
                 }).render();
-                
+
                 this.sprintDialog.on('select', _.bind(function() {
                     var selected = this.sprintDialog.getSelected();
                     if(selected) {
                         this.showSprintPanel(selected);
                     }
                 }, this));
-                
+
                 this.sprintDialog.on('close', _.bind(function() {
                     this.sprintDialog.remove();
                     this.sprintDialog = null;
                 }, this));
-            
+
             }, this));
         }
         this.sprintDialog.clear().open();
     },
 
     showWorkDialog: function(workModel) {
-        
+
         if (this.workDialog) {
             return;
         }
-    
+
         workModel.getRecordType().done(_.bind(function(recordType) {
             var dialog = null;
             var name = recordType.get('Name');
@@ -1067,7 +1067,7 @@ gus.PanelContainer = Backbone.View.extend({
                 this._onError('Unsupported record type ' + name + ' specified.');
                 return;
             }
-            
+
             this.workDialog = dialog.render();
             this.workDialog.open();
             this.workDialog.on('close', _.bind(function() {
@@ -1082,59 +1082,59 @@ gus.PanelContainer = Backbone.View.extend({
         this.panels.push(panel);
         panel.setPanelContainer(this);
         var $panelList = this.$('#panel-list').append(panel.render().el);
-        
+
         panel.on('removed', function() {
             panelContainer.removePanel(panel);
         });
         panel.on('change:index', function(panel, index) {
-        
+
             //move the panel within the array
             panelContainer.panels = _.without(panelContainer.panels, panel);
             panelContainer.panels.splice(index, 0, panel);
-            
+
             //move the panel in the UI
             var $panelUiElements = $panelList.find('>');
             var currentUiIndex = $panelUiElements.index(panel.$el);
             if(currentUiIndex !== index) {
                 $panelUiElements.eq(index).after($panelUiElements.eq(index - 1));
             }
-            
+
             panelContainer.trigger('panel:moved', panelContainer, panel, index);
         });
-        
+
         // unfill any currently filled panels to make room for new panel
         _.each(this.panels, function(panel) {
             if(panel.isFill) {
                 panel.unfill();
             }
         });
-        
+
         panel.show();
-        
+
         panel.el.scrollIntoView();
-        
+
         this.trigger('panel:added', panelContainer, panel);
-        
+
         return this;
     },
-    
+
     removePanel: function(panel) {
-        
+
         //if the panel is filled, then we want to unfill it before removing it
         if(_.result(panel, 'isFill')) {
             panel.unfill();
         }
-        
+
         //whenever a panel is removed, we want to remove it from the panel collection
         if(_.contains(this.panels, panel)) {
             this.panels = _.without(this.panels, panel);
         }
-        
+
         this.trigger('panel:removed', panelContainer, panel);
-        
+
         return this;
     },
-    
+
     resize: function() {
 		if (currentUserLightningDesktopPreference) {
 	        if (this.isFullscreen) {
@@ -1153,14 +1153,14 @@ gus.PanelContainer = Backbone.View.extend({
 	            this.$('.panel-container').width($(window).width() - 74);
 	        }
 		}
-        
+
         var toolbarHeight = this.$('#uw-toolbar').outerHeight();
         this.maxPanelHeight = this.$('.panel-container').height();
         this.hideDropdowns();
-        
+
         this.trigger('resize');
     },
-    
+
     toggleMultiEdit: function() {
         if(!this.$toggleEditButton.hasClass('on')) {
             this.showMultiEdit();
@@ -1168,27 +1168,27 @@ gus.PanelContainer = Backbone.View.extend({
             this.hideMultiEdit();
         }
     },
-    
+
     showMultiEdit: function() {
         this.$toggleEditButton.addClass('on').removeAttr('disabled');
-        
+
         _.each(this.panels, function(panel) {
             if(panel.showMultiEdit) {
                 panel.showMultiEdit();
             }
         });
     },
-    
+
     hideMultiEdit: function() {
         this.$toggleEditButton.removeClass('on');
-        
+
         _.each(this.panels, function(panel) {
             if(panel.hideMultiEdit) {
                 panel.hideMultiEdit();
             }
         });
     },
-    
+
     toggleSort: function() {
         if(!this.$toggleButton.hasClass('on')) {
             this.showSort();
@@ -1197,10 +1197,10 @@ gus.PanelContainer = Backbone.View.extend({
         }
         return this;
     },
-    
+
     showSort: function() {
         this.$toggleButton.addClass('on').removeAttr('disabled');
-        
+
         _.each(this.panels, function(panel) {
             if(panel.showSort) {
                 panel.showSort.call(this);
@@ -1208,10 +1208,10 @@ gus.PanelContainer = Backbone.View.extend({
         });
         return this;
     },
-    
+
     hideSort: function() {
         this.$toggleButton.removeClass('on');
-        
+
         _.each(this.panels, function(panel) {
             if(panel.hideSort) {
                 panel.hideSort.call(this);
@@ -1223,36 +1223,36 @@ gus.PanelContainer = Backbone.View.extend({
     openHelp: function() {
         window.open('https://sites.google.com/a/salesforce.com/agile-help/backlog-manager');
     },
-    
+
     showMasterBacklogPanel: function() {
         if(this.containsPanelOfType(gus.MasterBacklogPanel)){
             return $.when(this.getPanelOfType(gus.MasterBacklogPanel));
         }
-        
+
         var panel = new gus.MasterBacklogPanel({
-            teamDeferred: this._fetchTeam() 
+            teamDeferred: this._fetchTeam()
         });
         this.addPanel(panel);
         return $.Deferred().resolve(panel);
     },
-    
+
     showFeatureBacklogPanel: function() {
         if(this.containsPanelOfType(gus.FeatureBacklogPanel)){
             return $.when(this.getPanelOfType(gus.FeatureBacklogPanel));
         }
-        
+
         var panel = new gus.FeatureBacklogPanel({
             teamDeferred: this._fetchTeam()
         });
         this.addPanel(panel);
         return $.Deferred().resolve(panel);
     },
-    
+
     showTrustBacklogPanel: function() {
         if(this.containsPanelOfType(gus.TrustBacklogPanel)){
             return $.when(this.getPanelOfType(gus.TrustBacklogPanel));
         }
-        
+
         var panelContainer = this;
         var panel = new gus.TrustBacklogPanel({
             teamDeferred: this._fetchTeam()
@@ -1260,13 +1260,13 @@ gus.PanelContainer = Backbone.View.extend({
         this.addPanel(panel);
         return $.Deferred().resolve(panel);
     },
-    
+
     showThemePanel: function(theme) {
         var themeIdEqualTo = function(panel){ return panel.theme && panel.theme.id === theme.id; };
         if(this.containsPanelWith(themeIdEqualTo)){
             return $.when(this.getPanelWith(themeIdEqualTo));
         }
-        
+
         var themeDeferred = $.Deferred().resolve(theme);
         var panel = new gus.ThemePanel({
             themeDeferred: themeDeferred,
@@ -1275,17 +1275,17 @@ gus.PanelContainer = Backbone.View.extend({
         this.addPanel(panel);
         return $.Deferred().resolve(panel);
     },
-    
+
     showScheduledBuildPanel: function(build) {
         var buildEqualTo = function(build) {
-            return function(panel){ 
-                return panel.build && panel.build.id === build.id; 
+            return function(panel){
+                return panel.build && panel.build.id === build.id;
             };
         };
         if(this.containsPanelWith(buildEqualTo(build))) {
             return $.when(this.getPanelWith(buildEqualTo(build)));
         }
-        
+
         var buildDeferred = $.Deferred().resolve(build);
         var panel = new gus.ScheduledBuildPanel({
             buildDeferred: buildDeferred,
@@ -1309,19 +1309,19 @@ gus.PanelContainer = Backbone.View.extend({
         this.addPanel(panel);
         return $.Deferred().resolve(panel);
     },
-    
+
     showBackburnerPanel: function() {
         if(this.containsPanelOfType(gus.BackburnerPanel)) {
             return $.when(this.getPanelOfType(gus.BackburnerPanel));
         }
-        
+
         var panel = new gus.BackburnerPanel({
             teamDeferred: this._fetchTeam()
         });
         this.addPanel(panel);
         return $.Deferred().resolve(panel);
     },
-    
+
     showSprintPanel: function(sprint) {
         var sprintIdEqualTo = function(panel){ return panel.sprint && panel.sprint.id === sprint.id; };
         if(this.containsPanelWith(sprintIdEqualTo)) {
@@ -1336,21 +1336,21 @@ gus.PanelContainer = Backbone.View.extend({
         this.addPanel(panel);
         return $.Deferred().resolve(panel);
     },
-    
+
     containsPanelWith: function(f) {
         return _.any(this.panels, f);
     },
-    
+
     getPanelWith: function(f) {
         return _.find(this.panels, f);
     },
-    
+
     containsPanelOfType: function(type) {
         return this.containsPanelWith(function(panel) {
             return panel instanceof type;
         });
     },
-    
+
     getPanelOfType: function(type) {
         return this.getPanelWith(function(panel) {
             return panel instanceof type;
@@ -1360,17 +1360,17 @@ gus.PanelContainer = Backbone.View.extend({
     showAddPanelMenu: function() {
         this.addPanelMenu.show();
     },
-    
+
     hideAddPanelMenu: function() {
         this.addPanelMenu.hide();
     },
-    
+
     hideDropdowns: function() {
         // normalize all buttons and hide dropdowns
         this.$('#btn-columns button').removeClass('on');
         this.$('.dropdown').hide();
     },
-    
+
     delegateEvents: function() {
         gus.PanelContainer.__super__.delegateEvents.apply(this, arguments);
         $(document).on('click.panelContainer' + this.cid, $.proxy(this.hideAddPanelMenu, this));
@@ -1380,7 +1380,7 @@ gus.PanelContainer = Backbone.View.extend({
         gus.PanelContainer.__super__.undelegateEvents.apply(this, arguments);
         $(document).off('.panelContainer' + this.cid);
     },
-    
+
     _renderAddPanelMenu: function() {
         var buttonToDomMappings = {
             'backlog': '#button-backlog',
@@ -1392,21 +1392,21 @@ gus.PanelContainer = Backbone.View.extend({
             'themeBacklog': '#button-theme',
             'buildBacklog': '#button-build'
         };
-        
+
         //create a view for each button
         _.each(this.addPanelMenu.buttons, _.bind(function(buttonModel) {
             var $buttonDom = this.$(buttonToDomMappings[buttonModel.id]);
-            
+
             var buttonView = new gus.menu.MenuItemButtonView({
                 model: buttonModel,
                 $el: $buttonDom
             }).render();
         }, this));
     },
-    
+
     _initializeAddPanelMenu: function() {
         var addPanelMenu = this.addPanelMenu;
-        
+
         //return back a callback that disables the specified button when the panel is of the specified type
         var disableButton = function(buttonId, panelType) {
             var button = addPanelMenu.get(buttonId);
@@ -1420,14 +1420,14 @@ gus.PanelContainer = Backbone.View.extend({
                 button.disable();
             };
         };
-        
+
         //disable the addPanelMenu button when the a panel is added
         this.on('panel:added', disableButton('backlog', gus.MasterBacklogPanel));
         this.on('panel:added', disableButton('backburner', gus.BackburnerPanel));
         this.on('panel:added', disableButton('featureBacklog', gus.FeatureBacklogPanel));
         this.on('panel:added', disableButton('trustBacklog', gus.TrustBacklogPanel));
     },
-    
+
     /**
      * Updates the UI/DOM for the "Add Panel" menu
      */
@@ -1435,7 +1435,7 @@ gus.PanelContainer = Backbone.View.extend({
         if(this.addPanelMenu.visible) {
             //make sure all of other menus are hidden
             this.hideDropdowns();
-            
+
             //show the menu and position under the button
 			if (currentUserLightningDesktopPreference) {
 	            this.$('.menu_addpanel').show().position({my:'right top', at:'right bottom', of:this.$('button#btn-add-panel'), offset:'0px -1px'});
@@ -1446,7 +1446,7 @@ gus.PanelContainer = Backbone.View.extend({
             this.$('.menu_addpanel').hide();
         }
     },
-    
+
     /**
      * Updates the UI/DOM for the "Add Panel" button
      */
@@ -1462,34 +1462,34 @@ gus.PanelContainer = Backbone.View.extend({
             $button.find('div.arrow-down').removeClass('arrow-down-white');
         }
     },
-    
+
     _onShowAddPanelButtonClick: function(event) {
         event.preventDefault();
         event.stopPropagation();
-        
+
         if(this.addPanelMenu.visible) {
             this.hideAddPanelMenu();
         } else {
             this.showAddPanelMenu();
         }
     },
-    
+
     /**
      * Gets the team for the team dependent panels
      */
     _fetchTeam: function() {
         return this.teamDeferred;
     },
-    
+
     _onError: function(message, event) {
         //show a jquery modal dialog
         var $el = $('<div><div class="error-dialog-message"></div><div class="error-dialog-details" style="display: none; margin-top: 1em;"></div></div>');
-        
+
         $el.find('.error-dialog-message').text(message);
         if(event && event.message) {
             $el.find('.error-dialog-details').show().text(event.message);
         }
-        
+
         $el.dialog({
             title: 'Error Occurred',
             modal: true,
@@ -1510,12 +1510,12 @@ gus.PanelRouter = function(options) {
 };
 _.extend(gus.PanelRouter.prototype, {
     initialize: function(options) {
-    
+
         //panelDefs (or panel definitions) tell how to convert panelArgs from strings to panels and vice versa
         //panelDef.isInstanceOf - given a panel determines if is from the same definition
         //panelDef.toPanelArg - takes a panel and converts it to a panelArg
         //panelDef.fromPanelArg - given a panelArg, creates a new panel from it
-        var panelDefs = [ 
+        var panelDefs = [
             {
                 id: 'backburner',
                 isInstanceOf: function(panel) {
@@ -1545,7 +1545,7 @@ _.extend(gus.PanelRouter.prototype, {
                 toPanelArg: function(panel) {
                     return {
                         id: this.id,
-                        state: this.getState(panel), 
+                        state: this.getState(panel),
                     };
                 },
                 fromPanelArg: function(panelArg, context) {
@@ -1554,12 +1554,12 @@ _.extend(gus.PanelRouter.prototype, {
                     }
                     var epicId = panelArg.state;
                     var epicDeferred = gus.EpicModel.fetch(epicId);
-                    
+
                     var epicPanel = new gus.EpicPanel({
                         teamDeferred: context.teamDeferred,
                         epicDeferred: epicDeferred
                     });
-                    
+
                     return epicDeferred
                         .then(function(epic) {
                             return epicPanel;
@@ -1634,7 +1634,7 @@ _.extend(gus.PanelRouter.prototype, {
                 toPanelArg: function(panel) {
                     return {
                         id: this.id,
-                        state: this.getState(panel) 
+                        state: this.getState(panel)
                     };
                 },
                 fromPanelArg: function(panelArg, context) {
@@ -1643,12 +1643,12 @@ _.extend(gus.PanelRouter.prototype, {
                     }
                     var themeId = panelArg.state;
                     var themeDeferred = gus.ThemeModel.fetch(themeId);
-                    
+
                     var themePanel = new gus.ThemePanel({
                         themeDeferred: themeDeferred,
                         teamDeferred: context.teamDeferred
                     });
-                    
+
                     return themeDeferred.then(function(theme) {
                             return themePanel;
                         }, function(event) {
@@ -1670,7 +1670,7 @@ _.extend(gus.PanelRouter.prototype, {
                 toPanelArg: function(panel) {
                     return {
                         id: this.id,
-                        state: this.getState(panel) 
+                        state: this.getState(panel)
                     };
                 },
                 fromPanelArg: function(panelArg, context) {
@@ -1679,12 +1679,12 @@ _.extend(gus.PanelRouter.prototype, {
                     }
                     var buildId = panelArg.state;
                     var buildDeferred = gus.BuildModel.fetch(buildId);
-                    
+
                     var buildPanel = new gus.ScheduledBuildPanel({
                         buildDeferred: buildDeferred,
                         teamDeferred: context.teamDeferred
                     });
-                    
+
                     return buildDeferred
                         .then(function(build) {
                             return buildPanel;
@@ -1707,7 +1707,7 @@ _.extend(gus.PanelRouter.prototype, {
                 toPanelArg: function(panel) {
                     return {
                         id: this.id,
-                        state: this.getState(panel), 
+                        state: this.getState(panel),
                     };
                 },
                 fromPanelArg: function(panelArg, context) {
@@ -1716,12 +1716,12 @@ _.extend(gus.PanelRouter.prototype, {
                     }
                     var sprintId = panelArg.state;
                     var sprintDeferred = gus.SprintModel.fetch(sprintId);
-                    
+
                     var sprintPanel = new gus.SprintPanel({
                         teamDeferred: context.teamDeferred,
                         sprintDeferred: sprintDeferred
                     });
-                    
+
                     return sprintDeferred
                         .then(function(sprint) {
                             return sprintPanel;
@@ -1734,17 +1734,17 @@ _.extend(gus.PanelRouter.prototype, {
                 }
             }
         ];
-        
+
         //convert the panelDefs into a map by Id so it is easier to find a specific panel definition
         var panelDefsById = this.panelDefsById = [];
         _.each(panelDefs, function(panelDef) {
             panelDefsById[panelDef.id] = panelDef;
         });
-        
+
         this.panelContainer = options.panelContainer;
         this.teamDeferred = options.teamDeferred;
         this.panelDelimiter = '|';
-        
+
         //defaultPanels specifies an array of PanelArgs that are used when panels are
         //not specified on the query string
         this.defaultPanels = [{id:'backlog'}, {id:'backburner'}];
@@ -1752,7 +1752,7 @@ _.extend(gus.PanelRouter.prototype, {
     start: function() {
     try{
         var panelArgs;
-        
+
         //check the query string to see if panels are specified
         var queryString = gus.QueryString.parse(document.location.search.substring(1));
         var panelString = '';
@@ -1761,8 +1761,8 @@ _.extend(gus.PanelRouter.prototype, {
         if(myData != null && myData != ''){
             myData = JSON.parse(myData);        //parse the JSON so that it can be used as a normal javascript object
             $.each(myData.user.teams, function() {
-                // if the we are looking into the UW of this particular team then we need to get values from the json field. 
-                if(this.id == uwTeamId){            
+                // if the we are looking into the UW of this particular team then we need to get values from the json field.
+                if(this.id == uwTeamId){
                     $.each(this.panels,function(){ //Arrange panels based on the order in the JSON
                        if(!formPanelArray[this.order]){
                        	 formPanelArray[this.order] = this.name;
@@ -1770,10 +1770,10 @@ _.extend(gus.PanelRouter.prototype, {
                        else{
                        	formPanelArray[this.order+1] = this.name;
                        }
-                       
+
                     });
 
-                }       
+                }
             });
 
             for(var i =0;i<formPanelArray.length;i++){ //Form panelString so that panels can be loaded from the JSON vales
@@ -1782,16 +1782,16 @@ _.extend(gus.PanelRouter.prototype, {
 		            panelString = panelString + '|';
 	            }
             }
-            panelString = panelString.substr(0,panelString.length-1); 
+            panelString = panelString.substr(0,panelString.length-1);
             //We check if there are any panels stored in the JSON.
-            if(panelString == '' || panelString == null){    
+            if(panelString == '' || panelString == null){
                 var teamsInJSON= myData.user.teams;
                 var teamsInJSONLength = teamsInJSON.length;
                 var teamCount = 0;
                 $.each(myData.user.teams,function(){
                     //if there is a JSON defined but it has no panels, like if we closed all and then closed the  page.
-                    if(this.id == uwTeamId){   
-                        this.panels = defaultPanelsArray;  
+                    if(this.id == uwTeamId){
+                        this.panels = defaultPanelsArray;
                     }
                     else{
                         teamCount = teamCount+1; //checking if the team is not already defined in the JSON.
@@ -1814,19 +1814,19 @@ _.extend(gus.PanelRouter.prototype, {
             }
             else{
                 //We parse the panelString to get the panels stored in the JSON field.
-                panelArgs = this._parseStringToPanelArgs(panelString); 
-            }       
-            
-        
-        } 
+                panelArgs = this._parseStringToPanelArgs(panelString);
+            }
+
+
+        }
         else if(myData == null || myData == '' )  //Case where there are no values stored in the JSON field, a.k.a first time user.
         {
-                
+
                 //We have to manually form the full JSON in this case because there is nothing stored in the field.
                 var wallPreference = {
                  user : { "id" : userIdInfo,
                           "teams" : []
-                        } 
+                        }
                 };
                 wallPreference.user.teams[0] = { "id" : scrumTeamId,
 
@@ -1838,11 +1838,11 @@ _.extend(gus.PanelRouter.prototype, {
                     panel._onError('Failed to save JSON values', event);
                 });
 
-            //Loading default panels from this.defaultPanels because its easier and we do not have to parse again.     
-            panelArgs = this.defaultPanels;  
-            
+            //Loading default panels from this.defaultPanels because its easier and we do not have to parse again.
+            panelArgs = this.defaultPanels;
+
         }
-        
+
         //create the panels from the panel arguments
         var deferred = this._createPanelsFromPanelArgs(panelArgs);
         deferred.done(_.bind(function() {
@@ -1851,7 +1851,7 @@ _.extend(gus.PanelRouter.prototype, {
             this.panelContainer.on('panel:removed', this._updateHistory, this);
             this.panelContainer.on('panel:moved', this._updateHistory, this);
         }, this));
-        
+
         return deferred;
     }
     catch(err){
@@ -1869,33 +1869,33 @@ alert('Unexpected exception while retrieving panel values from server : '+err+'\
         var panelDeferreds = [];
         for(index = 0; index < panelArgs.length; index++) {
             var panelArg = panelArgs[index];
-            
+
             //if no route defined for the ID, then we don't need to continue processing
             if(!this.panelDefsById.hasOwnProperty(panelArg.id)) {
                 console.warn('Unknown panel ID specified: %s', panelArg.id);
                 continue;
             }
-            
+
             var panelDef = this.panelDefsById[panelArg.id];
-            
-            //create a panel for each panelDefinition specified 
+
+            //create a panel for each panelDefinition specified
             var deferred = panelDef.fromPanelArg(panelArg, {
                 panelContainer: panelContainer,
                 teamDeferred: this.teamDeferred
             });
-            
+
             //if there is a failure when loading the panel, then we need to show the error
             deferred.fail(function(event){
                 if(event.message) {
                     panelContainer._onError(event.message);
                 }
             });
-            
+
             panelDeferreds.push(deferred);
         }
-        
-        //after we have all of the panels starting to load, we want to 
-        //add the panels to the panelContainer in the order that they were 
+
+        //after we have all of the panels starting to load, we want to
+        //add the panels to the panelContainer in the order that they were
         //specified.
         return this._whenAll(panelDeferreds).done(function(panels) {
             _.each(panels, function(panel) {
@@ -1907,27 +1907,27 @@ alert('Unexpected exception while retrieving panel values from server : '+err+'\
             });
         });
     },
-    
+
     //returns a new deferred that resolves when all of the given deferreds have resolved.
-    //if any of the deferreds are rejected, the returned deferred is still resolved however the 
+    //if any of the deferreds are rejected, the returned deferred is still resolved however the
     //index within values array is blank for the rejected deferreds.
     //this is different than $.when because $.when is rejected when any deferred is rejected.
     _whenAll: function(deferreds) {
         var allDeferred = $.Deferred(),
-            
+
             //counts the number of deferreds left to resolve
             remaining = deferreds.length,
-            
+
             //stores all of the values that have been loaded
             values = new Array(deferreds.length),
-            
+
             //callback to set the value in the array
             setValueAt = function(index) {
                 return function(value) {
                     values[index] = value;
                 };
             },
-            
+
             //callback to decrement the remaining and resolve when finished
             updateContext = function(index) {
                 return function() {
@@ -1938,14 +1938,14 @@ alert('Unexpected exception while retrieving panel values from server : '+err+'\
                     }
                 };
             };
-         
+
         //register the callbacks for each of the deferreds given
         for(index = 0; index < deferreds.length; index++) {
             deferreds[index]
                 .done(setValueAt(index))
                 .always(updateContext(index));
         }
-        
+
         return allDeferred;
     },
     _updateHistory: function() {
@@ -1962,12 +1962,12 @@ alert('Unexpected exception while retrieving panel values from server : '+err+'\
             panelsArray = [];
         }
         //This is done because the myData is a global object being manipulated everywhere. We do not know currently if it is a string or an object because everytime a change is made it is saved back to myData. Also .parse() throws an error if it of typer object.
-        if(typeof myData != 'object'){        
+        if(typeof myData != 'object'){
             myData = JSON.parse(myData.toString());
         }
         $.each(myData.user.teams,function(){
             if(this.id == uwTeamId){
-                
+
                 if(this.panels.length < panelsArray.length){   //Case of Adding a new Panel
                 this.panels.push({"name" : panelsArray[panelsArray.length-1], "order" : this.panels.length,"columns" : []});
 
@@ -1993,22 +1993,22 @@ alert('Unexpected exception while retrieving panel values from server : '+err+'\
                 }
 
                 });
-                }     
+                }
             }
         });
         myData = JSON.stringify(myData); // Convert it back to JSON frm javascript object.
         gus.setJSONValues(myData) //save to database.
                 .fail(function(event) {
-                    panel._onError('Failed to save JSON values', event); 
+                    panel._onError('Failed to save JSON values', event);
                 });
     },
     _toQueryString: function() {
-        var panels = this.panelContainer.panels;                     
+        var panels = this.panelContainer.panels;
         var panelArgs = this._panelsToPanelArgs(panels);
         var states = [];
         for(var index = 0; index < panelArgs.length; index++) {
             var panelArg = panelArgs[index];
-            
+
             //convert the panelArg to a string
             if(panelArg.state) {
                 states.push(panelArg.id + '(' + panelArg.state + ')');
@@ -2019,14 +2019,14 @@ alert('Unexpected exception while retrieving panel values from server : '+err+'\
 
         return states.join(this.panelDelimiter);
     },
-    
+
     //given an array of panels, get an array of panelArgs
     _panelsToPanelArgs: function(panels) {
         var panels = this.panelContainer.panels;
         var panelArgs = [];
         for(var index = 0; index < panels.length; index++) {
             var panel = panels[index];
-            
+
             //find the panel definition for the panel in the container
             var panelDef;
             for(var panelId in this.panelDefsById) {
@@ -2036,12 +2036,12 @@ alert('Unexpected exception while retrieving panel values from server : '+err+'\
                     break;
                 }
             }
-            
+
             if(!panelDef) {
                 console.warn('Unable to get panel definition for the panel %s', index);
                 continue;
             }
-            
+
             //get the panelArg for the the panel from the panel definition
             var panelArg;
             if(panelDef.toPanelArg) {
@@ -2050,21 +2050,21 @@ alert('Unexpected exception while retrieving panel values from server : '+err+'\
                 console.warn('Unable to save panel because panel definition %s does not contain toPanelArg', panelDef.id);
                 continue;
             }
-            
+
             panelArgs.push(panelArg);
         }
         return panelArgs;
     },
-    
+
     //given a string, an array of panel args are returned.
     _parseStringToPanelArgs: function(value) {
         //parse the panels argument
         var panelArgs = value.split(this.panelDelimiter);
-        
+
         //parse each panel initialization
         var panels = [];
         for(var index = 0; index < panelArgs.length; index++) {
-        
+
             try {
                 var panelArg = panelArgs[index];
                 var panelId, state;
@@ -2074,9 +2074,9 @@ alert('Unexpected exception while retrieving panel values from server : '+err+'\
                     panelId = panelArg.substring(0, panelArg.indexOf('(')).trim();
                     state = panelArg.substring(panelArg.indexOf('(') + 1, panelArg.indexOf(')'));
                 }
-                
+
                 panels.push({
-                    id: panelId, 
+                    id: panelId,
                     state: state
                 });
             } catch(err) {
@@ -2091,30 +2091,30 @@ alert('Unexpected exception while retrieving panel values from server : '+err+'\
 gus.Panel = Backbone.View.extend({
     tagName: 'li',
     className: 'panel',
-    
+
     initialize: function(options) {
         gus.Panel.__super__.initialize.apply(this, arguments);
     },
-    
+
     setPanelContainer: function(panelContainer) {
         this.panelContainer = panelContainer;
     },
-    
+
     remove: function() {
         gus.Panel.__super__.remove.apply(this, arguments);
         this.trigger('removed');
     },
-    
+
     show: function() {
         this.$el.removeClass('ui-helper-hidden');
     },
-    
+
     hide: function() {
         this.$el.addClass('ui-helper-hidden');
     },
-    
+
     isFill: false,
-    
+
     /**
      * Hides all of the panels except this panel and expands this panel to fill all of the panel container space.
      */
@@ -2122,26 +2122,26 @@ gus.Panel = Backbone.View.extend({
         if(this.isFill) {
             return;
         }
-        
+
         //unfill any other panel that may already be filling the panel
         _.each(_.where(this.panelContainer.panels, function(panel) {return panel.isFill;}), function(panel) {
             panel.unfill();
         });
-        
+
         this.isFill = true;
         this.$el.addClass('panel-fill').data('fill', true);
-        
+
         //reset all of the other panels
         _.each(_.without(panelContainer.panels, this), function(panel) {
             panel.hide();
         });
-        
+
         //show only the current panel
         this.show();
-        
+
         this.trigger('change:fill');
     },
-    
+
     /**
      * If this panel is expanded (using fill), it reverts to the previous size and shows all of the other panels.
      */
@@ -2149,19 +2149,19 @@ gus.Panel = Backbone.View.extend({
         if(!this.isFill) {
             return;
         }
-        
+
         this.isFill = false;
         this.$el.removeClass('panel-fill').data('fill', false);
-        
+
         //unfill all of the panels
         _.each(_.without(panelContainer.panels, this), function(panel){
             panel.show();
         });
-        
+
         this.trigger('change:fill');
         panelContainer.resize();
     },
-    
+
     /**
      * If the panel is currently not filling the container, then it fills otherwise it unfills.
      */
@@ -2179,7 +2179,7 @@ gus.Panel = Backbone.View.extend({
         });
         gus.Panel.__super__.delegateEvents.apply(this, arguments);
     },
-    
+
     /**
      * Invoked when the DOM element is dropped
      */
@@ -2223,7 +2223,7 @@ _.extend(gus.menu.Menu.prototype, Backbone.Events, {
     initialize: function(options) {
         this.visible = false;
         this.buttons = [];
-        
+
         //create an index of buttons by the button ID if one has not been created already
         this.buttonsById = {};
         _.each(options.buttons, _.bind(function(buttonDefinition) {
@@ -2231,9 +2231,9 @@ _.extend(gus.menu.Menu.prototype, Backbone.Events, {
             this.buttons.push(button);
             this.buttonsById[button.id] = button;
         }, this));
-        
+
     },
-    
+
     // shows the menu
     show: function() {
         if(!this.visible) {
@@ -2241,7 +2241,7 @@ _.extend(gus.menu.Menu.prototype, Backbone.Events, {
             this.trigger('change:visible', this.visible);
         }
     },
-    
+
     //hides the menu
     hide: function() {
         if(this.visible) {
@@ -2249,20 +2249,20 @@ _.extend(gus.menu.Menu.prototype, Backbone.Events, {
             this.trigger('change:visible', this.visible);
         }
     },
-    
+
     //gets the button with the specified ID. returns undefined if
     //the button is not registered
     get: function(buttonId) {
         return this.buttonsById[buttonId];
     },
-    
+
     //disables a button
     disableButton: function(buttonId) {
         if(this.buttonsById[buttonId]) {
             this.buttonsById[buttonId].disable();
         }
     },
-    
+
     //enables a button
     enableButton: function(buttonId) {
         if(this.buttonsById[buttonId]) {
@@ -2307,7 +2307,7 @@ _.extend(gus.menu.MenuItemButtonView.prototype, Backbone.Events, {
     initialize: function(options) {
         this.model = options.model;
         this.$el = options.$el;
-        
+
         this.model.on('change:disabled', this.update, this);
     },
     render: function() {
@@ -2333,7 +2333,7 @@ gus.dataTable.ColumnMenuItem = Backbone.View.extend({
         options = _.defaults(options || {}, {checked: true});
         this.checked = options.checked;
         this.label = options.label;
-        
+
         //setup internal eventing
         this.on('change:checked', _.bind(this.update, this));
     },
@@ -2368,7 +2368,7 @@ gus.dataTable.ColumnMenuItem = Backbone.View.extend({
     }
 });
 
-gus.dataTable.Column = function(options) { 
+gus.dataTable.Column = function(options) {
     this.cid = _.uniqueId('column_');
     this.initialize.apply(this, arguments);
 };
@@ -2376,27 +2376,27 @@ _.extend(gus.dataTable.Column.prototype, Backbone.Events, {
     initialize: function(options) {
         options = _.defaults(options || {}, {visible: true, hideable: true, index: -1});
         this.id = options.id || this.cid;
-        
-        //label: the value that is used for UI to be displayed to user 
+
+        //label: the value that is used for UI to be displayed to user
         this.label = options.label;
-        
+
         //visible: if true, then the column is visible otherwise it is hidden
         this.visible = options.visible;
-        
+
         //hideable: if true, the column is able to be hidden by the user
         this.hideable = options.hideable;
-        
+
         //tableView: the table to which the column is associated to
         this.tableView = options.tableView;
         this.columns = options.columns;
-        
+
         //tableHiddenClass: the class that is applied to the table when the
         //column should be hidden
         this.tableHiddenClass = options.tableHiddenClass || this.id + '-hidden';
-        
+
         //index: the index of the column within the group of columns
         this.index = options.index;
-        
+
         this.on('change:visibility', _.bind(this.apply, this));
     },
     hide: function() {
@@ -2413,7 +2413,7 @@ _.extend(gus.dataTable.Column.prototype, Backbone.Events, {
         this.visible = true;
         this.trigger('change:visibility');
     },
-    
+
     /**
      * Applies the current visibility to the columns and menu item.
      */
@@ -2442,28 +2442,28 @@ gus.WorkListPanel = gus.Panel.extend({
         'click .headers .check-holder': 'checkColumnClicked',
         'click .btn-refresh button': 'refreshPanel'
     },
-    
+
     initialize: function(options) {
         gus.WorkListPanel.__super__.initialize.apply(this, arguments);
         options = _.defaults({}, options, {
             title: 'Work Backlog',
             sortable: false
         });
-        
+
         this.template = _.template($('#template-panel-backlog').html());
         this.title = options.title;
         this.rows = [];
-        
+
         //enable the autoloading of records
         this.autoLoadRecordsEnabled = true;
-        
+
         //sorting properties
         this.sortable = options.sortable;
         this.sortedProperty = options.sortedProperty;
-        
+
         //initialize the collection
         this.collection = options.collection;
-        
+
         //fetch the first batch of records and setup the additional event handling
         this.recordsLoaded = null;
         this.collection.fetch()
@@ -2472,7 +2472,7 @@ gus.WorkListPanel = gus.Panel.extend({
             }, this))
             .fail(_.bind(function(event) {
                 this.recordsLoaded = {
-                    success: false, 
+                    success: false,
                     message: 'Error occurred while loading work records. Are you logged in and is your session still active?',
                     event: event
                 };
@@ -2480,7 +2480,7 @@ gus.WorkListPanel = gus.Panel.extend({
             .always(_.bind(function() {
                 this.renderContent();
             }, this));
-        
+
         this.on('change:fill', _.bind(function() {
             var $fillButton = this.$('#btn-fill button');
             if(this.isFill) {
@@ -2490,19 +2490,19 @@ gus.WorkListPanel = gus.Panel.extend({
             }
             this._applyTaskClasses();
         }, this));
-        
-        this.on('change:title', this.renderTitle, this);        
+
+        this.on('change:title', this.renderTitle, this);
     },
-    
+
     setPanelContainer: function(panelContainer) {
         gus.WorkListPanel.__super__.setPanelContainer.apply(this, arguments);
 
         if (panelContainer) {
             panelContainer.on('resize', this.recalcHeight, this);
         }
-    
+
     },
-    
+
     setTitle: function(title) {
         this.title = title;
         this.trigger('change:title');
@@ -2512,21 +2512,21 @@ gus.WorkListPanel = gus.Panel.extend({
         if (panelContainer) {
             panelContainer.off('resize', this.recalcHeight, this);
         }
-    
+
         gus.WorkListPanel.__super__.remove.apply(this, arguments);
     },
-    
+
     render: function() {
         gus.WorkListPanel.__super__.render.apply(this, arguments);
         this.$el.html(this.template());
         this.renderTitle();
-        
+
         //initialize the columns
         this.initializeColumns();
-        
+
         //Disabled selection commented to make selection possible on the work rows in the unified wall.
         var $workList = this.$('ul.wall-work-list').addClass('ui-helper-hidden');// .disableSelection();
-        
+
         //make the work list sortable
         if(this.sortable) {
             var panelConnectedWith = (this.connectedWithRules) ? this.connectedWithRules() : undefined;
@@ -2546,21 +2546,21 @@ gus.WorkListPanel = gus.Panel.extend({
                     });
                     if (placeholderHtml.length == 0) {
                         placeholderHtml = '<div style="width:100%;height:4px;"></div>';
-                        
+
                         if (!$(ui.placeholder).closest('ul').find('li.temp').length) {
                             $(ui.placeholder).closest('ul').append('<li class="temp"></li>');
                         }
-                        
+
                     }
                     $(ui.placeholder).html(placeholderHtml);
                 }
             });
         }
-        
-        //since the browser doesn't bubble up scroll events like other events we 
+
+        //since the browser doesn't bubble up scroll events like other events we
         //need to bind directly to the tableContainer to provide scroll functionality
         this.$('.table-container').on('scroll.work' + this.cid, _.throttle(_.bind(this._onTableContainerScroll, this), 50));
-        
+
         this.renderContent();
         this.recalcHeight();
         return this;
@@ -2570,10 +2570,10 @@ gus.WorkListPanel = gus.Panel.extend({
     //We need a call to initialize and Model needs a fresh refresh of work updates happening outside of unified wall
     var refreshButtonClassName = '.btn-refresh-' + removeSpecialCharacters(this.title);
     $(refreshButtonClassName+' button').attr('disabled','true');
-    $(refreshButtonClassName).attr('style','display:inline-block;opacity:0.5'); 
+    $(refreshButtonClassName).attr('style','display:inline-block;opacity:0.5');
     this.initialize();
     },
-    
+
     renderContent: function() {
         //if the records have not finished loading, then let's show the default state
         if(!this.recordsLoaded) {
@@ -2582,15 +2582,15 @@ gus.WorkListPanel = gus.Panel.extend({
             this.$('.panel-loading').show();
             return;
         }
-        
+
         //only show the loading bar until the first records are loaded
         this.$('.panel-loading').hide();
-        
+
         if(this.recordsLoaded.success) {
             //render all of the rows that the collection contains
             this.renderRows();
-            
-            //for each additional change to the collection 
+
+            //for each additional change to the collection
             this.collection.on('addBatch', _.bind(this._addRows, this));
         } else {
             this.$('ul.wall-work-list').addClass('ui-helper-hidden');
@@ -2601,7 +2601,7 @@ gus.WorkListPanel = gus.Panel.extend({
             this.recalcHeight();
         }
     },
-    
+
     renderShowMoreLink: function() {
         //if the collection has more records, then we should show the "Show More" link
         if(this.collection.hasMoreRecords && _.result(this.collection, 'hasMoreRecords')) {
@@ -2610,7 +2610,7 @@ gus.WorkListPanel = gus.Panel.extend({
             this.$('.panel-show-more').hide();
         }
     },
-    
+
     renderTitle: function() {
         this.$('.wall-title > span').text(this.title);
         //since the refresh button appears on multiple panels we need to give it a unique selector.
@@ -2618,66 +2618,66 @@ gus.WorkListPanel = gus.Panel.extend({
         this.$('.btn-refresh').addClass(refreshButtonClassName);
         return this;
     },
-    
+
     renderRows: function() {
         var view = this;
         var container = this.$('ul.wall-work-list');
-        
+
         //remove all of the existing work records
         container.find('li.work').remove();
-        
+
         //create a new row for each work item
         this._addRows(this.collection.models);
     },
-    
+
     show: function() {
         gus.WorkListPanel.__super__.show.apply(this, arguments);
         this.recalcHeight();
     },
-    
+
     /**
-     * Adds new rows to the work list based on specified models 
+     * Adds new rows to the work list based on specified models
      */
     _addRows: function(models) {
         var view = this;
         var container = this.$('ul.wall-work-list');
         var newElements = [];
-        
+
         models = _.isArray(models) ? models : [models];
-        
+
         _.each(models, function(work){
             var row = new gus.WorkRow({
-                model: work, 
+                model: work,
                 canSelect: function() {
                     return false;
                     //return _.isUndefined(view.mode);
                 },
                 tableView: view
             });
-            
+
             var el = row.render().el;
             container.append(el);
             newElements.push(el);
-            
+
             //bubble the errors from the rows up to the container
             row.on('error', _.bind(function(error) {
                 view._onError(error);
             }, row));
-            
-            //recalc the height of the panel when a row resizes itself 
+
+            //recalc the height of the panel when a row resizes itself
             row.on('resize', function() {
                 view.recalcHeight();
             });
-            
+
             view.rows.push(row);
         });
-        
+
         //apply the column visibility to the new rows
         _.invoke(_.values(this.columns), 'apply');
-        
+
         //apply the special classes to the last columns of the rows
         //this._applyLastVisibleColumn($(newElements));
-        
+
          //if there are no elements then we need to show the no results and hide some of the elements
 	        if (this.collection.length > 0) {
 	            //container.removeClass('ui-helper-hidden');
@@ -2685,7 +2685,7 @@ gus.WorkListPanel = gus.Panel.extend({
 	            this.$('.wall-tools-left').removeClass('ui-helper-hidden');
 	            this.$('#btn-fill').removeClass('ui-helper-hidden');
 	            this.$('.panel-full-message').hide();
-	        } 
+	        }
 	        else {
 	            //container.addClass('ui-helper-hidden');
 	            if(this.title == 'Backlog'){
@@ -2695,21 +2695,21 @@ gus.WorkListPanel = gus.Panel.extend({
 	            	this.$('.wall-tools-left').addClass('ui-helper-hidden');
 	        	}
 	        	this.$('li.headers').addClass('ui-helper-hidden');
-	            this.$('#btn-fill').addClass('ui-helper-hidden');    
+	            this.$('#btn-fill').addClass('ui-helper-hidden');
 	            this.$('.panel-full-message').text('No results found.').show();
 	            this.$('.table-container').removeClass('ui-scroll-helper');
 
 	        }
 
         this.renderShowMoreLink();
-        
+
         this.recalcHeight();
     },
-    
+
     initializeColumns: function() {
     try{
         var panel = this;
-        
+
         //create columns for each of the column definitions
         this.columns = {};
         var columnIndex = 0;
@@ -2864,11 +2864,11 @@ $.each(myData.user.teams,function(){
        	  	 }
    	  	 else{  //in case of old json data without panel definition
    	  	 for(var i=0; i< sampleColumnDefinitions.length;i++){  // here we set the default columns are visible and set them to the panels
-   	  	 if(sampleColumnDefinitions[i].label && defaultColumns.indexOf(sampleColumnDefinitions[i].label.toUpperCase())!= -1){ 
+   	  	 if(sampleColumnDefinitions[i].label && defaultColumns.indexOf(sampleColumnDefinitions[i].label.toUpperCase())!= -1){
    	  	 sampleColumnDefinitions[i].visible = true;  //Sets the values to the SampleColumnDefinition for the sake of display
    	  	 }
    	  	 }
-   	  	 this.columns = defaultColumns;	 //Sets the values to the JSON        	  
+   	  	 this.columns = defaultColumns;	 //Sets the values to the JSON
    	  	 }
    	  	 panel.setColumnDefinitionForPanels(sampleColumnDefinitions,panel); // saving them and displaying the columns on load.
    	  	}
@@ -2878,7 +2878,7 @@ $.each(myData.user.teams,function(){
        	  	});
 if(this.panels.length == panelCount){ //Case of Adding a new Panel
 for(var i=0; i< sampleColumnDefinitions.length;i++){  //set default columns as visible and add it to the JSON
- 	 if(sampleColumnDefinitions[i].label && defaultColumns.indexOf(sampleColumnDefinitions[i].label.toUpperCase())!= -1){ 
+ 	 if(sampleColumnDefinitions[i].label && defaultColumns.indexOf(sampleColumnDefinitions[i].label.toUpperCase())!= -1){
  	 sampleColumnDefinitions[i].visible = true; //Sets the values to the SampleColumnDefinition for the sake of display
  	 }
        	  	 }
@@ -2889,7 +2889,7 @@ for(var i=0; i< sampleColumnDefinitions.length;i++){  //set default columns as v
 myData = JSON.stringify(myData); // Convert it back to JSON from javascript object.
    gus.setJSONValues(myData) //save to database.
            .fail(function(event) {
-               panel._onError('Failed to save JSON values', event); 
+               panel._onError('Failed to save JSON values', event);
    });
         sampleColumnDefinitions = tempColumnDefinition;  //reset to old value at the end of each iteration for every panel.
         //initialize the column vibility menu
@@ -2900,12 +2900,12 @@ myData = JSON.stringify(myData); // Convert it back to JSON from javascript obje
                     label: column.label,
                     checked: column.visible
                 });
-                
+
                 //if the column visibility changes, then change the menu item
                 column.on('change:visibility', function() {
                     menuItem.setChecked(column.visible);
                 });
-                
+
                 //if the menu item changes, then change the column visibility
                 menuItem.on('change:checked', function() {
                     if(menuItem.checked) {
@@ -2916,16 +2916,16 @@ myData = JSON.stringify(myData); // Convert it back to JSON from javascript obje
                         panel.updateJSONData(column);
                     }
                 });
-                
+
                 $menu.append(menuItem.render().$el);
             }
         });
         $menu.menu();
 
-       
+
         //bind the column to the panel
         _.each(_.values(this.columns), function(column) {
-            
+
             column.on('change:visibility', function() {
                 //whenever the visibility of a column changes, we need to update which
                 //column is the last visible within each row
@@ -2934,24 +2934,24 @@ myData = JSON.stringify(myData); // Convert it back to JSON from javascript obje
                     panel.lastVisibleColumn = newLastVisibleColumn;
                     panel._applyLastVisibleColumn();
                 }
-                
+
                 //whenever the visibility changes, recalc the panel height
                 panel.recalcHeight();
             });
-            
+
         });
-        
+
         this.lastVisibleColumn = this._checkLastVisibleColumn();
-        
+
         //bind the specific work-tasks column to apply task classes
-        this.columns['work-tasks'].on('change:visibility', this._applyTaskClasses, this);  
+        this.columns['work-tasks'].on('change:visibility', this._applyTaskClasses, this);
 
 }
 catch(err){
 myData = ''; // Convert it back to JSON from javascript object.
    gus.setJSONValues(myData) //save to database.
            .fail(function(event) {
-               panel._onError('Failed to save JSON values', event); 
+               panel._onError('Failed to save JSON values', event);
    });
    alert('Unexpected exception while initializing columns : '+err+'\nTry reloading the page!');
 }
@@ -2968,7 +2968,7 @@ myData = ''; // Convert it back to JSON from javascript object.
 });
 
     },
-    
+
     _applyTaskClasses: function() {
         this.$el.removeClass('panel-tasks');
 
@@ -2981,7 +2981,7 @@ myData = ''; // Convert it back to JSON from javascript object.
 
     updateJSONData: function(editedColumn) { // Updates the JSON when a new column is added or removed
     var panelName = this.formPanelNameFromJSON();
-    if(typeof myData != 'object'){        
+    if(typeof myData != 'object'){
             myData = JSON.parse(myData.toString());
         }
     $.each(myData.user.teams,function(){
@@ -3014,7 +3014,7 @@ myData = ''; // Convert it back to JSON from javascript object.
     myData = JSON.stringify(myData); // Convert it back to JSON from javascript object.
         gus.setJSONValues(myData) //save to database.
                 .fail(function(event) {
-                    panel._onError('Failed to save JSON values', event); 
+                    panel._onError('Failed to save JSON values', event);
         });
 
 
@@ -3032,7 +3032,7 @@ myData = ''; // Convert it back to JSON from javascript object.
     else if(panelTitle.indexOf('BUILD') != -1  && panelTitle.indexOf('THEME') == -1){
     return 'build'+'('+this.buildId+')';
 
-    } 
+    }
     else if(panelTitle.indexOf('SPRINT') != -1  && panelTitle.indexOf('THEME') == -1){
     return 'sprint'+'('+this.sprintId+')';
 
@@ -3049,14 +3049,14 @@ myData = ''; // Convert it back to JSON from javascript object.
     return panelTitle;
     }
     },
-    
+
     delegateEvents: function() {
         gus.WorkListPanel.__super__.delegateEvents.apply(this, arguments);
 
         //hide the menu when the document is clicked
         $(document).on('click.work' + this.cid, $.proxy(this.hideColumnSelectionMenu, this));
     },
-    
+
     undelegateEvents: function() {
         gus.WorkListPanel.__super__.undelegateEvents.apply(this, arguments);
 
@@ -3068,79 +3068,79 @@ myData = ''; // Convert it back to JSON from javascript object.
     showSort: function() {
         this.mode = 'sort';
         this.$('div.wall-tools-left li button').attr('disabled','disabled');
-        
+
         // show/hide
         this.$('ul.wall-work-list').addClass('sort');
-        
+
         //show the grip controls
         this.$('div.grip').removeClass('ui-helper-hidden');
         this.$('li.work').addClass('no-edit');
         this.$('li.work div.work-subject').addClass('noradius');
-        
+
         //hide the check controls
         this.$('div.check-holder').addClass('ui-helper-hidden');
     },
     hideSort: function() {
-        delete this.mode; 
+        delete this.mode;
         this.$('div.wall-tools-left li button').removeAttr('disabled');
-        
+
         // show/hide
         this.$('ul.wall-work-list').removeClass('sort');
-        
+
         //hide the grip controls
         this.$('div.grip').addClass('ui-helper-hidden');
         this.$('li.work').removeClass('no-edit');
         this.$('li.work div.work-subject').removeClass('noradius');
     },
-    
+
     showWorkEditor: function(workRow) {
         if(this.panelContainer) {
             this.panelContainer.showWorkDialog(workRow.model);
         }
         return this;
     },
-    
+
     checkColumnClicked: function() {
         if ( this.$('li.work').hasClass('selected') ) {
             this.$('li.work').removeClass('selected');
         } else {
             this.$('li.work').addClass('selected');
         }
-        
+
     },
-    
+
     showMultiEdit: function() {
         this.mode = 'multiedit';
-        
+
         //hide the panel controls
         this.$('div.wall-tools-left li button').attr('disabled','disabled');
-        
+
         // show/hide
         this.$('ul.wall-work-list').addClass('multiedit');
         this.$('li.work').addClass('no-edit');
         this.$('li.work div.work-subject').addClass('noradius');
-        
+
         this.columns['check-holder'].show();
     },
-    
+
     hideMultiEdit: function() {
         if(this.mode !== 'multiedit') {
             return;
         }
         delete this.mode;
-        
+
         //enable to panel controls
         this.$('div.wall-tools-left li button').removeAttr('disabled');
-        
+
         // show/hide
         this.$('ul.wall-work-list').removeClass('multiedit');
         this.$('li.work').removeClass('no-edit');
         this.$('li.work div.work-subject').removeClass('noradius');
-        
+
         //hide the checkholder column
         this.columns['check-holder'].hide();
     },
-    
+
     showColumnSelectionMenu: function() {
         var panel = this;
         var $panel = this.$el;
@@ -3148,45 +3148,45 @@ myData = ''; // Convert it back to JSON from javascript object.
         if(panelMenu.is(':visible')) {
             return false;
         }
-        
+
         var $button = this.$('#btn-columns button').addClass('on');
-       
+
         //show the menu and position under the button
         panelMenu.show().position({my:'left top', at:'left bottom', of:$button, offset:'0px -1px'});
-        
+
 var maxPanelHeight = $('.panel-container').outerHeight() - parseInt(panelMenu.css('top'),10) - 80;
         panelMenu.css('max-height',maxPanelHeight + 'px');
     },
-    
+
     hideColumnSelectionMenu: function() {
         if(!this.$('.menu_columns').is(':visible')) {
             return;
         }
-        
+
         this.$('.menu_columns').hide();
-        
+
         // normalize column selection button
         this.$('#btn-columns button').removeClass('on');
     },
-    
+
     fill: function() {
         gus.WorkListPanel.__super__.fill.apply(this, arguments);
 
         this.$el.addClass('panel-fill');
         this.recalcHeight();
     },
-    
+
     unfill: function() {
         gus.WorkListPanel.__super__.unfill.apply(this, arguments);
         this.$el.removeClass('panel-fill');
         this.recalcHeight();
     },
-    
+
     recalcHeight: function() {
         if(!this.panelContainer) {
             return;
         }
-        
+
         var loadingVisible = this.$('.panel-loading').is(':visible');
         var workList = this.$('.wall-work-list');
         if (loadingVisible) {
@@ -3196,14 +3196,14 @@ var maxPanelHeight = $('.panel-container').outerHeight() - parseInt(panelMenu.cs
         } else if (!loadingVisible && workList.outerHeight() > 30) {
             workList.css('height','auto');
         }
-    
+
         var maxPanelHeight = this.panelContainer.maxPanelHeight;
         var panelHeaderHeight = this.$('.panel-header').outerHeight();
         var panelOffset = this.$el.outerHeight() - this.$el.height();
         this.$('.table-container').height(maxPanelHeight - panelHeaderHeight - panelOffset);
 
         var addedUp = maxPanelHeight - panelHeaderHeight - panelOffset;
-        
+
         var contentHeight = this._getContentHeight();
         if ( contentHeight < this.$('.table-container').height() ) {
             this.$('.table-container').height(contentHeight);
@@ -3218,20 +3218,20 @@ var maxPanelHeight = $('.panel-container').outerHeight() - parseInt(panelMenu.cs
             this.$('.table-container').addClass('ui-noresults-helper');
         }*/
     },
-    
+
     showMore: function() {
         var deferred = new $.Deferred();
         if(_.isUndefined(this.collection.hasMoreRecords) || _.result(this.collection, 'hasMoreRecords') === false) {
             deferred.resolve(false);
             return deferred.promise();
         }
-        
+
         console.log('Loading the next batch of records');
-        
+
         this.$('.panel-show-more').hide();
         this.$('.panel-loading').show();
         this.recalcHeight();
-        
+
         this.collection.fetchNextBatch()
             .always(_.bind(function(event) {
                 this.$('.panel-loading').hide();
@@ -3242,37 +3242,37 @@ var maxPanelHeight = $('.panel-container').outerHeight() - parseInt(panelMenu.cs
                 this._onError('Failed to load records', event);
                 deferred.reject('Failed to load records', event);
             }, this));
-            
+
         return deferred.promise();
     },
-    
+
     _getContentHeight: function() {
         var contentHeight = this.$('.wall-work-list').outerHeight();
-        
+
         //if the show more link is visible, we need to account for it in the scrollable area
         var showMoreVisible = this.$('.panel-show-more').is(':visible');
         if(showMoreVisible) {
             contentHeight += this.$('.panel-show-more').outerHeight();
         }
-        
+
         var loadingVisible = this.$('.panel-loading').is(':visible');
         if(loadingVisible) {
             contentHeight += this.$('.panel-loading').outerHeight();
         }
-        
+
         return contentHeight;
     },
-    
-    sprintToggle: function(event) {  
-   $('#btn-sprinttoggle button').attr('disabled','true');      
-   hideWorkWithSprint = (hideWorkWithSprint == 'false') ? 'true' : 'false'; 
+
+    sprintToggle: function(event) {
+   $('#btn-sprinttoggle button').attr('disabled','true');
+   hideWorkWithSprint = (hideWorkWithSprint == 'false') ? 'true' : 'false';
    this.refreshPanel();
     },
-    
+
     _onShowColumnSettingsButtonClick: function(event) {
         event.preventDefault();
         event.stopPropagation();
-        
+
         if(this.$('.menu_columns').is(':visible')) {
             this.hideColumnSelectionMenu();
         } else {
@@ -3286,7 +3286,7 @@ var maxPanelHeight = $('.panel-container').outerHeight() - parseInt(panelMenu.cs
     _onSortReceive: function(event, ui) {
         this.processDrop(this);
         this.autoLoadRecordsEnabled = true;
-        this.renderRows();  
+        this.renderRows();
     },
     _onSortStart: function(event, ui) {
         var allowedLists = this.$('ul.wall-work-list').sortable('option','connectWith');
@@ -3303,13 +3303,13 @@ var maxPanelHeight = $('.panel-container').outerHeight() - parseInt(panelMenu.cs
         this.$('li.headers > div:visible').each(function(i) {
             placeholderHtml += '<div></div>';
         });
-        this.$('li.placeholder').html(placeholderHtml);     
+        this.$('li.placeholder').html(placeholderHtml);
 
         // record counter on cursor start
         if (this.$('li.selected').size() != 1) { var sNeeded = 's' } else { var sNeeded = '' }
         $('#cursorInfo').html(this.$('li.selected').size() + ' record' + sNeeded).show();
         numberOfRecordsSelected = this.$('li.selected').size();
-        
+
         // TODO: recalculate height of panel after items are grabbed and hidden
     },
     _onSortBeforeStop: function(event, ui) {
@@ -3317,7 +3317,7 @@ var maxPanelHeight = $('.panel-container').outerHeight() - parseInt(panelMenu.cs
             this.$('li.headers > div:visible').each(function(i) {
                 $(this).css('min-width','0px');
             });
-    
+
             $('ul.wall-work-list').not('.themepanel ul.wall-work-list').sortable('enable');
             $('.themepanel ul.wall-work-list').removeClass('ui-sortable-disabled');
 
@@ -3330,10 +3330,10 @@ var maxPanelHeight = $('.panel-container').outerHeight() - parseInt(panelMenu.cs
             var collection = this.collection;
             modelsBeingSorted = new Array();
             itemsBeingSorted.each(function(idx, item) {
-    
+
             // Strip off the leading "/"
             var work_id = $(item).attr("href").substr(1);
-    
+
             // Create a list of the models being sort for later insertion
             var model = collection.get(work_id);
             modelsBeingSorted.push(model);
@@ -3371,7 +3371,7 @@ var maxPanelHeight = $('.panel-container').outerHeight() - parseInt(panelMenu.cs
         var newIndex = droppedIndex;
 		// Put the models back in to the collection at the dropped panel
         dropTarget.collection.add(modelsBeingSorted, {at: newIndex, silent: true});
-        
+
         //set the new ranks (specific to the target panel) within each of the models in the collection
         // and also update other fields depending on the drop target
         var listView = dropTarget;
@@ -3390,37 +3390,37 @@ var maxPanelHeight = $('.panel-container').outerHeight() - parseInt(panelMenu.cs
                     model.set('Sprint__c', dropTarget.sprintId);
                 }
             }
-            
-            
+
+
             if (dropTarget.$el.attr('id').indexOf('epicpanel') != -1) {
                     if (model.get('Epic__c') != dropTarget.epicId) {
                         change['Epic__c'] = dropTarget.epicId;
                         model.set('Epic__c', dropTarget.epicId);
                     }
                 }
-            
+
             if (dropTarget.$el.attr('id').indexOf('scheduledbuildpanel') != -1) {
                 if (model.get('Scheduled_Build__c') != dropTarget.buildId) {
                     change['Scheduled_Build__c'] = dropTarget.buildId;
                     model.set('Scheduled_Build__c', dropTarget.buildId);
                 }
             }
-            
+
             if (dropTarget.$el.attr('id').indexOf('backburnerpanel') != -1) {
                 change[nameSpace + 'Priority_Rank__c'] = null;     //Backlog Rank to null
                 model.set(nameSpace + 'Priority_Rank__c', null);
             }
-            
+
             changes.push(change);
-           
+
             index++;
         });
-        
+
         dropTarget.collection.sort();
-        
+
         //send the rank order (and possibly other updated attributes) back to the server
         dropTarget.saveOrder(changes);
-        
+
         dropTarget.$('li.selected').removeAttr('style');
 
     },
@@ -3429,19 +3429,19 @@ var maxPanelHeight = $('.panel-container').outerHeight() - parseInt(panelMenu.cs
      * Event handler when the table-container element is scrolled
      */
     _onTableContainerScroll: function() {
-        
+
         //if auto loading the next batch of records
         if(this.autoLoadRecordsEnabled && !this.autoLoadRecords) {
             var $container = this.$('.table-container');
             var containerHeight = $container.height();
             var scrollTop = $container.scrollTop();
             var scrollBottom = scrollTop + containerHeight;
-            
+
             var contentHeight = this._getContentHeight();
-            
+
             //once the user scrolls past this value, then we need to showMore
             var scrollRangeTop = contentHeight - (contentHeight / 10);
-            
+
             //when the user scrolls down to within the last 10% of the table-container, automatically
             //load the next batch of records
             if(scrollBottom >= scrollRangeTop) {
@@ -3453,7 +3453,7 @@ var maxPanelHeight = $('.panel-container').outerHeight() - parseInt(panelMenu.cs
             }
         }
     },
-    
+
     /**
      * Applies the special 'lastcolumnvisible' to the last visible columns within the row.
      */
@@ -3461,13 +3461,13 @@ var maxPanelHeight = $('.panel-container').outerHeight() - parseInt(panelMenu.cs
         if(!context) {
             context = this.$('li.work');
         }
-        
+
         context.find('>div').removeClass('lastvisiblecolumn');
-        
+
         //TODO: this doesn't use this.lastVisibleColumn so the last one may not be correct
         context.find('>div:visible:last').addClass('lastvisiblecolumn');
     },
-    
+
     /**
      * Determines the last visible column
      */
@@ -3482,7 +3482,7 @@ var maxPanelHeight = $('.panel-container').outerHeight() - parseInt(panelMenu.cs
         }
         return lastVisibleColumn;
     },
-    
+
     _onError: function(message, event) {
         if(this.panelContainer) {
             this.panelContainer._onError(message, event);
@@ -3510,7 +3510,7 @@ gus.TaskColumns = Backbone.View.extend({
         this.columns[0].$el.appendTo(this.$('.work-tasks-column1 .task-list'));
         this.columns[1].$el.appendTo(this.$('.work-tasks-column2 .task-list'));
         this.columns[2].$el.appendTo(this.$('.work-tasks-column3 .task-list'));
-        
+
         //if any of the columns change their stack property,
         //let's just send it up
         _.each(this.columns, _.bind(function(column) {
@@ -3518,7 +3518,7 @@ gus.TaskColumns = Backbone.View.extend({
                 this.trigger('change:stack');
             }, this);
         }, this));
-        
+
         return this;
     },
     setTasks: function(tasks) {
@@ -3528,7 +3528,7 @@ gus.TaskColumns = Backbone.View.extend({
             'In Progress': [],
             'Completed': []
         };
-        
+
         //sort all of the tasks between the three columns
         _.each(tasks, function(task) {
             if(columns[task.get(nameSpace + 'Status__c')]) {
@@ -3537,7 +3537,7 @@ gus.TaskColumns = Backbone.View.extend({
                 columns['Not Started'].push(task);
             }
         });
-        
+
         //add the new task cards
         this.columns[0].collection.reset(columns['Not Started']);
         this.columns[1].collection.reset(columns['In Progress']);
@@ -3559,7 +3559,7 @@ gus.TaskCardColumn = Backbone.View.extend({
         this.collection.comparator = function(task1, task2) {
             var order1 = task1.get('Order__c');
             var order2 = task2.get('Order__c');
-            
+
             if(_.isUndefined(order1) && _.isUndefined(order2)) {
                 return 0;
             } else if(_.isUndefined(order1)) {
@@ -3567,7 +3567,7 @@ gus.TaskCardColumn = Backbone.View.extend({
             } else if(_.isUndefined(order2)) {
                 return -1;
             }
-            
+
             if(order1 < order2) {
                 return -1;
             } else if(order1 > order2) {
@@ -3588,7 +3588,7 @@ gus.TaskCardColumn = Backbone.View.extend({
             }, this));
             this.taskCards.push(taskCard);
         }, this));
-        
+
         if(this.isStackable()) {
             this.stack();
         } else {
@@ -3612,12 +3612,12 @@ gus.TaskCardColumn = Backbone.View.extend({
         _.each(this.taskCards, _.bind(function(taskCard) {
             this.$el.append(taskCard.el);
         }, this));
-        
+
         //if this card can be stacked, show the "collapse" link
         if(this.isStackable()) {
             this.$el.append($(this.showAllTemplate())).find('.showAllTasks a').text('Collapse ' + this.taskCards.length + ' tasks');
         }
-        
+
         if(beforeStacked != this.stacked) {
             this.trigger('change:stack');
         }
@@ -3628,23 +3628,23 @@ gus.TaskCardColumn = Backbone.View.extend({
         this.$el.empty();
         if(this.collection.length === 0) {
             return;
-        } 
-        
+        }
+
         this.$el.addClass('stacked');
-        
+
         //show three blank task cards under the last card
         var $blankTaskCard = $('<li class="taskcard-blank"></li>');
         this.$el.append($blankTaskCard.clone());
         this.$el.append($blankTaskCard.clone());
         this.$el.append($blankTaskCard.clone());
-        
+
         //show the last task card
         var lastTaskCard = this.taskCards[this.taskCards.length - 1];
         this.$el.append(lastTaskCard.el);
-        
+
         //show the "show all tasks" link
         this.$el.append($(this.showAllTemplate())).find('.showAllTasks a').text('Expand ' + this.taskCards.length + ' tasks');
-        
+
         if(beforeStacked != this.stacked) {
             this.trigger('change:stack');
         }
@@ -3682,7 +3682,7 @@ this.$('.hours input').val( this.model.get(nameSpace + 'Hours_Remaining__c') || 
                 this.$('.assignee-picture img').attr({src: '/profilephoto/005/T', title: ''});
             }
         }, this));
-        
+
         if(!this.editable) {
             this.$('.row-1 button').addClass('ui-helper-hidden');
             this.$('.task-subject textarea').attr('disabled', 'disabled');
@@ -3692,7 +3692,7 @@ this.$('.hours input').val( this.model.get(nameSpace + 'Hours_Remaining__c') || 
             this.$('.task-subject textarea').removeAttr('disabled');
             this.$('.hours input').removeAttr('disabled');
         }
-        
+
         return this;
     },
     remove: function() {
@@ -3727,18 +3727,18 @@ gus.WorkRow = Backbone.View.extend({
         this.template = _.template($('#template-backlog-work').html());
         this.canSelect = options.canSelect;
         this.tableView = options.tableView;
-        
+
         this.taskColumns = new gus.TaskColumns({
             model: this.model,
             el: this.el
         });
         this.taskColumns.setTasks(this.model.get(nameSpace + 'Tasks__r'));
-        
+
         //if the columns are stacked/unstacked, lets tell the subscribers to resize
         this.taskColumns.on('change:stack', function() {
             this.trigger('resize');
         }, this);
-        
+
         //if the model changes, we want to rerender the property on the row
         this.model.on('change:'+ nameSpace + 'Subject__c', this.renderSubject, this);
         this.model.on('change:'+ nameSpace + 'Status__c', this.renderStatus, this);
@@ -3755,15 +3755,15 @@ gus.WorkRow = Backbone.View.extend({
     },
     render: function() {
         var $row = this.$el.empty().append($(this.template({work: this.model.toJSON()})));
-        
+
         //make sure the task column is rendered
         this.taskColumns.render();
-        
+
         var view = this;
         var work = this.model;
-        
+
         this.$el.data('work-id', work.id);
-        
+
         //load the record type
         this.model.getRecordType()
             .done(function(recordType) {
@@ -3784,7 +3784,7 @@ gus.WorkRow = Backbone.View.extend({
             .fail(function(event) {
                 view._onError('Failed to load record type: ' + work.get('RecordTypeId'), event);
             });
-            
+
         //load the model properties
         this.renderSubject()
             .renderStatus()
@@ -3843,7 +3843,7 @@ gus.WorkRow = Backbone.View.extend({
             })
             .fail(function(event) {
                 view._onError('Failed to load build: ' + work.get('Scheduled_Build__c'), event);
-            });     
+            });
         return this;
     },
     renderProductTag: function() {
@@ -3855,7 +3855,7 @@ gus.WorkRow = Backbone.View.extend({
             })
             .fail(function(event) {
                 view._onError('Failed to load product tag: ' + work.get('Product_Tag__c'), event);
-            });     
+            });
         return this;
     },
     renderFoundInBuild: function() {
@@ -3867,7 +3867,7 @@ gus.WorkRow = Backbone.View.extend({
             })
             .fail(function(event) {
                 view._onError('Failed to load build: ' + work.get('Found_In_Build__c'), event);
-            });     
+            });
         return this;
     },
     renderEpic: function() {
@@ -3886,27 +3886,27 @@ gus.WorkRow = Backbone.View.extend({
         var work = this.model;
         var view = this;
         var themeCsv = '';
-        
+
         //load theme assignments
         var $themeContainer = view.$('.work-themes').empty();
         _.each(this.model.get( nameSpace + 'Theme_Assignments__r'), function(themeAssignment) {
             var themeModel = themeAssignment[nameSpace + 'Theme__r'];
             var name = themeModel.get('Name');
-            
-            //create the dom 
+
+            //create the dom
             $('<span>').text(name).appendTo($themeContainer);
-            
+
             //add it to the CSV
             if(themeCsv.length > 0) {
                 themeCsv += ', ';
             }
             themeCsv += name;
         });
-        
+
         //add the list of themes as the title attribute of the container so
         //that it displays on hover over
         $themeContainer.attr('title', themeCsv);
-        
+
         return this;
     },
     renderAssignee: function() {
@@ -3925,7 +3925,7 @@ gus.WorkRow = Backbone.View.extend({
             }, this));
         return this;
     },
-    renderQAEngineer: function() { 
+    renderQAEngineer: function() {
         var work = this.model;
         var view = this;
         this.model.getQAEngineer()
@@ -3978,7 +3978,7 @@ gus.WorkRow = Backbone.View.extend({
         if(!_.result(this, 'canSelect')) {
             return;
         }
-        
+
         if(this.isSelected) {
             this.unselect();
         } else {
@@ -3989,7 +3989,7 @@ gus.WorkRow = Backbone.View.extend({
         if(!_.result(this, 'canSelect')) {
             return;
         }
-        
+
         if(!this.isSelected) {
             this.isSelected = true;
             this.$el.addClass('selected');
@@ -4000,7 +4000,7 @@ gus.WorkRow = Backbone.View.extend({
         if(!_.result(this, 'canSelect')) {
             return;
         }
-        
+
         if(this.isSelected) {
             this.isSelected = false;
             this.$el.removeClass('selected');
@@ -4042,54 +4042,54 @@ gus.WorkCollection = Backbone.Collection.extend({
     initialize: function(models, options) {
         options = _.defaults(options || {}, {batchSize: 50, model: gus.WorkModel});
         gus.WorkCollection.__super__.initialize.call(this, models, options);
-        
+
         //the remote GET method
         this.remoteGetMethod = options.remoteGetMethod;
-        
+
         //batch loading properties
         this.batchSize = options.batchSize;
         this.currentBatch = -1;
-        
+
         //total number of records on the server
         this.numberOfRecords = -1;
     },
-    
+
     /**
      * Overriding the basic fetch function
      */
     fetch: function() {
         return this.fetchNextBatch();
     },
-    
+
     /**
      * Fetches the next batch of records from the server.
      * @return a $.Deferred
      */
     fetchNextBatch: function(options) {
         options = _.defaults(options || {}, {batchSize: this.batchSize});
-        
+
         //we only allow one fetch at a time, no matter what options are specified
         if(!this.promise) {
-            
+
             //calculate the next index
             options.offset = (this.currentBatch + 1) * options.batchSize;
-            
+
             this.promise = this.remoteGetMethod(options);
             this.promise = this.promise.then(_.bind(function(data) {
                 this.setNumberOfRecords(data.numberOfRecords);
                 this.currentBatch += 1;
-                
+
                 delete this.promise;
-                
+
                 this.add(data.records, {at: options.offset, merge: true});
                 this.trigger('addBatch', data.records);
                 return this;
             }, this));
         }
-        
+
         return this.promise;
     },
-    
+
     /**
      * Determines if all of the records have been loaded
      */
@@ -4099,7 +4099,7 @@ gus.WorkCollection = Backbone.Collection.extend({
         }
         return this.length < this.numberOfRecords;
     },
-    
+
     setNumberOfRecords: function(value) {
         if(value != this.numberOfRecords) {
             this.numberOfRecords = value;
@@ -4115,25 +4115,25 @@ gus.MasterBacklogPanel = gus.WorkListPanel.extend({
             sortable: true,
             sortedProperty: 'Priority_Rank__c'
         });
-        
+
         //check that team is specified
         var teamDeferred = this.teamDeferred;
         //If teamDeffered is passd in options let's use that and assign that to this.teamDeferred
         if(options.teamDeferred){
         teamDeferred = this.teamDeferred = options.teamDeferred;
         }
-        
+
         if(!teamDeferred) {
             throw 'Team is required to show a backlog panel';
         }
-        
+
         options.collection = new gus.WorkCollection(null, {
             remoteGetMethod: function(myOptions) {
                 return teamDeferred.then(function(team) {
                    var result =  gus.getMasterBacklog(team.get('Id'), myOptions.offset, myOptions.batchSize, hideWorkWithSprint);
                    result.then(function(){
                     resetIcons(options.title);
-                   }); 
+                   });
                    return result;
                 })
             },
@@ -4144,7 +4144,7 @@ gus.MasterBacklogPanel = gus.WorkListPanel.extend({
         options.collection.on('change', this.rerender,this);
         gus.MasterBacklogPanel.__super__.initialize.call(this, options);
     },
-    
+
     saveOrder: function(changes) {
         var panel = this;
         return this.teamDeferred.then(function(team) {
@@ -4160,17 +4160,17 @@ gus.MasterBacklogPanel = gus.WorkListPanel.extend({
         $(this.el).addClass('masterbacklogpanel');
         $(this.el).find('#btn-sprinttoggle').css('display','inline-block');
         return this;
-    }, 
+    },
     rerender: function() {
         if(this.collection) {
             /*When dragging from the master backlog to other panels the item should still be displayed in the backlog panel.  This requries it to be re-rendered by backbone
-            which is expensive for large backlogs.  Typically users will leave most work records on the backburner and pull less then 100 records onto their backlog. 
+            which is expensive for large backlogs.  Typically users will leave most work records on the backburner and pull less then 100 records onto their backlog.
             But if they have more drag and drop will still function but degrade gracefully by not re-rendering the backlog when it is too large */
-            if(this.collection.length < MAX_RERENDER_SIZE) { 
+            if(this.collection.length < MAX_RERENDER_SIZE) {
                 this.render();
-            } 
-        } 
-        
+            }
+        }
+
     },
     // Put the names of the lists this panel is allowed to talk to here
     connectedWithRules: function() {
@@ -4185,20 +4185,20 @@ gus.EpicPanel = gus.WorkListPanel.extend({
             sortable: true,
             sortedProperty: 'Epic_Rank__c'
         });
-        
+
         //check that a team deferred was specified
         var teamDeferred = this.teamDeferred;
         //If teamDeffered is passd in options let's use that and assign that to this.teamDeferred
         if(options.teamDeferred){
         teamDeferred = this.teamDeferred = options.teamDeferred;
         }
-        
+
         //check that an epic deferred was specified
         var epicDeferred = this.epicDeferred;
         if(options.epicDeferred){
         epicDeferred = this.epicDeferred = options.epicDeferred;
         }
-        
+
         if(!epicDeferred) {
             throw 'Epic is required to show epic panel';
         }
@@ -4210,7 +4210,7 @@ gus.EpicPanel = gus.WorkListPanel.extend({
                         var result = gus.getEpicBacklog(team.get('Id'), epic.get('Id'), myOptions.offset, myOptions.batchSize);
                         result.then(function(){
                     		resetIcons(panel.title);
-                   	    });  
+                   	    });
                          return result;
                     });
                 });
@@ -4219,12 +4219,12 @@ gus.EpicPanel = gus.WorkListPanel.extend({
                 return work.get(this.sortedProperty);
             }, this)
         });
-        
+
         gus.EpicPanel.__super__.initialize.call(this, options);
         //this must be called after the initialize since it sets the title
         //which could be overwritten by the initialize function
         epicDeferred.done(_.bind(this.setEpic, this));
-    }, 
+    },
 
     saveOrder: function(changes) {
         var panel = this;
@@ -4238,7 +4238,7 @@ gus.EpicPanel = gus.WorkListPanel.extend({
     setEpic: function(epic) {
         this.epicId = epic.get('Id');
         this.epic = epic;
-        
+
         //update the title of the panel
         var title = (epic.get('Name') || epic.get('Id')) + ' Epic';
         this.setTitle(title);
@@ -4265,25 +4265,25 @@ gus.BackburnerPanel = gus.WorkListPanel.extend({
             sortedProperty: 'Backburner_Rank__c'
 
         });
-        
+
         //check that team is specified
         var teamDeferred = this.teamDeferred;
         //If teamDeffered is passd in options let's use that and assign that to this.teamDeferred
         if(options.teamDeferred){
         teamDeferred = this.teamDeferred = options.teamDeferred;
         }
-       
+
         if(!teamDeferred) {
             throw 'Team is required to show a feature backlog panel';
         }
-        
+
         options.collection = new gus.WorkCollection(null, {
             remoteGetMethod: function(myOptions) {
                 return teamDeferred.then(function(team) {
                     var result = gus.getBackburner(team.get('Id'), myOptions.offset, myOptions.batchSize);
                     result.then(function(){
                     	resetIcons(options.title);
-                    });                    
+                    });
                     return result;
                 });
             },
@@ -4308,7 +4308,7 @@ gus.BackburnerPanel = gus.WorkListPanel.extend({
         $(this.el).attr('id', 'backburnerpanel');
         $(this.el).addClass('backburnerpanel');
         return this;
-    }, 
+    },
 
     // Put the names of the lists this panel is allowed to talk to here
     connectedWithRules: function() {
@@ -4324,7 +4324,7 @@ gus.FeatureBacklogPanel = gus.WorkListPanel.extend({
             sortable: true,
             sortedProperty: 'Feature_Rank__c'
         });
-        
+
         //check that team is specified
         var teamDeferred = this.teamDeferred;
         //If teamDeffered is passd in options let's use that and assign that to this.teamDeferred
@@ -4335,14 +4335,14 @@ gus.FeatureBacklogPanel = gus.WorkListPanel.extend({
         if(!teamDeferred) {
             throw 'Team is required to show a feature backlog panel';
         }
-        
+
         options.collection = new gus.WorkCollection(null, {
             remoteGetMethod: function(myOptions) {
                 return teamDeferred.then(function(team) {
                     var result = gus.getFeatureBacklog(team.get('Id'), myOptions.offset, myOptions.batchSize);
                     result.then(function(){
                     resetIcons(options.title);
-                    });  
+                    });
                     return result;
                 });
             },
@@ -4371,11 +4371,11 @@ gus.FeatureBacklogPanel = gus.WorkListPanel.extend({
     },
     rerender: function() {
         if(this.collection) {
-            if(this.collection.length < MAX_RERENDER_SIZE) { 
+            if(this.collection.length < MAX_RERENDER_SIZE) {
                 this.render();
-            } 
-        } 
-    },    
+            }
+        }
+    },
     // Put the names of the lists this panel is allowed to talk to here
     connectedWithRules: function() {
         return '.scheduledbuildpanel ul.wall-work-list,.sprintpanel ul.wall-work-list,.backburnerpanel ul.wall-work-list, .epicpanel ul.wall-work-list';
@@ -4389,7 +4389,7 @@ gus.TrustBacklogPanel = gus.WorkListPanel.extend({
             sortable: true,
             sortedProperty: 'Trust_Rank__c'
         });
-        
+
         //check that team is specified
         var teamDeferred = this.teamDeferred;
         //If teamDeffered is passd in options let's use that and assign that to this.teamDeferred
@@ -4400,7 +4400,7 @@ gus.TrustBacklogPanel = gus.WorkListPanel.extend({
         if(!teamDeferred) {
             throw 'Team is required to show a trust panel';
         }
-        
+
         options.collection = new gus.WorkCollection(null, {
             remoteGetMethod: function(options) {
                 return teamDeferred.then(function(team) {
@@ -4433,11 +4433,11 @@ gus.TrustBacklogPanel = gus.WorkListPanel.extend({
 
     rerender: function() {
         if(this.collection) {
-            if(this.collection.length < MAX_RERENDER_SIZE) { 
+            if(this.collection.length < MAX_RERENDER_SIZE) {
                 this.render();
-            } 
-        } 
-    },    
+            }
+        }
+    },
     // Put the names of the lists this panel is allowed to talk to here
     connectedWithRules: function() {
         return '.scheduledbuildpanel ul.wall-work-list,.sprintpanel ul.wall-work-list,.backburnerpanel ul.wall-work-list,.epicpanel ul.wall-work-list';
@@ -4452,7 +4452,7 @@ gus.ThemePanel = gus.WorkListPanel.extend({
             sortable: false,
             sortedProperty: 'Priority_Rank__c'
         });
-        
+
         //check that team is specified
         var teamDeferred = this.teamDeferred;
         //If teamDeffered is passd in options let's use that and assign that to this.teamDeferred
@@ -4463,7 +4463,7 @@ gus.ThemePanel = gus.WorkListPanel.extend({
         if(!teamDeferred) {
             throw 'Team is required to show a build panel';
         }
-        
+
         //wrap theme in a deferred
         var themeDeferred = this.themeDeferred;
         if(options.themeDeferred){
@@ -4480,7 +4480,7 @@ gus.ThemePanel = gus.WorkListPanel.extend({
                         var result =  gus.getThemeBacklog(team.get('Id'), theme.get('Id'), options.offset, options.batchSize);
                         result.then(function(){
                     resetIcons('Theme:'+theme.attributes.Name);
-                   	 });  
+                   	 });
                          return result;
                     });
                 });
@@ -4489,17 +4489,17 @@ gus.ThemePanel = gus.WorkListPanel.extend({
                 return work.get('Priority_Rank__c');
             }
         });
-        
+
         gus.ThemePanel.__super__.initialize.call(this, options);
-        
+
         //this must be called after the initialize since it sets the title
         //which could be overwritten by the initialize function
-        themeDeferred.done(_.bind(this.setTheme, this));        
+        themeDeferred.done(_.bind(this.setTheme, this));
     },
     setTheme: function(theme) {
         this.theme = theme;
         this.themeId = theme.get('Id');
-        
+
         //update the title of the panel
         var title = 'Theme: ' + (theme.get('Name') || theme.get('Id'));
         this.setTitle(title);
@@ -4524,7 +4524,7 @@ gus.ScheduledBuildPanel = gus.WorkListPanel.extend({
             sortable: true,
             sortedProperty: 'Scheduled_Build_Rank__c'
         });
-        
+
         //check that team is specified
         var teamDeferred = this.teamDeferred;
         //If teamDeffered is passd in options let's use that and assign that to this.teamDeferred
@@ -4535,7 +4535,7 @@ gus.ScheduledBuildPanel = gus.WorkListPanel.extend({
         if(!teamDeferred) {
             throw 'Team is required to show a build panel';
         }
-        
+
         //check that build is specified
         var buildDeferred = this.buildDeferred;
         if(options.buildDeferred){
@@ -4544,7 +4544,7 @@ gus.ScheduledBuildPanel = gus.WorkListPanel.extend({
         if(!buildDeferred) {
             throw 'Build is required to show a build panel';
         }
-        
+
         var panel = this;
         options.collection = new gus.WorkCollection(null, {
             remoteGetMethod: function(myOptions) {
@@ -4554,7 +4554,7 @@ gus.ScheduledBuildPanel = gus.WorkListPanel.extend({
                         var result = gus.getScheduledBuildBacklog(team.get('Id'), build.get('Id'), myOptions.offset, myOptions.batchSize);
                         result.then(function(){
                     resetIcons(panel.title);
-                   	 });  
+                   	 });
                          return result;
                     });
                 });
@@ -4563,13 +4563,13 @@ gus.ScheduledBuildPanel = gus.WorkListPanel.extend({
                 return work.get(this.sortedProperty);
             }, this)
         });
-        
+
         gus.ScheduledBuildPanel.__super__.initialize.call(this, options);
         //this must be called after the initialize since initiailize sets properties (like title)
         //which could be overwritten by the initialize function
         buildDeferred.done(_.bind(this.setBuild, this));
         teamDeferred.done(_.bind(this.setTeam, this));
-        
+
     },
 
     saveOrder: function(changes) {
@@ -4588,7 +4588,7 @@ gus.ScheduledBuildPanel = gus.WorkListPanel.extend({
     setBuild: function(build) {
         this.build = build;
         this.buildId = build.get('Id');
-        
+
         //update the title of the panel
         var title = (build.get('Name') || build.get('Id')) + ' Build';
         this.setTitle(title);
@@ -4613,20 +4613,20 @@ gus.SprintPanel = gus.WorkListPanel.extend({
             sortable: true,
             sortedProperty: 'Sprint_Rank__c'
         });
-        
+
         //check that a team deferred was specified
         var teamDeferred = this.teamDeferred;
         //If teamDeffered is passd in options let's use that and assign that to this.teamDeferred
         if(options.teamDeferred){
         teamDeferred = this.teamDeferred = options.teamDeferred;
         }
-        
+
         //check that a sprint deferred was specified
         var sprintDeferred = this.sprintDeferred;
         if(options.sprintDeferred){
         sprintDeferred = this.sprintDeferred = options.sprintDeferred;
         }
-        
+
         if(!sprintDeferred) {
             throw 'Sprint is required to show sprint panel';
         }
@@ -4638,7 +4638,7 @@ gus.SprintPanel = gus.WorkListPanel.extend({
                         var result = gus.getSprintBacklog(team.get('Id'), sprint.get('Id'), myOptions.offset, myOptions.batchSize);
                         result.then(function(){
                     resetIcons(panel.title);
-                   	 });  
+                   	 });
                          return result;
                     });
                 });
@@ -4647,12 +4647,12 @@ gus.SprintPanel = gus.WorkListPanel.extend({
                 return work.get(this.sortedProperty);
             }, this)
         });
-        
+
         gus.SprintPanel.__super__.initialize.call(this, options);
         //this must be called after the initialize since it sets the title
         //which could be overwritten by the initialize function
         sprintDeferred.done(_.bind(this.setSprint, this));
-    }, 
+    },
 
     saveOrder: function(changes) {
         var panel = this;
@@ -4666,7 +4666,7 @@ gus.SprintPanel = gus.WorkListPanel.extend({
     setSprint: function(sprint) {
         this.sprintId = sprint.get('Id');
         this.sprint = sprint;
-        
+
         //update the title of the panel
         var title = (sprint.get('Name') || sprint.get('Id')) + ' Sprint';
         this.setTitle(title);
@@ -4701,7 +4701,7 @@ gus.WorkEditor = Backbone.View.extend({
         var dialog = this._renderDialog();
         this.setElement(dialog);
         var view = this;
-        
+
         $('<a href="/' + this.model.get('Id') + '" title="Popout" class="ui-dialog-titlebar-extlink ui-corner-all" role="button"><span class="ui-icon ui-icon-extlink">popout</span></a>').appendTo(this.$('.ui-dialog-titlebar'));
 
         this.userLookupComponent = new gus.UserLookupComponent({
@@ -4720,7 +4720,7 @@ gus.WorkEditor = Backbone.View.extend({
             $nameInput: this.$('input#scheduledBuildInput'),
             modelClass: gus.BuildModel
         }).render();
-        
+
         var errorHandler = _.bind(function(message) {
             return _.bind(function() {
                 this._dialogCancel();
@@ -4735,7 +4735,7 @@ gus.WorkEditor = Backbone.View.extend({
                     var $statusInput = this.$('#statusInput').empty();
                     _.each(statusValues, function(statusValue) {
                         var $option = $('<option>').text(statusValue).attr('value', statusValue).appendTo($statusInput);
-                        if (view.model.get(nameSpace+'Status__c') == statusValue) { 
+                        if (view.model.get(nameSpace+'Status__c') == statusValue) {
                             $option.attr('selected', 'selected');
                         }
                     });
@@ -4753,7 +4753,7 @@ gus.WorkEditor = Backbone.View.extend({
                 }
             })
             .fail(errorHandler('Failed to load assignees: ' + this.model.get('Assignee__c')));
-        
+
         var sprintPromise = this.model.getSprint()
             .done(function(sprint) {
                 if (sprint) {
@@ -4822,7 +4822,7 @@ gus.WorkEditor = Backbone.View.extend({
             title: this.title,
             resizable: false
         });
-        
+
         return dialogBody.parents('.ui-dialog');
     },
     _getDialogBody: function() {
@@ -4850,7 +4850,7 @@ gus.WorkEditor = Backbone.View.extend({
     },
     _showFormErrors: function(pageErrors) {
         this._showErrorIndicator();
-        
+
         //display the page errors
         try {
             var errorContainer = this.$('.page-error-container').empty().hide();
@@ -4863,7 +4863,7 @@ gus.WorkEditor = Backbone.View.extend({
             if(pageErrors.length > 0) {
                 errorContainer.show();
             }
-            
+
         } catch(e) {
             console.warn(e);
             console.error('Error occurred while displaying errors.');
@@ -4872,13 +4872,13 @@ gus.WorkEditor = Backbone.View.extend({
     },
     _onSaveError: function(model, xhr, options) {
         var pageErrors;
-        
+
         if(xhr.readyState == 0 || xhr.status == 0) {
             console.warn('url changed during save');
             pageErrors = [{
                 message: 'URL changed during save'
             }];
-            
+
         } else {
             //parse the page errors from the XHR
             try {
@@ -4891,7 +4891,7 @@ gus.WorkEditor = Backbone.View.extend({
                 }];
             }
         }
-        
+
         this._showFormErrors(pageErrors);
     },
     _onSuccess: function() {
@@ -4910,7 +4910,7 @@ gus.WorkEditor = Backbone.View.extend({
         this.$formIndicator.removeClass('successIndicator').removeClass('errorIndicator').addClass('submitIndicator').show();
         this.$saveButtonText.text('Saving...');
         this.$cancelButton.hide();
-        
+
         var fetchingAttributes = this._getFormAttributes()
             .done(_.bind(function(values) {
                 //remove any attributes that have the same values as the model
@@ -4919,11 +4919,11 @@ gus.WorkEditor = Backbone.View.extend({
                         delete values[propertyName];
                     }
                 }, this));
-            
+
                 //save the values to the server
                 this.model.save(values, {
                     wait: true,
-                    success: _.bind(this._onSuccess, this), 
+                    success: _.bind(this._onSuccess, this),
                     error: _.bind(this._onSaveError, this)
                 });
             },this))
@@ -4935,30 +4935,30 @@ gus.WorkEditor = Backbone.View.extend({
     },
     _getFormAttributes: function() {
         var values = {};
-        
+
         values[nameSpace + 'Subject__c'] = this.$('input#subjectInput').val();
         values[nameSpace + 'Status__c'] = this.$('select#statusInput').val();
         values[nameSpace + 'Details__c'] = this.$('textarea#descriptionInput').val();
         values[nameSpace + 'Details_and_Steps_to_Reproduce__c'] = this.$('div#detailsAndStepsInput').html();
-        
+
         var lookupFailHandler = function(label) {
             return function(lookupComponent, message) {
                 return label + ': ' + message;
             };
         };
-        
+
         var userLookupPromise = this.userLookupComponent.commit().done(_.bind(function(lookupComponent, user) {
-            values[nameSpace + 'Assignee__c'] = (user && user.Id) ? user.Id : null; 
+            values[nameSpace + 'Assignee__c'] = (user && user.Id) ? user.Id : null;
         },this)).then(void 0, lookupFailHandler('Assignee'));
-        
+
         var sprintLookupPromise = this.sprintLookupComponent.commit().done(_.bind(function(lookupComponent, sprint) {
             values[nameSpace + 'Sprint__c'] = (sprint && sprint.Id) ? sprint.Id : null;
         },this)).then(void 0, lookupFailHandler('Sprint'));
-        
+
         var scheduledBuildLookupPromise = this.buildLookupComponent.commit().done(_.bind(function(lookupComponent, build) {
             values[nameSpace + 'Scheduled_Build__c'] = (build && build.Id) ? build.Id : null;
         },this)).then(void 0, lookupFailHandler('Scheduled Build'));
-        
+
         values[nameSpace + 'Story_Points__c'] = this.$('input#storyPointsInput').val();
 
         return $.when(userLookupPromise, sprintLookupPromise, scheduledBuildLookupPromise).then(function() { return values; });
@@ -5020,7 +5020,7 @@ gus.LookupDialog = Backbone.View.extend({
         this.template = _.template($('#template-lookup-dialog').html());
         this.errorMessage = null;
         this.isOpen = false;
-        
+
         //create the component that does the lookup
         this.nameComponent = options.nameComponent || new gus.LookupComponent({
             modelClass: this.modelClass
@@ -5029,7 +5029,7 @@ gus.LookupDialog = Backbone.View.extend({
         this.nameComponent.on('error', function(errorMessage) {
             this._onError(errorMessage);
         }, this);
-        
+
         //bind events
         this.on('error', this._updateError, this);
         this.on('clear-error', this._updateError, this);
@@ -5039,12 +5039,12 @@ gus.LookupDialog = Backbone.View.extend({
         //the standard element within backbone with the new dialog dom
         var dialog = this._renderDialog();
         this.setElement(dialog);
-        
+
         this.$('label').text(this.label);
-        
-        //render the input component and add it to the container 
+
+        //render the input component and add it to the container
         this.$('.input-container').empty().append(this.nameComponent.render().$el);
-        
+
         this._updateError();
         return this;
     },
@@ -5060,11 +5060,11 @@ gus.LookupDialog = Backbone.View.extend({
             }
             delete this.nameComponent;
         }
-        
+
         if(this.$el && this.$el.data('dialog')) {
             this.$el.dialog('destroy');
         }
-        
+
         gus.LookupDialog.__super__.remove.apply(this, arguments);
     },
     open: function() {
@@ -5125,7 +5125,7 @@ gus.LookupDialog = Backbone.View.extend({
             ]
         });
     },
-    _dialogOk: function() { 
+    _dialogOk: function() {
         var dialog = this;
         this._clearError();
         this.nameComponent.commit()
@@ -5201,11 +5201,11 @@ gus.UserLookupComponent = gus.LookupComponent.extend({
         options = _.defaults({}, options, {modelClass: gus.UserModel});
         gus.UserLookupComponent.__super__.initialize.call(this, options);
         this.profileImage = options.profileImage;
-        
+
         this.on('error.nomatch', _.bind(function() {
             this._clearPhoto();
         }, this));
-        
+
     },
     _buildQuery: function(term) {
         term = gus.soqlEncode(term);
@@ -5224,7 +5224,7 @@ gus.UserLookupComponent = gus.LookupComponent.extend({
     },
     select: function(attrs) {
         gus.UserLookupComponent.__super__.select.apply(this, arguments);
-        
+
         var photoUrl;
         if(attrs && attrs.SmallPhotoUrl) {
             photoUrl = attrs.SmallPhotoUrl;
@@ -5245,7 +5245,7 @@ gus.SprintLookupComponent = gus.LookupComponent.extend({
         var qualifiedObjectName = nameSpace + 'ADM_Sprint__c';
         var soql = "select Id, Name, Start_Date__c, End_Date__c from " + qualifiedObjectName + " where ";
         soql += "Name like '%" + cleanTerm + "%' ";
-        soql += "and Scrum_Team__c = '" + cleanTeamId + "' "; 
+        soql += "and Scrum_Team__c = '" + cleanTeamId + "' ";
         soql += "and (End_Date__c >= TODAY or (Start_Date__c <= TODAY and End_Date__c >= TODAY)) ";
         soql += "order by Start_Date__c asc";
         return soql;
@@ -5287,7 +5287,13 @@ $(function() {
 </script>
 </head>
 <body class="{!IF($CurrentPage.parameters.isdtp == 'p1','slds', '')}">
-	
+
+<div style="position:fixed;top:0;left:0;right:0;z-index:5000;text-align:center;">
+	<div style="display:inline-block;padding:6px 10px;background:orange;color:#fff;font-weight:bold;font-size:10px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;">
+	This tool is being replaced by the <a href="/apex/ADM_WorkManager?teamid={!teamId}" style="text-decoration:underline;color:#fff;">Work Manager</a>. 
+	</div>
+</div>
+
 <div id="uw">
 	<apex:outputPanel layout="none" rendered="{!IF($CurrentPage.parameters.isdtp == 'p1','true', 'false')}">
 		<div class="slds-anchor">
@@ -5349,7 +5355,7 @@ $(function() {
 				</div>
 			</div>
 		</div>
-	</apex:outputPanel>	
+	</apex:outputPanel>
 	<apex:outputPanel layout="none" rendered="{!IF($CurrentPage.parameters.isdtp == 'p1','false', 'true')}">
 	    <div id="uw-toolbar">
 	        <ul>
@@ -5361,7 +5367,7 @@ $(function() {
 	        <ul>
 	            <li id="btn-add-panel"><button><div class="icon"></div>Add Panel<div class="arrow-down"></div></button></li>
 	            <!--li id="btn-edit"><button><div class="icon"></div>Multi-Edit</button></li-->
-	        </ul>           
+	        </ul>
 	    </div>
 	</apex:outputPanel>
     <div class="panel-container">
@@ -5377,8 +5383,8 @@ $(function() {
         <li id="button-backlog"><div class="icon icon-white"></div>Backlog</li>
         <li id="button-backburner"><div class="icon icon-white"></div>Backburner</li>
         <apex:outputPanel layout="none" rendered="{!NOT(packagedOrg)}">
-	   		<li id="button-feature-backlog"><div class="icon icon-white"></div>Feature Backlog</li> 
-       	    <li id="button-trust-backlog"><div class="icon icon-white"></div>Trust Backlog</li> 
+	   		<li id="button-feature-backlog"><div class="icon icon-white"></div>Feature Backlog</li>
+       	    <li id="button-trust-backlog"><div class="icon icon-white"></div>Trust Backlog</li>
         </apex:outputPanel>
         <li id="button-epic"><div class="icon icon-white"></div>By Epic...</li>
         <li id="button-sprint"><div class="icon icon-white"></div>By Sprint...</li>
@@ -5395,14 +5401,14 @@ $(function() {
             <li id="btn-columns"><button title="Show/Hide Columns"><div class="icon-white"></div>Columns</button></li>
             <li class="btn-refresh"><button title="Refresh Panel"><div class="icon-white"></div>Refresh</button></li>
             <li id="btn-sprinttoggle"><button title="Toggle Work Assigned to Sprint"><div class="icon-white"></div>Toggle Sprinted Work</button></li>
-        </ul>           
+        </ul>
     </div>
 
     <div class="wall-tools wall-tools-right">
         <ul>
             <li id="btn-settings"><button title="Close Panel"><div class="icon-white"></div>Close Panel</button></li>
             <li id="btn-fill" class="ui-helper-hidden"><button title="Maximize Panel"><div class="icon-white"></div>Maximize Panel</button></li>
-        </ul>           
+        </ul>
     </div>
 </div>
 <div class="table-container">
@@ -5411,7 +5417,7 @@ $(function() {
             <div class="grip"></div>
             <div class="check-holder"><div class="check-header-label icon"></div></div>
             <div class="work-icon"></div>
-            <div class="work-workid">Work ID</div>          
+            <div class="work-workid">Work ID</div>
             <div class="work-subject">Subject</div>
             <div class="work-status">Status</div>
             <div class="work-assignee-picture">Assignee</div>
@@ -5420,9 +5426,9 @@ $(function() {
             <div class="work-qa">QA Engineer</div>
             <div class="work-po-picture">PO</div>
             <div class="work-po">Product Owner</div>
-            <div class="work-found-in-build">Found in Build</div> 
+            <div class="work-found-in-build">Found in Build</div>
             <div class="work-scheduled-build">Scheduled Build</div>
-            <div class="work-product-tag">Product Tag</div>          
+            <div class="work-product-tag">Product Tag</div>
             <div class="work-epic">Epic</div>
             <div class="work-sprint">Sprint</div>
             <div class="work-themes">Theme(s)</div>
@@ -5460,7 +5466,7 @@ $(function() {
                 <select id="statusInput"></select>
             </div>
         </div>
-        
+
         <div class="workEditorRow workEditor1Column">
             <label for="detailsAndStepsInput">Details and Steps to Reproduce</label>
             <div id="detailsAndStepsInput" contenteditable="true" class="contenteditable"></div>
@@ -5506,7 +5512,7 @@ $(function() {
                 <select id="statusInput"></select>
             </div>
         </div>
-        
+
         <div class="workEditorRow workEditor1Column">
             <label for="descriptionInput">Description</label>
             <textarea id="descriptionInput" rows="3"></textarea>
@@ -5590,10 +5596,10 @@ $(function() {
 <div class="work-column work-po-picture"></div>
 <div class="work-column work-po"></div>
 <div class="work-column work-desc"></div>
-<div class="work-column work-found-in-build"></div> 
-<div class="work-column work-scheduled-build"></div> 
-<div class="work-column work-product-tag"></div> 
-<div class="work-column work-epic"></div>   
+<div class="work-column work-found-in-build"></div>
+<div class="work-column work-scheduled-build"></div>
+<div class="work-column work-product-tag"></div>
+<div class="work-column work-epic"></div>
 <div class="work-column work-sprint"></div>
 <div class="work-column work-themes"></div>
 <div class="work-column work-story-points"></div>
@@ -5618,7 +5624,7 @@ $(function() {
 <div class="dialog-lookup ui-helper-hidden">
     <div class="dialog-lookup-table">
         <div>
-            <label></label>   
+            <label></label>
             <div>
                 <div class="input-container"></div>
             </div>

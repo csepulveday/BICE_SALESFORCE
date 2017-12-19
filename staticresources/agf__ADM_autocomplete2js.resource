@@ -148,7 +148,7 @@ autocomplete2.AutoComplete.prototype = {
                     showLine = true;
                 } else if (assignment.agf__Record_Type__c == 'User Story' && $('#recordTypeInputUserStory').is(':checked')) {
                     showLine = true;
-                } else if (assignment.Record_Type__c == 'Investigation' && $('#recordTypeInputInvestigation').is(':checked')) {
+                } else if (assignment.agf__Record_Type__c == 'Investigation' && $('#recordTypeInputInvestigation').is(':checked')) {
                     showLine = true;
                 }
             });

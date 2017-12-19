@@ -12,24 +12,24 @@ function removeEvents(ele) {
 	ele.onmouseout = null;
 	ele.onmouseover = null;
 }
-
+	
 function setInit(val) {
 	init = val;
 }
 
 //---------------------------BEGIN related_url_link s-control Java script----------------------------\\
-function processRelatedURL(text) {
+function processRelatedURL(text) {												
 	var linkPattern = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
 	var wwwPattern = /(^|[^\/])(www\.[-A-Z0-9+&@#\/%?=~_|!:,.;]*)/gim;
 	var mailtoPattern = /([\w-_.]+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})/gim;
 	var filePattern = /([\\]{2}[\w\\]*)/gi;
-
+	
 	text = text.replace(linkPattern, "<a href='$1' target='_blank'>$1</a>");
 	text = text.replace(wwwPattern, "$1<a href='http://$2' target='_blank'>$2</a>");
 	text = text.replace(mailtoPattern, '<a href="mailto:$1">$1</a>');
 	text = text.replace(filePattern, '<a title="For local links in Firefox install this extension: http://locallink.mozdev.org/installation.html" href="file:///$1" target="_blank">$1</a>');
-
-	return text;
+	
+	return text;  
 }
 
 //prebuilt map of regex pattern to encode entity which is used by the escapeHtml()
@@ -42,12 +42,12 @@ var _entityMap = [
     [/\"/g, '&quot;'],
     [/\//g, '&#47;']
 ];
-function escapeHTML(/**String*/ s) {
+function escapeHTML(/**String*/ s) {	
 	if(s != null && s != '') {
         for(var index = 0; index < _entityMap.length; index++) {
             var pattern = _entityMap[index][0];
             var entity = _entityMap[index][1];
-
+            
             s = s.replace(pattern, entity)
         }
 	}
@@ -64,25 +64,25 @@ function removePlus(s) {
 
 function reRenderIframe(id, url) {
 	var targetIframe = dojo.byId(id);
-
+	
 	targetIframe.src = url;
 }
 
 //disable enter submitting the form and perform onClick event of provided button ID instead
 function clickButtonOnEnterKeyPress(e,f,buttonID) {
-	if((e == 13) || (f==13)) {
+	if((e == 13) || (f==13)) { 
 		document.getElementById(buttonID).click();
 		return false;
 	} else {
 		return true;
 	}
-}
+}	
 
 function escapePunctuation(inputValue) {
-	// Need to escape single quotes.  Split the text on single quotes, and rejoin with the escaped value
+	// Need to escape single quotes.  Split the text on single quotes, and rejoin with the escaped value 
     inputValue = inputValue.split("'");
     inputValue = inputValue.join("\\'");
-
+    
     // Now escape double quotes.
     inputValue = inputValue.split('"');
     inputValue = inputValue.join('\\"');
@@ -91,7 +91,7 @@ function escapePunctuation(inputValue) {
 
 function removeSpacesFromEmail(newUser) {
 	if(newUser != null && newUser.indexOf("@") > -1) {
-    	newUser = removeSpacesFromString(newUser.replace(/^\s*|\s*$/g,''));
+    	newUser = removeSpacesFromString(newUser.replace(/^\s*|\s*$/g,'')); 
     }
     return newUser;
 }
@@ -105,15 +105,15 @@ function removeSpacesFromString(s) {
 }
 
 function cleanupArray(arr) {
-	if(arr != null) {
+	if(arr != null) {        
         for(var i = 0; i < arr.length; i++) {
-
+        
         	if(isEmptyString(arr[i])) {
         		arr.splice([i], 1);
         	}
         }
     }
-
+    
     return arr;
 }
 
@@ -121,19 +121,19 @@ function numberOfInArray(arr, str) {
 	var str = removeSpacesFromString(str);
 	var numOfInArray = 0;
 
-
+	
 	if(str != null && arr != null) {
 		for(var i = 0; i < arr.length; i++) {
-			el = removeSpacesFromString(arr[i]);
-
-
-			if(el.indexOf(str) > -1) {
+			el = removeSpacesFromString(arr[i]);        		
+			
+	
+			if(el.indexOf(str) > -1) { 
 				numOfInArray++;
-
+			
 			}
-		}
+		}		
 	}
-
+	
 	return numOfInArray;
 }
 
@@ -141,17 +141,17 @@ function indexOfArray(arr, str) {
 	var str = removeSpacesFromString(str);
 	var el = "";
 	var idx = -1;
-
+	
 	if(str != null && arr != null) {
 		for(var i = 0; i < arr.length; i++) {
-			el = removeSpacesFromString(arr[i]);
-			if(el.indexOf(str) > -1) {
+			el = removeSpacesFromString(arr[i]);        		
+			if(el.indexOf(str) > -1) { 
 				idx = i;
 				break;
 			}
 		}
 	}
-
+	
 	return idx;
 }
 
@@ -167,7 +167,7 @@ function addCheckinQuestions(id, work) {
             questions.push('Why is this a low-risk fix?');
             questions.push('How does this meet the Patch or e-Release criteria?');
             questions.push('Will customers notice a change, either in functionality or performance? (Y/N) If yes, work with your PM or PO to fill out the "ReadMe Notes" field. Also add the "ReadMe Required" theme.');
-
+            
             if(work && work.Scheduled_Build__c && (work.Scheduled_Build__c.toLowerCase().indexOf('ecelerity') > -1 || work.Scheduled_Build__c.toLowerCase().indexOf('momentum') > -1)) {
                 questions.push('How can this be verified in ftests?');
                 questions.push('How can this be verified in end-to-end tests?');
@@ -177,13 +177,13 @@ function addCheckinQuestions(id, work) {
                 questions.push('How can this be verified in TYO/CHI?');
                 questions.push('How can this be verified in TYO/CHI/ASG?');
             }
-
+            
             //convert the array of questions to a string
             var checkinQuestions = '';
             for(var index = 0; index < questions.length; index++) {
                 checkinQuestions += '- ' + questions[index] + '\n\n';
             }
-
+            
             note.value = checkinQuestions;
         }
         else {
@@ -195,15 +195,15 @@ function addCheckinQuestions(id, work) {
     }
 }
 
-function copyValues(fromElement, toElement) {
+function copyValues(fromElement, toElement) {	
 	if(fromElement != null && toElement != null) {
-
+		
 	    if(fromElement.tagName == 'DIV' && toElement.tagName == 'TEXTAREA') {
 	        toElement.innerHTML = fromElement.innerHTML;
-
+	        
 	    } else {
 	    	toElement.value = fromElement.value;
-
+	       
 	    }
 	}
 }
@@ -236,7 +236,7 @@ function getWidthHeight() {
 
 function getScrollXY() {
     var scrOfX = 0, scrOfY = 0;
-
+    
     if(typeof(window.pageYOffset) == 'number') {
         //Netscape compliant
         scrOfY = window.pageYOffset;
@@ -250,20 +250,20 @@ function getScrollXY() {
         scrOfY = document.documentElement.scrollTop;
         scrOfX = document.documentElement.scrollLeft;
     }
-
+    
     return [ scrOfX, scrOfY ];
 }
 
 function NetscapeEventHandler_KeyDown(e) {
-	if(e.which == 13 && e.target.type != 'textarea' && e.target.type != 'submit') {
-  		return false;
+	if(e.which == 13 && e.target.type != 'textarea' && e.target.type != 'submit') { 
+  		return false; 
   	} else {
   		return true;
   	}
 }
 
 function MicrosoftEventHandler_KeyDown() {
-	//in ie element type is coming back as text even for textarea so enters are not being let through.  Instead using class name... will work so long as there is never an autocomplete on a textarea.
+	//in ie element type is coming back as text even for textarea so enters are not being let through.  Instead using class name... will work so long as there is never an autocomplete on a textarea. 
 	//alert('Element class:' + event.srcElement.className);
 	if(event.keyCode == 13 && event.srcElement.type != 'textarea' && event.srcElement.type != 'submit' && event.srcElement.className != 'adm_longInputField') {
 		return false;
@@ -272,8 +272,8 @@ function MicrosoftEventHandler_KeyDown() {
 	}
 }
 
-function setRegressedValue(types, attributes, unselections, selections, value) {
-    var text = "";
+function setRegressedValue(types, attributes, unselections, selections, value) {  
+    var text = "";          
 
     if(!types) {
     } else {
@@ -281,13 +281,13 @@ function setRegressedValue(types, attributes, unselections, selections, value) {
         if(text == 'Test Failure' || text == 'Test Change') {
             removeAttributeValue(attributes, unselections, selections, value);
         }
-    }
+    }    
 }
 
 function removeAttributeByValue(els, value) {
     var index = '';
     var returnVar = '';
-
+    
     for(var i = 0; i < els.options.length; i++) {
         var el = els.options[i];
         if(el.text == value) {
@@ -296,12 +296,12 @@ function removeAttributeByValue(els, value) {
         }
     }
     if(index != '') {
-        try {
+        try { 
             els.remove(index);
         } catch(ex) {
         }
     }
-
+    
     return returnVar;
 }
 
@@ -311,44 +311,44 @@ function removeAttributeValue(attributes, unselections, selections, text) {
     var value = removeAttributeByValue(unselections, text);
 
     setAttributeSelectedValue(value, text, selections);
-}
+} 
 
 
 
 function setAttributeSelectedValue(value, text, selections) {
     var newRegressedOption = document.createElement('option');
     newRegressedOption.text = text;
-    newRegressedOption.value = value;
+    newRegressedOption.value = value;                        
 
     try {
         selections.add(newRegressedOption, null);
     } catch(ex) {
         selections.add(newRegressedOption);
-    }
+    }    
 }
 
-function set(types, attributes, unselections, selections) {
+function set(types, attributes, unselections, selections) { 
     var text = "";
-    var foundRegressed = false;
+    var foundRegressed = false;          
 
     if(!types) {
     } else {
 
         text = types[types.selectedIndex].text;
-
+        
         if(text == 'Test Failure' || text == 'Test Change') {
             for(var i = 0; i < attributes.options.length; i++) {
                 var attribute = attributes.options[i];
                 if(attribute.text == 'Regressed') {
-                    unselections.remove(i);
+                    unselections.remove(i);                  
 
                     for(var j = 0; j < selections.options.length; i++) {
                         var selected = selections.options[j];
-
+                        
                         if(selected.text == attribute.text) {
                             foundRegressed = true;
                             break;
-                        }
+                        }         
                     }
 
                     if(!foundRegressed) {
@@ -360,8 +360,8 @@ function set(types, attributes, unselections, selections) {
                             selections.add(newRegressedOption, null);
                         } catch(ex) {
                             selections.add(newRegressedOption);
-                        }
-                    }
+                        } 
+                    }     
                 }
             }
         }
@@ -371,7 +371,7 @@ function set(types, attributes, unselections, selections) {
 <!-- Disables browsers local autocomplete which can interfere with our server side version -->
 function disableautocomplete() {
 	var forms = document.getElementsByTagName('form');
-
+	
 	for (var i = 0; i < forms.length; ++i) {
     	if(forms[i].setAttribute) {
       		forms[i].setAttribute('autocomplete', 'off');
@@ -388,7 +388,7 @@ function initAutoCompleteBrowserSettings() {
 		window.attachEvent('onload', disableautocomplete);
     } else {
       window.onload = disableautocomplete;
-    }
+    }    
 
     <!-- following code stops enter submitted the form so that you can use keyboard to navigate autocomplete -->
     var nav = window.Event ? true : false;
@@ -399,17 +399,17 @@ function initAutoCompleteBrowserSettings() {
     } else {
        document.onkeydown = MicrosoftEventHandler_KeyDown;
     }
-}
+}     
 
 
-var detailsValue;
+var detailsValue;                
 detailsValue = 'User type (As a...)\n';
 detailsValue += 'Goal (I want to...)\n';
 detailsValue += 'Reason (so that...)\n';
 detailsValue += 'Additional Details';
 
 function populateDetails(el) {
-    if(!el) {
+    if(!el) {                    
     } else {
         //alert('details el' + el);
         if(isEmpty(el)) {
@@ -423,7 +423,7 @@ function populateDetails(el) {
 
 function populateHelpText(elementID, helpText) {
     var el = document.getElementById(elementID);
-    if(!el) {
+    if(!el) {                    
     } else {
         if(isEmpty(el)) {
             el.style.color = 'grey';
@@ -444,7 +444,7 @@ function populateOverrideExplanation(el) {
         } else {
             el.style.color = 'black';
         }
-    }
+    }    
 }
 
 function isString(v) {
@@ -534,7 +534,7 @@ function addInvestigationQuestions(id) {
     }
 }
 
-function toggleSeniorMgrDisabled(mgr_review, senior_mgr) {
+function toggleSeniorMgrDisabled(mgr_review, senior_mgr) {    
     if(mgr_review != null && senior_mgr != null) {
         if(!mgr_review.checked) {
             senior_mgr.disabled = true;
@@ -546,11 +546,11 @@ function toggleSeniorMgrDisabled(mgr_review, senior_mgr) {
 }
 
 function setIcon(recordType, node, url) {
-    var img = document.createElement('img');
+    var img = document.createElement('img');                        
 
     if(recordType == 'User Story') {
         img.setAttribute('src', url.us);
-    } else if(recordType == 'Bug') {
+    } else if(recordType == 'Bug') {    
         img.setAttribute('src', url.bug);
     } else if(recordType == 'ToDo') {
         img.setAttribute('src', url.todo);
@@ -558,7 +558,7 @@ function setIcon(recordType, node, url) {
         img.setAttribute('src', url.investigation);
     } else if(recordType == 'Template') {
         img.setAttribute('src', url.template);
-    }
+    }    
 
     img.setAttribute('style', 'float:left; width:32px; vertical-align:middle; padding-top:5px;');
     node.parentNode.replaceChild(img, node);
@@ -633,7 +633,7 @@ gus.sfdc.isLookup = function($input) {
         console.warn('No ID specified on input');
         return false;
     }
-
+    
     var lookupIdInput = document.getElementById(id + '_lkid');
     return !!lookupIdInput;
 };
@@ -647,7 +647,7 @@ gus.sfdc.getSobjectFromLookup = function($input) {
     if(!id || id === '000000000000000') {
         id = null;
     }
-
+    
     var name = $input.val();
     if(!id && !name) {
         return null;
@@ -665,21 +665,21 @@ gus.sfdc.getSobjectFromLookup = function($input) {
  */
 gus.sfdc.getSobjectIdFromLookup = function($input) {
     if(!$input) {
-        return;
+        return; 
     }
-
+    
     var id = $input.attr('id');
     if(!id) {
         console.warn('No ID specified on input');
         return;
     }
-
+    
     var lookupIdInput = document.getElementById(id + '_lkid');
     if(!lookupIdInput) {
         console.warn('Input #' + id + ' is not a lookup field');
         return;
-    }
-
+    } 
+    
     return $(lookupIdInput).val();
 };
 
@@ -692,12 +692,12 @@ gus.sfdc.setLookup = function($field, sObject) {
         $field.val('').change();
         return;
     }
-
+    
     //set the field value
     if('Name' in sObject) {
         $field.val(sObject.Name).change();
     }
-
+    
     //try to set the lookup fields
     try {
         var fieldId = $field.attr('id');
@@ -766,7 +766,7 @@ var isEmpty = function(value) {
     if(Array.isArray(value) || isString(value)) {
         return value.length === 0;
     }
-
+    
     for(var key in value) {
         if(value.hasOwnProperty(key)) {
             return false;
@@ -786,21 +786,21 @@ RichAutoCompleteComponent.prototype = {
         this.minLength = options.minLength || 1;
         this.controller = options.controller;
         this._loading = false;
-
+        
         //get the inputs
         this.$container = options.$container;
         this.$nameInput = this.$('.gusRichAutoCompleteInput');
         this.$idInput = this.$('.gusRichAutoCompleteUserID');
         this.$statusIndicator = this.$('.gusRichAutoCompleteStatusIndicator');
-
+        
         //register this within the input so it can be retrieved within the page
         this.$container.data('gus.RichAutoComplete', this);
-
+        
         //set the field properties
         this.$nameInput.attr('placeholder', options.placeholder);
-
+        
         this._initializeFromInputs();
-
+        
         //whenever the input is loading, we need to the status indicator
         this.on('change:loading', $.proxy(function() {
             if(this._loading) {
@@ -809,7 +809,7 @@ RichAutoCompleteComponent.prototype = {
                 this.$statusIndicator.hide();
             }
         }, this));
-
+        
         //update the ID input when a value is selected
         this.on('change:selected', $.proxy(function() {
             var model = this.getSelected();
@@ -819,7 +819,7 @@ RichAutoCompleteComponent.prototype = {
                 this.$idInput.val('');
             }
         }, this));
-
+        
         //update the name input when a value is selected
         this.on('change:selected', $.proxy(function() {
             var model = this.getSelected();
@@ -830,68 +830,69 @@ RichAutoCompleteComponent.prototype = {
             }
         }, this));
     },
-
+    
     clear: function() {
         this.set(null);
     },
-
+    
     set: function(/*String|Object*/ model) {
-
+    
         //convert the string argument to the a models
         if(isString(model)) {
             model = {Name: model};
         }
-
+        
         this._selected = model;
         this.trigger('change:selected');
     },
-
+    
     getSelected: function() {
         return this._selected;
     },
-
+    
     getId: function() {
         var model = this.getSelected();
         return (model) ? model.Id : null;
     },
-
+    
     render: function() {
         this.$nameInput.bind('autocompleteselect', $.proxy(this._onSelect, this));
         this.$nameInput.bind('autocompletechange', $.proxy(this._onAutocompleteChange, this));
 
         this.$nameInput
-        	.attr('aria-expanded','false')
-        	.attr('aria-activedescendant','')
-        	.attr('aria-describedby','')
-        	.attr('aria-haspopup','true')
-        	.attr('aria-autocomplete','list')
-        	.attr('role','combobox')
-			.autocomplete({
+            .attr('aria-expanded','false')
+            .attr('aria-activedescendant','')
+            .attr('aria-describedby','')
+            .attr('aria-haspopup','true')
+            .attr('aria-autocomplete','list')
+            .attr('role','combobox')
+            .autocomplete({
             source: $.proxy(this._onLookup, this),
             minLength: this.minLength,
             delay: 0,
             focus: function(event, ui) {
-	            $(this).attr('aria-activedescendant','selection-' + ui.item.Id);
+                $(this).attr('aria-activedescendant','selection-' + ui.item.Id);
             },
             open: function(event, ui) {
-	            $(this).attr('aria-expanded','true');
+                $(this).attr('aria-expanded','true');
             },
             close: function(event, ui) {
-	            $(this).attr('aria-expanded','false').attr('aria-activedescendant','');
+                $(this).attr('aria-expanded','false').attr('aria-activedescendant','');
             },
             _renderItem: function(ul, item) {
                 $(ul).attr('role','listbox');
-    	        return $("<li>")
-    	            .data("item.autocomplete", item)
-    	            .attr('role','presentation')
-    				//.append(itemPhoto)
-    	            .append($("<a>").text(item.label).attr('role','option').attr('id','selection-' + item.Id))
-    	            .appendTo(ul);
-    		}
+                return $("<li>")
+                    .data("item.autocomplete", item)
+                    .attr('role','presentation')
+                    //.append(itemPhoto)
+                    .append($("<a>").text(item.label).attr('role','option').attr('id','selection-' + item.Id))
+                    .appendTo(ul);
+            }
         })
 
     },
 
+    
     setLoading: function(value) {
         var bool = !!value;
         if(this._loading !== bool) {
@@ -899,39 +900,39 @@ RichAutoCompleteComponent.prototype = {
             this.trigger('change:loading');
         }
     },
-
+    
     on: function() {
         return $.prototype.bind.apply($(this), arguments);
     },
-
+    
     trigger: function() {
         return $.prototype.trigger.apply($(this), arguments);
     },
-
+    
     $: function(selector) {
         return this.$container.find(selector);
     },
-
+    
     _initializeFromInputs: function() {
         var name = this.$nameInput.val(),
             id = this.$idInput.val();
-
+            
         //check to see if there are already values in the input
         if(name || id) {
             var model = {};
-
+            
             if(name) {
                 model.Name = name;
             }
-
+            
             if(id) {
                 model.Id = id;
             }
-
+            
             this._selected = model;
         }
     },
-
+    
     /**
      * Invoked by jQuery UI autocomplete when trying to find items with the entered search term
      */
@@ -940,7 +941,7 @@ RichAutoCompleteComponent.prototype = {
         if(!term || term.length < this.minLength) {
             return;
         }
-
+        
         var self = this;
         this._query({
             term: term,
@@ -952,23 +953,23 @@ RichAutoCompleteComponent.prototype = {
             }
         });
     },
-
+    
     /**
      * Executes the query with the given term.
      */
     _query: function(options) {
         var self = this;
         var load = this._startLoading();
-
+        
         var always = function() {
             load.finish();
         };
-
+        
         this.controller.getUsersWithNameLike({
-            term: options.term,
+            term: options.term, 
             success: function(data) {
                 always();
-
+            
                 //normalize the results returned so that they are usable by jquery autocomplete ui
                 var results = map(data.results, function(result) {
                     return extend({
@@ -976,7 +977,7 @@ RichAutoCompleteComponent.prototype = {
                         value: result.Name || result.Id
                     }, result);
                 });
-
+            
                 if(options.success) {
                     options.success(results);
                 }
@@ -988,33 +989,33 @@ RichAutoCompleteComponent.prototype = {
                 }
             }
         });
-    },
-
+    }, 
+    
     /**
      * Invoked by jQuery UI autocomplete when an item is selected
      */
     _onSelect: function(event, ui) {
         var item = extend({}, ui.item);
-
+        
         //remove the jquery specific properties
         delete item.value;
         delete item.label;
-
+        
         this.set(item);
     },
-
+    
     _onAutocompleteChange: function(event, ui) {
         //if the user selected an item, then the onSelect should have already been invoked
         if(ui.item) {
             return;
         }
-
+        
         var name = this.$nameInput.val();
         if(!name) {
             this.clear();
             return;
         }
-
+        
         this._query({
             term: name,
             success: $.proxy(function(results) {
@@ -1029,18 +1030,18 @@ RichAutoCompleteComponent.prototype = {
                     var item = results[0];
                     this.set(item);
                 }
-
+            
             }, this),
             fail: $.proxy(function() {
                 this._onError('Failed to find autocomplete match');
             }, this)
         });
     },
-
+    
     _onError: function(attributes) {
         console.log(attributes.messages);
     },
-
+    
     _nextLoadId: 0,
     _loads: {},
     _startLoading: function() {
@@ -1069,16 +1070,16 @@ RichAutoCompleteComponent.extend = function(protoProps) {
     var parent = this;
     var child = function() {
         parent.apply(this, arguments);
-    };
-
+    }; 
+    
     extend(child, parent);
-
-    var Surrogate = function() {
-        this.constructor = child;
+    
+    var Surrogate = function() { 
+        this.constructor = child; 
     };
     Surrogate.prototype = parent.prototype;
     child.prototype = new Surrogate();
-
+    
     extend(child.prototype, protoProps);
     return child;
 };
@@ -1089,30 +1090,30 @@ var RichUserLookupComponent = RichAutoCompleteComponent.extend({
         RichAutoCompleteComponent.prototype.initialize.apply(this, arguments);
         this.$profileImage = this.$('.gusRichAutoCompleteProfileImage');
         this.$profileImageUrlInput = this.$('.gusRichAutoCompleteProfileImageUrlInput');
-
+        
         //initialize the profile image from the input
         if(this.$profileImageUrlInput.val() && this._selected) {
             this._selected.SmallPhotoUrl = this.$profileImageUrlInput.val();
             this.updatePhoto();
         }
-
+        
         this.on('change:selected', $.proxy(this.updatePhoto, this));
     },
     updatePhoto: function() {
         var model = this.getSelected();
-
+        
         var photoUrl;
         if(model && model.SmallPhotoUrl) {
             photoUrl = model.SmallPhotoUrl;
         }
         photoUrl = photoUrl || '/profilephoto/005/F';
-
+        
         //set the image's source
         this.$profileImage.attr('src', photoUrl);
-
+        
         //update the URL hidden input
         this.$profileImageUrlInput.val(photoUrl);
-
+        
         //set the image's title
         this.$profileImage.attr('title', (model && model.Name) ? model.Name : '');
     }
@@ -1170,7 +1171,7 @@ if (this.$) {
 function callNoConflict(){
     //Checking jquery version is not the one we want, if not call noConflict.
     if($().jquery != '1.8.3'){
-        $.noConflict(true);
+        $.noConflict(true);  
     }
 }
 
@@ -1178,10 +1179,10 @@ function isRunningInSFX(){
     var runningInSFX = false;
     if ((typeof sforce == 'undefined') || (sforce == null) ) {
         runningInSFX = false;
-    }
+    }  
     else{
         runningInSFX = true;
-    }
+    } 
     return runningInSFX;
 }
 
@@ -1215,7 +1216,7 @@ function checkAndNavigateToURL(url){
 
 if (this.$) {
 	$(function() {
-
+	
 		// SLDS v0.4.2 tabs
 		$('.slds-tabs > .slds-tabs--default__nav > .slds-tabs__item > a').on('click', function() {
 			// inactive tabs
@@ -1231,16 +1232,16 @@ if (this.$) {
 				$('#' + $(this).closest('.slds-tabs__item').attr('data-tabpanel')).addClass('slds-show').removeClass('slds-hide');
 			}
 		});
-
+	
 		// SLDS v0.5.2 tabs
 		$('.slds-tabs--default .slds-tabs__item > a').on('click', function(e) {
 			e.preventDefault();
 			// inactive tabs
 			$(this).closest('ul').find('li').removeClass('slds-active').removeAttr('role');
-			$(this).attr('aria-selected','false').attr('tabindex','-1');
+			$(this).attr('aria-selected','false'); //.attr('tabindex','-1');
 			// active tab
 			$(this).closest('li').addClass('slds-active').attr('role','presentation');
-			$(this).attr('aria-selected','true').attr('tabindex','0');
+			$(this).attr('aria-selected','true'); //.attr('tabindex','0');
 			// inactive panels
 			$(this).closest('.slds-tabs--default').find('.slds-tabs__content').removeClass('slds-show').addClass('slds-hide');
 			// active panel
@@ -1248,6 +1249,57 @@ if (this.$) {
 				$('#' + $(this).closest('li').attr('data-tabpanel')).addClass('slds-show').removeClass('slds-hide');
 			}
 		});
+	
+	});	
+}
 
-	});
+function makeTaskCardCapexHtml(isCapex) {
+    return '<div class="task_capex">QUALITY: </div>' +
+        	'<div class="task_capex_checkbox">' +
+		        '<input type="checkbox"' + (isCapex ? 'checked' : '') + '/>' +
+        	'</div>';
+}
+
+function makeTaskCardHtml(isNew, canBeCapex, isCapex, id, subject, assignedTo, assignedToName, assignedToFirstName, smallPhotoUrl, hoursRemaining, actualHours) {
+    hoursRemaining = typeof hoursRemaining === 'number' ? hoursRemaining.toString().replace('.0', '') : 0;
+    actualHours = typeof actualHours === 'number' ? actualHours.toString().replace('.0', '') : 0;
+    subject = subject || '';
+    smallPhotoUrl = smallPhotoUrl || '';
+    assignedToName = assignedToName || '';
+    assignedToFirstName = assignedToFirstName || '';
+
+    var taskHoursId = isNew ? '' : ('hours_' + id);
+    var actualHoursId = isNew ? '' : ('actual_hours_' + id);
+    var grippyClass = isCapex ? 'task_grippy task_grippy_centered' : 'task_grippy';
+    var subjectDiv = '<div class="task_row1_holder"><div class="task_desc"><textarea maxlength="255">' + (isNew ? '' : subject) + '</textarea></div></div>';
+    var imgDiv = '<div class="task_img"><img ' + (isNew ? '' : 'src="' + smallPhotoUrl + '" alt="' + assignedToName + '" title="' + assignedToName + '" class="img_clickable"') + '/></div>';
+    var grippyDiv = '<div class="' + grippyClass + '"></div>';
+    var taskHoursDiv = '<div class="task_hours"><input type="text" id="' + taskHoursId + '" name="' + taskHoursId + '" value="' + hoursRemaining + '" size="3" maxlength="3" spellcheck="false" /></div>';
+    var capexDiv = canBeCapex ? makeTaskCardCapexHtml(isCapex) : '';
+    var taskLinkDiv = '<div class="task_link"><a target="_blank" href="' + (isNew ? '' : "/" + id) + '"><span class="ui-icon ui-icon-extlink" title="Open Task in New Window" style="background-position:-30px -80px;"></span></a></div>';
+
+    return '<div class="task_row1">' +
+        subjectDiv +
+        imgDiv +
+    '</div>' +
+    '<div class="task_row2">' +
+        grippyDiv +
+        '<div class="task_row2_hours_container">' +
+            '<div class="task_rh">Remaining:</div>' +
+            taskHoursDiv +
+            '<div class="task_row2_hours_container_row" style="display:' + (isCapex ? 'table-row' : 'none') + '">' +
+                '<div class="task_ah">Actual:</div>' +
+                '<div class="task_actual_hours">' +
+                '<input type="text" id=' + actualHoursId + ' name=' + actualHoursId + '" value="' + actualHours + '" size="3" maxlength="3" spellcheck="false" />' +
+                '</div>' +
+            '</div>' +
+        '</div>' +
+        '<div class="task_hint"></div>' +
+        '<div class="task_assignee_name" style="display:none;"></div>' +
+        capexDiv +
+        taskLinkDiv +
+        '<div class="task_dd">' +
+            '<div class="delete-task-button"><span class="ui-icon ui-icon-trash" title="Delete Task"></span></div>' +
+        '</div>' +
+    '</div>';
 }

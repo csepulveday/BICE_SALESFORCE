@@ -124,7 +124,17 @@ function togglePanelStack(){
 				</div>
 			</apex:outputPanel>
 			
-            
+            <apex:outputPanel layout="none" rendered="{!agf__ADM_Work__c.RecordType.Name == 'Investigation'}">
+                <div id="tab-sla_Violations" class="gusTabPanelInactive gusFieldset">
+                    <div class="gusLegend">SLA Violations</div>
+                    <div class="marginReducer">
+                        <apex:relatedList list="SLA_Violations__r" pageSize="30"/>
+                        <apex:outputPanel styleClass="adm_relatedListInfo" rendered="{!agf__ADM_Work__c.agf__Number_of_Cases__c==0 && agf__ADM_Work__c.agf__Critical_CRM_Feature__c==false}">
+                            <apex:outputText styleClass="adm_relatedListText" value="SLA Violations will not be captured for this investigation because it has no 62 Org Cases, and critical CRM feature is unchecked." />
+                        </apex:outputPanel>
+                    </div>
+                </div>
+            </apex:outputPanel>
 			
 				<div id="tab-tasks" class="gusTabPanelInactive gusFieldset">
 					<div class="gusLegend"><h2>Tasks</h2></div>

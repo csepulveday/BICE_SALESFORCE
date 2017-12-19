@@ -13,6 +13,14 @@
         <name>agf__Days_Remaining__c</name>
     </fields>
     <fields>
+        <label><!-- Definition of Done Met --></label>
+        <name>agf__Definition_of_Done_Met__c</name>
+    </fields>
+    <fields>
+        <label><!-- Definition of Ready Met --></label>
+        <name>agf__Definition_of_Ready_Met__c</name>
+    </fields>
+    <fields>
         <label><!-- Discount work time (%) --></label>
         <name>agf__Discount_Work__c</name>
     </fields>

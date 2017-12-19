@@ -38,9 +38,9 @@
 			<div class="slds-col slds-no-flex slds-align-bottom">
 				<div class="slds-button-group" role="group">
                     <button class="slds-button slds-button--neutral" onClick="checkAndNavigateToURL('/apex/agf__adm_wall?teamid={!agf__ADM_Scrum_Team__c.Id}&retURL=%2Fapex%2Fadm_scrumteamdetail%3Fid%3D{!agf__ADM_Scrum_Team__c.Id}');">Backlog Manager</button>
-                    <button class="slds-button slds-button--neutral" onClick="checkAndNavigateToURL('/apex/agf__adm_kanbansplash?teamid={!agf__ADM_Scrum_Team__c.Id}&retURL=%2Fapex%2Fadm_scrumteamdetail%3Fid%3D{!agf__ADM_Scrum_Team__c.Id}');">Kanban</button>
-					
-                    
+                    <button class="slds-button slds-button--neutral" onClick="checkAndNavigateToURL('/apex/agf__adm_WorkManager?teamid={!agf__ADM_Scrum_Team__c.Id}&retURL=%2Fapex%2Fadm_scrumteamdetail%3Fid%3D{!agf__ADM_Scrum_Team__c.Id}');">Work Manager</button>
+					<button class="slds-button slds-button--neutral" onClick="checkAndNavigateToURL('/apex/agf__adm_kanbansplash?teamid={!agf__ADM_Scrum_Team__c.Id}&retURL=%2Fapex%2Fadm_scrumteamdetail%3Fid%3D{!agf__ADM_Scrum_Team__c.Id}');">Kanban</button>
+
 					<button class="slds-button slds-button--neutral" onClick="checkAndNavigateToURL('/{!agf__ADM_Scrum_Team__c.Id}/e?retURL=%2Fapex%2Fadm_scrumteamdetail%3Fid%3D{!agf__ADM_Scrum_Team__c.Id}');">Edit</button>
 				</div>
 			</div>
@@ -69,12 +69,22 @@
                                             <c:ADM_InputSds readonly="true" object="{!agf__ADM_Scrum_Team__c}" inputFieldName="Active__c" inputObjectName="ADM_Scrum_Team__c" renderRow="true" inputColumnStyleClass="slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2" />
                                             
                                             <c:ADM_InputSds readonly="true" object="{!agf__ADM_Scrum_Team__c}" inputFieldName="Distribution_Lists__c" inputObjectName="ADM_Scrum_Team__c" renderRow="true" inputColumnStyleClass="slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2" />
-                                            
-                                            
+                                            <c:ADM_InputSds readonly="true" object="{!agf__ADM_Scrum_Team__c}" inputFieldName="Release_Coverage_Needed__c" inputObjectName="ADM_Scrum_Team__c" renderRow="true" inputColumnStyleClass="slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2" />
+                                            <c:ADM_InputSds readonly="true" object="{!agf__ADM_Scrum_Team__c}" inputFieldName="Capex_Enabled__c" inputObjectName="ADM_Scrum_Team__c" renderRow="true" inputColumnStyleClass="slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2" />
+																						<c:ADM_InputSds readonly="true" object="{!agf__ADM_Scrum_Team__c}" inputFieldName="Capex_Lead__c" inputObjectName="ADM_Scrum_Team__c" renderRow="true" inputColumnStyleClass="slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2" />
+                                            <!--<c:ADM_InputSds readonly="true" object="{!agf__ADM_Scrum_Team__c}" inputFieldName="Slack_Enabled__c" inputObjectName="ADM_Scrum_Team__c" renderRow="true" inputColumnStyleClass="slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2" />-->
+                                            <!--<c:ADM_InputSds readonly="true" object="{!agf__ADM_Scrum_Team__c}" inputFieldName="Slack_URL__c" inputObjectName="ADM_Scrum_Team__c" renderRow="true" inputColumnStyleClass="slds-size--1-of-1" />-->
                                             <c:ADM_InputSds readonly="true" object="{!agf__ADM_Scrum_Team__c}" inputFieldName="CreatedDate" inputObjectName="ADM_Scrum_Team__c" renderRow="true" inputColumnStyleClass="slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2" />
-                                            <c:ADM_InputSds readonly="true" object="{!agf__ADM_Scrum_Team__c}" inputFieldName="LastModifiedDate" inputObjectName="ADM_Scrum_Team__c" renderRow="true" inputColumnStyleClass="slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2" /> </div>
+                                            <c:ADM_InputSds readonly="true" object="{!agf__ADM_Scrum_Team__c}" inputFieldName="LastModifiedDate" inputObjectName="ADM_Scrum_Team__c" renderRow="true" inputColumnStyleClass="slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2" />
+                                        </div>
                                 </div>
                             </apex:form>
+                            <apex:pageBlock title="Definition of Ready">
+                            	<apex:outputField value="{!agf__ADM_Scrum_Team__c.agf__Definition_of_Ready__c}"/>
+                            </apex:pageBlock>
+                            <apex:pageBlock title="Definition of Done">
+                            	<apex:outputField value="{!agf__ADM_Scrum_Team__c.agf__Definition_of_Done__c}"/>
+                            </apex:pageBlock>
                             <apex:relatedList list="Scrum_Team_Members__r" pageSize="10" />
 				            <c:ADM_OutOfOffice />
 				            <apex:relatedList list="NotesAndAttachments" />

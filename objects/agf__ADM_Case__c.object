@@ -92,11 +92,36 @@
         <fullName>agf__Account_Stage__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Account Stage</label>
+        <label>Red Account Stage</label>
         <length>10</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Account_Support_SBR_Category__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Account Support SBR Category</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Age__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>ROUND(DATETIMEVALUE (TODAY()) - agf__Case_Created_Date__c,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Age (Days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
         <unique>false</unique>
     </fields>
     <fields>
@@ -174,6 +199,28 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>agf__Case_Reason__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Case Reason</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Case_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Case Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>agf__Case_Subject_Link__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -209,6 +256,53 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>agf__Closed__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula designed as per request in the story https://gus.my.salesforce.com/apex/adm_userstorydetail?id=a07B00000011BKiIAM&amp;sfdc.override=1</description>
+        <externalId>false</externalId>
+        <formula>OR(agf__Case_Status__c  = &apos;Closed - Resolved&apos;,agf__Case_Status__c = &apos;Closed - Feature Req/Bug&apos;,agf__Case_Status__c = &apos;Closed - No response from customer&apos;, agf__Case_Status__c = &apos;Closed - Cust Credit&apos;, agf__Case_Status__c = &apos;Closed - Write Off&apos;, agf__Case_Status__c = &apos;Closed - WO/Collect&apos;,
+agf__Case_Status__c = &apos;Closed - Future Consideration&apos;,agf__Case_Status__c = &apos;Closed - Rejected&apos;,
+agf__Case_Status__c = &apos;Closed - Duplicate&apos;,agf__Case_Status__c = &apos;Closed - Request Submitted&apos;,
+agf__Case_Status__c = &apos;Closed - Completed&apos;,agf__Case_Status__c = &apos;Closed - Reviewed&apos;,
+agf__Case_Status__c = &apos;Closed - Request Received&apos;,agf__Case_Status__c = &apos;Complete/Closed&apos;,
+agf__Case_Status__c = &apos;Closed - Feature Request Submitted&apos;,agf__Case_Status__c = &apos;Bug Fix Submitted&apos;,
+agf__Case_Status__c = &apos;Fulfilled&apos;, agf__Case_Status__c = &apos;Approved&apos;,
+agf__Case_Status__c = &apos;Rejected&apos;, agf__Case_Status__c = &apos;Closed-Sent to Feature Roadmap Owner&apos;, agf__Case_Status__c = &apos;Closed-Workaround provided&apos;,
+agf__Case_Status__c = &apos;Closed-Feature Implemented/Exists&apos;,agf__Case_Status__c = &apos;Closed - Directed to IdeaExchange&apos;,
+agf__Case_Status__c = &apos;Closed - No response from Sales (Closed)&apos;, agf__Case_Status__c = &apos;Implemented&apos;,
+agf__Case_Status__c = &apos;Closed - Routed to Internal Helpdesk&apos;, agf__Case_Status__c = &apos;Closed&apos;,
+agf__Case_Status__c = &apos;Closed – Delivered&apos;, agf__Case_Status__c = &apos;Closed – Withdrawn&apos;, agf__Case_Status__c = &apos;Closed – Feature Exists&apos;,
+agf__Case_Status__c = &apos;Closed – Workaround&apos;, agf__Case_Status__c = &apos;Closed – IdeaExchange&apos;, agf__Case_Status__c = &apos;Closed - Implemented&apos;,
+agf__Case_Status__c = &apos;Closed - Request out of Scope&apos;, agf__Case_Status__c = &apos;Closed - Cust. Invoiced (Sales Ops only)&apos;, agf__Case_Status__c = &apos;Closed - Never&apos;,
+agf__Case_Status__c = &apos;Auto-response&apos;, agf__Case_Status__c = &apos;Closed - No response from Partner&apos;, agf__Case_Status__c = &apos;Closed - Support Issue&apos;,
+agf__Case_Status__c = &apos;Closed - Services/Sales Issue&apos;, agf__Case_Status__c = &apos;Closed - Product Issue&apos;, agf__Case_Status__c = &apos;Closed - Forward to Partner&apos;,
+agf__Case_Status__c = &apos;Closed - Edition Upgrade Needed&apos;, agf__Case_Status__c = &apos;Closed - Self Service&apos;, agf__Case_Status__c = &apos;Closed - Customer Closed&apos;,
+agf__Case_Status__c = &apos;Closed - Partner Resolved&apos;, agf__Case_Status__c = &apos;No Action Needed&apos;, agf__Case_Status__c = &apos;Closed - No CSAT&apos;)</formula>
+        <label>Closed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>agf__Date_Time_Closed__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Date/Time Closed</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>agf__Escalated_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Escalated Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>agf__External_ID__c</fullName>
         <caseSensitive>true</caseSensitive>
         <deprecated>false</deprecated>
@@ -219,6 +313,48 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>agf__FunctionalArea__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Functional Area</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__General_Application_Area__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>General Application Area</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Geo__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Geo</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__New_Feature_Release_Related__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>New Feature or Release Related</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>agf__Parent_Account_Id__c</fullName>
@@ -249,6 +385,51 @@
         <externalId>false</externalId>
         <label>Parent Account Name</label>
         <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Support_Skill_Group__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Support_Skill_Group</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Support_Tier_3_Owner_Link__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>HYPERLINK( &quot;https://org62.my.salesforce.com/&quot; &amp; agf__Support_Tier_3_Owner__c , agf__Support_Tier_3_Owner_Name__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Support Tier 3 Owner</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Support_Tier_3_Owner_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Support Tier 3 Owner Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Support_Tier_3_Owner__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Support Tier 3 Owner</label>
+        <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>
