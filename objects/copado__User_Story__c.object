@@ -2576,7 +2576,7 @@
         <columns>copado__Sprint__c</columns>
         <columns>copado__Release__c</columns>
         <columns>LAST_UPDATE</columns>
-        <filterScope>Everything</filterScope>
+        <filterScope>Mine</filterScope>
         <label>All</label>
     </listViews>
     <nameField>

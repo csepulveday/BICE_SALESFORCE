@@ -826,6 +826,15 @@
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>EyC_ActualizaCampoPNdesdeEyC</fullName>
+        <field>Customer_type_other_rating__c</field>
+        <literalValue>Gerencia Comercial</literalValue>
+        <name>EyC-ActualizaCampoPNdesdeEyC</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>EyC_Actualiza_fecha_deuda_sbif</fullName>
         <field>Fecha_revisi_n_deuda_SBIF__c</field>
         <formula>TODAY()</formula>
@@ -3274,6 +3283,16 @@
             <value>Rechazado</value>
         </criteriaItems>
         <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>EyC - Actualiza valor para lead creado como PN desde EYC</fullName>
+        <actions>
+            <name>EyC_ActualizaCampoPNdesdeEyC</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>IF( 	AND( 		RecordType.Name = &quot;Lead Persona Natural&quot;, 		CONTAINS(CreatedBy.UserRole.Name,&quot;Banca Empresas - Account Executive&quot;) 		),TRUE,FALSE)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
         <fullName>EyC - Crea tarea al enviar desglose</fullName>

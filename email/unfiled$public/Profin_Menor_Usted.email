@@ -1,192 +1,216 @@
-<!DOCTYPE html>
-    <html> 
-        <head>
-            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-            <title>
-                Banco BICE
-            </title>
-        </head>
-        <body align="center">
-            <div align="center" style="margin:0 auto;">
-            
-            <br />
-                <br />
-                <table width="714">
-                    <tr>
-                        <td align="right" style="padding-left:46px; padding-right:46px; font-family:arial; color:#5b5b5e; font-size:16px; text-align:right;">
-                    
-                            <img src="http://multimedia.bice.cl/mailings/activos/logobice.jpg" />
-                        </td>
-                    </tr>
-                </table>
-                <table width="714">
-                    
-                    <tr>
-                        <td align="left" style="padding-left:46px; padding-right:46px; font-family:arial; color:#5b5b5e; font-size:16px; text-align:justify;">
-                            <br />
-                            <br />
-                            {!Lead.Salutation} {!Lead.Name}:
-                                <br />
-                                <br />
-                            </span><span style="font-size:22px; color:#306095;">
-							<strong>Le invitamos a ser parte de Banco BICE</strong><br />y disfrutar de la mejor experiencia de servicio
-                        </span><br />
-                            <br />
-                        </td>
-                    </tr>
-                </table>
-			<img src="http://multimedia.bice.cl/bck082016/profin_menor.jpg" width="714" height="168" />
-			<br />
-                <br />
-                <table width="714">
-                    <tr>
-                        <td align="left" style="padding-left:46px; padding-right:46px; font-family:arial; color:#5b5b5e; font-size:16px; text-align:justify;">
-						En Banco BICE encontrará un servicio superior:
-						  <br>
-						  <br />
-						<br />
-						
-						</td>
-					</tr>
-                </table>
-              <img src="http://multimedia.bice.cl/bck082016/profin_ico_7.jpg" width="477" height="74" />
-			  <table width="714">
-                	<tr>
-                        <td align="left" style="padding-left:46px; padding-right:46px; font-family:arial; color:#5b5b5e; font-size:16px; text-align:justify;">
-						<br>
-						<br>
-						Además, tenemos una oferta de productos y servicios para hacerle la vida más simple: <br />
-						<br />
-						
-					  </td>
-					</tr>
-                    <tr>
-					 <td style="font-family:arial; font-size:16px; color:#5b5b5e; padding-left:20px; padding-right:20px;" align="center">
-					   <table width="100%">	
-                        	<tr>
-                           	  <td width="10%" align="center" valign="top" style="padding:10px;">
-                                	<img src="http://multimedia.bice.cl/bck082016/profin_ico_1.jpg" />
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"><META NAME="referrer" CONTENT="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+      ReadMsgBody{ width: 100%;}
+      .ExternalClass {width: 100%;}
+      .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+      body {-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;margin:0 !important;}
+      p { margin: 1em 0;}
+      table td { border-collapse: collapse;}
+      img {outline:0;}
+      a img {border:none;}
+      p {margin: 1em 0;}
+      @-ms-viewport{ width: device-width;}
+    </style>
+    <style type="text/css">
+      @media only screen and (max-width: 480px) {
+        .container {width: 100% !important;}
+        .footer { width:auto !important; margin-left:0; }
+        .content-padding{ padding:4px !important; }
+        .mobile-hidden { display:none !important; }
+        .logo { display:block !important; padding:0 !important; }
+        img { max-width:100% !important; height:auto !important; max-height:auto !important;}
+        .header img{max-width:100% !important;height:auto !important; max-height:auto !important;}
+        .photo img { width:100% !important; max-width:100% !important; height:auto !important;}
+        .drop { display:block !important; width: 100% !important; float:left; clear:both;}
+        .footerlogo { display:block !important; width: 100% !important; padding-top:15px; float:left; clear:both;}
+        .nav4, .nav5, .nav6 { display: none !important; }
+        .tableBlock {width:100% !important;}
+        .responsive-td {width:100% !important; display:block !important; padding:0 !important; }
+        .fluid, .fluid-centered {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .fluid-centered {
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        /* MOBILE GLOBAL STYLES - DO NOT CHANGE */
+        body { padding: 0px !important; font-size: 16px !important; line-height: 150% !important;}
+        h1 { font-size: 22px !important; line-height: normal !important;}
+        h2 { font-size: 20px !important; line-height: normal !important;}
+        h3 { font-size: 18px !important; line-height: normal !important;}
+        .buttonstyles {
+          font-family:arial,helvetica,sans-serif !important;
+          font-size: 16px !important;
+          color: #FFFFFF !important;
+          padding: 10px !important;
+        }
+        /* END OF MOBILE GLOBAL STYLES - DO NOT CHANGE */
+      }
+      @media only screen and (max-width: 640px) {
+        .container { width:100% !important; }
+        .mobile-hidden { display:none !important; }
+        .logo { display:block !important; padding:0 !important; }
+        .photo img { width:100% !important; height:auto !important;}
+        .nav5, .nav6 { display: none !important;}
+        .fluid, .fluid-centered {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .fluid-centered {
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+      }
+    </style>
+    <!--[if mso]>       <style type="text/css">           /* Begin Outlook Font Fix */           body, table, td {               font-family: Arial, Helvetica, sans-serif ;               font-size:16px;               color:#808080;               line-height:1;           }           /* End Outlook Font Fix */       </style>     <![endif]-->
+  </head>
+  <body bgcolor="#ffffff" text="#000000" style="background-color: #ffffff; color: #000000; padding: 0px; -webkit-text-size-adjust:none; font-size: 16px; font-family:arial,helvetica,sans-serif;">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+      <tr>
+        <td align="center" valign="top">
+          
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <table cellspacing="0" cellpadding="0" border="0" width="600" class="container" align="center">
+            <tr>
+              <td>
+                <table class="tb_properties border_style" style="background-color:#FFFFFF;" cellspacing="0" cellpadding="0" bgcolor="#ffffff" width="100%">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <!-- added padding here -->
+                          <td class="content_padding" style="">
+                            <!-- end of comment -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr> <!-- top slot -->
+                                <td align="center" class="header" valign="top">
+                                  <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                          <td align="left" valign="top">
+                                            <table cellspacing="0" cellpadding="0" style="width:100%">
+                                              <tbody>
+                                              <tr>
+                                                <td class="responsive-td" valign="top" style="width: 100%;">
+                                                  <table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px; min-width: 100%;" class="stylingblock-content-wrapper"><tr><td style="padding: 20px 45px;" class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td align="right"><img data-assetid="2110" src="http://multimedia.bice.cl/bck082016/d9fa0f38-9550-4a4f-b258-5d36d52f7d91.jpg" height="19" width="190" style="display: block; height: 19px; width: 190px; text-align: right;"></td></tr></tbody></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px; min-width: 100%;" class="stylingblock-content-wrapper"><tr><td style="padding: 20px 45px;" class="stylingblock-content-wrapper camarker-inner"><div style="color:#5b5b5e; font-size:16px;">
+	{!Lead.Salutation} {!Lead.Name}:<br>
+	<br>
+	<span style="font-size:22px; color:#306095;"><b>Le invitamos a ser parte de Banco BICE</b><br>
+	y disfrutar de la mejor experiencia de servicio </span></div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><img data-assetid="20524" src="http://multimedia.bice.cl/bck082016/84670175-60ff-4b14-938e-3a6c8bc762ce.jpg" height="168" width="714" style="display: block; height: auto; width: 100%; padding: 0px; text-align: center;"></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px; min-width: 100%;" class="stylingblock-content-wrapper"><tr><td style="padding: 20px 45px;" class="stylingblock-content-wrapper camarker-inner"><div style="color: rgb(91, 91, 94); font-size: 16px; text-align: justify;">
+	En Banco BICE encontrar&aacute;&nbsp;un servicio superior:</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><img data-assetid="20523" src="http://multimedia.bice.cl/bck082016/c6a32e3b-3e08-4916-9814-47d78cbd7799.jpg" height="74" width="477" style="display: block; padding: 0px; text-align: center; height: 74px; width: 477px;"></td></tr></tbody></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px; min-width: 100%;" class="stylingblock-content-wrapper"><tr><td style="padding: 20px 45px;" class="stylingblock-content-wrapper camarker-inner"><div style="color: rgb(91, 91, 94); font-size: 16px; text-align: justify;">
+	Adem&aacute;s, tenemos una oferta de productos y servicios para hacerle la vida m&aacute;s simple:</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px; min-width: 100%;" class="stylingblock-content-wrapper"><tr><td style="padding: 20px 45px;" class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" style="width: 100%;"><tbody><tr><td><table cellspacing="0" cellpadding="0" style="width: 100%;"><tbody><tr><td valign="top" class="responsive-td" style="width: 20%; padding-right: 3px;"><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td align="center">
+<img data-assetid="20520" src="http://multimedia.bice.cl/bck082016/590632e6-9a28-4308-875a-a5a32bb47d5c.jpg" height="31" width="34" style="display: block; padding: 0px; text-align: center; height: 31px; width: 34px;"></td></tr></tbody></table></td></tr></table></td><td valign="top" class="responsive-td" style="width: 80%; padding-left: 3px;"><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div style="color: rgb(91, 91, 94); font-size: 16px; text-align: justify; font-family:arial;">
+	Para que nunca pague&nbsp;de m&aacute;s, su <strong>Cuenta Corriente</strong> tiene una <strong>L&iacute;nea de Sobregiro integrada,</strong> que una vez que tenga&nbsp;fondos disponibles, se abona autom&aacute;ticamente.</div></td></tr></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px; min-width: 100%;" class="stylingblock-content-wrapper"><tr><td style="padding: 20px 45px;" class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" style="width: 100%;"><tbody><tr><td><table cellspacing="0" cellpadding="0" style="width: 100%;"><tbody><tr><td valign="top" class="responsive-td" style="width: 20%; padding-right: 3px;"><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><img data-assetid="20519" src="http://multimedia.bice.cl/bck082016/b354b8f2-a34f-4bb8-9a8b-0ff7a34572ed.jpg" height="29" width="47" style="display: block; padding: 0px; text-align: center; height: 29px; width: 47px;"></td></tr></tbody></table></td></tr></table></td><td valign="top" class="responsive-td" style="width: 80%; padding-left: 3px;"><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div style="color: rgb(91, 91, 94); font-size: 16px; text-align: justify; font-family:arial;">
+	Acumule&nbsp;<strong>D&oacute;lares BICE</strong> usando sus <strong>Tarjetas de Cr&eacute;dito Visa Banco BICE</strong> y canj&eacute;elos, parcial o totalmente, en las compras de cualquier aerol&iacute;nea, hoteles, Seguros BICE, convenios de Beneficios BICE y otros servicios tur&iacute;sticos.</div></td></tr></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px; min-width: 100%;" class="stylingblock-content-wrapper"><tr><td style="padding: 20px 45px;" class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" style="width: 100%;"><tbody><tr><td><table cellspacing="0" cellpadding="0" style="width: 100%;"><tbody><tr><td valign="top" class="responsive-td" style="width: 20%; padding-right: 3px;"><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr>
+<td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><img data-assetid="20522" src="http://multimedia.bice.cl/bck082016/eddc7343-e72b-41d1-bcc5-2bb52f8b12de.jpg" height="37" width="37" style="display: block; padding: 0px; text-align: center; height: 37px; width: 37px;"></td></tr></tbody></table></td></tr></table></td><td valign="top" class="responsive-td" style="width: 80%; padding-left: 3px;"><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div style="color: rgb(91, 91, 94); font-size: 16px; text-align: justify; font-family:arial;">
+	Tenemos convenientes condiciones en tasas, plazos, cuotas y la flexibilidad que necesita&nbsp;para concretar sus ideas y proyectos, con <strong>Pr&eacute;stamos Personales, Cr&eacute;ditos Hipotecarios y Cr&eacute;dito Automotriz BICE.</strong></div></td></tr></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px; min-width: 100%;" class="stylingblock-content-wrapper"><tr><td style="padding: 20px 45px;" class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" style="width: 100%;"><tbody><tr><td><table cellspacing="0" cellpadding="0" style="width: 100%;"><tbody><tr><td valign="top" class="responsive-td" style="width: 33%; padding-right: 4px;"><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table border="0" cellpadding="0" cellspacing="3" style="margin:0 auto;" width="98%">
+	
+		<tbody><tr width="50%">
+			<td align="center" style="height: 58px; width: 310px;" valign="middle">
+				<img data-assetid="20518" height="23" src="http://multimedia.bice.cl/bck082016/9b82c646-ac60-46a2-b28a-61f2d7eca8d1.jpg" style="height: 23px; width: 25px; padding: 0px; text-align: center;" width="25"></td></tr><tr width="50%">
+			<td align="center" style="font-family: Arial; color:#306095; font-size:16px; padding:16px; width: 310px;">
+				<b style="font-size:16px; color:#306095;">Beneficios BICE </b><br>
+				<br>
+				Disfrute de una experiencia nueva todos los d&iacute;as con los convenios que tenemos pensados para usted.</td></tr></tbody></table></td></tr></table></td><td valign="top" class="responsive-td" style="width: 33%; padding-left: 2px; padding-right: 2px;"><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table border="0" cellpadding="0" cellspacing="3" style="margin:0 auto;" width="98%">
+	
+		<tbody><tr width="50%">
+			<td align="center" style="height: 58px; width: 310px;" valign="middle">
+				<img data-assetid="20517" height="33" src="http://multimedia.bice.cl/bck082016/12a9ed54-3c8e-4ef0-abfd-673153269d57.jpg" style="height: 33px; width: 42px; padding: 0px; text-align: center;" width="42"></td></tr><tr width="50%">
+			<td align="center" style="font-family: Arial; color:#306095; font-size:16px; padding:16px; width: 310px;">
+				<b style="font-size:16px; color:#306095;">Giro en Cajeros</b><br>
+				<br>
+				Retire hasta $400.000 diarios en nuestros cajeros autom&aacute;ticos BICE.</td></tr></tbody></table></td></tr></table></td><td valign="top" class="responsive-td" style="width: 33%; padding-left: 4px;"><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table border="0" cellpadding="0" cellspacing="3" style="margin:0 auto;" width="98%">
+	
+		<tbody><tr width="50%">
+			<td align="center" style="height: 58px; width: 310px;" valign="middle">
+				<img data-assetid="20521" height="31" src="http://multimedia.bice.cl/bck082016/19524170-5ad4-4488-ace7-f814c47e01bc.jpg" style="height: 31px; width: 19px; padding: 0px; text-align: center;" width="19"></td></tr><tr width="50%">
+			<td align="center" style="font-family: Arial; color:#306095; font-size:16px; padding:16px; width: 310px;">
+				<b style="font-size:15px; color:#306095;">App Banco BICE</b><br>
+				<br>
+				Ingrese a la aplicaci&oacute;n con su huella y realice todas sus transacciones de manera m&aacute;s simple, r&aacute;pida y segura.</td></tr></tbody></table></td></tr></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px; min-width: 100%;" class="stylingblock-content-wrapper"><tr><td style="padding: 20px 45px;" class="stylingblock-content-wrapper camarker-inner"><div style="color: rgb(91, 91, 94); font-size: 16px; text-align: justify;">
+	En caso de querer m&aacute;s informaci&oacute;n, no dude&nbsp;en contactarme.</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px; min-width: 100%;" class="stylingblock-content-wrapper"><tr><td style="padding: 20px 45px;" class="stylingblock-content-wrapper camarker-inner"><div style="color: rgb(91, 91, 94); font-size: 16px; text-align: justify;">
+	Le saluda atentamente,</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px; min-width: 100%;" class="stylingblock-content-wrapper"><tr><td style="padding: 20px 45px;" class="stylingblock-content-wrapper camarker-inner"><div style="color: rgb(91, 91, 94); font-size: 16px; text-align: right;">
+<b style="font-size:16px;">{!Lead.owner}</b>
+                          <br>
+                            bice<img src="http://multimedia.bice.cl/mailings/activos/punto_negro.png">cl&nbsp;</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px; min-width: 100%;" class="stylingblock-content-wrapper"><tr><td style="padding: 20px 45px;" class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" style="width: 100%;"><tbody><tr><td><table cellspacing="0" cellpadding="0" style="width: 100%;"><tbody><tr><td valign="top" class="responsive-td" style="width: 50%; padding-right: 3px;"><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td align="left">
+<img data-assetid="12732" src="http://multimedia.bice.cl/bck082016/a22806d2-ef65-4bef-b3c4-f1d12daf3c68.jpg" height="19" width="248" style="display: block; padding: 0px; text-align: left; height: 19px; width: 248px; border-width: 0px; border-color: transparent; border-style: solid;"></td></tr></tbody></table></td></tr></table></td><td valign="top" class="responsive-td" style="width: 50%; padding-left: 3px;"><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td align="right">
+<img data-assetid="12733" src="http://multimedia.bice.cl/bck082016/d9fa0f38-9550-4a4f-b258-5d36d52f7d91.jpg" height="19" width="190" style="display: block; padding: 0px; border-width: 0px; border-color: transparent; border-style: solid; text-align: right; height: 19px; width: 190px;"></td></tr></tbody></table></td></tr></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px; min-width: 100%;" class="stylingblock-content-wrapper"><tr><td style="padding: 20px 45px;" class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" style="width: 100%;"><tbody><tr><td><table cellspacing="0" cellpadding="0" style="width: 100%;"><tbody><tr><td valign="top" class="responsive-td" style="width: 25%; padding-right: 3px;"><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr>
+<td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><img data-assetid="12943" src="http://multimedia.bice.cl/bck082016/34d8ed0f-bade-48a6-95f8-1cf40d54872b.jpg" height="78" width="100" style="padding: 0px; border-width: 0px; border-color: transparent; border-style: solid; text-align: center; height: 78px; width: 100px;"></td></tr></tbody></table></td></tr></table></td><td valign="top" class="responsive-td" style="width: 75%; padding-left: 3px;"><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div style="color:#306095; font-size: 16px; text-align: justify; font-family:arial;">
+	Primer lugar Premio Nacional de Satisfacci&oacute;n de Clientes ProCalidad Sector Bancos Medios y Mejor de los Mejores Categor&iacute;a Contractual.</div></td></tr></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px; min-width: 100%;" class="stylingblock-content-wrapper"><tr><td style="padding: 5px 45px 20px;" class="stylingblock-content-wrapper camarker-inner"><hr>
+</td></tr></table><table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px; min-width: 100%;" class="stylingblock-content-wrapper"><tr><td style="padding: 10px 45px 40px;" class="stylingblock-content-wrapper camarker-inner"><div style="color:#97999b; font-size:14px; text-align:justify;">
+
+ Inf&oacute;rmese sobre la garant&iacute;a estatal de los dep&oacute;sitos en su banco o en www<img src="http://multimedia.bice.cl/mailings/activos/punto_gris.png">sbif<img src="http://multimedia.bice.cl/mailings/activos/punto_gris.png">cl</div></td></tr></table>
+												  
+                                                </td>
+                                              </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
                                 </td>
-                              <td style="font-family:arial; color:#3B342E; font-size:16px; text-align:left; padding-left:20px; padding-top:10px;" width="90%" valign="middle">
-                                Para que nunca 
-								pague de más, su <strong>Cuenta Corriente</strong> tiene una <strong>Línea de Sobregiro integrada,</strong>  que una vez que 
-								tenga fondos disponibles, se abona automáticamente.
-                              </td>
-                            </tr>
-                            <tr>
-                           	  <td width="10%" align="center" valign="top" style="padding:10px;">
-                                	<img src="http://multimedia.bice.cl/bck082016/profin_ico_2.jpg" />
-                                </td>
-                                <td style="font-family:arial; color:#3B342E; font-size:16px; text-align:left; padding-left:20px; padding-top:10px;" width="90%" valign="middle">
-                                    Acumule <strong>Dólares BICE</strong>  usando 
-									sus <strong>Tarjetas de Crédito Visa Banco BICE</strong>  y 
-									canjéelos, parcial o totalmente, en las compras de cualquier aerolínea, hoteles, Seguros BICE, convenios de Beneficios BICE y otros servicios turísticos.
-                              </td>
-                            </tr>
-                            <tr>
-                           	  <td width="10%" align="center" valign="top" style="padding:10px;">
-                                	<img src="http://multimedia.bice.cl/bck082016/profin_ico_3.jpg" />
-                                </td>
-                                <td style="font-family:arial; color:#3B342E; font-size:16px; text-align:left; padding-left:20px; padding-top:10px;" width="90%" valign="middle">
-                                    Tenemos convenientes condiciones en tasas, plazos, cuotas y la flexibilidad que necesita para concretar 
-									sus ideas y proyectos, con <strong>Préstamos Personales, Créditos Hipotecarios y Crédito Automotriz BICE.</strong>
-							  </td>
-                            </tr>
-                        </table>
-                <br />
-                <br>
-                <br />
-                <table width="100%">
-							<tr>
-                            
-                            	
-								<td width="33%" align="center" valign="middle" style="text-align:center; font-family:arial; color:#306095; font-size:16px; padding:0, 20px, 20px, 0;"><img src="http://multimedia.bice.cl/bck082016/profin_ico_4.jpg" width="25" height="23" /></td>
-                                <td width="33%" align="center" valign="middle" style="text-align:center; font-family:arial; color:#306095; font-size:16px; padding:0, 20px, 20px, 0;"><img src="http://multimedia.bice.cl/bck082016/profin_ico_5.jpg" width="42" height="33" /></td>
-                                <td width="33%" align="center" valign="middle" style="text-align:center; font-family:arial; color:#306095; font-size:16px; padding:0, 20px, 20px, 0;"><img src="http://multimedia.bice.cl/bck082016/profin_ico_6.jpg" width="19" height="31";/>
-							  </td>
-				  </tr>
-                            <tr>
-                            
-                            	
-								<td width="33%" valign="top" style="text-align:center; font-family:arial; color:#306095; font-size:16px; padding:0, 20px, 20px, 0;"><span style="font-size:18px;"><b>Beneficios BICE</b></span>  <br />
-                                  <br />
-                                  Disfrute de una experiencia nueva todos los días con los convenios que tenemos pensados para 
-								usted.<br />
-                                <br />
-							  </td>
-                                <td width="33%" valign="top" style="text-align:center; font-family:arial; color:#306095; font-size:16px; padding:0, 20px, 20px, 0;"><span style="font-size:18px;"><b>Giro en Cajeros</b></span> <br />
-                                  <br />
-                                 RRetire hasta $400.000 diarios en nuestros cajeros automáticos BICE.<br />
-                                    <br />
-							  </td>
-                                <td width="33%" valign="top" style="text-align:center; font-family:arial; color:#306095; font-size:16px; padding:0, 20px, 20px, 0;">
-									
-                                    <span style="font-size:18px;"><b>App Banco BICE</b></span>
-                                    <br>
-                                    <br>
-                                    IIngrese a la aplicación con su huella y 
-									realice todas sus transacciones de manera más simple, rápida y segura.<br>
-                                    <br />
-							  </td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-				<tr>
-					<td align="left" style="padding-left:46px; padding-right:46px; font-family:arial; color:#5b5b5e; font-size:16px; text-align:justify;">
-                    	<br />
-                        <br />
-                    	En caso de querer más información, no 
-						dude en contactarme.<br />
-                        <br />
-                       
-					</td>
-				</tr>
-			</table>
-          	<table width="714">
-				<tr>
-					<td align="left" style="padding-left:46px; padding-right:46px; font-family:arial; color:#5b5b5e; font-size:16px; text-align:justify;">
-						Le saluda atentamente,<br />
-						<br />
-						<br />
-					</td>
-				</tr>
-				<tr>
-                        <td align="right" style="font-family:arial; color:#5b5b5e; font-size:16px; padding-right:50px; padding-left:0;" ><p><br />
-                         <b style="font-size:16px;">{!Lead.Account_Executive__c}</b>
-                          <br />
-                            bice<img src="http://multimedia.bice.cl/mailings/activos/punto_negro.png" />cl <br />
-                          <br />
-                          <br /><br />
-                          </p>
-                          <table width="100%">
-                              <tr>
-                                    <td align="left" style="padding-left:46px; width:100%;"><img  src="http://multimedia.bice.cl/mailings/activos/logoinversiones.jpg" width="248" height="19"  /></td>
-                                    <td align="right" style="width:100%;">
-                                        <img  src="http://multimedia.bice.cl/mailings/activos/logobice.jpg" width="190" height="19"  />
-                                    </td>
-                                </tr>
+                              </tr>
                             </table>
-                        </td>
-              </tr>
-              </table>
-              <table width="714">
-                    <tr>
-                        <td style="padding-left:46px; padding-right:46px;">
-                            <hr>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left" style="padding-left:46px; padding-right:46px; font-family:arial; color:#97999b; font-size:14px; text-align:justify;">
-                            
-                            <br />
-                            Infórmese sobre la garantía estatal de los depósitos en su banco o en www<img src="http://multimedia.bice.cl/mailings/activos/punto_gris.png" />sbif<img src="http://multimedia.bice.cl/mailings/activos/punto_gris.png" />cl
-							<br />
-							<br />
-							<br />
-					</td>
-				</tr>
-			</table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          
+<table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" bgcolor="#FFFFFF" style="border-collapse:collapse;">
+  <tr>
+    <td><center style="width: 100%;">
+        
+        <div style="max-width: 600px;"> 
+          <!--[if (gte mso 9)|(IE)]>
+            <table cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+            <tr>
+            <td>
+            <![endif]--> 
+          
+          
+          <!-- Email Body : BEGIN -->
+          <!-- Email Body : END --> 
+          
+          
+          <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]--> 
         </div>
-	</body>
+      </center></td>
+  </tr>
+</table>
+
+        </td>
+      </tr>
+    </table>
+    <img src="http://click.info.bice.cl/open.aspx?ffcb10-fefe1676746701-fe5e1771766c0279751c-fe8e13727c660d7c76-ff911278-fe511578716d03787013-ffce15" width="1" height="1">
+  </body>
 </html>

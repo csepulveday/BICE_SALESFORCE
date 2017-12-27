@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>BICE</letterhead>
+    <name>enviar notificacion al usuario por crear evento</name>
+    <style>formalLetter</style>
+    <subject>creacion evento</subject>
+    <textOnly>Estimado {!Account.Name}, se ha creado un nuevo evento con el siguinente asunto: {!Event.Subject}
+Inicio : {!Event.StartDateTime}
+Fin: {!Event.EndDateTime}
+
+Saludos cordiales
+{!Account.Ejecutivo_de_Cuenta__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

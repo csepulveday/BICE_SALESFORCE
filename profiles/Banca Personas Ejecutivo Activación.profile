@@ -10878,7 +10878,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.Fecha_MAC_Apertura_Cuenta__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -11003,7 +11003,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.Fecha_resultado_comit__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -11523,7 +11523,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.Opening_date__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -12088,17 +12088,17 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.Tiene_Cuenta_Corriente__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.Tiene_Garantia_Hipotecaria__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.Tiene_Margen_Hipotecario__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
