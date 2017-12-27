@@ -1,0 +1,23 @@
+<!--
+ - Created by Equipo AcercaRSE on 21-12-2017.
+ -->
+
+<aura:component description="BiceBaseSearch" access="global" controller="BICE_Base_Controller" >
+
+    <div class="slds-col--padded slds-size--1-of-1">
+        <div class="slds-global-header slds-grid slds-grid_align-spread">
+            <div class="slds-global-header__item slds-global-header__item_search ">
+                <div class="slds-form-element slds-lookup" data-select="single">
+                    <div class="slds-form-element__control ">
+                        <div class="slds-grid slds-grid--vertical-align-center slds-grid--align-center slds-input-has-icon slds-input-has-icon--left">
+                            <lightning:buttonIcon iconName="utility:search" variant="bare" onclick="{! c.searchRut }" alternativeText="Buscar por RUT" class="slds-input__icon" />
+                            <input type="search" class="slds-lookup__search-input slds-input" placeholder="Buscar por RUT" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</aura:component>

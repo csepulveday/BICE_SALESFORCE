@@ -1,0 +1,8 @@
+<!--
+ - Created by Equipo AcercaRSE on 21-12-2017.
+ -->
+
+<aura:event type="APPLICATION" description="ModalEvent">
+    <aura:attribute name="errorMessage" type="String"/>
+    <aura:attribute name="errorMessageHeader" type="String"/>
+</aura:event>

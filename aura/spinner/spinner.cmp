@@ -1,0 +1,13 @@
+<!--
+ - Created by Equipo AcercaRSE on 21-12-2017.
+ -->
+
+<aura:component description="spinner">
+
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+
+
+    <center><ui:spinner aura:id="spinner"/></center>
+
+</aura:component>

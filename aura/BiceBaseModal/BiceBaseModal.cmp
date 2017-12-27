@@ -1,0 +1,31 @@
+<!--
+ - Created by Carlos Bastidas on 21-12-2017.
+ -->
+
+<aura:component description="BiceBaseModal" controller="BICE_Base_Controller">
+
+    <!-- event -->
+    <aura:handler event="c:ModalEvent" action="{!c.loadModalError}" />
+    <!-- attribute -->
+    <aura:attribute name="errorMsg" type="String"  />
+    <aura:attribute name="errorMsgHeader" type="String"  />
+
+    <div class="demo-only slds-hide" aura:id="modalContainer">
+        <section aura:id="modalId" role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick="{!c.modalClose}">
+                        <lightning:icon iconName="utility:close" />
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!v.errorMsgHeader}</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <p>{!v.errorMsg}</p>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </div>
+
+</aura:component>

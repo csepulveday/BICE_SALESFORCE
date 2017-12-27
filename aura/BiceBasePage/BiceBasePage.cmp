@@ -1,0 +1,20 @@
+<!--
+ - Created by Carlos Bastidas on 21-12-2017.
+ -->
+
+<aura:component description="BiceBasePage" controller="BICE_Base_Controller" >
+
+        <!-- default handler, executes on initialize -->
+        <aura:handler name="init" action="{!c.initAction}" value="{!this}"/>
+
+        <!-- attribute -->
+        <aura:attribute name="userAccounts" type="Account[]" />
+        <aura:attribute name="selectedAccount" type="Account" />
+
+        <div class="slds-grid">
+
+        </div>
+        <div class="slds-grid slds-grid--vertical-align-center slds-grid--align-center slds-m-top_xxx-small">
+            <lightning:button variant="success" label="Open modal por evento de aplicación" iconName="utility:magicwand" iconPosition="left" onclick="{! c.loadModal }" />
+        </div>
+</aura:component>
