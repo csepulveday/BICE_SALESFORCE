@@ -291,4 +291,16 @@
             <value>Pendiente,Aprobado,Rechazado</value>
         </criteriaItems>
     </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Leads_Regional_Zona_3</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Da acceso Escritura a Leads cuyos de propietarios pertenezcan a las Sucursales dependientes de la Gerencia Regional Zona 3, a todas los usuarios que estén asociados al Grupo Público &quot;Retail Banking Regional Zona 3&quot;</description>
+        <label>Leads Regional Zona 3</label>
+        <sharedTo>
+            <group>Retail_Banking_Regional_Zonal_3</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Retail_Banking_Regional_Manager_Zona_3</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
 </SharingRules>
