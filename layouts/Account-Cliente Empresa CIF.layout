@@ -4,6 +4,9 @@
     <customButtons>Consulta_Bolsa</customButtons>
     <excludeButtons>AccountHierarchy</excludeButtons>
     <excludeButtons>ChangeRecordType</excludeButtons>
+    <excludeButtons>DataDotComAccountInsights</excludeButtons>
+    <excludeButtons>DataDotComClean</excludeButtons>
+    <excludeButtons>DataDotComCompanyHierarchy</excludeButtons>
     <excludeButtons>Delete</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <excludeButtons>XClean</excludeButtons>
@@ -709,6 +712,13 @@
         <relatedList>BICE_Solicitud_Cliente__c.Cliente__c</relatedList>
     </relatedLists>
     <relatedLists>
+        <fields>NAME</fields>
+        <fields>productdos__c</fields>
+        <fields>FEC_APERTURA__c</fields>
+        <fields>CURRENCY_ISO_CODE</fields>
+        <relatedList>BICE_Fin_Account__c.Customer__c</relatedList>
+    </relatedLists>
+    <relatedLists>
         <fields>FULL_NAME</fields>
         <fields>CONTACT.TITLE</fields>
         <fields>CONTACT.EMAIL</fields>
@@ -776,15 +786,6 @@
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedNoteList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>Product__c</fields>
-        <fields>COD_PRODUCTO__c</fields>
-        <fields>X360_view_Product_Family__c</fields>
-        <fields>FEC_APERTURA__c</fields>
-        <fields>FEC_ACTIVACION__c</fields>
-        <relatedList>BICE_Fin_Account__c.Customer__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>

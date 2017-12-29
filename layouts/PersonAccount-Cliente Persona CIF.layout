@@ -38,11 +38,19 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Perfil_de_Riesgo__c</field>
+                <field>MDR__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Profession__pc</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>MDR__c</field>
+                <field>Employer__pc</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Current_MAC_Status__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -95,14 +103,6 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Situac_Laboral__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>SBIF_Sector__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>RUT__c</field>
             </layoutItems>
@@ -131,30 +131,16 @@
                 <field>Linkedin__pc</field>
             </layoutItems>
             <layoutItems>
-                <emptySpace>true</emptySpace>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Profession__pc</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Cargo__pc</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Employer__pc</field>
-            </layoutItems>
-            <layoutItems>
-                <emptySpace>true</emptySpace>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Cliente_desde__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Current_MAC_Status__c</field>
+                <behavior>Edit</behavior>
+                <field>Current_MAC_Presentation_Date__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -579,10 +565,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Sucursal_creaci_n_registro__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
                 <field>RecordTypeId</field>
             </layoutItems>
         </layoutColumns>
@@ -678,15 +660,10 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>COD_PRODUCTO__c</fields>
-        <fields>COD_ESTADO_PROD__c</fields>
-        <fields>X360_view_Product_Family__c</fields>
-        <fields>FEC_ACTIVACION__c</fields>
+        <fields>productdos__c</fields>
         <fields>FEC_APERTURA__c</fields>
-        <fields>CREATED_DATE</fields>
+        <fields>CURRENCY_ISO_CODE</fields>
         <relatedList>BICE_Fin_Account__c.Customer__c</relatedList>
-        <sortField>X360_view_Product_Family__c</sortField>
-        <sortOrder>Asc</sortOrder>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
